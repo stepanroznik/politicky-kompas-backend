@@ -1,6 +1,6 @@
 //import { IQuestionCreationAttributes } from '../entities/question.entity';
 import { ApiProperty } from '@nestjs/swagger';
-import { IsBoolean, IsIn, IsString } from 'class-validator';
+import { IsBoolean, IsIn, IsOptional, IsString } from 'class-validator';
 
 const positionEnum = [
     'top-left',
@@ -24,6 +24,7 @@ export class CreateQuestionDto {
     @ApiProperty({
         description: 'Subtitle/body of the question',
     })
+    @IsOptional()
     @IsString()
     subtitle: string;
 

@@ -39,7 +39,7 @@ import { AnswerModule } from './answer/answer.module';
                     database: dbConfig.database,
                     autoLoadModels: true,
                     logging: false,
-                    sync: { force: true },
+                    sync: { force: false },
                     define: { timestamps: true, paranoid: true },
                 };
             },

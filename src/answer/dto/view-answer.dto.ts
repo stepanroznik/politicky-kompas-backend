@@ -12,6 +12,9 @@ export class ViewAnswerDto extends TimestampsDto {
     agreeLevel: number;
 
     @IsString()
+    statement: string;
+
+    @IsString()
     source: string;
 
     @IsUUID()

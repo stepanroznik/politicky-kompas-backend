@@ -11,8 +11,8 @@ async function bootstrap() {
     app.useGlobalPipes(new ValidationPipe({ transform: true }));
 
     const apiSpec = new DocumentBuilder()
-        .setTitle('Docsherpa Master App')
-        .setDescription('Docsherpa Master API')
+        .setTitle('Politický Kompas')
+        .setDescription('Politický Kompas API')
         .setVersion('1.0')
         .addSecurity('BearerAuth', {
             type: 'http',

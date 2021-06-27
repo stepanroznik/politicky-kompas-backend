@@ -46,7 +46,7 @@ export class Question extends Model<
     @Column(DataType.STRING)
     title: string;
 
-    @AllowNull(false)
+    @AllowNull(true)
     @Column(DataType.TEXT)
     subtitle: string;
 

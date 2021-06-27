@@ -21,6 +21,7 @@ import { Question } from '../../question/entities/question.entity';
 export interface IAnswerAttributes extends ITimestamps {
     id: string;
     agreeLevel: number;
+    statement: string;
     source: string;
     QuestionId: string;
     PartyId: string;
@@ -48,6 +49,10 @@ export class Answer extends Model<
     @AllowNull(false)
     @Column(DataType.TEXT)
     source: string;
+
+    @AllowNull(true)
+    @Column(DataType.TEXT)
+    statement: string;
 
     @ForeignKey(() => Question)
     @Column

@@ -1,6 +1,6 @@
 //import { IAnswerCreationAttributes } from '../entities/answer.entity';
 import { ApiProperty, ApiPropertyOptions } from '@nestjs/swagger';
-import { IsString, IsUUID, Max, Min } from 'class-validator';
+import { IsOptional, IsString, IsUUID, Max, Min } from 'class-validator';
 
 const uuidProperty: ApiPropertyOptions = {
     type: 'string',
@@ -16,6 +16,14 @@ export class CreateAnswerDto {
     @Max(5)
     @IsString()
     agreeLevel: number;
+
+    @ApiProperty({
+        description:
+            "Party's statement that they may have provided while answering this question",
+    })
+    @IsOptional()
+    @IsString()
+    statement: string;
 
     @ApiProperty({
         description:
