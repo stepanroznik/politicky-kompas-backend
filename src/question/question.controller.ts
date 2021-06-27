@@ -20,7 +20,6 @@ import {
     ApiOperation,
     ApiParam,
     ApiQuery,
-    ApiQueryOptions,
     ApiTags,
 } from '@nestjs/swagger';
 import { LoggerService } from '../common/logger/logger.service';
@@ -39,15 +38,6 @@ import {
     WHERE_QUERY,
 } from '../common/openapi/query.openapi';
 import { idParam } from '../common/openapi/params.openapi';
-
-const WITH_TES_QUERY = 'with-tes';
-const withTesQuery: ApiQueryOptions = {
-    name: WITH_TES_QUERY,
-    type: Boolean,
-    required: false,
-    description:
-        'whether to include the field `tagExtractionScript` within the results',
-};
 @ApiTags('Questions')
 @Controller('questions')
 export class QuestionController {
@@ -80,18 +70,14 @@ export class QuestionController {
         summary: 'Finds all questions',
     })
     @ApiQuery(whereQuery)
-    @ApiQuery(withTesQuery)
     @ApiQuery(includeDeletedArrayQuery)
     async findAll(
         @Query(WHERE_QUERY) where: any,
-        @Query(WITH_TES_QUERY, ParseBoolPipe) withTes: boolean,
         @Query(INCLUDE_DELETED_ARRAY_QUERY, ParseBoolPipe)
         includeDeleted: boolean,
     ) {
-        this.logger.debug('this is where:', where);
         const questions = await this.questionService.findAll({
             where: where ? this.whereParser.parseWhereObject(where) : null,
-            withTes,
             includeDeleted,
         });
         return this.questionMapper.toDtoArray(questions);

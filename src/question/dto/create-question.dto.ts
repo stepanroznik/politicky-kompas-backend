@@ -1,6 +1,18 @@
 //import { IQuestionCreationAttributes } from '../entities/question.entity';
 import { ApiProperty } from '@nestjs/swagger';
-import { IsBoolean, IsString } from 'class-validator';
+import { IsBoolean, IsIn, IsString } from 'class-validator';
+
+const positionEnum = [
+    'top-left',
+    'top',
+    'top-right',
+    'left',
+    'center',
+    'right',
+    'bottom-left',
+    'bottom',
+    'bottom-right',
+];
 
 export class CreateQuestionDto {
     @ApiProperty({
@@ -18,24 +30,15 @@ export class CreateQuestionDto {
     @ApiProperty({
         description:
             'The political compass position of the question (in case of a positive answer)',
-        enum: [
-            'top-left',
-            'top',
-            'top-right',
-            'left',
-            'center',
-            'right',
-            'bottom-left',
-            'bottom',
-            'bottom-right',
-        ],
+        enum: positionEnum,
     })
     @IsString()
+    @IsIn(positionEnum)
     position: string;
 
     @ApiProperty({
         description:
-            'Whether or not does the question belong to the first approx. 24 questions of the quiz',
+            'Whether or not does the question belong to the core (approx. 24) questions of the quiz',
     })
     @IsBoolean()
     isPrimary: boolean;

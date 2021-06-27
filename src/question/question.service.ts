@@ -15,7 +15,6 @@ import { LoggerService } from '../common/logger/logger.service';
 interface IServiceFindAllOptions {
     where?: Record<string, any>;
     includeDeleted?: boolean;
-    withTes?: boolean;
 }
 
 interface IServiceFindOneOptions {
@@ -53,7 +52,6 @@ export class QuestionService {
     async findAll(
         opts: IServiceFindAllOptions = {
             includeDeleted: false,
-            withTes: false,
             where: null,
         },
     ) {
@@ -61,9 +59,6 @@ export class QuestionService {
         const questions = await this.questionRepository.findAll({
             where: opts.where,
             paranoid: !opts.includeDeleted,
-            attributes: opts.withTes
-                ? null
-                : { exclude: ['tagExtractionScript'] },
         });
         return questions;
     }
