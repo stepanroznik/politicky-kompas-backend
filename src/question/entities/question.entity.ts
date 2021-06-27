@@ -2,6 +2,7 @@ import {
     AllowNull,
     BeforeDestroy,
     BeforeRestore,
+    BelongsToMany,
     Column,
     DataType,
     Default,
@@ -13,8 +14,10 @@ import {
     Unique,
 } from 'sequelize-typescript';
 import { Optional } from 'sequelize/types';
+import { Answer } from '../../answer/entities/answer.entity';
 import { RenameBeforeDelete, RenameBeforeRestore } from '../../common/hooks';
 import { ITimestamps } from '../../common/interfaces/timestamps.interface';
+import { Party } from '../../party/entities/party.entity';
 
 export interface IQuestionAttributes extends ITimestamps {
     id: string;
@@ -67,6 +70,9 @@ export class Question extends Model<
     @AllowNull(false)
     @Column(DataType.BOOLEAN)
     isPrimary: boolean;
+
+    @BelongsToMany(() => Party, () => Answer)
+    Answers: Array<Party & { Answer: Answer }>;
 
     @BeforeDestroy({})
     static renameBeforeDestroy = RenameBeforeDelete();

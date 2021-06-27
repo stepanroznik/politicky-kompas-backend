@@ -15,6 +15,8 @@ import { WhereParserModule } from './common/where-parser/where-parser.module';
 import { LoggerMiddleware } from './common/logger/logger.middleware';
 import { HttpExceptionFilter } from './common/filters/http-exception.filter';
 import { APP_FILTER } from '@nestjs/core';
+import { PartyModule } from './party/party.module';
+import { AnswerModule } from './answer/answer.module';
 
 @Module({
     imports: [
@@ -45,6 +47,8 @@ import { APP_FILTER } from '@nestjs/core';
             inject: [ConfigService],
         }),
         QuestionModule,
+        PartyModule,
+        AnswerModule,
         LoggerModule,
         AuthModule,
         WhereParserModule,
