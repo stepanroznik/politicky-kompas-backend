@@ -23,6 +23,7 @@ export class CreateQuestionDto {
             'top',
             'top-right',
             'left',
+            'center',
             'right',
             'bottom-left',
             'bottom',
@@ -30,7 +31,7 @@ export class CreateQuestionDto {
         ],
     })
     @IsString()
-    regexSequence: string;
+    position: string;
 
     @ApiProperty({
         description:

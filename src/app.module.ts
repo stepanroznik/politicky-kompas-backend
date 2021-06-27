@@ -4,7 +4,6 @@ import { SequelizeModule } from '@nestjs/sequelize';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { QuestionModule } from './question/question.module';
-import { SourceModule } from './source/source.module';
 import { LoggerModule } from './common/logger/logger.module';
 import rTracer from 'cls-rtracer';
 import shortUUID from 'short-uuid';
@@ -45,7 +44,6 @@ import { APP_FILTER } from '@nestjs/core';
             imports: [ConfigModule],
             inject: [ConfigService],
         }),
-        SourceModule,
         QuestionModule,
         LoggerModule,
         AuthModule,

@@ -108,7 +108,7 @@ describe('SourceController (e2e)', () => {
             createdQuestions = await questionRepository.bulkCreate([
                 {
                     name: 'test',
-                    regexSequence: 'tost',
+                    position: 'tost',
                     tagExtractionScript: 'test',
                     tagBubbleMapping: { test: 'tost' },
                     SourceId: createdSourceId,

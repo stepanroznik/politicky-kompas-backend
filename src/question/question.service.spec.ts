@@ -57,7 +57,7 @@ describe('QuestionService', () => {
             const questionsToCreate: IQuestionCreationAttributes[] = [
                 {
                     name: 'test',
-                    regexSequence: 'test',
+                    position: 'test',
                     tagExtractionScript: 'test',
                     tagBubbleMapping: { test: 'tost' },
                     SourceId: '5fa2d83a-5c5f-4c9b-9759-7f08415791f1',
@@ -73,7 +73,7 @@ describe('QuestionService', () => {
             const questionsToCreate = [
                 {
                     name: null,
-                    regexSequence: 'test',
+                    position: 'test',
                     tagExtractionScript: 'test',
                     tagBubbleMapping: { test: 'tost' },
                     SourceId: '5fa2d83a-5c5f-4c9b-9759-7f08415791f1',
@@ -95,7 +95,7 @@ describe('QuestionService', () => {
             return [
                 {
                     name: 'test',
-                    regexSequence: 'test',
+                    position: 'test',
                     tagExtractionScript: 'test',
                     tagBubbleMapping: { test: 'tost' },
                     SourceId: '5fa2d83a-5c5f-4c9b-9759-7f08415791f1',
@@ -109,12 +109,12 @@ describe('QuestionService', () => {
         it('contains all properties', async () => {
             const questions = await service.findAll();
             expect(questions[0]).toHaveProperty('name');
-            expect(questions[0]).toHaveProperty('regexSequence');
+            expect(questions[0]).toHaveProperty('position');
             expect(questions[0]).toHaveProperty('tagExtractionScript');
             expect(questions[0]).toHaveProperty('tagBubbleMapping');
             expect(questions[0]).toHaveProperty('SourceId');
             expect(questions[0].name).toEqual('test');
-            expect(questions[0].regexSequence).toEqual('test');
+            expect(questions[0].position).toEqual('test');
             expect(questions[0].tagExtractionScript).toEqual('test');
             expect(questions[0].tagBubbleMapping).toEqual({ test: 'tost' });
             expect(questions[0].SourceId).toEqual(
@@ -128,7 +128,7 @@ describe('QuestionService', () => {
             mockQuestionRepository.findByPk = jest.fn(async () => {
                 return {
                     name: 'test',
-                    regexSequence: 'test',
+                    position: 'test',
                     tagExtractionScript: 'test',
                     tagBubbleMapping: { test: 'tost' },
                     SourceId: '5fa2d83a-5c5f-4c9b-9759-7f08415791f1',
@@ -136,12 +136,12 @@ describe('QuestionService', () => {
             });
             const question = await service.findOne('');
             expect(question).toHaveProperty('name');
-            expect(question).toHaveProperty('regexSequence');
+            expect(question).toHaveProperty('position');
             expect(question).toHaveProperty('tagExtractionScript');
             expect(question).toHaveProperty('tagBubbleMapping');
             expect(question).toHaveProperty('SourceId');
             expect(question.name).toEqual('test');
-            expect(question.regexSequence).toEqual('test');
+            expect(question.position).toEqual('test');
             expect(question.tagExtractionScript).toEqual('test');
             expect(question.tagBubbleMapping).toEqual({ test: 'tost' });
             expect(question.SourceId).toEqual(

@@ -54,6 +54,7 @@ export class Question extends Model<
             'top',
             'top-right',
             'left',
+            'center',
             'right',
             'bottom-left',
             'bottom',

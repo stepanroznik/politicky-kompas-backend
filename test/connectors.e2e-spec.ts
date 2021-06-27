@@ -53,7 +53,7 @@ describe('QuestionController (e2e)', () => {
     const questionsToCreate = [
         {
             name: 'test',
-            regexSequence: 'tost',
+            position: 'tost',
             tagExtractionScript: 'test',
             tagBubbleMapping: {
                 test: 'tost',
@@ -61,7 +61,7 @@ describe('QuestionController (e2e)', () => {
         },
         {
             name: 'test2',
-            regexSequence: 'tost2',
+            position: 'tost2',
             tagExtractionScript: 'test2',
             tagBubbleMapping: {
                 test: 'tost2',
@@ -147,8 +147,8 @@ describe('QuestionController (e2e)', () => {
             expect(Array.isArray(res.body)).toBe(true);
             expect(res.body[0].id).toEqual(createdQuestionId);
             expect(res.body[0].name).toEqual(questionsToCreate[0].name);
-            expect(res.body[0].regexSequence).toEqual(
-                questionsToCreate[0].regexSequence,
+            expect(res.body[0].position).toEqual(
+                questionsToCreate[0].position,
             );
             expect(res.body[0].tagExtractionScript).toEqual(
                 questionsToCreate[0].tagExtractionScript,
@@ -158,8 +158,8 @@ describe('QuestionController (e2e)', () => {
             );
             expect(res.body[0].sourceId).toEqual(createdSources[0].id);
             expect(res.body[1].name).toEqual(questionsToCreate[1].name);
-            expect(res.body[1].regexSequence).toEqual(
-                questionsToCreate[1].regexSequence,
+            expect(res.body[1].position).toEqual(
+                questionsToCreate[1].position,
             );
             expect(res.body[1].tagExtractionScript).toEqual(
                 questionsToCreate[1].tagExtractionScript,
@@ -228,7 +228,7 @@ describe('QuestionController (e2e)', () => {
                 .patch('/questions/' + createdQuestionId)
                 .send({
                     name: 'new name',
-                    regexSequence: 'new rs',
+                    position: 'new rs',
                     tagExtractionScript: 'new tes',
                     tagBubbleMapping: {
                         tost: 'test',
@@ -239,7 +239,7 @@ describe('QuestionController (e2e)', () => {
                 .then((res) => {
                     expect(res.body.id).toEqual(createdQuestionId);
                     expect(res.body.name).toEqual('new name');
-                    expect(res.body.regexSequence).toEqual('new rs');
+                    expect(res.body.position).toEqual('new rs');
                     expect(res.body.tagExtractionScript).toEqual('new tes');
                     expect(res.body.tagBubbleMapping).toEqual({
                         tost: 'test',
