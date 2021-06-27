@@ -15,7 +15,7 @@ export class CreateAnswerDto {
     @Min(1)
     @Max(5)
     @IsString()
-    agreeLevel: string;
+    agreeLevel: number;
 
     @ApiProperty({
         description:

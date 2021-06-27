@@ -38,8 +38,8 @@ import {
     WHERE_QUERY,
 } from '../common/openapi/query.openapi';
 import { idParam } from '../common/openapi/params.openapi';
-@ApiTags('Partys')
-@Controller('partys')
+@ApiTags('Parties')
+@Controller('parties')
 export class PartyController {
     constructor(
         private readonly partyService: PartyService,
@@ -53,7 +53,7 @@ export class PartyController {
     @Post()
     @ApiBody({ type: [CreatePartyDto] })
     @ApiOperation({
-        summary: 'Creates partys',
+        summary: 'Creates parties',
     })
     async create(
         @Body(ArrayValidationPipe(CreatePartyDto))
@@ -67,7 +67,7 @@ export class PartyController {
 
     @Get()
     @ApiOperation({
-        summary: 'Finds all partys',
+        summary: 'Finds all parties',
     })
     @ApiQuery(whereQuery)
     @ApiQuery(includeDeletedArrayQuery)
@@ -76,11 +76,11 @@ export class PartyController {
         @Query(INCLUDE_DELETED_ARRAY_QUERY, ParseBoolPipe)
         includeDeleted: boolean,
     ) {
-        const partys = await this.partyService.findAll({
+        const parties = await this.partyService.findAll({
             where: where ? this.whereParser.parseWhereObject(where) : null,
             includeDeleted,
         });
-        return this.partyMapper.toDtoArray(partys);
+        return this.partyMapper.toDtoArray(parties);
     }
 
     @Get(':id')

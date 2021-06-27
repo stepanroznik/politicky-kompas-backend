@@ -38,10 +38,10 @@ export class PartyService {
         this.logger.setContext(PartyService.name);
     }
 
-    async create(partysToCreate: IPartyCreationAttributes[]) {
-        this.logger.debug('Creating a party!!', partysToCreate);
+    async create(partiesToCreate: IPartyCreationAttributes[]) {
+        this.logger.debug('Creating a party!!', partiesToCreate);
         try {
-            return await this.partyRepository.bulkCreate(partysToCreate);
+            return await this.partyRepository.bulkCreate(partiesToCreate);
         } catch (e) {
             if (e instanceof Sequelize.UniqueConstraintError)
                 throw new ConflictException(e.message);
@@ -56,11 +56,11 @@ export class PartyService {
         },
     ) {
         if (opts.where) this.logger.debug('where:', opts.where);
-        const partys = await this.partyRepository.findAll({
+        const parties = await this.partyRepository.findAll({
             where: opts.where,
             paranoid: !opts.includeDeleted,
         });
-        return partys;
+        return parties;
     }
 
     async findOne(

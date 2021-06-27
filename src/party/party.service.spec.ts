@@ -53,8 +53,8 @@ describe('PartyService', () => {
     });
 
     describe('create', () => {
-        it('creates partys from a valid data array', async () => {
-            const partysToCreate: IPartyCreationAttributes[] = [
+        it('creates parties from a valid data array', async () => {
+            const partiesToCreate: IPartyCreationAttributes[] = [
                 {
                     name: 'test',
                     position: 'test',
@@ -64,13 +64,13 @@ describe('PartyService', () => {
                 },
             ];
             mockPartyRepository.bulkCreate = jest.fn(async (x) => x);
-            const partys = await service.create(partysToCreate);
-            expect(Array.isArray(partys)).toBe(true);
-            expect(partys).toEqual(partysToCreate);
+            const parties = await service.create(partiesToCreate);
+            expect(Array.isArray(parties)).toBe(true);
+            expect(parties).toEqual(partiesToCreate);
         });
 
         it('throws an error with invalid data', async () => {
-            const partysToCreate = [
+            const partiesToCreate = [
                 {
                     name: null,
                     position: 'test',
@@ -83,7 +83,7 @@ describe('PartyService', () => {
                 throw new Error('name cannot be null');
             });
             try {
-                await service.create(partysToCreate);
+                await service.create(partiesToCreate);
             } catch (e) {
                 expect(e).toBeInstanceOf(Error);
             }
@@ -103,21 +103,21 @@ describe('PartyService', () => {
             ];
         });
         it('returns an array', async () => {
-            const partys = await service.findAll();
-            expect(Array.isArray(partys)).toBe(true);
+            const parties = await service.findAll();
+            expect(Array.isArray(parties)).toBe(true);
         });
         it('contains all properties', async () => {
-            const partys = await service.findAll();
-            expect(partys[0]).toHaveProperty('name');
-            expect(partys[0]).toHaveProperty('position');
-            expect(partys[0]).toHaveProperty('tagExtractionScript');
-            expect(partys[0]).toHaveProperty('tagBubbleMapping');
-            expect(partys[0]).toHaveProperty('SourceId');
-            expect(partys[0].name).toEqual('test');
-            expect(partys[0].position).toEqual('test');
-            expect(partys[0].tagExtractionScript).toEqual('test');
-            expect(partys[0].tagBubbleMapping).toEqual({ test: 'tost' });
-            expect(partys[0].SourceId).toEqual(
+            const parties = await service.findAll();
+            expect(parties[0]).toHaveProperty('name');
+            expect(parties[0]).toHaveProperty('position');
+            expect(parties[0]).toHaveProperty('tagExtractionScript');
+            expect(parties[0]).toHaveProperty('tagBubbleMapping');
+            expect(parties[0]).toHaveProperty('SourceId');
+            expect(parties[0].name).toEqual('test');
+            expect(parties[0].position).toEqual('test');
+            expect(parties[0].tagExtractionScript).toEqual('test');
+            expect(parties[0].tagBubbleMapping).toEqual({ test: 'tost' });
+            expect(parties[0].SourceId).toEqual(
                 '5fa2d83a-5c5f-4c9b-9759-7f08415791f1',
             );
         });
