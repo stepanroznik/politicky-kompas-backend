@@ -22,7 +22,7 @@ export class LoggerMiddleware implements NestMiddleware {
                 break;
             case 'PUT':
                 color = 'yellow';
-            case 'PATCH':
+            case 'PUT':
                 color = 'yellow';
                 break;
             case 'DELETE':

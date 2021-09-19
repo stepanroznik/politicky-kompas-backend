@@ -64,29 +64,37 @@ export class AnswerService {
     }
 
     async findOne(
-        id: string,
+        QuestionId,
+        PartyId,
         opts: IServiceFindOneOptions = {
             includeDeleted: false,
         },
     ) {
-        const answer = await this.answerRepository.findByPk(id, {
+        const answer = await this.answerRepository.findOne({
+            where: { PartyId, QuestionId },
             paranoid: !opts.includeDeleted,
         });
         if (!answer)
-            throw new NotFoundException(`Answer with id ${id} not found.`);
+            throw new NotFoundException(
+                `Answer with PartyId ${PartyId} and QuestionId ${QuestionId} not found.`,
+            );
         return answer;
     }
 
     async update(
-        id: string,
+        QuestionId: string,
+        PartyId: string,
         answerToUpdate: Partial<IAnswerAttributes>,
         opts: IServiceUpdateOptions = { restore: false },
     ) {
-        const answer = await this.answerRepository.findByPk(id, {
+        const answer = await this.answerRepository.findOne({
+            where: { PartyId, QuestionId },
             paranoid: !opts.restore,
         });
         if (!answer)
-            throw new NotFoundException(`Answer with id ${id} not found.`);
+            throw new NotFoundException(
+                `Answer with PartyId ${PartyId} and QuestionId ${QuestionId} not found.`,
+            );
         try {
             await answer.update(answerToUpdate);
             if (opts.restore) await answer.restore();
@@ -98,12 +106,19 @@ export class AnswerService {
         }
     }
 
-    async remove(id: string, opts: IServiceRemoveOptions = { force: false }) {
-        const answer = await this.answerRepository.findByPk(id, {
+    async remove(
+        QuestionId,
+        PartyId,
+        opts: IServiceRemoveOptions = { force: false },
+    ) {
+        const answer = await this.answerRepository.findOne({
+            where: { PartyId, QuestionId },
             paranoid: !opts.force,
         });
         if (!answer) {
-            throw new NotFoundException(`Answer with id ${id} not found.`);
+            throw new NotFoundException(
+                `Answer with PartyId ${PartyId} and QuestionId ${QuestionId} not found.`,
+            );
         }
         await answer.destroy({ force: opts.force });
     }

@@ -3,7 +3,7 @@ import {
     Get,
     Post,
     Body,
-    Patch,
+    Put,
     Param,
     Delete,
     ParseUUIDPipe,
@@ -99,7 +99,7 @@ export class PartyController {
         return this.partyMapper.toDto(party);
     }
 
-    @Patch(':id')
+    @Put(':id')
     @ApiOperation({
         summary: 'Updates a single party by id',
     })

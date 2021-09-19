@@ -1,5 +1,4 @@
 import { ValidationPipe } from '@nestjs/common';
-import cors from 'cors';
 import { ConfigType } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
@@ -10,7 +9,7 @@ import appConfig from './config/app.config';
 async function bootstrap() {
     const app = await NestFactory.create(AppModule);
     app.useGlobalPipes(new ValidationPipe({ transform: true }));
-    app.use(cors());
+    app.enableCors();
 
     const apiSpec = new DocumentBuilder()
         .setTitle('Politický Kompas')

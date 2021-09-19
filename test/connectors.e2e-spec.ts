@@ -203,15 +203,15 @@ describe('QuestionController (e2e)', () => {
         });
     });
 
-    describe('PATCH "/questions/:id"', () => {
+    describe('PUT "/questions/:id"', () => {
         it('returns 400 on malformed id', () => {
             return request(app.getHttpServer())
-                .patch('/questions/malformed-id')
+                .put('/questions/malformed-id')
                 .expect(400);
         });
         it('returns 404 on non-existent id', () => {
             return request(app.getHttpServer())
-                .patch('/questions/5fa2d83a-5c5f-4c9b-9759-7f08415791f1')
+                .put('/questions/5fa2d83a-5c5f-4c9b-9759-7f08415791f1')
                 .send({
                     name: 'new name',
                 })
@@ -219,13 +219,13 @@ describe('QuestionController (e2e)', () => {
         });
         it('returns 409 on duplicate name', () => {
             return request(app.getHttpServer())
-                .patch('/questions/' + createdQuestionId)
+                .put('/questions/' + createdQuestionId)
                 .send(questionsToCreate[1])
                 .expect(409);
         });
         it('returns a modified question', () => {
             return request(app.getHttpServer())
-                .patch('/questions/' + createdQuestionId)
+                .put('/questions/' + createdQuestionId)
                 .send({
                     name: 'new name',
                     position: 'new rs',
@@ -280,10 +280,10 @@ describe('QuestionController (e2e)', () => {
         });
     });
 
-    describe('PATCH "/questions/:id?restore=true"', () => {
+    describe('PUT "/questions/:id?restore=true"', () => {
         it('restores a question', async () => {
             const res = await request(app.getHttpServer())
-                .patch(`/questions/${createdQuestionId}?restore=true`)
+                .put(`/questions/${createdQuestionId}?restore=true`)
                 .expect(200);
             expect(res.body.id).toEqual(createdQuestionId);
             expect(res.body.name).toEqual('new name');

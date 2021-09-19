@@ -131,9 +131,7 @@ describe('SourceController (e2e)', () => {
             expect(res.body[0].id).toEqual(createdSourceId);
             expect(res.body[0].name).toEqual(sourcesToCreate[0].name);
             expect(res.body[1].name).toEqual(sourcesToCreate[1].name);
-            expect(res.body[0].questions[0].id).toEqual(
-                createdQuestions[0].id,
-            );
+            expect(res.body[0].questions[0].id).toEqual(createdQuestions[0].id);
             expect(res.body[0].questions[0].name).toEqual('test');
         });
     });
@@ -160,27 +158,27 @@ describe('SourceController (e2e)', () => {
         });
     });
 
-    describe('PATCH "/sources/:id"', () => {
+    describe('PUT "/sources/:id"', () => {
         it('returns 400 on malformed id', () => {
             return request(app.getHttpServer())
-                .patch('/sources/malformed-id')
+                .put('/sources/malformed-id')
                 .expect(400);
         });
         it('returns 404 on non-existent id', () => {
             return request(app.getHttpServer())
-                .patch('/sources/5fa2d83a-5c5f-4c9b-9759-7f08415791f1')
+                .put('/sources/5fa2d83a-5c5f-4c9b-9759-7f08415791f1')
                 .send({ name: 'new name' })
                 .expect(404);
         });
         it('returns 409 on duplicate name', () => {
             return request(app.getHttpServer())
-                .patch('/sources/' + createdSourceId)
+                .put('/sources/' + createdSourceId)
                 .send(sourcesToCreate[1])
                 .expect(409);
         });
         it('returns a modified source', () => {
             return request(app.getHttpServer())
-                .patch('/sources/' + createdSourceId)
+                .put('/sources/' + createdSourceId)
                 .send({ name: 'new name' })
                 .expect(200)
                 .then((res) => {
@@ -230,10 +228,10 @@ describe('SourceController (e2e)', () => {
         });
     });
 
-    describe('PATCH "/sources/:id?restore=true"', () => {
+    describe('PUT "/sources/:id?restore=true"', () => {
         it('restores a source', async () => {
             const res = await request(app.getHttpServer())
-                .patch(`/sources/${createdSourceId}?restore=true`)
+                .put(`/sources/${createdSourceId}?restore=true`)
                 .expect(200);
             expect(res.body.id).toEqual(createdSourceId);
             expect(res.body.name).toEqual('new name');

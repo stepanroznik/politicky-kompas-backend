@@ -3,7 +3,7 @@ import {
     Get,
     Post,
     Body,
-    Patch,
+    Put,
     Param,
     Delete,
     ParseUUIDPipe,
@@ -83,35 +83,38 @@ export class AnswerController {
         return this.answerMapper.toDtoArray(answers);
     }
 
-    @Get(':id')
+    @Get(':QuestionId/:PartyId')
     @ApiOperation({
         summary: 'Finds a single answer by id',
     })
     @ApiParam(idParam)
     @ApiQuery(includeDeletedQuery)
     async findOne(
-        @Param('id', new ParseUUIDPipe()) id: string,
+        @Param('QuestionId', new ParseUUIDPipe()) QuestionId: string,
+        @Param('PartyId', new ParseUUIDPipe()) PartyId: string,
         @Query(INCLUDE_DELETED_QUERY, ParseBoolPipe) includeDeleted: boolean,
     ) {
-        const answer = await this.answerService.findOne(id, {
+        const answer = await this.answerService.findOne(QuestionId, PartyId, {
             includeDeleted,
         });
         return this.answerMapper.toDto(answer);
     }
 
-    @Patch(':id')
+    @Put(':QuestionId/:PartyId')
     @ApiOperation({
         summary: 'Updates a single answer by id',
     })
     @ApiParam(idParam)
     @ApiQuery(restoreQuery)
     async update(
-        @Param('id', ParseUUIDPipe) id: string,
+        @Param('QuestionId', new ParseUUIDPipe()) QuestionId: string,
+        @Param('PartyId', new ParseUUIDPipe()) PartyId: string,
         @Query(RESTORE_QUERY, ParseBoolPipe) restore: boolean,
         @Body() updateAnswerDto: UpdateAnswerDto,
     ) {
         const answer = await this.answerService.update(
-            id,
+            QuestionId,
+            PartyId,
             this.answerMapper.fromDto(updateAnswerDto),
             {
                 restore,
@@ -120,18 +123,21 @@ export class AnswerController {
         return this.answerMapper.toDto(answer);
     }
 
-    @Delete(':id')
+    @Delete(':QuestionId/:PartyId')
     @ApiOperation({
         summary: 'Deletes a single answer by id',
     })
     @ApiParam(idParam)
     @ApiQuery(forceQuery)
     async remove(
-        @Param('id', new ParseUUIDPipe()) id: string,
+        @Param('QuestionId', new ParseUUIDPipe()) QuestionId: string,
+        @Param('PartyId', new ParseUUIDPipe()) PartyId: string,
         @Query(FORCE_QUERY, ParseBoolPipe) force: boolean,
     ) {
         try {
-            return await this.answerService.remove(id, { force });
+            return await this.answerService.remove(QuestionId, PartyId, {
+                force,
+            });
         } catch (e) {
             if (e instanceof NotFoundException) {
                 return;

@@ -4,7 +4,6 @@ import {
     BeforeRestore,
     Column,
     DataType,
-    Default,
     ForeignKey,
     Max,
     Min,
@@ -35,18 +34,13 @@ export class Answer extends Model<
     IAnswerAttributes,
     IAnswerCreationAttributes
 > {
-    @PrimaryKey
-    @Default(DataType.UUIDV4)
-    @Column(DataType.UUID)
-    id: string;
-
     @AllowNull(false)
     @Min(1)
     @Max(5)
-    @Column(DataType.STRING)
+    @Column(DataType.INTEGER)
     agreeLevel: number;
 
-    @AllowNull(false)
+    @AllowNull(true)
     @Column(DataType.TEXT)
     source: string;
 
@@ -54,10 +48,12 @@ export class Answer extends Model<
     @Column(DataType.TEXT)
     statement: string;
 
+    @PrimaryKey
     @ForeignKey(() => Question)
     @Column
     QuestionId: string;
 
+    @PrimaryKey
     @ForeignKey(() => Party)
     @Column
     PartyId: string;

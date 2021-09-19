@@ -3,7 +3,7 @@ import {
     Get,
     Post,
     Body,
-    Patch,
+    Put,
     Param,
     Delete,
     ParseUUIDPipe,
@@ -99,7 +99,7 @@ export class QuestionController {
         return this.questionMapper.toDto(question);
     }
 
-    @Patch(':id')
+    @Put(':id')
     @ApiOperation({
         summary: 'Updates a single question by id',
     })
