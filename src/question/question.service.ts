@@ -59,6 +59,7 @@ export class QuestionService {
         const questions = await this.questionRepository.findAll({
             where: opts.where,
             paranoid: !opts.includeDeleted,
+            order: [['isPrimary', 'DESC']],
         });
         return questions;
     }
