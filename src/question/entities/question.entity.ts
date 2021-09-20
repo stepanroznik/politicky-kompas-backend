@@ -6,6 +6,7 @@ import {
     Column,
     DataType,
     Default,
+    HasMany,
     IsIn,
     Model,
     NotEmpty,
@@ -71,8 +72,8 @@ export class Question extends Model<
     @Column(DataType.BOOLEAN)
     isPrimary: boolean;
 
-    @BelongsToMany(() => Party, () => Answer)
-    Answers: Array<Party & { Answer: Answer }>;
+    @HasMany(() => Answer)
+    Answers: Array<Answer>;
 
     @BeforeDestroy({})
     static renameBeforeDestroy = RenameBeforeDelete();

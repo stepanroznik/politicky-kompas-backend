@@ -6,6 +6,7 @@ import {
     Column,
     DataType,
     Default,
+    HasMany,
     Model,
     NotEmpty,
     PrimaryKey,
@@ -51,8 +52,8 @@ export class Party extends Model<IPartyAttributes, IPartyCreationAttributes> {
     @Column(DataType.STRING)
     externalId: string;
 
-    @BelongsToMany(() => Question, () => Answer)
-    Answers: Array<Question & { Answer: Answer }>;
+    @HasMany(() => Answer)
+    Answers: Array<Answer>;
 
     @BeforeDestroy({})
     static renameBeforeDestroy = RenameBeforeDelete();

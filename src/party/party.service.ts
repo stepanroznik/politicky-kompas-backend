@@ -11,10 +11,13 @@ import {
     Party,
 } from './entities/party.entity';
 import { LoggerService } from '../common/logger/logger.service';
+import { Question } from '../question/entities/question.entity';
+import { Answer } from '../answer/entities/answer.entity';
 
 interface IServiceFindAllOptions {
     where?: Record<string, any>;
     includeDeleted?: boolean;
+    includeAnswers?: boolean;
 }
 
 interface IServiceFindOneOptions {
@@ -52,6 +55,7 @@ export class PartyService {
     async findAll(
         opts: IServiceFindAllOptions = {
             includeDeleted: false,
+            includeAnswers: false,
             where: null,
         },
     ) {
@@ -59,6 +63,19 @@ export class PartyService {
         const parties = await this.partyRepository.findAll({
             where: opts.where,
             paranoid: !opts.includeDeleted,
+            include: {
+                model: Answer,
+                attributes: ['agreeLevel'],
+                include: {
+                    model: Question,
+                    attributes: ['id', 'position'],
+                    where: {
+                        position: {
+                            [Sequelize.Op.ne]: 'center',
+                        },
+                    },
+                } as any,
+            },
         });
         return parties;
     }

@@ -99,6 +99,16 @@ export class QuestionController {
         return this.questionMapper.toDto(question);
     }
 
+    @Get('party/:id')
+    @ApiOperation({
+        summary: 'Finds a single question by id',
+    })
+    @ApiParam(idParam)
+    @ApiQuery(includeDeletedQuery)
+    async getPartyAnswers(@Param('id', new ParseUUIDPipe()) partyId: string) {
+        return this.questionService.getPartyAnswers(partyId);
+    }
+
     @Put(':id')
     @ApiOperation({
         summary: 'Updates a single question by id',

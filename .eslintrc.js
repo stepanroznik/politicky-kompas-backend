@@ -23,5 +23,6 @@ module.exports = {
         '@typescript-eslint/no-empty-interface': 'off',
         'indent': 'off',
         'linebreak-style': 'off',
+        'prettier/prettier': 'warn',
     },
 };

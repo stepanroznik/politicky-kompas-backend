@@ -75,10 +75,13 @@ export class PartyController {
         @Query(WHERE_QUERY) where: any,
         @Query(INCLUDE_DELETED_ARRAY_QUERY, ParseBoolPipe)
         includeDeleted: boolean,
+        @Query('include-answers', ParseBoolPipe)
+        includeAnswers: boolean,
     ) {
         const parties = await this.partyService.findAll({
             where: where ? this.whereParser.parseWhereObject(where) : null,
             includeDeleted,
+            includeAnswers,
         });
         return this.partyMapper.toDtoArray(parties);
     }

@@ -2,6 +2,8 @@ import {
     AllowNull,
     BeforeDestroy,
     BeforeRestore,
+    BelongsTo,
+    BelongsToMany,
     Column,
     DataType,
     ForeignKey,
@@ -57,6 +59,12 @@ export class Answer extends Model<
     @ForeignKey(() => Party)
     @Column
     PartyId: string;
+
+    @BelongsTo(() => Party)
+    Party: Party;
+
+    @BelongsTo(() => Question)
+    Question: Question;
 
     @BeforeDestroy({})
     static renameBeforeDestroy = RenameBeforeDelete();

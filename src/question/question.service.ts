@@ -11,6 +11,7 @@ import {
     Question,
 } from './entities/question.entity';
 import { LoggerService } from '../common/logger/logger.service';
+import { Answer } from '../answer/entities/answer.entity';
 
 interface IServiceFindAllOptions {
     where?: Record<string, any>;
@@ -62,6 +63,25 @@ export class QuestionService {
             order: [['isPrimary', 'DESC']],
         });
         return questions;
+    }
+
+    async getPartyAnswers(partyId: string) {
+        const partyAnswers = await this.questionRepository.findAll({
+            attributes: ['id', 'position'],
+            where: {
+                position: {
+                    [Sequelize.Op.ne]: 'center',
+                },
+            },
+            include: {
+                model: Answer,
+                attributes: ['agreeLevel'],
+                where: {
+                    PartyId: partyId,
+                },
+            },
+        });
+        return partyAnswers;
     }
 
     async findOne(
