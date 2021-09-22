@@ -3,7 +3,6 @@ import {
     BeforeDestroy,
     BeforeRestore,
     BelongsTo,
-    BelongsToMany,
     Column,
     DataType,
     ForeignKey,

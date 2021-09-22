@@ -63,19 +63,21 @@ export class PartyService {
         const parties = await this.partyRepository.findAll({
             where: opts.where,
             paranoid: !opts.includeDeleted,
-            include: {
-                model: Answer,
-                attributes: ['agreeLevel'],
-                include: {
-                    model: Question,
-                    attributes: ['id', 'position'],
-                    where: {
-                        position: {
-                            [Sequelize.Op.ne]: 'center',
-                        },
-                    },
-                } as any,
-            },
+            include: opts.includeAnswers
+                ? {
+                      model: Answer,
+                      attributes: ['agreeLevel'],
+                      include: {
+                          model: Question,
+                          attributes: ['id', 'position'],
+                          where: {
+                              position: {
+                                  [Sequelize.Op.ne]: 'center',
+                              },
+                          },
+                      } as any,
+                  }
+                : undefined,
         });
         return parties;
     }

@@ -2,7 +2,6 @@ import {
     AllowNull,
     BeforeDestroy,
     BeforeRestore,
-    BelongsToMany,
     Column,
     DataType,
     Default,
@@ -17,7 +16,6 @@ import { Optional } from 'sequelize/types';
 import { Answer } from '../../answer/entities/answer.entity';
 import { RenameBeforeDelete, RenameBeforeRestore } from '../../common/hooks';
 import { ITimestamps } from '../../common/interfaces/timestamps.interface';
-import { Question } from '../../question/entities/question.entity';
 
 export interface IPartyAttributes extends ITimestamps {
     id: string;
