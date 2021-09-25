@@ -78,6 +78,7 @@ export class PartyService {
                       } as any,
                   }
                 : undefined,
+            order: [['abbreviation', 'ASC']],
         });
         return parties;
     }
