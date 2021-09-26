@@ -61,6 +61,8 @@ export class Question extends Model<
             'bottom-left',
             'bottom',
             'bottom-right',
+            'east',
+            'west',
         ],
     ])
     @Column(DataType.STRING)
