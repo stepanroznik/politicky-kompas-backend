@@ -2,16 +2,11 @@ import Joi from 'joi';
 
 export default Joi.object({
     // APP
-    APP_PORT: Joi.number().min(0).max(65536),
+    PORT: Joi.number().min(0).max(65536),
     APP_ID: Joi.string().uuid(),
 
     // DB
-    DB_HOST: Joi.string().required(),
-    DB_PORT: Joi.number().integer().default(5421),
-    DB_USERNAME: Joi.string().default('postgres'),
-    DB_PASSWORD: Joi.string().required(),
-    DB_DATABASE: Joi.string().required(),
-    DB_DATABASE_TEST: Joi.string(),
+    DATABASE_URL: Joi.string().required(),
 
     // LOGGER
     LOGGER_CONSOLE_LEVEL: Joi.string()

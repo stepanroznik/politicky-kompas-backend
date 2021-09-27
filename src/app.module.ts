@@ -17,6 +17,7 @@ import { HttpExceptionFilter } from './common/filters/http-exception.filter';
 import { APP_FILTER } from '@nestjs/core';
 import { PartyModule } from './party/party.module';
 import { AnswerModule } from './answer/answer.module';
+import parseDbUrl from 'parse-database-url';
 
 @Module({
     imports: [
@@ -26,17 +27,18 @@ import { AnswerModule } from './answer/answer.module';
         }),
         SequelizeModule.forRootAsync({
             useFactory: (configService: ConfigService) => {
-                const dbConfig =
+                const dbEnvConfig =
                     configService.get<ConfigType<typeof appConfig>>(
                         'app',
                     ).database;
+                const dbConfig = parseDbUrl(dbEnvConfig.url);
                 return {
-                    dialect: 'postgres',
+                    dialect: dbConfig.driver,
+                    database: dbConfig.database,
+                    username: dbConfig.user,
+                    password: dbConfig.password,
                     host: dbConfig.host,
                     port: dbConfig.port,
-                    username: dbConfig.username,
-                    password: dbConfig.password,
-                    database: dbConfig.database,
                     autoLoadModels: true,
                     logging: false,
                     sync: { force: false },
