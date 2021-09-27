@@ -43,6 +43,9 @@ import parseDbUrl from 'parse-database-url';
                     logging: false,
                     sync: { force: false },
                     define: { timestamps: true, paranoid: true },
+                    dialectOptions: {
+                        rejectUnauthorized: false,
+                    },
                 };
             },
             imports: [ConfigModule],
