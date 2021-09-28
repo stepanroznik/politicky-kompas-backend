@@ -43,10 +43,14 @@ import parseDbUrl from 'parse-database-url';
                     logging: false,
                     sync: { force: false },
                     define: { timestamps: true, paranoid: true },
-                    dialectOptions: {
-                        ssl: dbEnvConfig.ssl,
-                        rejectUnauthorized: false,
-                    },
+                    dialectOptions: dbEnvConfig.ssl
+                        ? {
+                              ssl: {
+                                  require: dbEnvConfig.ssl,
+                                  rejectUnauthorized: false,
+                              },
+                          }
+                        : undefined,
                 };
             },
             imports: [ConfigModule],
