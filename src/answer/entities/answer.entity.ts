@@ -51,12 +51,12 @@ export class Answer extends Model<
 
     @PrimaryKey
     @ForeignKey(() => Question)
-    @Column
+    @Column({ type: DataType.UUID, allowNull: false })
     QuestionId: string;
 
     @PrimaryKey
     @ForeignKey(() => Party)
-    @Column
+    @Column({ type: DataType.UUID, allowNull: false })
     PartyId: string;
 
     @BelongsTo(() => Party)
