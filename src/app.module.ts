@@ -7,7 +7,6 @@ import { QuestionModule } from './question/question.module';
 import { LoggerModule } from './common/logger/logger.module';
 import rTracer from 'cls-rtracer';
 import shortUUID from 'short-uuid';
-import { AuthModule } from './common/auth/auth.module';
 import appConfig from './config/app.config';
 import configValidation from './config/env.validation';
 import { ConfigType } from '@nestjs/config';
@@ -60,7 +59,6 @@ import parseDbUrl from 'parse-database-url';
         PartyModule,
         AnswerModule,
         LoggerModule,
-        AuthModule,
         WhereParserModule,
     ],
     controllers: [AppController],

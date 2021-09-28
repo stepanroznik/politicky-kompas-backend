@@ -6,7 +6,6 @@ export default registerAs('app', () => ({
         id: process.env.APP_ID,
     },
     database: {
-        test: 'THIS IS TEST',
         url: process.env.DATABASE_URL,
         ssl: process.env.DATABASE_SSL === 'true',
     },
