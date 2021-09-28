@@ -7,6 +7,7 @@ export default Joi.object({
 
     // DB
     DATABASE_URL: Joi.string().required(),
+    DATABASE_SSL: Joi.boolean(),
 
     // LOGGER
     LOGGER_CONSOLE_LEVEL: Joi.string()

@@ -39,6 +39,7 @@ import parseDbUrl from 'parse-database-url';
                     password: dbConfig.password,
                     host: dbConfig.host,
                     port: dbConfig.port,
+                    ssl: dbEnvConfig.ssl,
                     autoLoadModels: true,
                     logging: false,
                     sync: { force: false },

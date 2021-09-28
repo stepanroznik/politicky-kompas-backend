@@ -8,5 +8,6 @@ export default registerAs('app', () => ({
     database: {
         test: 'THIS IS TEST',
         url: process.env.DATABASE_URL,
+        ssl: process.env.DATABASE_SSL === 'true',
     },
 }));
