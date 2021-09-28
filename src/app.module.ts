@@ -45,6 +45,7 @@ import parseDbUrl from 'parse-database-url';
                     define: { timestamps: true, paranoid: true },
                     dialectOptions: {
                         ssl: dbEnvConfig.ssl,
+                        rejectUnauthorized: false,
                     },
                 };
             },
