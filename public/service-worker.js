@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.4b176902d7a14fded95d260c6d782222.js"
+  "/precache-manifest.1f4daaa1002fde1ea01d09c229b49ee3.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "politicky-kompas"});

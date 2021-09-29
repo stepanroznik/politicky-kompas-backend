@@ -11,6 +11,7 @@ async function bootstrap() {
     const app = await NestFactory.create(AppModule);
     app.useGlobalPipes(new ValidationPipe({ transform: true }));
     app.enableCors();
+    app.setGlobalPrefix('api');
 
     const apiSpec = new DocumentBuilder()
         .setTitle('Politický Kompas')
@@ -24,8 +25,6 @@ async function bootstrap() {
         .build();
     const document = SwaggerModule.createDocument(app, apiSpec);
     SwaggerModule.setup('api', app, document);
-
-    app.use('/', express.static('./public'));
 
     const logger = (await app.resolve(LoggerService)).setContext('Main');
     const PORT = app.get<ConfigType<typeof appConfig>>(appConfig.KEY).app.port;

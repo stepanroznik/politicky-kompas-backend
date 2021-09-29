@@ -17,12 +17,17 @@ import { APP_FILTER } from '@nestjs/core';
 import { PartyModule } from './party/party.module';
 import { AnswerModule } from './answer/answer.module';
 import parseDbUrl from 'parse-database-url';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
 
 @Module({
     imports: [
         ConfigModule.forRoot({
             validationSchema: configValidation,
             load: [appConfig],
+        }),
+        ServeStaticModule.forRoot({
+            rootPath: join(__dirname, '..', 'public'),
         }),
         SequelizeModule.forRootAsync({
             useFactory: (configService: ConfigService) => {
