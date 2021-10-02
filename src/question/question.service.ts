@@ -71,11 +71,11 @@ export class QuestionService {
     async getPartyAnswers(partyId: string) {
         const partyAnswers = await this.questionRepository.findAll({
             attributes: ['id', 'position'],
-            where: {
-                position: {
-                    [Sequelize.Op.ne]: 'center',
-                },
-            },
+            // where: {
+            //     position: {
+            //         [Sequelize.Op.ne]: 'center',
+            //     },
+            // },
             include: {
                 model: Answer,
                 attributes: ['agreeLevel'],

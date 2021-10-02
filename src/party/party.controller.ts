@@ -10,6 +10,7 @@ import {
     Query,
     ParseBoolPipe,
     NotFoundException,
+    UseGuards,
 } from '@nestjs/common';
 import { PartyService } from './party.service';
 import { CreatePartyDto } from './dto/create-party.dto';
@@ -38,6 +39,7 @@ import {
     WHERE_QUERY,
 } from '../common/openapi/query.openapi';
 import { idParam } from '../common/openapi/params.openapi';
+import { ApiKeyGuard } from '../common/api-key.guard';
 @ApiTags('Parties')
 @Controller('parties')
 export class PartyController {
@@ -51,6 +53,7 @@ export class PartyController {
     }
 
     @Post()
+    @UseGuards(ApiKeyGuard)
     @ApiBody({ type: [CreatePartyDto] })
     @ApiOperation({
         summary: 'Creates parties',
@@ -103,6 +106,7 @@ export class PartyController {
     }
 
     @Put(':id')
+    @UseGuards(ApiKeyGuard)
     @ApiOperation({
         summary: 'Updates a single party by id',
     })
@@ -124,6 +128,7 @@ export class PartyController {
     }
 
     @Delete(':id')
+    @UseGuards(ApiKeyGuard)
     @ApiOperation({
         summary: 'Deletes a single party by id',
     })

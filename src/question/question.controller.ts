@@ -10,6 +10,7 @@ import {
     Query,
     ParseBoolPipe,
     NotFoundException,
+    UseGuards,
 } from '@nestjs/common';
 import { QuestionService } from './question.service';
 import { CreateQuestionDto } from './dto/create-question.dto';
@@ -38,6 +39,7 @@ import {
     WHERE_QUERY,
 } from '../common/openapi/query.openapi';
 import { idParam } from '../common/openapi/params.openapi';
+import { ApiKeyGuard } from '../common/api-key.guard';
 @ApiTags('Questions')
 @Controller('questions')
 export class QuestionController {
@@ -51,6 +53,7 @@ export class QuestionController {
     }
 
     @Post()
+    @UseGuards(ApiKeyGuard)
     @ApiBody({ type: [CreateQuestionDto] })
     @ApiOperation({
         summary: 'Creates questions',
@@ -110,6 +113,7 @@ export class QuestionController {
     }
 
     @Put(':id')
+    @UseGuards(ApiKeyGuard)
     @ApiOperation({
         summary: 'Updates a single question by id',
     })
@@ -131,6 +135,7 @@ export class QuestionController {
     }
 
     @Delete(':id')
+    @UseGuards(ApiKeyGuard)
     @ApiOperation({
         summary: 'Deletes a single question by id',
     })

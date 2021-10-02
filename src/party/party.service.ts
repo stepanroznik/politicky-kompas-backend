@@ -70,15 +70,15 @@ export class PartyService {
                       include: {
                           model: Question,
                           attributes: ['id', 'position'],
-                          where: {
-                              position: {
-                                  [Sequelize.Op.ne]: 'center',
-                              },
-                          },
+                          //   where: {
+                          //       position: {
+                          //           [Sequelize.Op.ne]: 'center',
+                          //       },
+                          //   },
                       } as any,
                   }
                 : undefined,
-            order: [['abbreviation', 'ASC']],
+            order: [['id', 'DESC']],
         });
         return parties;
     }
