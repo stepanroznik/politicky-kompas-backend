@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/browserconfig.xml"
   },
   {
-    "revision": "367b0ab59160a1469bc8",
-    "url": "/css/app.34457889.css"
+    "revision": "95cc1a314a7e7ab38be2",
+    "url": "/css/app.c4fe208b.css"
   },
   {
     "revision": "0cd07dd76cc989b6bead",
@@ -60,8 +60,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/cc223c8d-f3f5-4a56-b35a-5b0901942d94.c2d0bf8b.png"
   },
   {
-    "revision": "3485dcd1bd57475fc41c2525130f7a5d",
-    "url": "/img/compass.3485dcd1.png"
+    "revision": "ce64ed77453adc264472b2d2fb647303",
+    "url": "/img/compass.ce64ed77.png"
   },
   {
     "revision": "8d5edab49e30a3b8000a9ba7caebc3e4",
@@ -76,20 +76,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/locationMarker.939a3561.svg"
   },
   {
-    "revision": "91fbc95d1df52b69d6aea338d49ac774",
+    "revision": "693ea56cfeec2d0e24506d2bc75b863a",
     "url": "/index.html"
   },
   {
-    "revision": "3842d01393d0d801971c",
-    "url": "/js/about.0dfac85f.js"
+    "revision": "bc3a217666126ccde698",
+    "url": "/js/about.36ee0629.js"
   },
   {
     "revision": "52d2a31daeb5df37b513",
     "url": "/js/answers.7e486f01.js"
   },
   {
-    "revision": "367b0ab59160a1469bc8",
-    "url": "/js/app.ecddc873.js"
+    "revision": "95cc1a314a7e7ab38be2",
+    "url": "/js/app.0a4cfa22.js"
   },
   {
     "revision": "662c6a669377219d6d2d",
