@@ -78,7 +78,7 @@ export class PartyService {
                       } as any,
                   }
                 : undefined,
-            order: [['id', 'DESC']],
+            order: Sequelize.literal('random()'),
         });
         return parties;
     }
