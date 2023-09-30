@@ -6,7 +6,7 @@ const uuidProperty: ApiPropertyOptions = {
     format: 'uuid',
 };
 
-export class CreateAnswerDto {
+export class CreateResultDto {
     @ApiProperty({
         description:
             "A number 1-5 describing the party's position to the questions's issue (1 = completely agree, 3 = neutral/no opinion, 5 = completely disagree)",
@@ -18,7 +18,7 @@ export class CreateAnswerDto {
 
     @ApiProperty({
         description:
-            "Party's statement that they may have provided while answering this question",
+            "Party's statement that they may have provided while resulting this question",
     })
     @IsOptional()
     @IsString()
