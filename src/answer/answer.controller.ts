@@ -76,7 +76,10 @@ export class AnswerController {
     @ApiQuery(includeDeletedArrayQuery)
     async findAll(
         @Query(WHERE_QUERY) where: any,
-        @Query(INCLUDE_DELETED_ARRAY_QUERY, ParseBoolPipe)
+        @Query(
+            INCLUDE_DELETED_ARRAY_QUERY,
+            new ParseBoolPipe({ optional: true }),
+        )
         includeDeleted: boolean,
     ) {
         const answers = await this.answerService.findAll({
@@ -95,7 +98,8 @@ export class AnswerController {
     async findOne(
         @Param('QuestionId', new ParseUUIDPipe()) QuestionId: string,
         @Param('PartyId', new ParseUUIDPipe()) PartyId: string,
-        @Query(INCLUDE_DELETED_QUERY, ParseBoolPipe) includeDeleted: boolean,
+        @Query(INCLUDE_DELETED_QUERY, new ParseBoolPipe({ optional: true }))
+        includeDeleted: boolean,
     ) {
         const answer = await this.answerService.findOne(QuestionId, PartyId, {
             includeDeleted,
@@ -113,7 +117,8 @@ export class AnswerController {
     async update(
         @Param('QuestionId', new ParseUUIDPipe()) QuestionId: string,
         @Param('PartyId', new ParseUUIDPipe()) PartyId: string,
-        @Query(RESTORE_QUERY, ParseBoolPipe) restore: boolean,
+        @Query(RESTORE_QUERY, new ParseBoolPipe({ optional: true }))
+        restore: boolean,
         @Body() updateAnswerDto: UpdateAnswerDto,
     ) {
         const answer = await this.answerService.update(
@@ -137,7 +142,8 @@ export class AnswerController {
     async remove(
         @Param('QuestionId', new ParseUUIDPipe()) QuestionId: string,
         @Param('PartyId', new ParseUUIDPipe()) PartyId: string,
-        @Query(FORCE_QUERY, ParseBoolPipe) force: boolean,
+        @Query(FORCE_QUERY, new ParseBoolPipe({ optional: true }))
+        force: boolean,
     ) {
         try {
             return await this.answerService.remove(QuestionId, PartyId, {

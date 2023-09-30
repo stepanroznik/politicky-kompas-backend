@@ -76,9 +76,12 @@ export class PartyController {
     @ApiQuery(includeDeletedArrayQuery)
     async findAll(
         @Query(WHERE_QUERY) where: any,
-        @Query(INCLUDE_DELETED_ARRAY_QUERY, ParseBoolPipe)
+        @Query(
+            INCLUDE_DELETED_ARRAY_QUERY,
+            new ParseBoolPipe({ optional: true }),
+        )
         includeDeleted: boolean,
-        @Query('include-answers', ParseBoolPipe)
+        @Query('include-answers', new ParseBoolPipe({ optional: true }))
         includeAnswers: boolean,
     ) {
         const parties = await this.partyService.findAll({
@@ -97,7 +100,8 @@ export class PartyController {
     @ApiQuery(includeDeletedQuery)
     async findOne(
         @Param('id', new ParseUUIDPipe()) id: string,
-        @Query(INCLUDE_DELETED_QUERY, ParseBoolPipe) includeDeleted: boolean,
+        @Query(INCLUDE_DELETED_QUERY, new ParseBoolPipe({ optional: true }))
+        includeDeleted: boolean,
     ) {
         const party = await this.partyService.findOne(id, {
             includeDeleted,
@@ -114,7 +118,8 @@ export class PartyController {
     @ApiQuery(restoreQuery)
     async update(
         @Param('id', ParseUUIDPipe) id: string,
-        @Query(RESTORE_QUERY, ParseBoolPipe) restore: boolean,
+        @Query(RESTORE_QUERY, new ParseBoolPipe({ optional: true }))
+        restore: boolean,
         @Body() updatePartyDto: UpdatePartyDto,
     ) {
         const party = await this.partyService.update(
@@ -136,7 +141,8 @@ export class PartyController {
     @ApiQuery(forceQuery)
     async remove(
         @Param('id', new ParseUUIDPipe()) id: string,
-        @Query(FORCE_QUERY, ParseBoolPipe) force: boolean,
+        @Query(FORCE_QUERY, new ParseBoolPipe({ optional: true }))
+        force: boolean,
     ) {
         try {
             return await this.partyService.remove(id, { force });
