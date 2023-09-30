@@ -3,7 +3,7 @@ import Joi from 'joi';
 export default Joi.object({
     // APP
     PORT: Joi.number().min(0).max(65536),
-    APP_ID: Joi.string().uuid(),
+    API_KEY: Joi.string(),
 
     // DB
     DATABASE_URL: Joi.string().required(),
