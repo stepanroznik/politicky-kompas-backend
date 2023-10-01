@@ -1,48 +1,55 @@
-import { ApiProperty, ApiPropertyOptions } from '@nestjs/swagger';
-import { IsOptional, IsString, IsUUID, IsInt, Max, Min } from 'class-validator';
+import { ApiProperty } from '@nestjs/swagger';
+import {
+    IsArray,
+    IsJSON,
+    IsOptional,
+    IsString,
+    IsNumber,
+    IsIn,
+} from 'class-validator';
+import { IResultAnswer } from '../interfaces/result-answer.interface';
+import { TimestampsDto } from '../../common/dto/timestamps.dto';
 
-const uuidProperty: ApiPropertyOptions = {
-    type: 'string',
-    format: 'uuid',
-};
-
-export class CreateResultDto {
+export class CreateResultDto extends TimestampsDto {
     @ApiProperty({
-        description:
-            "A number 1-5 describing the party's position to the questions's issue (1 = completely agree, 3 = neutral/no opinion, 5 = completely disagree)",
+        description: "All user's answers in JSON format",
     })
-    @Min(1)
-    @Max(5)
-    @IsInt()
-    agreeLevel: number;
+    @IsArray()
+    @IsJSON()
+    answers: IResultAnswer[];
 
     @ApiProperty({
-        description:
-            "Party's statement that they may have provided while resulting this question",
+        description: 'The IP address of the user',
+    })
+    @IsString()
+    ipAddress: string;
+
+    @ApiProperty({
+        description: "The fingerprint of the user's browser or device",
+    })
+    @IsString()
+    fingerprint: string;
+
+    @ApiProperty({
+        description: 'The ZIP code of the user (PSČ)',
+        required: false,
     })
     @IsOptional()
-    @IsString()
-    statement: string;
+    @IsNumber()
+    zipCode?: number;
 
     @ApiProperty({
-        description:
-            "Source of information about the party's opinion, preferabily containing short text and an external link",
+        description: 'The gender of the user',
     })
     @IsOptional()
-    @IsString()
-    source: string;
+    @IsIn(['male', 'female', 'other'])
+    gender: 'male' | 'female' | 'other';
 
     @ApiProperty({
-        ...uuidProperty,
-        description: 'ID of the linked Question',
+        description: 'The birth year of the user',
+        required: false,
     })
-    @IsUUID()
-    QuestionId: string;
-
-    @ApiProperty({
-        ...uuidProperty,
-        description: 'ID of the linked Party',
-    })
-    @IsUUID()
-    PartyId: string;
+    @IsOptional()
+    @IsNumber()
+    birthYear?: number;
 }

@@ -39,7 +39,7 @@ export class AnswerService {
     }
 
     async create(answersToCreate: IAnswerCreationAttributes[]) {
-        this.logger.debug('Creating a answer!!', answersToCreate);
+        this.logger.debug('Creating answer:', answersToCreate);
         try {
             return await this.answerRepository.bulkCreate(answersToCreate);
         } catch (e) {

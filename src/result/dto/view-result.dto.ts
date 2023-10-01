@@ -1,25 +1,55 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsString, IsUUID } from 'class-validator';
+import { IResultAnswer } from '../interfaces/result-answer.interface';
 import { TimestampsDto } from '../../common/dto/timestamps.dto';
-import { uuidProperty } from '../../common/openapi/properties.openapi';
+import { IsIn, IsNumber, IsOptional, IsString, IsUUID } from 'class-validator';
+import { genders } from '../entities/result.entity';
 
 export class ViewResultDto extends TimestampsDto {
-    @ApiProperty(uuidProperty)
+    @ApiProperty()
     @IsUUID()
     id: string;
 
+    @ApiProperty({
+        description: "All user's answers in JSON format",
+    })
     @IsString()
-    agreeLevel: number;
+    answers: IResultAnswer[];
 
+    @ApiProperty({
+        description: 'The ZIP code of the user',
+    })
     @IsString()
-    statement: string;
+    @IsOptional()
+    zipCode: number;
 
-    @IsString()
-    source: string;
+    @ApiProperty({
+        description: 'The gender of the user',
+    })
+    @IsIn(genders)
+    @IsOptional()
+    gender: 'male' | 'female' | 'other';
 
-    @IsUUID()
-    QuestionId: string;
+    @ApiProperty({
+        description: 'The birth year of the user',
+    })
+    @IsOptional()
+    @IsNumber()
+    birthYear: number;
 
-    @IsUUID()
-    PartyId: string;
+    @ApiProperty({
+        description: "User's age calculated based on the birth year",
+    })
+    @IsOptional()
+    @IsNumber()
+    age: number;
+
+    constructor(data: Partial<ViewResultDto>) {
+        super();
+        Object.assign(this, data);
+
+        if (this.birthYear) {
+            const currentYear = new Date().getFullYear();
+            this.age = currentYear - this.birthYear;
+        }
+    }
 }

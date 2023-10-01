@@ -26,7 +26,7 @@ export class CreateAnswerDto {
 
     @ApiProperty({
         description:
-            "Source of information about the party's opinion, preferabily containing short text and an external link",
+            "Source of information about the party's opinion, preferably containing short text and an external link",
     })
     @IsOptional()
     @IsString()

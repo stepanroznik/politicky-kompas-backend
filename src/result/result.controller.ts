@@ -69,6 +69,7 @@ export class ResultController {
     }
 
     @Get()
+    @UseGuards(ApiKeyGuard)
     @ApiOperation({
         summary: 'Finds all results',
     })
@@ -89,25 +90,24 @@ export class ResultController {
         return this.resultMapper.toDtoArray(results);
     }
 
-    @Get(':QuestionId/:PartyId')
+    @Get(':ResultId')
     @ApiOperation({
         summary: 'Finds a single result by id',
     })
     @ApiParam(idParam)
     @ApiQuery(includeDeletedQuery)
     async findOne(
-        @Param('QuestionId', new ParseUUIDPipe()) QuestionId: string,
-        @Param('PartyId', new ParseUUIDPipe()) PartyId: string,
+        @Param('ResultId', new ParseUUIDPipe()) ResultId: string,
         @Query(INCLUDE_DELETED_QUERY, new ParseBoolPipe({ optional: true }))
         includeDeleted: boolean,
     ) {
-        const result = await this.resultService.findOne(QuestionId, PartyId, {
+        const result = await this.resultService.findOne(ResultId, {
             includeDeleted,
         });
         return this.resultMapper.toDto(result);
     }
 
-    @Put(':QuestionId/:PartyId')
+    @Put(':ResultId')
     @UseGuards(ApiKeyGuard)
     @ApiOperation({
         summary: 'Updates a single result by id',
@@ -115,15 +115,13 @@ export class ResultController {
     @ApiParam(idParam)
     @ApiQuery(restoreQuery)
     async update(
-        @Param('QuestionId', new ParseUUIDPipe()) QuestionId: string,
-        @Param('PartyId', new ParseUUIDPipe()) PartyId: string,
+        @Param('ResultId', new ParseUUIDPipe()) ResultId: string,
         @Query(RESTORE_QUERY, new ParseBoolPipe({ optional: true }))
         restore: boolean,
         @Body() updateResultDto: UpdateResultDto,
     ) {
         const result = await this.resultService.update(
-            QuestionId,
-            PartyId,
+            ResultId,
             this.resultMapper.fromDto(updateResultDto),
             {
                 restore,
@@ -132,7 +130,7 @@ export class ResultController {
         return this.resultMapper.toDto(result);
     }
 
-    @Delete(':QuestionId/:PartyId')
+    @Delete(':ResultId')
     @UseGuards(ApiKeyGuard)
     @ApiOperation({
         summary: 'Deletes a single result by id',
@@ -140,13 +138,12 @@ export class ResultController {
     @ApiParam(idParam)
     @ApiQuery(forceQuery)
     async remove(
-        @Param('QuestionId', new ParseUUIDPipe()) QuestionId: string,
-        @Param('PartyId', new ParseUUIDPipe()) PartyId: string,
+        @Param('ResultId', new ParseUUIDPipe()) ResultId: string,
         @Query(FORCE_QUERY, new ParseBoolPipe({ optional: true }))
         force: boolean,
     ) {
         try {
-            return await this.resultService.remove(QuestionId, PartyId, {
+            return await this.resultService.remove(ResultId, {
                 force,
             });
         } catch (e) {

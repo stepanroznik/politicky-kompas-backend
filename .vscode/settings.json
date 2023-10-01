@@ -11,5 +11,8 @@
     "spellright.documentTypes": [
         "latex",
         "plaintext"
+    ],
+    "cSpell.words": [
+        "UUIDV"
     ]
 }

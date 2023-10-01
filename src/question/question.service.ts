@@ -40,7 +40,7 @@ export class QuestionService {
     }
 
     async create(questionsToCreate: IQuestionCreationAttributes[]) {
-        this.logger.debug('Creating a question!!', questionsToCreate);
+        this.logger.debug('Creating question:', questionsToCreate);
         try {
             return await this.questionRepository.bulkCreate(questionsToCreate);
         } catch (e) {

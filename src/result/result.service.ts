@@ -39,7 +39,7 @@ export class ResultService {
     }
 
     async create(resultsToCreate: IResultCreationAttributes[]) {
-        this.logger.debug('Creating a result!!', resultsToCreate);
+        this.logger.debug('Creating result:', resultsToCreate);
         try {
             return await this.resultRepository.bulkCreate(resultsToCreate);
         } catch (e) {
@@ -64,36 +64,34 @@ export class ResultService {
     }
 
     async findOne(
-        QuestionId,
-        PartyId,
+        ResultId: string,
         opts: IServiceFindOneOptions = {
             includeDeleted: false,
         },
     ) {
         const result = await this.resultRepository.findOne({
-            where: { PartyId, QuestionId },
+            where: { id: ResultId },
             paranoid: !opts.includeDeleted,
         });
         if (!result)
             throw new NotFoundException(
-                `Result with PartyId ${PartyId} and QuestionId ${QuestionId} not found.`,
+                `Result with ResultId ${ResultId} not found.`,
             );
         return result;
     }
 
     async update(
-        QuestionId: string,
-        PartyId: string,
+        ResultId: string,
         resultToUpdate: Partial<IResultAttributes>,
         opts: IServiceUpdateOptions = { restore: false },
     ) {
         const result = await this.resultRepository.findOne({
-            where: { PartyId, QuestionId },
+            where: { id: ResultId },
             paranoid: !opts.restore,
         });
         if (!result)
             throw new NotFoundException(
-                `Result with PartyId ${PartyId} and QuestionId ${QuestionId} not found.`,
+                `Result with ResultId ${ResultId} not found.`,
             );
         try {
             await result.update(resultToUpdate);
@@ -107,17 +105,16 @@ export class ResultService {
     }
 
     async remove(
-        QuestionId,
-        PartyId,
+        ResultId: string,
         opts: IServiceRemoveOptions = { force: false },
     ) {
         const result = await this.resultRepository.findOne({
-            where: { PartyId, QuestionId },
+            where: { id: ResultId },
             paranoid: !opts.force,
         });
         if (!result) {
             throw new NotFoundException(
-                `Result with PartyId ${PartyId} and QuestionId ${QuestionId} not found.`,
+                `Result with ResultId ${ResultId} not found.`,
             );
         }
         await result.destroy({ force: opts.force });

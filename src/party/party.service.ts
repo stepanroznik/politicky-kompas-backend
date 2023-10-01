@@ -42,7 +42,7 @@ export class PartyService {
     }
 
     async create(partiesToCreate: IPartyCreationAttributes[]) {
-        this.logger.debug('Creating a party!!', partiesToCreate);
+        this.logger.debug('Creating party:', partiesToCreate);
         try {
             return await this.partyRepository.bulkCreate(partiesToCreate);
         } catch (e) {

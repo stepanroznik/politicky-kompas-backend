@@ -24,9 +24,7 @@ export class ResultMapper extends BaseMapper<
         return dto;
     }
     toDto(inst: Result): ViewResultDto {
-        const ret = {
-            ...(inst.toJSON() as IResultAttributes),
-        };
-        return ret;
+        const rawResult = inst.toJSON() as IResultAttributes;
+        return new ViewResultDto(rawResult);
     }
 }
