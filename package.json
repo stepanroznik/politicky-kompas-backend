@@ -9,7 +9,6 @@
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start:prod": "node dist/main",
     "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build",
-    "postinstall": "node modules.js",
     "start": "nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
