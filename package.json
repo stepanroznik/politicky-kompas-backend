@@ -2,7 +2,9 @@
   "name": "politicky-kompas",
   "version": "0.0.1",
   "description": "",
-  "author": "",
+  "author": "","engines": {
+    "node": ">=16"
+  },
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
