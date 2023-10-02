@@ -2,7 +2,8 @@
   "name": "politicky-kompas",
   "version": "0.0.1",
   "description": "",
-  "author": "","engines": {
+  "author": "",
+  "engines": {
     "node": ">=16"
   },
   "scripts": {
