@@ -19,6 +19,7 @@ import { AnswerModule } from './answer/answer.module';
 import parseDbUrl from 'parse-database-url';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
+import { ResultModule } from './result/result.module';
 
 @Module({
     imports: [
@@ -63,6 +64,7 @@ import { join } from 'path';
         QuestionModule,
         PartyModule,
         AnswerModule,
+        ResultModule,
         LoggerModule,
         WhereParserModule,
     ],

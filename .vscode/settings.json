@@ -3,7 +3,7 @@
     "typescript.preferences.importModuleSpecifier": "relative",
     "indentRainbow.ignoreErrorLanguages" : [ "*" ],
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
+        "source.fixAll.eslint": "explicit"
     },
     "spellright.language": [
         "en"
@@ -13,7 +13,9 @@
         "plaintext"
     ],
     "cSpell.words": [
+        "Dtos",
         "nestjs",
+        "openapi",
         "UUIDV"
     ]
 }

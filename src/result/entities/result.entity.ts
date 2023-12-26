@@ -47,7 +47,7 @@ export class Result extends Model<
     answers: IResultAnswer[];
 
     @AllowNull(true)
-    @Column(DataType.NUMBER)
+    @Column(DataType.INTEGER)
     birthYear?: number;
 
     @AllowNull(false)
@@ -56,7 +56,7 @@ export class Result extends Model<
     gender?: (typeof genders)[number];
 
     @AllowNull(true)
-    @Column(DataType.NUMBER)
+    @Column(DataType.INTEGER)
     zipCode?: number;
 
     @AllowNull(false)

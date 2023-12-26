@@ -16,11 +16,12 @@ async function bootstrap() {
         .setTitle('Politický Kompas')
         .setDescription('Politický Kompas API')
         .setVersion('1.0')
-        .addSecurity('BearerAuth', {
-            type: 'http',
-            scheme: 'bearer',
-            bearerFormat: 'JWT',
+        .addSecurity('ApiKeyAuth', {
+            type: 'apiKey',
+            in: 'header',
+            name: 'x-api-key',
         })
+        .addSecurityRequirements('ApiKeyAuth')
         .build();
     const document = SwaggerModule.createDocument(app, apiSpec);
     SwaggerModule.setup('api', app, document);

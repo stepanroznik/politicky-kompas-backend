@@ -75,7 +75,7 @@ export class PartyController {
     @ApiQuery(whereQuery)
     @ApiQuery(includeDeletedArrayQuery)
     async findAll(
-        @Query(WHERE_QUERY) where: any,
+        @Query(WHERE_QUERY) where: Record<string, any>,
         @Query(
             INCLUDE_DELETED_ARRAY_QUERY,
             new ParseBoolPipe({ optional: true }),
