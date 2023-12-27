@@ -21,6 +21,7 @@ import {
     ApiOperation,
     ApiParam,
     ApiQuery,
+    ApiResponse,
     ApiTags,
 } from '@nestjs/swagger';
 import { LoggerService } from '../common/logger/logger.service';
@@ -40,6 +41,7 @@ import {
 } from '../common/openapi/query.openapi';
 import { idParam } from '../common/openapi/params.openapi';
 import { ApiKeyGuard } from '../common/api-key.guard';
+import { ViewPercentagesDto } from './dto/view-percentages.dto';
 @ApiTags('Results')
 @Controller('results')
 export class ResultController {
@@ -58,14 +60,18 @@ export class ResultController {
     @ApiOperation({
         summary: 'Creates results',
     })
+    @ApiResponse({ type: ViewPercentagesDto, isArray: true })
     async create(
         @Body(ArrayValidationPipe(CreateResultDto))
-        createResultDtos: CreateResultDto[],
+        createResultDto: CreateResultDto,
+        @Query('no-save', new ParseBoolPipe({ optional: true }))
+        noSave?: boolean,
     ) {
         const result = await this.resultService.create(
-            this.resultMapper.fromDtoArray(createResultDtos),
+            this.resultMapper.fromDto(createResultDto),
+            noSave,
         );
-        return this.resultMapper.toDtoArray(result);
+        return result;
     }
 
     @Get()

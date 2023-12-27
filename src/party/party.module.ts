@@ -8,7 +8,7 @@ import { WhereParserModule } from '../common/where-parser/where-parser.module';
 
 @Module({
     imports: [SequelizeModule.forFeature([Party]), WhereParserModule],
-    exports: [PartyMapper],
+    exports: [PartyMapper, PartyService],
     controllers: [PartyController],
     providers: [PartyService, PartyMapper],
 })

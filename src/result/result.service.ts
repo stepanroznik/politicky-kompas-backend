@@ -11,6 +11,8 @@ import {
     Result,
 } from './entities/result.entity';
 import { LoggerService } from '../common/logger/logger.service';
+import { PartyService } from '../party/party.service';
+import { getPartyAgreePercentage } from '../common/utils/calculations';
 
 interface IServiceFindAllOptions {
     where?: Record<string, any>;
@@ -34,14 +36,27 @@ export class ResultService {
         @InjectModel(Result)
         private readonly resultRepository: typeof Result,
         private readonly logger: LoggerService,
+        private partyService: PartyService,
     ) {
         this.logger.setContext(ResultService.name);
     }
 
-    async create(resultsToCreate: IResultCreationAttributes[]) {
-        this.logger.debug('Creating result:', resultsToCreate);
+    async create(resultsToCreate: IResultCreationAttributes, noSave = false) {
+        this.logger.debug('Calculating results:', resultsToCreate);
         try {
-            return await this.resultRepository.bulkCreate(resultsToCreate);
+            const parties = await this.partyService.findAll({
+                includeAnswers: true,
+            });
+            const agreePercentages = parties.map((party) => {
+                const percentage = getPartyAgreePercentage(
+                    party.Answers,
+                    resultsToCreate.answers,
+                );
+                return { party, percentage };
+            });
+            this.logger.debug('Creating results:', resultsToCreate);
+            if (!noSave) await this.resultRepository.create(resultsToCreate);
+            return agreePercentages;
         } catch (e) {
             if (e instanceof Sequelize.UniqueConstraintError)
                 throw new ConflictException(e.message);
