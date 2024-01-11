@@ -1,21 +1,27 @@
 import { ApiProperty } from '@nestjs/swagger';
 import {
     IsArray,
-    IsJSON,
     IsOptional,
     IsString,
     IsNumber,
     IsIn,
+    ValidateNested,
+    ArrayMinSize,
+    ArrayMaxSize,
 } from 'class-validator';
 import { IResultAnswer } from '../interfaces/result-answer.interface';
-import { TimestampsDto } from '../../common/dto/timestamps.dto';
+import { Type } from 'class-transformer';
+import { CreateResultAnswerDto } from './create-result-answer.dto.';
 
-export class CreateResultDto extends TimestampsDto {
+export class CreateResultDto {
     @ApiProperty({
         description: "All user's answers in JSON format",
     })
     @IsArray()
-    @IsJSON()
+    @ValidateNested({ each: true })
+    @ArrayMinSize(30)
+    @ArrayMaxSize(42)
+    @Type(() => CreateResultAnswerDto)
     answers: IResultAnswer[];
 
     @ApiProperty({

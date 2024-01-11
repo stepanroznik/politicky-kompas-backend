@@ -15,7 +15,6 @@ import {
 import { ResultService } from './result.service';
 import { CreateResultDto } from './dto/create-result.dto';
 import { UpdateResultDto } from './dto/update-result.dto';
-import { ArrayValidationPipe } from '../common/pipes/array-validation.pipe';
 import {
     ApiBody,
     ApiOperation,
@@ -55,15 +54,13 @@ export class ResultController {
     }
 
     @Post()
-    @UseGuards(ApiKeyGuard)
-    @ApiBody({ type: [CreateResultDto] })
+    @ApiBody({ type: CreateResultDto })
     @ApiOperation({
         summary: 'Creates results',
     })
     @ApiResponse({ type: ViewPercentagesDto, isArray: true })
     async create(
-        @Body(ArrayValidationPipe(CreateResultDto))
-        createResultDto: CreateResultDto,
+        @Body() createResultDto: CreateResultDto,
         @Query('no-save', new ParseBoolPipe({ optional: true }))
         noSave?: boolean,
     ) {

@@ -52,7 +52,7 @@ export class ResultService {
                     party.Answers,
                     resultsToCreate.answers,
                 );
-                return { party, percentage };
+                return { party: party.id, percentage };
             });
             this.logger.debug('Creating results:', resultsToCreate);
             if (!noSave) await this.resultRepository.create(resultsToCreate);
