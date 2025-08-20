@@ -53,6 +53,7 @@ const consoleTransportFormat = Winston.format.combine(
                 stack: info.meta.stack,
             };
         }
+        const infoMeta = info.meta as Record<string, string> | Record<string, string>[];
         // eslint-disable-next-line prefer-template
         return (
             info.timestamp +
@@ -62,9 +63,9 @@ const consoleTransportFormat = Winston.format.combine(
             (info.rid ? colors.gray(info.rid + ' ') : '') +
             (info.namespace ? colors.yellow(`[${info.namespace}] `) : '') +
             message +
-            (info.meta && info.meta.length
+            (infoMeta && Array.isArray(infoMeta)
                 ? '\n' +
-                  info.meta
+                  infoMeta
                       .map((m) =>
                           util.formatWithOptions({ colors: true }, '%o', m),
                       )
@@ -87,7 +88,7 @@ const fileTransportFormat = Winston.format.combine(
             info.level.toUpperCase(),
             info.rid,
             info.namespace,
-            stripColor(message),
+            stripColor(message as string),
             info.meta ? JSON.stringify(info.meta) : '-',
         ].join(';');
     }),

@@ -76,7 +76,10 @@
     "ts-loader": "^9.4.4",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "nx": "21.4.0",
+    "@nx/eslint": "21.4.0",
+    "@nx/jest": "21.4.0"
   },
   "jest": {
     "moduleFileExtensions": [
@@ -94,5 +97,6 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
-  }
+  },
+  "nx": {}
 }
