@@ -3,7 +3,7 @@ import Transport from 'winston-transport';
 import path from 'path';
 import fs from 'fs';
 import { Sequelize, DataTypes } from 'sequelize';
-import colors from 'colors/safe';
+import chalk from 'chalk';
 import util from 'util';
 
 let rTracer: { id: () => any };
@@ -60,8 +60,8 @@ const consoleTransportFormat = Winston.format.combine(
             ' ' +
             `${info.level} ` +
             (info.level.match(/info|warn/) ? ' ' : '') +
-            (info.rid ? colors.gray(info.rid + ' ') : '') +
-            (info.namespace ? colors.yellow(`[${info.namespace}] `) : '') +
+            (info.rid ? chalk.gray(info.rid + ' ') : '') +
+            (info.namespace ? chalk.yellow(`[${info.namespace}] `) : '') +
             message +
             (infoMeta && Array.isArray(infoMeta)
                 ? '\n' +

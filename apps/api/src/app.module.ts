@@ -28,7 +28,8 @@ import { ResultModule } from './result/result.module';
             load: [appConfig],
         }),
         ServeStaticModule.forRoot({
-            rootPath: join(__dirname, '..', 'public'),
+            // In Nx, the app builds to dist/apps/api, and assets are copied to dist/apps/api/public
+            rootPath: join(__dirname, 'public'),
         }),
         SequelizeModule.forRootAsync({
             useFactory: (configService: ConfigService) => {
