@@ -49,23 +49,23 @@ export class LoggerService {
     }
 
     silly(message: string, ...meta: unknown[]) {
-        this.logger.debug(formatMessage(message, meta));
+        this.logger?.debug(formatMessage(message, meta));
     }
 
     debug(message: string, ...meta: unknown[]) {
-        this.logger.debug(formatMessage(message, meta));
+        this.logger?.debug(formatMessage(message, meta));
     }
 
     log(message: string, ...meta: unknown[]) {
-        this.logger.log(formatMessage(message, meta));
+        this.logger?.log(formatMessage(message, meta));
     }
 
     info(message: string, ...meta: unknown[]) {
-        this.logger.log(formatMessage(message, meta));
+        this.logger?.log(formatMessage(message, meta));
     }
 
     warn(message: string, ...meta: unknown[]) {
-        this.logger.warn(formatMessage(message, meta));
+        this.logger?.warn(formatMessage(message, meta));
     }
 
     error(message: string, ...meta: unknown[]) {
@@ -77,6 +77,6 @@ export class LoggerService {
                     ? (meta[0] as string)
                     : undefined
                 : undefined;
-        this.logger.error(formatted, trace);
+        this.logger?.error(formatted, trace);
     }
 }

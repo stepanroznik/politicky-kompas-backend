@@ -43,7 +43,7 @@ export class PartyService {
     }
 
     async create(partiesToCreate: IPartyCreationAttributes[]) {
-        this.logger.debug('Creating party:', partiesToCreate);
+        this.logger?.debug('Creating party:', partiesToCreate);
         try {
             return await this.partyRepository.bulkCreate(partiesToCreate);
         } catch (e) {
@@ -60,7 +60,7 @@ export class PartyService {
             where: null,
         },
     ) {
-        if (opts.where) this.logger.debug('where:', opts.where);
+        if (opts.where) this.logger?.debug('where:', opts.where);
         const parties = await this.partyRepository.findAll({
             where: opts.where,
             paranoid: !opts.includeDeleted,

@@ -43,7 +43,7 @@ export class ResultService {
     }
 
     async create(resultsToCreate: IResultCreationAttributes, noSave = false) {
-        this.logger.debug('Calculating results:', resultsToCreate);
+        this.logger?.debug('Calculating results:', resultsToCreate);
         try {
             const parties = await this.partyService.findAll({
                 includeAnswers: true,
@@ -55,7 +55,7 @@ export class ResultService {
                 );
                 return { party: party.id, percentage };
             });
-            this.logger.debug('Creating results:', resultsToCreate);
+            this.logger?.debug('Creating results:', resultsToCreate);
             if (!noSave) await this.resultRepository.create(resultsToCreate);
             return agreePercentages;
         } catch (e) {
@@ -71,7 +71,7 @@ export class ResultService {
             where: null,
         },
     ) {
-        if (opts.where) this.logger.debug('where:', opts.where);
+        if (opts.where) this.logger?.debug('where:', opts.where);
         const results = await this.resultRepository.findAll({
             where: opts.where,
             paranoid: !opts.includeDeleted,

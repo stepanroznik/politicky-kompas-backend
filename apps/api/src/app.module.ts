@@ -19,12 +19,10 @@ import { AnswerModule } from './answer/answer.module';
 import parseDbUrl from 'parse-database-url';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
-import { fileURLToPath } from 'url';
 import { ResultModule } from './result/result.module';
 
-// ES module equivalent of __dirname
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = join(__filename, '..');
+// Resolve public assets directory relative to this file's directory (works for CommonJS tsc output)
+const publicPath = join(__dirname, '..', 'public');
 
 @Module({
     imports: [
@@ -34,7 +32,7 @@ const __dirname = join(__filename, '..');
         }),
         ServeStaticModule.forRoot({
             // In Nx, the app builds to dist/apps/api, and assets are copied to dist/apps/api/public
-            rootPath: join(__dirname, 'public'),
+            rootPath: publicPath,
         }),
         SequelizeModule.forRootAsync({
             useFactory: (configService: ConfigService) => {

@@ -22,50 +22,25 @@
       }
     },
     "build": {
-      "executor": "@nx/esbuild:esbuild",
+      "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
         "main": "apps/api/src/main.ts",
-        "outputPath": "dist/apps/api",
-        "platform": "node",
-        "bundle": true,
         "tsConfig": "apps/api/tsconfig.app.json",
+        "outputPath": "dist/apps/api",
         "assets": [
           {
             "input": "apps/api",
             "glob": "public/**",
             "output": "."
           }
-        ],
-        "esbuildOptions": {
-          "target": "node20",
-          "format": "cjs",
-          "minify": false,
-          "external": [
-            "@nestjs/microservices",
-            "@nestjs/platform-socket.io",
-            "@nestjs/platform-ws",
-            "@nestjs/websockets",
-            "@fastify/static",
-            "class-transformer/storage",
-            "pg-hstore",
-            "dustjs-linkedin",
-            "eco",
-            "ect",
-            "babel-core",
-            "hamlet",
-            "hogan.js",
-            "lodash"
-          ]
-        }
+        ]
       },
       "configurations": {
         "development": {
-          "optimization": false,
           "sourceMap": true
         },
         "production": {
-          "optimization": true,
           "sourceMap": false
         }
       }
