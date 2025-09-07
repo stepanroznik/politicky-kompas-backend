@@ -24,6 +24,7 @@ import {
     ApiTags,
 } from '@nestjs/swagger';
 import { LoggerService } from '../common/logger/logger.service';
+import { Optional } from '@nestjs/common';
 import { QuestionMapper } from './question.mapper';
 import { WhereParserService } from '../common/where-parser/where-parser.service';
 import {
@@ -47,9 +48,9 @@ export class QuestionController {
         private readonly questionService: QuestionService,
         private readonly questionMapper: QuestionMapper,
         private readonly whereParser: WhereParserService,
-        private logger: LoggerService,
+        @Optional() private logger?: LoggerService,
     ) {
-        this.logger.setContext(QuestionController.name);
+        this.logger?.setContext(QuestionController.name);
     }
 
     @Post()
@@ -76,7 +77,10 @@ export class QuestionController {
     @ApiQuery(includeDeletedArrayQuery)
     async findAll(
         @Query(WHERE_QUERY) where: Record<string, any>,
-        @Query(INCLUDE_DELETED_ARRAY_QUERY, new ParseBoolPipe({ optional: true }))
+        @Query(
+            INCLUDE_DELETED_ARRAY_QUERY,
+            new ParseBoolPipe({ optional: true }),
+        )
         includeDeleted: boolean,
     ) {
         const questions = await this.questionService.findAll({
@@ -94,7 +98,8 @@ export class QuestionController {
     @ApiQuery(includeDeletedQuery)
     async findOne(
         @Param('id', new ParseUUIDPipe()) id: string,
-        @Query(INCLUDE_DELETED_QUERY, new ParseBoolPipe({ optional: true })) includeDeleted: boolean,
+        @Query(INCLUDE_DELETED_QUERY, new ParseBoolPipe({ optional: true }))
+        includeDeleted: boolean,
     ) {
         const question = await this.questionService.findOne(id, {
             includeDeleted,
@@ -121,7 +126,8 @@ export class QuestionController {
     @ApiQuery(restoreQuery)
     async update(
         @Param('id', ParseUUIDPipe) id: string,
-        @Query(RESTORE_QUERY, new ParseBoolPipe({ optional: true })) restore: boolean,
+        @Query(RESTORE_QUERY, new ParseBoolPipe({ optional: true }))
+        restore: boolean,
         @Body() updateQuestionDto: UpdateQuestionDto,
     ) {
         const question = await this.questionService.update(
@@ -143,7 +149,8 @@ export class QuestionController {
     @ApiQuery(forceQuery)
     async remove(
         @Param('id', new ParseUUIDPipe()) id: string,
-        @Query(FORCE_QUERY, new ParseBoolPipe({ optional: true })) force: boolean,
+        @Query(FORCE_QUERY, new ParseBoolPipe({ optional: true }))
+        force: boolean,
     ) {
         try {
             return await this.questionService.remove(id, { force });

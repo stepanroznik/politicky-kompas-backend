@@ -24,6 +24,7 @@ import {
     ApiTags,
 } from '@nestjs/swagger';
 import { LoggerService } from '../common/logger/logger.service';
+import { Optional } from '@nestjs/common';
 import { PartyMapper } from './party.mapper';
 import { WhereParserService } from '../common/where-parser/where-parser.service';
 import {
@@ -47,9 +48,9 @@ export class PartyController {
         private readonly partyService: PartyService,
         private readonly partyMapper: PartyMapper,
         private readonly whereParser: WhereParserService,
-        private logger: LoggerService,
+        @Optional() private logger?: LoggerService,
     ) {
-        this.logger.setContext(PartyController.name);
+        this.logger?.setContext(PartyController.name);
     }
 
     @Post()

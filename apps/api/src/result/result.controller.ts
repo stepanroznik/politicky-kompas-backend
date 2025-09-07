@@ -24,6 +24,7 @@ import {
     ApiTags,
 } from '@nestjs/swagger';
 import { LoggerService } from '../common/logger/logger.service';
+import { Optional } from '@nestjs/common';
 import { ResultMapper } from './result.mapper';
 import { WhereParserService } from '../common/where-parser/where-parser.service';
 import {
@@ -48,9 +49,9 @@ export class ResultController {
         private readonly resultService: ResultService,
         private readonly resultMapper: ResultMapper,
         private readonly whereParser: WhereParserService,
-        private logger: LoggerService,
+        @Optional() private logger?: LoggerService,
     ) {
-        this.logger.setContext(ResultController.name);
+        this.logger?.setContext(ResultController.name);
     }
 
     @Post()

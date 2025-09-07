@@ -2,6 +2,7 @@ import {
     ConflictException,
     Injectable,
     NotFoundException,
+    Optional,
 } from '@nestjs/common';
 import Sequelize from 'sequelize';
 import { InjectModel } from '@nestjs/sequelize';
@@ -33,13 +34,13 @@ export class AnswerService {
     constructor(
         @InjectModel(Answer)
         private readonly answerRepository: typeof Answer,
-        private readonly logger: LoggerService,
+        @Optional() private readonly logger: LoggerService,
     ) {
-        this.logger.setContext(AnswerService.name);
+        this.logger?.setContext(AnswerService.name);
     }
 
     async create(answersToCreate: IAnswerCreationAttributes[]) {
-        this.logger.debug('Creating answer:', answersToCreate);
+        this.logger?.debug('Creating answer:', answersToCreate);
         try {
             return await this.answerRepository.bulkCreate(answersToCreate);
         } catch (e) {
@@ -55,7 +56,7 @@ export class AnswerService {
             where: null,
         },
     ) {
-        if (opts.where) this.logger.debug('where:', opts.where);
+        if (opts.where) this.logger?.debug('where:', opts.where);
         const answers = await this.answerRepository.findAll({
             where: opts.where,
             paranoid: !opts.includeDeleted,

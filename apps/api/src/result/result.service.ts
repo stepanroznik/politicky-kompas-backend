@@ -2,6 +2,7 @@ import {
     ConflictException,
     Injectable,
     NotFoundException,
+    Optional,
 } from '@nestjs/common';
 import Sequelize from 'sequelize';
 import { InjectModel } from '@nestjs/sequelize';
@@ -35,10 +36,10 @@ export class ResultService {
     constructor(
         @InjectModel(Result)
         private readonly resultRepository: typeof Result,
-        private readonly logger: LoggerService,
         private partyService: PartyService,
+        @Optional() private readonly logger: LoggerService,
     ) {
-        this.logger.setContext(ResultService.name);
+        this.logger?.setContext(ResultService.name);
     }
 
     async create(resultsToCreate: IResultCreationAttributes, noSave = false) {

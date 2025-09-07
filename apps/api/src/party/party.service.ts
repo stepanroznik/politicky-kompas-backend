@@ -2,6 +2,7 @@ import {
     ConflictException,
     Injectable,
     NotFoundException,
+    Optional,
 } from '@nestjs/common';
 import Sequelize from 'sequelize';
 import { InjectModel } from '@nestjs/sequelize';
@@ -36,9 +37,9 @@ export class PartyService {
     constructor(
         @InjectModel(Party)
         private readonly partyRepository: typeof Party,
-        private readonly logger: LoggerService,
+        @Optional() private readonly logger: LoggerService,
     ) {
-        this.logger.setContext(PartyService.name);
+        this.logger?.setContext(PartyService.name);
     }
 
     async create(partiesToCreate: IPartyCreationAttributes[]) {

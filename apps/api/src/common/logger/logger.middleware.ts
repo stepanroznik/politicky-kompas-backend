@@ -7,7 +7,7 @@ import { Timer } from '../utils/timer';
 @Injectable()
 export class LoggerMiddleware implements NestMiddleware {
     constructor(private logger: LoggerService) {
-        this.logger.setContext(LoggerMiddleware.name);
+        this.logger?.setContext(LoggerMiddleware.name);
     }
 
     use(req: Request, res: Response, next: NextFunction) {
@@ -29,7 +29,7 @@ export class LoggerMiddleware implements NestMiddleware {
             default:
                 color = 'reset';
         }
-        this.logger.info(
+        this.logger?.info(
             [
                 colors[color](colors.bold(req.method)),
                 req.originalUrl,
@@ -37,7 +37,7 @@ export class LoggerMiddleware implements NestMiddleware {
             ].join(' '),
         );
         res.on('finish', () =>
-            this.logger.info(
+            this.logger?.info(
                 [
                     colors.gray(colors.bold(req.method)),
                     colors.gray(req.originalUrl),
