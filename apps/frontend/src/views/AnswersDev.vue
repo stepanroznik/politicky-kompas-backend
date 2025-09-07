@@ -1,44 +1,44 @@
 <template>
-    <div
-        v-if="questions?.length && parties?.length"
-        class="h-24"
+  <div
+    v-if="questions?.length && parties?.length"
+    class="h-24"
+  >
+    <div>{{ questions[index].title }}</div>
+    <span
+      v-for="party in parties"
+      :key="party.id"
     >
-        <div>{{ questions[index].title }}</div>
-        <span
-            v-for="party in parties"
-            :key="party.id"
+      <span class="inline-flex flex-col">
+        {{ party.abbreviation }}
+        <input
+          type="number"
+          max="5"
+          min="1"
+          class="w-16"
+          :value="answers.find((a) => a.QuestionId === currentQuestion!.id && a.PartyId === party.id)?.agreeLevel"
+          @change="changeAgreeLevel(party.id, ($event.target as any).value)"
         >
-            <span class="inline-flex flex-col">
-                {{ party.abbreviation }}
-                <input
-                    type="number"
-                    max="5"
-                    min="1"
-                    class="w-16"
-                    :value="answers.find((a) => a.QuestionId === currentQuestion!.id && a.PartyId === party.id)?.agreeLevel"
-                    @change="changeAgreeLevel(party.id, ($event.target as any).value)"
-                >
-            </span>
-        </span>
-    </div>
-    <a
-        href="#"
-        @click.prevent="index--"
-    >
-        Předchozí
-    </a>
-    <a
-        href="#"
-        @click.prevent="sendAnswers"
-    >
-        Odeslat
-    </a>
-    <a
-        href="#"
-        @click.prevent="index++"
-    >
-        Další
-    </a>
+      </span>
+    </span>
+  </div>
+  <a
+    href="#"
+    @click.prevent="index--"
+  >
+    Předchozí
+  </a>
+  <a
+    href="#"
+    @click.prevent="sendAnswers"
+  >
+    Odeslat
+  </a>
+  <a
+    href="#"
+    @click.prevent="index++"
+  >
+    Další
+  </a>
 </template>
 
 <script lang="ts">

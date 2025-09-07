@@ -1,5 +1,5 @@
 <template>
-    <Quiz />
+  <Quiz />
 </template>
 
 <script setup lang="ts">

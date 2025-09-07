@@ -1,11 +1,11 @@
 <template>
-    <div
-        v-if="questions.length"
-        class="max-w-5xl"
-    >
-        <QuizContent :questions="questions" />
-    </div>
-    <loading v-else />
+  <div
+    v-if="questions.length"
+    class="max-w-5xl"
+  >
+    <QuizContent :questions="questions" />
+  </div>
+  <loading v-else />
 </template>
 
 <script setup lang="ts">

@@ -1,14 +1,14 @@
 <template>
-    <navigation />
-    <div class="text-center max-w-5xl m-auto mt-6 sm:mt-12 px-2">
-        <router-view v-if="parties.length" />
-        <loading v-else />
-    </div>
-    <img
-        class="sr-only"
-        alt="main page politicky-kompas politicky kompas"
-        :src="compass"
-    >
+  <navigation />
+  <div class="text-center max-w-5xl m-auto mt-6 sm:mt-12 px-2">
+    <router-view v-if="parties.length" />
+    <loading v-else />
+  </div>
+  <img
+    class="sr-only"
+    alt="main page politicky-kompas politicky kompas"
+    :src="compass"
+  >
 </template>
 
 <script setup lang="ts">

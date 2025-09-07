@@ -1,20 +1,20 @@
 <template>
-    <teleport to="body">
-        <transition name="modal">
-            <div
-                v-if="show"
-                class="fixed z-50 inset-0 overflow-y-auto"
-                @close="$emit('close')"
-            >
-                <div class="flex bg-black bg-opacity-40 items-end justify-center h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-                    <span
-                        class="hidden sm:inline-block sm:align-middle sm:h-screen"
-                        aria-hidden="true"
-                    >
-                        &#8203;
-                    </span>
-                    <div
-                        class="inline-block
+  <teleport to="body">
+    <transition name="modal">
+      <div
+        v-if="show"
+        class="fixed z-50 inset-0 overflow-y-auto"
+        @close="$emit('close')"
+      >
+        <div class="flex bg-black bg-opacity-40 items-end justify-center h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+          <span
+            class="hidden sm:inline-block sm:align-middle sm:h-screen"
+            aria-hidden="true"
+          >
+            &#8203;
+          </span>
+          <div
+            class="inline-block
                         align-bottom
                         bg-white
                         rounded-lg
@@ -31,32 +31,32 @@
                         sm:max-w-lg
                         sm:w-full
                         sm:p-6"
-                    >   
-                        <h3 class="text-lg text-center font-semibold">
-                            {{ message }}
-                        </h3>
-                        <p
-                            v-if="text"
-                            class="py-5"
-                        >
-                            {{ text }}
-                        </p>
-                        <div class="flex gap-2 justify-center">
-                            <button-default
-                                v-if="buttonNo"
-                                @click="$emit('close', false)"
-                            >
-                                {{ buttonNo }}
-                            </button-default>
-                            <button-default @click="$emit('close', true)">
-                                {{ buttonYes }}
-                            </button-default>
-                        </div>
-                    </div>
-                </div>
+          >   
+            <h3 class="text-lg text-center font-semibold">
+              {{ message }}
+            </h3>
+            <p
+              v-if="text"
+              class="py-5"
+            >
+              {{ text }}
+            </p>
+            <div class="flex gap-2 justify-center">
+              <button-default
+                v-if="buttonNo"
+                @click="$emit('close', false)"
+              >
+                {{ buttonNo }}
+              </button-default>
+              <button-default @click="$emit('close', true)">
+                {{ buttonYes }}
+              </button-default>
             </div>
-        </transition>
-    </teleport>
+          </div>
+        </div>
+      </div>
+    </transition>
+  </teleport>
 </template>
 
 <script setup lang="ts">

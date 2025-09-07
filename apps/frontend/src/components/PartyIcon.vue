@@ -1,7 +1,7 @@
 <template> 
-    <span :style="{ backgroundImage: `url(${iconUrl})` }">
-        <slot />
-    </span>
+  <span :style="{ backgroundImage: `url(${iconUrl})` }">
+    <slot />
+  </span>
 </template>
 
 <script setup lang="ts">
