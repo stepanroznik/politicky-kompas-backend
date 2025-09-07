@@ -1,48 +1,61 @@
-import tsParser from "@typescript-eslint/parser";
-import typescriptEslintEslintPlugin from "@typescript-eslint/eslint-plugin";
+import tsParser from '@typescript-eslint/parser';
+import typescriptEslintEslintPlugin from '@typescript-eslint/eslint-plugin';
 import globals from 'globals';
-import js from "@eslint/js";
-import { FlatCompat } from "@eslint/eslintrc";
-import eslint from "eslint";
+import js from '@eslint/js';
+import { FlatCompat } from '@eslint/eslintrc';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const { defineConfig, globalIgnores } = eslint;
+// ESLint v8-compatible helpers (avoid importing 'eslint/config')
+const defineConfig = (config) => config;
+const globalIgnores = (patterns) => ({ ignores: patterns });
+
 const { node, jest } = globals;
+
+// ES module equivalent of __dirname
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const compat = new FlatCompat({
     baseDirectory: __dirname,
     recommendedConfig: js.configs.recommended,
-    allConfig: js.configs.all
+    allConfig: js.configs.all,
 });
 
-export default defineConfig([{
-    languageOptions: {
-        parser: tsParser,
-        sourceType: "module",
+export default defineConfig([
+    ...compat.extends(
+        'plugin:@typescript-eslint/recommended',
+        'plugin:prettier/recommended',
+    ),
+    {
+        languageOptions: {
+            parser: tsParser,
+            sourceType: 'module',
 
-        parserOptions: {
-            project: "tsconfig.json",
+            parserOptions: {
+                project: 'tsconfig.json',
+            },
+
+            globals: {
+                ...node,
+                ...jest,
+            },
         },
 
-        globals: {
-            ...node,
-            ...jest,
+        plugins: {
+            '@typescript-eslint': typescriptEslintEslintPlugin,
+        },
+
+        rules: {
+            '@typescript-eslint/interface-name-prefix': 'off',
+            '@typescript-eslint/explicit-function-return-type': 'off',
+            '@typescript-eslint/explicit-module-boundary-types': 'off',
+            '@typescript-eslint/no-explicit-any': 'off',
+            '@typescript-eslint/no-empty-interface': 'off',
+            indent: 'off',
+            'linebreak-style': 'off',
+            'prettier/prettier': 'warn',
         },
     },
-
-    plugins: {
-        "@typescript-eslint": typescriptEslintEslintPlugin,
-    },
-
-    extends: compat.extends("plugin:@typescript-eslint/recommended", "plugin:prettier/recommended"),
-
-    rules: {
-        "@typescript-eslint/interface-name-prefix": "off",
-        "@typescript-eslint/explicit-function-return-type": "off",
-        "@typescript-eslint/explicit-module-boundary-types": "off",
-        "@typescript-eslint/no-explicit-any": "off",
-        "@typescript-eslint/no-empty-interface": "off",
-        "indent": "off",
-        "linebreak-style": "off",
-        "prettier/prettier": "warn",
-    },
-}, globalIgnores(["**/.eslintrc.js"])]);
+    globalIgnores(['**/.eslintrc.js']),
+]);

@@ -1,7 +1,7 @@
 import { Injectable, NestMiddleware } from '@nestjs/common';
 import { NextFunction, Request, Response } from 'express';
 import { LoggerService } from './logger.service';
-import colors from 'colors/safe';
+import colors from 'colors/safe.js';
 import { Timer } from '../utils/timer';
 
 @Injectable()

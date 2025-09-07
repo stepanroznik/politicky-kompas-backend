@@ -5,16 +5,9 @@ import fs from 'fs';
 import { Sequelize, DataTypes } from 'sequelize';
 import chalk from 'chalk';
 import util from 'util';
-
-let rTracer: { id: () => any };
-try {
-    rTracer = require('cls-rtracer');
-} catch (e) {
-    rTracer = { id: () => null };
-}
+import rTracer from 'cls-rtracer';
 
 function stripColor(str: string) {
-    // eslint-disable-next-line
     return str ? str.replace(/\x1B[[(?);]{0,2}(;?\d)*./g, '') : str;
 }
 export interface LoggerOptionConsole {
@@ -29,6 +22,22 @@ export interface LoggerOptionDatabase {
     level?: string;
     tableName?: string;
     connectionString?: string;
+    transportIntervalMs?: number;
+}
+
+interface DatabaseLogEntry extends Record<string, unknown> {
+    timestamp: Date;
+    level: string;
+    rid: string;
+    namespace?: string;
+    message: string;
+    meta?: Record<string, unknown>;
+}
+
+interface DatabaseTransportOptions {
+    level?: string;
+    tableName?: string;
+    connectionString: string;
     transportIntervalMs?: number;
 }
 export interface LoggerOptions {
@@ -53,8 +62,10 @@ const consoleTransportFormat = Winston.format.combine(
                 stack: info.meta.stack,
             };
         }
-        const infoMeta = info.meta as Record<string, string> | Record<string, string>[];
-        // eslint-disable-next-line prefer-template
+        const infoMeta = info.meta as
+            | Record<string, string>
+            | Record<string, string>[];
+
         return (
             info.timestamp +
             ' ' +
@@ -96,11 +107,11 @@ const fileTransportFormat = Winston.format.combine(
 
 class CustomPostgresTrasport extends Transport {
     public ready: boolean;
-    public sequelize: any;
-    public Log: any;
-    public logBatch: Array<any>;
+    public sequelize: Sequelize;
+    public Log: ReturnType<Sequelize['define']>;
+    public logBatch: DatabaseLogEntry[];
 
-    constructor(opts: any) {
+    constructor(opts: DatabaseTransportOptions) {
         super(opts);
         this.sequelize = new Sequelize(opts.connectionString, {
             logging: false,
@@ -141,11 +152,11 @@ class CustomPostgresTrasport extends Transport {
         const logsToTransport = this.logBatch;
         this.logBatch = [];
         this.ready = false;
-        await this.Log.bulkCreate(logsToTransport);
+        await this.Log.bulkCreate(logsToTransport as Record<string, unknown>[]);
         this.ready = true;
     }
 
-    log(info: Winston.LogEntry, callback: () => any) {
+    log(info: Winston.LogEntry, callback: () => void) {
         setImmediate(() => {
             this.emit('logged', info);
         });
@@ -155,7 +166,7 @@ class CustomPostgresTrasport extends Transport {
             info.message = JSON.stringify(info.message);
         }
         info.message = stripColor(info.message);
-        this.logBatch.push(info);
+        this.logBatch.push(info as DatabaseLogEntry);
         callback();
     }
 }

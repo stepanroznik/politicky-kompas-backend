@@ -6,7 +6,7 @@ import {
     Type,
     ValidationPipe,
 } from '@nestjs/common';
-import { memoize } from 'lodash';
+import memoize from 'lodash/memoize.js';
 
 export const ArrayValidationPipe: <T>(
     itemType: Type<T>,
