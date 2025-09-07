@@ -33,8 +33,9 @@ export class Logger {
 export class LoggerService {
     private logger: ConsoleLogger;
 
-    constructor(logger: Logger) {
-        this.logger = logger.getLogger();
+    constructor(logger?: Logger) {
+        // If the Logger provider isn't available, fall back to a plain ConsoleLogger
+        this.logger = logger ? logger.getLogger() : new ConsoleLogger();
     }
 
     silence() {

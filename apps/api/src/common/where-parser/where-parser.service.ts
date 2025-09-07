@@ -2,6 +2,12 @@ import { Injectable } from '@nestjs/common';
 import { BadRequestException } from '@nestjs/common';
 import { Op } from 'sequelize';
 
+type ParsedQuery =
+    | string
+    | number
+    | null
+    | { [key: symbol]: ParsedQuery | ParsedQuery[] };
+
 @Injectable()
 export class WhereParserService {
     private splitQuery = (query: string) => {
@@ -24,20 +30,20 @@ export class WhereParserService {
         return tokens;
     };
 
-    private mapSingleParam = (query: string, seqOp: any) => {
+    private mapSingleParam = (query: string, seqOp: symbol) => {
         query = query.substr(query.indexOf(':') + 1);
         return {
             [seqOp]: this.parseQuery(query),
         };
     };
 
-    private mapArrayParam = (query: string, seqOp: any) => {
+    private mapArrayParam = (query: string, seqOp: symbol) => {
         try {
             const q = this.splitQuery(query);
             return {
                 [seqOp]: [...q.map(this.parseQuery)],
             };
-        } catch (e) {
+        } catch {
             throw new SyntaxError(`Malformed query near ${query}`);
         }
     };
@@ -67,7 +73,7 @@ export class WhereParserService {
      * parseQuery('gt:10') // returns { [Op.gt]: 10 }
      *
      */
-    parseQuery = (query: string): any => {
+    parseQuery = (query: string): ParsedQuery => {
         query = query.trim();
 
         if (query.startsWith('gt:')) {
@@ -112,8 +118,8 @@ export class WhereParserService {
     parseWhereObject = (
         query: Record<string, string>,
         filter: string[] | [string, string][] = null,
-    ): Record<string, any> => {
-        let q = {};
+    ): Record<string, ParsedQuery> => {
+        let q: Record<string, ParsedQuery> = {};
 
         try {
             Object.entries(query).forEach(([key, value]) => {
@@ -125,7 +131,7 @@ export class WhereParserService {
         }
 
         if (filter) {
-            const filteredQ = {};
+            const filteredQ: Record<string, ParsedQuery> = {};
             for (const key of filter) {
                 if (Array.isArray(key)) {
                     if (q[key[0]] || q[key[1]]) {

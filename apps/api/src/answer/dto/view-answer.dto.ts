@@ -8,7 +8,7 @@ export class ViewAnswerDto extends TimestampsDto {
     @IsUUID()
     id: string;
 
-    @IsString()
+    @ApiProperty({ type: Number })
     agreeLevel: number;
 
     @IsString()
@@ -17,9 +17,11 @@ export class ViewAnswerDto extends TimestampsDto {
     @IsString()
     source: string;
 
+    @ApiProperty(uuidProperty)
     @IsUUID()
     QuestionId: string;
 
+    @ApiProperty(uuidProperty)
     @IsUUID()
     PartyId: string;
 }

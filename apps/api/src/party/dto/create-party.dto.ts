@@ -5,12 +5,14 @@ import { IsString } from 'class-validator';
 export class CreatePartyDto {
     @ApiProperty({
         description: 'Name of the party',
+        type: String,
     })
     @IsString()
     name: string;
 
     @ApiProperty({
         description: 'Abbreviation of the party',
+        type: String,
     })
     @IsString()
     abbreviation: string;
@@ -18,6 +20,7 @@ export class CreatePartyDto {
     @ApiProperty({
         description:
             'Placeholder for a link to an external API for more information about the party (icon, description, etc.)',
+        type: String,
     })
     @IsString()
     externalId: string;

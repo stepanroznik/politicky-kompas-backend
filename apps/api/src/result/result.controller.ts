@@ -55,11 +55,11 @@ export class ResultController {
     }
 
     @Post()
-    @ApiBody({ type: CreateResultDto })
+    @ApiBody({ type: () => CreateResultDto })
     @ApiOperation({
         summary: 'Creates results',
     })
-    @ApiResponse({ type: ViewPercentagesDto, isArray: true })
+    @ApiResponse({ type: () => ViewPercentagesDto, isArray: true })
     async create(
         @Body() createResultDto: CreateResultDto,
         @Query('no-save', new ParseBoolPipe({ optional: true }))

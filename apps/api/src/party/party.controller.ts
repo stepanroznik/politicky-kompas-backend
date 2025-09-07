@@ -55,7 +55,7 @@ export class PartyController {
 
     @Post()
     @UseGuards(ApiKeyGuard)
-    @ApiBody({ type: [CreatePartyDto] })
+    @ApiBody({ type: () => [CreatePartyDto] })
     @ApiOperation({
         summary: 'Creates parties',
     })

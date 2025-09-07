@@ -17,12 +17,14 @@ const positionEnum = [
 export class CreateQuestionDto {
     @ApiProperty({
         description: 'Title of the question',
+        type: String,
     })
     @IsString()
     title: string;
 
     @ApiProperty({
         description: 'Subtitle/body of the question',
+        type: String,
     })
     @IsOptional()
     @IsString()
@@ -40,6 +42,7 @@ export class CreateQuestionDto {
     @ApiProperty({
         description:
             'Whether or not does the question belong to the core (approx. 24) questions of the quiz',
+        type: Boolean,
     })
     @IsBoolean()
     isPrimary: boolean;

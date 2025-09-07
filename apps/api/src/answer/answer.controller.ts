@@ -55,7 +55,7 @@ export class AnswerController {
 
     @Post()
     @UseGuards(ApiKeyGuard)
-    @ApiBody({ type: [CreateAnswerDto] })
+    @ApiBody({ type: () => [CreateAnswerDto] })
     @ApiOperation({
         summary: 'Creates answers',
     })

@@ -16,6 +16,8 @@ import { CreateResultAnswerDto } from './create-result-answer.dto.';
 export class CreateResultDto {
     @ApiProperty({
         description: "All user's answers in JSON format",
+        type: () => CreateResultAnswerDto,
+        isArray: true,
     })
     @IsArray()
     @ValidateNested({ each: true })
@@ -26,12 +28,14 @@ export class CreateResultDto {
 
     @ApiProperty({
         description: 'The IP address of the user',
+        type: String,
     })
     @IsString()
     ipAddress: string;
 
     @ApiProperty({
         description: "The fingerprint of the user's browser or device",
+        type: String,
     })
     @IsString()
     fingerprint: string;
@@ -39,6 +43,7 @@ export class CreateResultDto {
     @ApiProperty({
         description: 'The ZIP code of the user (PSČ)',
         required: false,
+        type: Number,
     })
     @IsOptional()
     @IsNumber()
@@ -46,6 +51,7 @@ export class CreateResultDto {
 
     @ApiProperty({
         description: 'The gender of the user',
+        type: String,
     })
     @IsOptional()
     @IsIn(['male', 'female', 'other'])
@@ -54,6 +60,7 @@ export class CreateResultDto {
     @ApiProperty({
         description: 'The birth year of the user',
         required: false,
+        type: Number,
     })
     @IsOptional()
     @IsNumber()

@@ -15,11 +15,13 @@ import {
 import { QuestionService } from './question.service';
 import { CreateQuestionDto } from './dto/create-question.dto';
 import { UpdateQuestionDto } from './dto/update-question.dto';
+import { ViewQuestionDto } from './dto/view-question.dto';
 import { ArrayValidationPipe } from '../common/pipes/array-validation.pipe';
 import {
     ApiBody,
     ApiOperation,
     ApiParam,
+    ApiResponse,
     ApiQuery,
     ApiTags,
 } from '@nestjs/swagger';
@@ -55,7 +57,7 @@ export class QuestionController {
 
     @Post()
     @UseGuards(ApiKeyGuard)
-    @ApiBody({ type: [CreateQuestionDto] })
+    @ApiBody({ type: () => [CreateQuestionDto] })
     @ApiOperation({
         summary: 'Creates questions',
     })
@@ -76,7 +78,7 @@ export class QuestionController {
     @ApiQuery(whereQuery)
     @ApiQuery(includeDeletedArrayQuery)
     async findAll(
-        @Query(WHERE_QUERY) where: Record<string, any>,
+        @Query(WHERE_QUERY) where: Record<string, string>,
         @Query(
             INCLUDE_DELETED_ARRAY_QUERY,
             new ParseBoolPipe({ optional: true }),
@@ -113,8 +115,11 @@ export class QuestionController {
     })
     @ApiParam(idParam)
     @ApiQuery(includeDeletedQuery)
+    @ApiResponse({ type: () => ViewQuestionDto, isArray: true })
     async getPartyAnswers(@Param('id', new ParseUUIDPipe()) partyId: string) {
-        return this.questionService.getPartyAnswers(partyId);
+        const partyAnswers =
+            await this.questionService.getPartyAnswers(partyId);
+        return this.questionMapper.toDtoArray(partyAnswers);
     }
 
     @Put(':id')

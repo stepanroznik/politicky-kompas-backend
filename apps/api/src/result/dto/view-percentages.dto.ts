@@ -4,10 +4,10 @@ import { IsNumber } from 'class-validator';
 import { ViewPartyDto } from '../../party/dto/view-party.dto';
 
 export class ViewPercentagesDto extends TimestampsDto {
-    @ApiProperty()
+    @ApiProperty({ type: () => ViewPartyDto, isArray: true })
     party: ViewPartyDto[];
 
-    @ApiProperty()
+    @ApiProperty({ type: Number })
     @IsNumber()
-    percentage: string;
+    percentage: number;
 }

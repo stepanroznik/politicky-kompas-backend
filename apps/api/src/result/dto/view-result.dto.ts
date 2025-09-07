@@ -5,18 +5,20 @@ import { IsIn, IsNumber, IsOptional, IsString, IsUUID } from 'class-validator';
 import { genders } from '../entities/result.entity';
 
 export class ViewResultDto extends TimestampsDto {
-    @ApiProperty()
+    @ApiProperty({ type: String })
     @IsUUID()
     id: string;
 
     @ApiProperty({
         description: "All user's answers in JSON format",
+        type: () => Object,
+        isArray: true,
     })
-    @IsString()
     answers: IResultAnswer[];
 
     @ApiProperty({
         description: 'The ZIP code of the user',
+        type: Number,
     })
     @IsString()
     @IsOptional()
@@ -24,6 +26,7 @@ export class ViewResultDto extends TimestampsDto {
 
     @ApiProperty({
         description: 'The gender of the user',
+        type: String,
     })
     @IsIn(genders)
     @IsOptional()
@@ -31,6 +34,7 @@ export class ViewResultDto extends TimestampsDto {
 
     @ApiProperty({
         description: 'The birth year of the user',
+        type: Number,
     })
     @IsOptional()
     @IsNumber()
@@ -38,6 +42,7 @@ export class ViewResultDto extends TimestampsDto {
 
     @ApiProperty({
         description: "User's age calculated based on the birth year",
+        type: Number,
     })
     @IsOptional()
     @IsNumber()
