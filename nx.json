@@ -1,37 +1,55 @@
 {
-  "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "defaultProject": "api",
-  "targetDefaults": {
-    "build": {
-      "outputs": [
-        "{projectRoot}/dist"
-      ],
-      "cache": true
+    "$schema": "./node_modules/nx/schemas/nx-schema.json",
+    "defaultProject": "api",
+    "targetDefaults": {
+        "build": {
+            "outputs": ["{projectRoot}/dist"],
+            "cache": true
+        },
+        "lint": {
+            "cache": true
+        },
+        "test": {
+            "cache": true
+        },
+        "test:e2e": {
+            "cache": true
+        }
     },
-    "lint": {
-      "cache": true
-    },
-    "test": {
-      "cache": true
-    },
-    "test:e2e": {
-      "cache": true
-    }
-  },
-  "defaultBase": "develop",
-  "plugins": [
-    {
-      "plugin": "@nx/eslint/plugin",
-      "options": {
-        "targetName": "eslint:lint"
-      }
-    },
-    {
-      "plugin": "@nx/jest/plugin",
-      "options": {
-        "targetName": "test"
-      }
-    }
-  ],
-  "nxCloudId": "68a437c8c083280b3260ed97"
+    "defaultBase": "develop",
+    "plugins": [
+        {
+            "plugin": "@nx/eslint/plugin",
+            "options": {
+                "targetName": "eslint:lint"
+            }
+        },
+        {
+            "plugin": "@nx/jest/plugin",
+            "options": {
+                "targetName": "test"
+            }
+        },
+        {
+            "plugin": "@nx/vite/plugin",
+            "options": {
+                "buildTargetName": "build",
+                "testTargetName": "test",
+                "serveTargetName": "serve",
+                "devTargetName": "dev",
+                "previewTargetName": "preview",
+                "serveStaticTargetName": "serve-static",
+                "typecheckTargetName": "typecheck",
+                "buildDepsTargetName": "build-deps",
+                "watchDepsTargetName": "watch-deps"
+            }
+        },
+        {
+            "plugin": "@nx/playwright/plugin",
+            "options": {
+                "targetName": "e2e"
+            }
+        }
+    ],
+    "nxCloudId": "68a437c8c083280b3260ed97"
 }
