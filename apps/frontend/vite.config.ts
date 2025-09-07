@@ -3,6 +3,8 @@ import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
 import { nxCopyAssetsPlugin } from '@nx/vite/plugins/nx-copy-assets.plugin';
+import path from 'path';
+import { createHtmlPlugin } from 'vite-plugin-html';
 
 export default defineConfig(() => ({
     root: __dirname,
@@ -15,7 +17,24 @@ export default defineConfig(() => ({
         port: 4300,
         host: 'localhost',
     },
-    plugins: [vue(), nxViteTsPaths(), nxCopyAssetsPlugin(['*.md'])],
+    plugins: [
+        vue(),
+        nxViteTsPaths(),
+        nxCopyAssetsPlugin(['*.md']),
+        createHtmlPlugin({
+            minify: true,
+            /**
+             * After writing entry here, you will not need to add script tags in `index.html`
+             * The original tags need to be deleted
+             */
+            entry: '/src/main.ts',
+        }),
+    ],
+    resolve: {
+        alias: {
+            '@': path.resolve(__dirname, './src'),
+        },
+    },
     // Uncomment this if you are using workers.
     // worker: {
     //  plugins: [ nxViteTsPaths() ],

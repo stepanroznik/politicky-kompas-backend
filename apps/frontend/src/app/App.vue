@@ -1,7 +1,9 @@
-<script setup lang="ts">
-import NxWelcome from './NxWelcome.vue';
-</script>
-
 <template>
-    <NxWelcome title="frontend" />
+    <div id="app">
+        <router-view />
+    </div>
 </template>
+
+<script setup lang="ts">
+// Main app component with router view
+</script>

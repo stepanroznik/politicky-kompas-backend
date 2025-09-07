@@ -1,0 +1,94 @@
+<template>
+    <div>
+        <span class="text-lg">
+            Načítání...
+            <span class="text-lg">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    style="margin: auto; background: none; display: block; shape-rendering: auto;"
+                    width="280px"
+                    height="280px"
+                    viewBox="0 0 100 100"
+                    preserveAspectRatio="xMidYMid"
+                >
+                    <g transform="translate(28.166666666666664,28.166666666666664)">
+                        <rect
+                            x="-15.5"
+                            y="-15.5"
+                            width="31"
+                            height="31"
+                            fill="#fda4a4"
+                        >
+                            <animateTransform
+                                attributeName="transform"
+                                type="scale"
+                                repeatCount="indefinite"
+                                dur="1.2195121951219512s"
+                                keyTimes="0;1"
+                                values="1.32;1"
+                                begin="-0.3658536585365853s"
+                            />
+                        </rect>
+                    </g>
+                    <g transform="translate(71.83333333333333,28.166666666666664)">
+                        <rect
+                            x="-15.5"
+                            y="-15.5"
+                            width="31"
+                            height="31"
+                            fill="#a6d9fe"
+                        >
+                            <animateTransform
+                                attributeName="transform"
+                                type="scale"
+                                repeatCount="indefinite"
+                                dur="1.2195121951219512s"
+                                keyTimes="0;1"
+                                values="1.32;1"
+                                begin="-0.24390243902439024s"
+                            />
+                        </rect>
+                    </g>
+                    <g transform="translate(28.166666666666664,71.83333333333333)">
+                        <rect
+                            x="-15.5"
+                            y="-15.5"
+                            width="31"
+                            height="31"
+                            fill="#9ff194"
+                        >
+                            <animateTransform
+                                attributeName="transform"
+                                type="scale"
+                                repeatCount="indefinite"
+                                dur="1.2195121951219512s"
+                                keyTimes="0;1"
+                                values="1.32;1"
+                                begin="0s"
+                            />
+                        </rect>
+                    </g>
+                    <g transform="translate(71.83333333333333,71.83333333333333)">
+                        <rect
+                            x="-15.5"
+                            y="-15.5"
+                            width="31"
+                            height="31"
+                            fill="#ece26f"
+                        >
+                            <animateTransform
+                                attributeName="transform"
+                                type="scale"
+                                repeatCount="indefinite"
+                                dur="1.2195121951219512s"
+                                keyTimes="0;1"
+                                values="1.32;1"
+                                begin="-0.12195121951219512s"
+                            />
+                        </rect>
+                    </g>
+                </svg>
+            </span></span>
+    </div>
+</template>
