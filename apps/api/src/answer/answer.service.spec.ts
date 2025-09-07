@@ -1,13 +1,9 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
 import { NotFoundException } from '@nestjs/common';
 import { getModelToken } from '@nestjs/sequelize';
 import { Test } from '@nestjs/testing';
 import { toggleFlagTimeout } from '../../test/utils';
 import { LoggerModule } from '../common/logger/logger.module';
-import {
-    IAnswerCreationAttributes,
-    Answer,
-} from './entities/answer.entity';
+import { IAnswerCreationAttributes, Answer } from './entities/answer.entity';
 import { AnswerMapper } from './answer.mapper';
 import { AnswerService } from './answer.service';
 

@@ -22,6 +22,10 @@ const compat = new FlatCompat({
 
 export default defineConfig([
     globalIgnores(['!**/*']),
+    ...compat.extends(
+        'plugin:@typescript-eslint/recommended',
+        'plugin:prettier/recommended',
+    ),
     {
         files: ['**/*.ts', '**/*.tsx'],
         languageOptions: {
@@ -29,7 +33,8 @@ export default defineConfig([
             sourceType: 'module',
 
             parserOptions: {
-                project: ['tsconfig.app.json'],
+                project:
+                    '/home/roznik/repositories/politicky-kompas-backend/tsconfig.json',
             },
 
             globals: {
@@ -48,6 +53,7 @@ export default defineConfig([
             '@typescript-eslint/explicit-module-boundary-types': 'off',
             '@typescript-eslint/no-explicit-any': 'off',
             '@typescript-eslint/no-empty-interface': 'off',
+            '@typescript-eslint/no-empty-object-type': 'off',
             indent: 'off',
             'linebreak-style': 'off',
             'prettier/prettier': 'warn',
@@ -66,8 +72,4 @@ export default defineConfig([
             'prettier/prettier': 'warn',
         },
     },
-    ...compat.extends(
-        'plugin:@typescript-eslint/recommended',
-        'plugin:prettier/recommended',
-    ),
 ]);

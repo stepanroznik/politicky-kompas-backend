@@ -51,7 +51,7 @@ export class Result extends Model<
     birthYear?: number;
 
     @AllowNull(false)
-    @IsIn([genders])
+    @IsIn([Array.from(genders)])
     @Column(DataType.STRING)
     gender?: (typeof genders)[number];
 

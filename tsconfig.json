@@ -11,10 +11,7 @@
         "target": "es2020",
         "sourceMap": true,
         "outDir": "./dist",
-        "baseUrl": "./",
-        "incremental": true,
-        "paths": {
-            "common/*": ["apps/api/src/common/*"]
-        }
-    }
+        "incremental": true
+    },
+    "include": ["**/*.ts"]
 }

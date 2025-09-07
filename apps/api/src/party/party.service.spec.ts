@@ -1,13 +1,9 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
 import { NotFoundException } from '@nestjs/common';
 import { getModelToken } from '@nestjs/sequelize';
 import { Test } from '@nestjs/testing';
 import { toggleFlagTimeout } from '../../test/utils';
 import { LoggerModule } from '../common/logger/logger.module';
-import {
-    IPartyCreationAttributes,
-    Party,
-} from './entities/party.entity';
+import { IPartyCreationAttributes, Party } from './entities/party.entity';
 import { PartyMapper } from './party.mapper';
 import { PartyService } from './party.service';
 

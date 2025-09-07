@@ -1,5 +1,4 @@
 import { BadRequestException } from '@nestjs/common';
-import { Model } from 'sequelize/types';
 
 export const RenameBeforeDelete =
     () =>
