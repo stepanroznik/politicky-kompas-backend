@@ -7,7 +7,9 @@
     "serve": {
       "executor": "@nx/js:node",
       "defaultConfiguration": "development",
-      "dependsOn": ["build"],
+      "dependsOn": [
+        "build"
+      ],
       "options": {
         "buildTarget": "api:build",
         "runBuildTargetDependencies": false
@@ -23,7 +25,12 @@
     },
     "build": {
       "executor": "@nx/js:tsc",
-      "outputs": ["{options.outputPath}"],
+      "dependsOn": [
+        "frontend:build"
+      ],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "main": "apps/api/src/main.ts",
         "tsConfig": "apps/api/tsconfig.app.json",
@@ -48,7 +55,9 @@
     "lint": {
       "executor": "@nx/eslint:lint",
       "options": {
-        "lintFilePatterns": ["apps/api/**/*.ts"]
+        "lintFilePatterns": [
+          "apps/api/**/*.ts"
+        ]
       }
     }
   },
