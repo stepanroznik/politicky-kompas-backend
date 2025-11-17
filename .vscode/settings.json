@@ -17,5 +17,6 @@
         "nestjs",
         "openapi",
         "UUIDV"
-    ]
+    ],
+    "nxConsole.generateAiAgentRules": true
 }

@@ -1,0 +1,95 @@
+import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
+import { ConfigModule, ConfigService } from '@nestjs/config';
+import { SequelizeModule } from '@nestjs/sequelize';
+import { AppController } from './app.controller';
+import { AppService } from './app.service';
+import { QuestionModule } from './question/question.module';
+import { LoggerModule } from './common/logger/logger.module';
+import rTracer from 'cls-rtracer';
+import shortUUID from 'short-uuid';
+import appConfig from './config/app.config';
+import configValidation from './config/env.validation';
+import { ConfigType } from '@nestjs/config';
+import { WhereParserModule } from './common/where-parser/where-parser.module';
+import { LoggerMiddleware } from './common/logger/logger.middleware';
+import { HttpExceptionFilter } from './common/filters/http-exception.filter';
+import { APP_FILTER } from '@nestjs/core';
+import { PartyModule } from './party/party.module';
+import { AnswerModule } from './answer/answer.module';
+import parseDbUrl from 'parse-database-url';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
+import { ResultModule } from './result/result.module';
+
+// Resolve public assets directory relative to this file's directory (works for CommonJS tsc output)
+const publicPath = join(__dirname, '../../../..', 'frontend');
+
+@Module({
+    imports: [
+        ConfigModule.forRoot({
+            validationSchema: configValidation,
+            load: [appConfig],
+        }),
+        ServeStaticModule.forRoot({
+            // In Nx, the app builds to dist/apps/api, and assets are copied to dist/apps/api/public
+            rootPath: publicPath,
+        }),
+        SequelizeModule.forRootAsync({
+            useFactory: (configService: ConfigService) => {
+                const dbEnvConfig =
+                    configService.get<ConfigType<typeof appConfig>>(
+                        'app',
+                    )!.database;
+                const dbConfig = parseDbUrl(dbEnvConfig.url!);
+                return {
+                    dialect: dbConfig.driver,
+                    database: dbConfig.database,
+                    username: dbConfig.user,
+                    password: dbConfig.password,
+                    host: dbConfig.host,
+                    port: dbConfig.port,
+                    autoLoadModels: true,
+                    logging: false,
+                    sync: { force: false },
+                    define: { timestamps: true, paranoid: true },
+                    dialectOptions: dbEnvConfig.ssl
+                        ? {
+                              ssl: {
+                                  require: dbEnvConfig.ssl,
+                                  rejectUnauthorized: false,
+                              },
+                          }
+                        : undefined,
+                };
+            },
+            imports: [ConfigModule],
+            inject: [ConfigService],
+        }),
+        QuestionModule,
+        PartyModule,
+        AnswerModule,
+        ResultModule,
+        LoggerModule,
+        WhereParserModule,
+    ],
+    controllers: [AppController],
+    providers: [
+        AppService,
+        {
+            provide: APP_FILTER,
+            useClass: HttpExceptionFilter,
+        },
+    ],
+})
+export class AppModule implements NestModule {
+    configure(consumer: MiddlewareConsumer) {
+        consumer
+            .apply(
+                rTracer.expressMiddleware({
+                    requestIdFactory: () => shortUUID().new(),
+                }),
+            )
+            .forRoutes('*');
+        consumer.apply(LoggerMiddleware).forRoutes('*');
+    }
+}
