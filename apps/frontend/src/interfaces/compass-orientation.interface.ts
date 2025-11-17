@@ -5,5 +5,6 @@ export interface ICompassOrientation {
 }
 
 export interface IUserCompassOrientation extends ICompassOrientation {
+    id: string;
     isUser: true;
 }

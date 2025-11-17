@@ -66,13 +66,13 @@
 </template>
 
 <script setup lang="ts">
-import { ICompassOrientation } from "@/interfaces/compass-orientation.interface";
-import { getPartyOrientation } from "@/utils/calculations";
+import { ICompassOrientation } from "@frontend/interfaces/compass-orientation.interface";
+import { getPartyOrientation } from "@frontend/utils/calculations";
 import { PropType, ref } from "vue";
 import locationMarker from "../assets/locationMarker.svg";
 import AxisLabel from "./AxisLabel.vue";
-import { IPartyWithOrientation } from "@/api";
-import useQuizStore from "@/store";
+import { IPartyWithOrientation } from "@frontend/api";
+import useQuizStore from "@frontend/store";
 import PartyIcon from "./PartyIcon.vue";
 
 defineProps({

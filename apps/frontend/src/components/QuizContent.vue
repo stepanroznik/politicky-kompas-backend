@@ -119,8 +119,8 @@
 import { ref, computed, onMounted, PropType } from "vue";
 import Modal from "./Modal.vue";
 import { useRouter, useRoute } from "vue-router";
-import useQuizStore from "@/store";
-import { IQuestion } from "@/interfaces/question-answer.interfaces";
+import useQuizStore from "@frontend/store";
+import { IQuestion } from "@frontend/interfaces/question-answer.interfaces";
 
 const props = defineProps({
     questions: {

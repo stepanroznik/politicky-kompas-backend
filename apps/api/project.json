@@ -34,7 +34,13 @@
       "options": {
         "main": "apps/api/src/main.ts",
         "tsConfig": "apps/api/tsconfig.app.json",
+        "rootDir": ".",
         "outputPath": "dist/apps/api",
+        "transformers": [
+          { 
+            "name": "typescript-transform-paths/nx-transformer"
+          }
+        ],
         "assets": [
           {
             "input": "apps/api",

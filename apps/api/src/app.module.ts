@@ -22,7 +22,7 @@ import { join } from 'path';
 import { ResultModule } from './result/result.module';
 
 // Resolve public assets directory relative to this file's directory (works for CommonJS tsc output)
-const publicPath = join(__dirname, '..', 'public');
+const publicPath = join(__dirname, '../../../..', 'frontend');
 
 @Module({
     imports: [
@@ -39,8 +39,8 @@ const publicPath = join(__dirname, '..', 'public');
                 const dbEnvConfig =
                     configService.get<ConfigType<typeof appConfig>>(
                         'app',
-                    ).database;
-                const dbConfig = parseDbUrl(dbEnvConfig.url);
+                    )!.database;
+                const dbConfig = parseDbUrl(dbEnvConfig.url!);
                 return {
                     dialect: dbConfig.driver,
                     database: dbConfig.database,

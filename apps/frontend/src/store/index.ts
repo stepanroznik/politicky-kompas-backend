@@ -1,5 +1,5 @@
-import { IPartyWithOrientation } from "@/api";
-import { IAnswerWithQuestion, IQuestion } from "@/interfaces/question-answer.interfaces";
+import { IPartyWithOrientation } from "@frontend/api";
+import { IAnswerWithQuestion, IQuestion } from "@frontend/interfaces/question-answer.interfaces";
 import { defineStore } from "pinia";
 import "pinia-plugin-persistedstate";
 

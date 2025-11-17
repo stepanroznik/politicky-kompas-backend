@@ -11,8 +11,8 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import QuizContent from '../components/QuizContent.vue';
-import { apiGet } from "@/api";
-import Loading from '@/components/Loading.vue';
+import { apiGet } from "@frontend/api";
+import Loading from '@frontend/components/Loading.vue';
 
 const questions = ref([]);
 

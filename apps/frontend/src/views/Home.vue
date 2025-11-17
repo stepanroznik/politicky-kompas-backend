@@ -40,7 +40,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import Compass from '../components/Compass.vue';
-import useQuizStore from '@/store';
+import useQuizStore from '@frontend/store';
 
 const store = useQuizStore();
 

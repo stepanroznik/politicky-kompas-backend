@@ -51,7 +51,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import Modal from './Modal.vue';
-import useQuizStore from '@/store';
+import useQuizStore from '@frontend/store';
 
 const store = useQuizStore();
 

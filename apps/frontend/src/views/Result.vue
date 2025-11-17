@@ -30,10 +30,10 @@
 </template>
 
 <script setup lang="ts">
-import Compass from "@/components/Compass.vue";
-import GeoOrientation from "@/components/GeoOrientation.vue";
-import Comparison from "@/components/ResultsComparison.vue";
-import useQuizStore from "@/store";
+import Compass from "@frontend/components/Compass.vue";
+import GeoOrientation from "@frontend/components/GeoOrientation.vue";
+import Comparison from "@frontend/components/ResultsComparison.vue";
+import useQuizStore from "@frontend/store";
 import { computed } from "vue";
 import { useRouter } from "vue-router";
 

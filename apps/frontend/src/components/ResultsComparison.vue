@@ -55,10 +55,11 @@
 
 <script setup lang="ts">
 import { PropType, ref } from "vue";
+import { getPartyAgreePercentage } from "calculations";
 import locationMarker from '../assets/locationMarker.svg';
 import { useRouter } from "vue-router";
-import useQuizStore from "@/store";
-import { IPartyWithOrientation, bigParties, smallParties } from "@/api";
+import useQuizStore from "@frontend/store";
+import { IPartyWithOrientation, bigParties, smallParties } from "@frontend/api";
 import PartyIcon from "./PartyIcon.vue";
 
 const router = useRouter();

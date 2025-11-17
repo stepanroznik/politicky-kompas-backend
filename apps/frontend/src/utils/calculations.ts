@@ -1,5 +1,5 @@
-import { ICompassOrientation } from "@/interfaces/compass-orientation.interface";
-import { IAnswerWithQuestion } from "@/interfaces/question-answer.interfaces";
+import { ICompassOrientation } from "@frontend/interfaces/compass-orientation.interface";
+import { IAnswerWithQuestion } from "@frontend/interfaces/question-answer.interfaces";
 
 export const getPartyOrientation = (answers: IAnswerWithQuestion[]): ICompassOrientation => {
     const leftRightAnswers: number[] = [];

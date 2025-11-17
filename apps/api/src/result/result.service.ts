@@ -13,7 +13,7 @@ import {
 } from './entities/result.entity';
 import { LoggerService } from '../common/logger/logger.service';
 import { PartyService } from '../party/party.service';
-import { getPartyAgreePercentage } from '../common/utils/calculations';
+import { getPartyAgreePercentage } from 'calculations';
 
 interface IServiceFindAllOptions {
     where?: Record<string, any>;

@@ -44,7 +44,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { IPartyWithOrientation, apiGet, apiPost } from '../api/index';
-import { IQuestion, IAnswer } from '@/interfaces/question-answer.interfaces';
+import { IQuestion, IAnswer } from '@frontend/interfaces/question-answer.interfaces';
 
 export default defineComponent({
     name: 'Answers',

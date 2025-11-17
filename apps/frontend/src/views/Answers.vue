@@ -109,13 +109,13 @@
 </template>
 
 <script setup lang="ts">
-import Loading from '@/components/Loading.vue';
-import { IUserResult } from '@/interfaces/user-result.interface';
-import useQuizStore from '@/store';
+import Loading from '@frontend/components/Loading.vue';
+import { IUserResult } from '@frontend/interfaces/user-result.interface';
+import useQuizStore from '@frontend/store';
 import { ref } from 'vue';
 import { IPartyWithAnswers, apiGet } from '../api/index';
 import locationMarker from '../assets/locationMarker.svg';
-import PartyIcon from '@/components/PartyIcon.vue';
+import PartyIcon from '@frontend/components/PartyIcon.vue';
 
 const store = useQuizStore();
 

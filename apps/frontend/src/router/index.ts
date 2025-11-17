@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/Home.vue';
-import useQuizStore from '@/store';
+import useQuizStore from '@frontend/store';
 
 const routes = [
     {

@@ -1,8 +1,8 @@
-import useQuizStore from "@/store";
+import useQuizStore from "@frontend/store";
 import { apiGet } from "../common.api";
-import { getPartyOrientation } from "@/utils/calculations";
-import { ICompassOrientation } from "@/interfaces/compass-orientation.interface";
-import { IAnswerWithQuestion } from "@/interfaces/question-answer.interfaces";
+import { getPartyOrientation } from "@frontend/utils/calculations";
+import { ICompassOrientation } from "@frontend/interfaces/compass-orientation.interface";
+import { IAnswerWithQuestion } from "@frontend/interfaces/question-answer.interfaces";
 
 export interface IParty {
     createdAt: string;

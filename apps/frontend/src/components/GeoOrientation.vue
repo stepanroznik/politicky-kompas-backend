@@ -48,13 +48,13 @@
 </template>
 
 <script setup lang="ts">
-import { IPartyWithOrientation } from "@/api";
-import { ICompassOrientation, IUserCompassOrientation } from "@/interfaces/compass-orientation.inteface";
-import { getPartyOrientation } from "@/utils/calculations";
+import { IPartyWithOrientation } from "@frontend/api";
+import { ICompassOrientation, IUserCompassOrientation } from "@frontend/interfaces/compass-orientation.interface";
+import { getPartyOrientation } from "@frontend/utils/calculations";
 import { PropType, computed, ref } from "vue";
 import locationMarker from "../assets/locationMarker.svg";
 import AxisLabel from "./AxisLabel.vue";
-import useQuizStore from "@/store";
+import useQuizStore from "@frontend/store";
 import PartyIcon from "./PartyIcon.vue";
 
 const props = defineProps({
@@ -76,7 +76,8 @@ if (quizCompleted.value) {
     userCompassOrientation.value = getPartyOrientation(answers);
     const userCompass: IUserCompassOrientation = {
         ...userCompassOrientation.value!,
-        isUser: true
+        isUser: true,
+        id: "0",
     };
     partiesSorted.value = [
         ...props.parties, 

@@ -32,7 +32,7 @@ export default defineConfig(() => ({
     ],
     resolve: {
         alias: {
-            '@': path.resolve(__dirname, './src'),
+            '@frontend': path.resolve(__dirname, './src'),
         },
     },
     // Uncomment this if you are using workers.
