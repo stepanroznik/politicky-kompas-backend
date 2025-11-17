@@ -1,0 +1,71 @@
+{
+  "name": "api",
+  "projectType": "application",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/api/src",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": [
+        "build"
+      ],
+      "options": {
+        "buildTarget": "api:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "api:build:development"
+        },
+        "production": {
+          "buildTarget": "api:build:production"
+        }
+      }
+    },
+    "build": {
+      "executor": "@nx/js:tsc",
+      "dependsOn": [
+        "frontend:build"
+      ],
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "main": "apps/api/src/main.ts",
+        "tsConfig": "apps/api/tsconfig.app.json",
+        "rootDir": ".",
+        "outputPath": "dist/apps/api",
+        "transformers": [
+          { 
+            "name": "typescript-transform-paths/nx-transformer"
+          }
+        ],
+        "assets": [
+          {
+            "input": "apps/api",
+            "glob": "public/**",
+            "output": "."
+          }
+        ]
+      },
+      "configurations": {
+        "development": {
+          "sourceMap": true
+        },
+        "production": {
+          "sourceMap": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/api/**/*.ts"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

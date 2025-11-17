@@ -1,0 +1,28 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "rootDir": ".",
+        "sourceMap": true,
+        "declaration": false,
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "checkJs": true,
+        "experimentalDecorators": true,
+        "importHelpers": true,
+        "esModuleInterop": true,
+        "module": "esnext",
+        "target": "ES2023",
+        "lib": [
+            "es2023",
+            "dom"
+        ],
+        "skipLibCheck": true,
+        "skipDefaultLibCheck": true,
+        "noImplicitThis": true,
+        "baseUrl": ".",
+        "paths": {
+            "calculations": ["shared/calculations/src/index.ts"],
+            "@frontend/*": ["apps/frontend/src/*"]
+        }
+    }
+}
