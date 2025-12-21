@@ -6,22 +6,22 @@ import { uuidProperty } from '../../common/openapi/properties.openapi';
 export class ViewAnswerDto extends TimestampsDto {
     @ApiProperty(uuidProperty)
     @IsUUID()
-    id: string;
+    id!: string;
 
     @ApiProperty({ type: Number })
-    agreeLevel: number;
+    agreeLevel!: number;
 
     @IsString()
-    statement: string;
+    statement?: string;
 
     @IsString()
-    source: string;
+    source?: string;
 
     @ApiProperty(uuidProperty)
     @IsUUID()
-    QuestionId: string;
+    QuestionId!: string;
 
     @ApiProperty(uuidProperty)
     @IsUUID()
-    PartyId: string;
+    PartyId!: string;
 }

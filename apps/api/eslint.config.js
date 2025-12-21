@@ -34,7 +34,7 @@ export default defineConfig([
 
             parserOptions: {
                 project:
-                    '/home/roznik/repositories/politicky-kompas-backend/tsconfig.json',
+                    '/home/roznik/repositories/politicky-kompas-backend/tsconfig.base.json',
             },
 
             globals: {

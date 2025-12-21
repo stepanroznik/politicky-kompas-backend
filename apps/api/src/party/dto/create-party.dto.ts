@@ -8,14 +8,14 @@ export class CreatePartyDto {
         type: String,
     })
     @IsString()
-    name: string;
+    name!: string;
 
     @ApiProperty({
         description: 'Abbreviation of the party',
         type: String,
     })
     @IsString()
-    abbreviation: string;
+    abbreviation!: string;
 
     @ApiProperty({
         description:
@@ -23,5 +23,5 @@ export class CreatePartyDto {
         type: String,
     })
     @IsString()
-    externalId: string;
+    externalId!: string;
 }

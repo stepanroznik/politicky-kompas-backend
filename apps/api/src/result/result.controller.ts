@@ -1,20 +1,19 @@
 import {
-    Controller,
-    Get,
-    Post,
     Body,
-    Put,
-    Param,
+    Controller,
     Delete,
-    ParseUUIDPipe,
-    Query,
-    ParseBoolPipe,
+    Get,
     NotFoundException,
+    Optional,
+    Param,
+    ParseBoolPipe,
+    ParseUUIDPipe,
+    Post,
+    Put,
+    Query,
+    Req,
     UseGuards,
 } from '@nestjs/common';
-import { ResultService } from './result.service';
-import { CreateResultDto } from './dto/create-result.dto';
-import { UpdateResultDto } from './dto/update-result.dto';
 import {
     ApiBody,
     ApiOperation,
@@ -23,25 +22,28 @@ import {
     ApiResponse,
     ApiTags,
 } from '@nestjs/swagger';
+import { Request } from 'express';
+import { ApiKeyGuard } from '../common/api-key.guard';
 import { LoggerService } from '../common/logger/logger.service';
-import { Optional } from '@nestjs/common';
-import { ResultMapper } from './result.mapper';
-import { WhereParserService } from '../common/where-parser/where-parser.service';
+import { idParam } from '../common/openapi/params.openapi';
 import {
-    forceQuery,
     FORCE_QUERY,
-    includeDeletedArrayQuery,
-    includeDeletedQuery,
+    forceQuery,
     INCLUDE_DELETED_ARRAY_QUERY,
     INCLUDE_DELETED_QUERY,
-    restoreQuery,
+    includeDeletedArrayQuery,
+    includeDeletedQuery,
     RESTORE_QUERY,
-    whereQuery,
+    restoreQuery,
     WHERE_QUERY,
+    whereQuery,
 } from '../common/openapi/query.openapi';
-import { idParam } from '../common/openapi/params.openapi';
-import { ApiKeyGuard } from '../common/api-key.guard';
+import { WhereParserService } from '../common/where-parser/where-parser.service';
+import { CreateResultDto } from './dto/create-result.dto';
+import { UpdateResultDto } from './dto/update-result.dto';
 import { ViewPercentagesDto } from './dto/view-percentages.dto';
+import { ResultMapper } from './result.mapper';
+import { ResultService } from './result.service';
 @ApiTags('Results')
 @Controller('results')
 export class ResultController {
@@ -64,10 +66,12 @@ export class ResultController {
         @Body() createResultDto: CreateResultDto,
         @Query('no-save', new ParseBoolPipe({ optional: true }))
         noSave?: boolean,
+        @Req() request?: Request,
     ) {
         const result = await this.resultService.create(
             this.resultMapper.fromDto(createResultDto),
             noSave,
+            request,
         );
         return result;
     }

@@ -15,7 +15,7 @@ export class CreateAnswerDto {
     @Min(1)
     @Max(5)
     @IsInt()
-    agreeLevel: number;
+    agreeLevel!: number;
 
     @ApiProperty({
         description:
@@ -24,7 +24,7 @@ export class CreateAnswerDto {
     })
     @IsOptional()
     @IsString()
-    statement: string;
+    statement?: string;
 
     @ApiProperty({
         description:
@@ -33,19 +33,19 @@ export class CreateAnswerDto {
     })
     @IsOptional()
     @IsString()
-    source: string;
+    source?: string;
 
     @ApiProperty({
         ...uuidProperty,
         description: 'ID of the linked Question',
     })
     @IsUUID()
-    QuestionId: string;
+    QuestionId!: string;
 
     @ApiProperty({
         ...uuidProperty,
         description: 'ID of the linked Party',
     })
     @IsUUID()
-    PartyId: string;
+    PartyId!: string;
 }

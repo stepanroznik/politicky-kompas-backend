@@ -14,7 +14,7 @@ export const useQuizStore = defineStore("quiz", {
         // if a question has been answered before, the new answer replaces the previous one, otherwise another answer is added to the state.answers object
         answerQuestion(Question: Partial<IQuestion>, agreeLevel: number) {
             const answerIndex: number = this.answers.findIndex((x) => x.Question.id === Question.id);
-            if (answerIndex === -1) this.answers.push({ Question: Question as IQuestion, agreeLevel });
+            if (answerIndex === -1) this.answers.push({ Question: Question as IQuestion, agreeLevel } as IAnswerWithQuestion);
             else this.answers[answerIndex].agreeLevel = agreeLevel;
         },
         setParties(parties: IPartyWithOrientation[]) {

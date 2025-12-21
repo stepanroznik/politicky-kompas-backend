@@ -4,10 +4,10 @@ import { IResultAnswer } from '../interfaces/result-answer.interface';
 export class CreateResultAnswerDto implements IResultAnswer {
     @IsString()
     @IsUUID()
-    QuestionId: string;
+    QuestionId!: string;
 
     @IsNumber()
     @Min(0)
     @Max(5)
-    agreeLevel: number;
+    agreeLevel!: number;
 }

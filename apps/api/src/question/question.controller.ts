@@ -86,7 +86,7 @@ export class QuestionController {
         includeDeleted: boolean,
     ) {
         const questions = await this.questionService.findAll({
-            where: where ? this.whereParser.parseWhereObject(where) : null,
+            where: where ? this.whereParser.parseWhereObject(where) : undefined,
             includeDeleted,
         });
         return this.questionMapper.toDtoArray(questions);

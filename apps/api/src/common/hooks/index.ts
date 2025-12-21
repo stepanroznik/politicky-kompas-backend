@@ -38,7 +38,7 @@ export const PreventSoftDeleteIfModelExists =
                 `Cannot delete a ${
                     instance.constructor.name
                 } with questions linked to it (${questions.map(
-                    (c) => c.name,
+                    (c: { name: string }) => c.name,
                 )}).`,
             );
         }

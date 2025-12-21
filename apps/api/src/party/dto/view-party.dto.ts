@@ -6,14 +6,14 @@ import { uuidProperty } from '../../common/openapi/properties.openapi';
 export class ViewPartyDto extends TimestampsDto {
     @ApiProperty(uuidProperty)
     @IsUUID()
-    id: string;
+    id!: string;
 
     @IsString()
-    name: string;
+    name!: string;
 
     @IsString()
-    abbreviation: string;
+    abbreviation!: string;
 
     @IsString()
-    externalId: string;
+    externalId!: string;
 }

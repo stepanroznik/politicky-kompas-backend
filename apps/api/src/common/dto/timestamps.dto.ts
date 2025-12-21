@@ -5,11 +5,11 @@ import { dateTimeProperty } from '../openapi/properties.openapi';
 export class TimestampsDto {
     @ApiProperty(dateTimeProperty)
     @IsDateString()
-    createdAt: string;
+    createdAt!: string;
 
     @ApiProperty(dateTimeProperty)
     @IsDateString()
-    updatedAt: string;
+    updatedAt!: string;
 
     @ApiProperty(dateTimeProperty)
     @IsOptional()

@@ -4,6 +4,11 @@ import { LoggerService } from './logger.service';
 import colors from 'colors/safe.js';
 import { Timer } from '../utils/timer';
 
+const colorFunctions = colors as unknown as Record<
+    string,
+    (value: string) => string
+>;
+
 @Injectable()
 export class LoggerMiddleware implements NestMiddleware {
     constructor(private logger: LoggerService) {
@@ -29,9 +34,11 @@ export class LoggerMiddleware implements NestMiddleware {
             default:
                 color = 'reset';
         }
+        const methodText = colors.bold(req.method);
+        const colorizer = colorFunctions[color] ?? colorFunctions.reset;
         this.logger?.info(
             [
-                colors[color](colors.bold(req.method)),
+                colorizer(methodText),
                 req.originalUrl,
                 colors.gray(`[${req.ip}]`),
             ].join(' '),

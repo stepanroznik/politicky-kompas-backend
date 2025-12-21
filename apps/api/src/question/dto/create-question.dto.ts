@@ -20,7 +20,7 @@ export class CreateQuestionDto {
         type: String,
     })
     @IsString()
-    title: string;
+    title!: string;
 
     @ApiProperty({
         description: 'Subtitle/body of the question',
@@ -28,7 +28,7 @@ export class CreateQuestionDto {
     })
     @IsOptional()
     @IsString()
-    subtitle: string;
+    subtitle?: string;
 
     @ApiProperty({
         description:
@@ -37,7 +37,7 @@ export class CreateQuestionDto {
     })
     @IsString()
     @IsIn(positionEnum)
-    position: string;
+    position!: string;
 
     @ApiProperty({
         description:
@@ -45,5 +45,5 @@ export class CreateQuestionDto {
         type: Boolean,
     })
     @IsBoolean()
-    isPrimary: boolean;
+    isPrimary!: boolean;
 }

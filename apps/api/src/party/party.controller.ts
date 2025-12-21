@@ -86,7 +86,7 @@ export class PartyController {
         includeAnswers: boolean,
     ) {
         const parties = await this.partyService.findAll({
-            where: where ? this.whereParser.parseWhereObject(where) : null,
+            where: where ? this.whereParser.parseWhereObject(where) : undefined,
             includeDeleted,
             includeAnswers,
         });

@@ -170,7 +170,7 @@ async function goToPreviousQuestion() {
 }
 
 async function goToNextQuestion() {
-    if (isCurrentQuestionAnswered.value && !isCurrentQuestionLast.value) {
+    if (!isCurrentQuestionLast.value) {
         currentQuestionIndex.value += 1;
         await setCurrentQuestionQuery();
         return;

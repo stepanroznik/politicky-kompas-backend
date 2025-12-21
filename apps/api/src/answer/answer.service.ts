@@ -53,7 +53,7 @@ export class AnswerService {
     async findAll(
         opts: IServiceFindAllOptions = {
             includeDeleted: false,
-            where: null,
+            where: undefined,
         },
     ) {
         if (opts.where) this.logger?.debug('where:', opts.where);
@@ -65,8 +65,8 @@ export class AnswerService {
     }
 
     async findOne(
-        QuestionId,
-        PartyId,
+        QuestionId: string,
+        PartyId: string,
         opts: IServiceFindOneOptions = {
             includeDeleted: false,
         },
@@ -108,8 +108,8 @@ export class AnswerService {
     }
 
     async remove(
-        QuestionId,
-        PartyId,
+        QuestionId: string,
+        PartyId: string,
         opts: IServiceRemoveOptions = { force: false },
     ) {
         const answer = await this.answerRepository.findOne({

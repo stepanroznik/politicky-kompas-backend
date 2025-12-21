@@ -20,6 +20,7 @@ import parseDbUrl from 'parse-database-url';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { ResultModule } from './result/result.module';
+import { Dialect } from 'sequelize';
 
 // Resolve public assets directory relative to this file's directory (works for CommonJS tsc output)
 const publicPath = join(__dirname, '../../../..', 'frontend');
@@ -41,8 +42,9 @@ const publicPath = join(__dirname, '../../../..', 'frontend');
                         'app',
                     )!.database;
                 const dbConfig = parseDbUrl(dbEnvConfig.url!);
+                const dialect = (dbConfig.driver ?? 'postgres') as Dialect;
                 return {
-                    dialect: dbConfig.driver,
+                    dialect,
                     database: dbConfig.database,
                     username: dbConfig.user,
                     password: dbConfig.password,

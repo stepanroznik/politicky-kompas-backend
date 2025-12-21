@@ -11,7 +11,8 @@ type ParsedQuery =
 @Injectable()
 export class WhereParserService {
     private splitQuery = (query: string) => {
-        const q = query.match(/\[(.*)\]/)[1] || query;
+        const match = query.match(/\[(.*)\]/);
+        const q = match?.[1] ?? query;
         let start = 0;
         let depth = 0;
         const tokens = [];
@@ -117,7 +118,7 @@ export class WhereParserService {
      */
     parseWhereObject = (
         query: Record<string, string>,
-        filter: string[] | [string, string][] = null,
+        filter?: string[] | [string, string][],
     ): Record<string, ParsedQuery> => {
         let q: Record<string, ParsedQuery> = {};
 
@@ -125,9 +126,8 @@ export class WhereParserService {
             Object.entries(query).forEach(([key, value]) => {
                 q[key] = this.parseQuery(value);
             });
-        } catch (e) {
-            e.message = "the 'where' query is malformed";
-            throw new BadRequestException(e.message);
+        } catch (error) {
+            throw new BadRequestException("the 'where' query is malformed");
         }
 
         if (filter) {

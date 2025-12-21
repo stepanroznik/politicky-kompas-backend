@@ -39,31 +39,31 @@ export class Answer extends Model<
     @Min(1)
     @Max(5)
     @Column(DataType.INTEGER)
-    agreeLevel: number;
+    declare agreeLevel: number;
 
     @AllowNull(true)
     @Column(DataType.TEXT)
-    source: string;
+    declare source?: string;
 
     @AllowNull(true)
     @Column(DataType.TEXT)
-    statement: string;
+    declare statement?: string;
 
     @PrimaryKey
     @ForeignKey(() => Question)
     @Column({ type: DataType.UUID, allowNull: false })
-    QuestionId: string;
+    declare QuestionId: string;
 
     @PrimaryKey
     @ForeignKey(() => Party)
     @Column({ type: DataType.UUID, allowNull: false })
-    PartyId: string;
+    declare PartyId: string;
 
     @BelongsTo(() => Party)
-    Party: Party;
+    declare Party: Party;
 
     @BelongsTo(() => Question)
-    Question: Question;
+    declare Question: Question;
 
     @BeforeDestroy({})
     static renameBeforeDestroy = RenameBeforeDelete();

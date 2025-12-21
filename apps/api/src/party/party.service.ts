@@ -57,7 +57,7 @@ export class PartyService {
         opts: IServiceFindAllOptions = {
             includeDeleted: false,
             includeAnswers: false,
-            where: null,
+            where: undefined,
         },
     ) {
         if (opts.where) this.logger?.debug('where:', opts.where);

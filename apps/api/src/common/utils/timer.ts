@@ -1,5 +1,5 @@
 export class Timer {
-    private handle;
+    private handle: [number, number] = process.hrtime();
 
     constructor() {
         this.start();

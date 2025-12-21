@@ -84,7 +84,7 @@ export class AnswerController {
         includeDeleted: boolean,
     ) {
         const answers = await this.answerService.findAll({
-            where: where ? this.whereParser.parseWhereObject(where) : null,
+            where: where ? this.whereParser.parseWhereObject(where) : undefined,
             includeDeleted,
         });
         return this.answerMapper.toDtoArray(answers);

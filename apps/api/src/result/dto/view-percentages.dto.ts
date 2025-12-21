@@ -5,9 +5,9 @@ import { ViewPartyDto } from '../../party/dto/view-party.dto';
 
 export class ViewPercentagesDto extends TimestampsDto {
     @ApiProperty({ type: () => ViewPartyDto, isArray: true })
-    party: ViewPartyDto[];
+    party!: ViewPartyDto[];
 
     @ApiProperty({ type: Number })
     @IsNumber()
-    percentage: number;
+    percentage!: number;
 }

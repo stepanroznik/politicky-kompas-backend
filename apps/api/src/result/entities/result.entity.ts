@@ -21,13 +21,25 @@ export interface IResultAttributes extends ITimestamps {
     answers: IResultAnswer[];
     ipAddress: string;
     fingerprint: string;
-    zipCode: number;
+    userAgent?: string;
+    geoCountry?: string;
+    geoRegion?: string;
+    geoCity?: string;
+    geoLatitude?: number;
+    geoLongitude?: number;
+    geoTimezone?: string;
+    zipCode?: number;
     gender: (typeof genders)[number];
-    birthYear: number;
+    birthYear?: number;
+    isDumped: boolean;
+    dumpReason?: string;
 }
 
 export interface IResultCreationAttributes
-    extends Optional<IResultAttributes, 'id' | 'createdAt' | 'updatedAt'> {}
+    extends Optional<
+        IResultAttributes,
+        'id' | 'createdAt' | 'updatedAt' | 'isDumped'
+    > {}
 
 @Table({ schema: 'public' })
 export class Result extends Model<
@@ -40,32 +52,68 @@ export class Result extends Model<
         allowNull: false,
         defaultValue: DataType.UUIDV4,
     })
-    id: string;
+    declare id: string;
 
     @AllowNull(false)
     @Column(DataType.JSONB)
-    answers: IResultAnswer[];
+    declare answers: IResultAnswer[];
 
     @AllowNull(true)
     @Column(DataType.INTEGER)
-    birthYear?: number;
+    declare birthYear?: number;
 
     @AllowNull(false)
     @IsIn([Array.from(genders)])
     @Column(DataType.STRING)
-    gender?: (typeof genders)[number];
+    declare gender: (typeof genders)[number];
 
     @AllowNull(true)
     @Column(DataType.INTEGER)
-    zipCode?: number;
+    declare zipCode?: number;
 
     @AllowNull(false)
     @Column(DataType.STRING)
-    ipAddress: string;
+    declare ipAddress: string;
 
     @AllowNull(false)
     @Column(DataType.TEXT)
-    fingerprint: string;
+    declare fingerprint: string;
+
+    @AllowNull(true)
+    @Column(DataType.TEXT)
+    declare userAgent?: string;
+
+    @AllowNull(true)
+    @Column(DataType.STRING)
+    declare geoCountry?: string;
+
+    @AllowNull(true)
+    @Column(DataType.STRING)
+    declare geoRegion?: string;
+
+    @AllowNull(true)
+    @Column(DataType.STRING)
+    declare geoCity?: string;
+
+    @AllowNull(true)
+    @Column(DataType.FLOAT)
+    declare geoLatitude?: number;
+
+    @AllowNull(true)
+    @Column(DataType.FLOAT)
+    declare geoLongitude?: number;
+
+    @AllowNull(true)
+    @Column(DataType.STRING)
+    declare geoTimezone?: string;
+
+    @AllowNull(false)
+    @Column({ type: DataType.BOOLEAN, defaultValue: false })
+    declare isDumped: boolean;
+
+    @AllowNull(true)
+    @Column(DataType.STRING)
+    declare dumpReason?: string;
 
     @BeforeDestroy({})
     static renameBeforeDestroy = RenameBeforeDelete();

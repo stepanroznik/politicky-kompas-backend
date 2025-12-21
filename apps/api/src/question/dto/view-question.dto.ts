@@ -6,11 +6,11 @@ import { uuidProperty } from '../../common/openapi/properties.openapi';
 export class ViewQuestionDto extends TimestampsDto {
     @ApiProperty(uuidProperty)
     @IsUUID()
-    id: string;
+    id!: string;
 
     @ApiProperty({ type: String, description: 'Title of the question' })
     @IsString()
-    title: string;
+    title!: string;
 
     @ApiProperty({
         type: String,
@@ -18,19 +18,19 @@ export class ViewQuestionDto extends TimestampsDto {
         required: false,
     })
     @IsString()
-    subtitle: string;
+    subtitle?: string;
 
     @ApiProperty({
         type: String,
         description: 'Position of the question on the compass',
     })
     @IsString()
-    position: string;
+    position!: string;
 
     @ApiProperty({
         type: Boolean,
         description: 'Whether the question is primary',
     })
     @IsBoolean()
-    isPrimary: boolean;
+    isPrimary!: boolean;
 }

@@ -32,26 +32,26 @@ export class Party extends Model<IPartyAttributes, IPartyCreationAttributes> {
     @PrimaryKey
     @Default(DataType.UUIDV4)
     @Column(DataType.UUID)
-    id: string;
+    declare id: string;
 
     @AllowNull(false)
     @Unique(true)
     @NotEmpty
     @Column(DataType.STRING)
-    name: string;
+    declare name: string;
 
     @AllowNull(false)
     @Unique(true)
     @NotEmpty
     @Column(DataType.STRING)
-    abbreviation: string;
+    declare abbreviation: string;
 
     @AllowNull(true)
     @Column(DataType.STRING)
-    externalId: string;
+    declare externalId?: string;
 
     @HasMany(() => Answer)
-    Answers: Array<Answer>;
+    declare Answers: Array<Answer>;
 
     @BeforeDestroy({})
     static renameBeforeDestroy = RenameBeforeDelete();

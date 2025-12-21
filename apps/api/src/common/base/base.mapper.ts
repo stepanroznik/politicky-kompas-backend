@@ -8,7 +8,9 @@ export abstract class BaseMapper<
 > {
     abstract fromDto(dto: TCreateDto): TCreationAttributes;
     abstract fromDto(dto: TUpdateDto): Partial<TAttributes>;
-    abstract fromDto(dto: TCreateDto | TUpdateDto);
+    abstract fromDto(
+        dto: TCreateDto | TUpdateDto,
+    ): TCreationAttributes | Partial<TAttributes>;
     abstract toDto(inst: TModel): TViewDto;
 
     fromDtoArray(dtos: TCreateDto[]): TCreationAttributes[] {

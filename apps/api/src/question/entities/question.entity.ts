@@ -37,17 +37,17 @@ export class Question extends Model<
     @PrimaryKey
     @Default(DataType.UUIDV4)
     @Column(DataType.UUID)
-    id: string;
+    declare id: string;
 
     @AllowNull(false)
     @Unique(true)
     @NotEmpty
     @Column(DataType.STRING)
-    title: string;
+    declare title: string;
 
     @AllowNull(true)
     @Column(DataType.TEXT)
-    subtitle: string;
+    declare subtitle?: string;
 
     @AllowNull(false)
     @IsIn([
@@ -66,14 +66,14 @@ export class Question extends Model<
         ],
     ])
     @Column(DataType.STRING)
-    position: string;
+    declare position: string;
 
     @AllowNull(false)
     @Column(DataType.BOOLEAN)
-    isPrimary: boolean;
+    declare isPrimary: boolean;
 
     @HasMany(() => Answer)
-    Answers: Array<Answer>;
+    declare Answers: Array<Answer>;
 
     @BeforeDestroy({})
     static renameBeforeDestroy = RenameBeforeDelete();

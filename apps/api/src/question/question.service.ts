@@ -54,7 +54,7 @@ export class QuestionService {
     async findAll(
         opts: IServiceFindAllOptions = {
             includeDeleted: false,
-            where: null,
+            where: undefined,
         },
     ) {
         if (opts.where) this.logger?.debug('where:', opts.where);

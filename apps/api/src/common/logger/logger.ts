@@ -106,10 +106,10 @@ const fileTransportFormat = Winston.format.combine(
 );
 
 class CustomPostgresTrasport extends Transport {
-    public ready: boolean;
-    public sequelize: Sequelize;
-    public Log: ReturnType<Sequelize['define']>;
-    public logBatch: DatabaseLogEntry[];
+    public ready = false;
+    public sequelize!: Sequelize;
+    public Log!: ReturnType<Sequelize['define']>;
+    public logBatch: DatabaseLogEntry[] = [];
 
     constructor(opts: DatabaseTransportOptions) {
         super(opts);
@@ -134,7 +134,6 @@ class CustomPostgresTrasport extends Transport {
                 updatedAt: false,
             },
         );
-        this.ready = false;
         (async () => {
             await this.sequelize.sync();
             this.ready = true;
@@ -144,7 +143,6 @@ class CustomPostgresTrasport extends Transport {
                 opts.transportIntervalMs ?? 2000,
             );
         })();
-        this.logBatch = [];
     }
 
     async transportLogBatch() {
@@ -201,7 +199,7 @@ export function initLogger(opts: LoggerOptions): Winston.Logger {
             }),
         );
     }
-    if (opts.database) {
+    if (opts.database?.connectionString) {
         transports.push(
             new CustomPostgresTrasport({
                 level: opts.database.level ?? 'info',
