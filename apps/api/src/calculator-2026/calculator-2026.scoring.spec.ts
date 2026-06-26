@@ -84,6 +84,12 @@ describe('calculator 2026 scoring', () => {
         expect(seed.parties).toHaveLength(7);
         expect(seed.ratings).toHaveLength(840);
         expect(
+            seed.questions.filter(
+                (question: { description?: string | null }) =>
+                    Boolean(question.description?.trim()),
+            ).length,
+        ).toBeGreaterThanOrEqual(80);
+        expect(
             seed.ratings.every(
                 (rating: { rating: number | null }) =>
                     rating.rating === null ||

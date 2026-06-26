@@ -24,6 +24,7 @@ export interface CalculatorQuestion {
     facet: string;
     originalText: string;
     text: string;
+    description?: string | null;
     reversed: boolean;
     reviewStatus: string;
     reviewNote?: string | null;

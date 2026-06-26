@@ -14,6 +14,12 @@
           {{ currentQuestion.text }}
         </h1>
         <p
+          v-if="currentQuestion.description"
+          class="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-gray-600"
+        >
+          {{ currentQuestion.description }}
+        </p>
+        <p
           v-if="isMainQuestion(currentQuestion.id)"
           class="mt-3 text-xs font-semibold uppercase tracking-wide text-gray-500"
         >
@@ -114,10 +120,13 @@ const answerOptions = [
 
 const orderedQuestions = computed(() => {
     const sortedAxes = [...store.axes].sort((a, b) => a.order - b.order);
-    const byAxis = sortedAxes.map((axis) =>
-        store.questions
-            .filter((question) => question.axisCode === axis.code)
-            .sort((a, b) => a.dimensionOrder - b.dimensionOrder),
+    const byAxis = sortedAxes.map((axis, index) =>
+        balanceQuestionDirection(
+            store.questions
+                .filter((question) => question.axisCode === axis.code)
+                .sort((a, b) => a.dimensionOrder - b.dimensionOrder),
+            index + 1,
+        ),
     );
     const ordered: CalculatorQuestion[] = [];
     const maxAxisQuestions = Math.max(...byAxis.map((questions) => questions.length), 0);
@@ -179,6 +188,26 @@ function isMainQuestion(questionId: string) {
     return orderedQuestions.value
         .slice(0, roughCheckpoint)
         .some((question) => question.id === questionId);
+}
+
+function balanceQuestionDirection(questions: CalculatorQuestion[], axisOrder: number) {
+    const byDirection: Record<"reversed" | "normal", CalculatorQuestion[]> = {
+        reversed: questions.filter((question) => question.reversed),
+        normal: questions.filter((question) => !question.reversed),
+    };
+    const firstKey: "normal" | "reversed" = axisOrder % 2 === 0 ? "normal" : "reversed";
+    const secondKey = firstKey === "normal" ? "reversed" : "normal";
+    const ordered: CalculatorQuestion[] = [];
+    const maxCount = Math.max(byDirection.reversed.length, byDirection.normal.length);
+
+    for (let index = 0; index < maxCount; index += 1) {
+        const first = byDirection[firstKey][index];
+        const second = byDirection[secondKey][index];
+        if (first) ordered.push(first);
+        if (second) ordered.push(second);
+    }
+
+    return ordered;
 }
 
 function isSelected(value: number | null) {

@@ -28,8 +28,8 @@
     {
       "code": "economy_market",
       "name": "Trh a regulace",
-      "negativeLabel": "Regulace",
-      "positiveLabel": "Volný trh"
+      "negativeLabel": "Volný trh",
+      "positiveLabel": "Regulace"
     },
     {
       "code": "culture_morality",
@@ -104,7 +104,8 @@
       "text": "Přítomnost amerických vojáků na českém území, i v rámci obranné smlouvy, by příliš omezila naši suverenitu.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka míří na spor mezi zdrženlivější zahraniční politikou a aktivním zapojením do spojenecké bezpečnosti."
     },
     {
       "id": "item_D1_2_mise_jen.osn",
@@ -116,7 +117,8 @@
       "text": "Naše armáda by se neměla účastnit žádných zahraničních vojenských misí, pokud nejsou schváleny OSN.",
       "reversed": true,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka míří na spor mezi zdrženlivější zahraniční politikou a aktivním zapojením do spojenecké bezpečnosti."
     },
     {
       "id": "item_D1_3_obrana_nizke.vydaje",
@@ -128,7 +130,8 @@
       "text": "Výdaje na obranu by se neměly zvyšovat, pokud by to omezilo financování důchodů, zdravotnictví nebo jiných veřejných služeb.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText.",
+      "description": "Otázka míří na spor mezi zdrženlivější zahraniční politikou a aktivním zapojením do spojenecké bezpečnosti."
     },
     {
       "id": "item_D1_4_technika_proti.f35",
@@ -140,7 +143,8 @@
       "text": "Česká republika měla místo stíhaček F-35 zvolit levnější evropskou alternativu.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText.",
+      "description": "Otázka míří na spor mezi zdrženlivější zahraniční politikou a aktivním zapojením do spojenecké bezpečnosti."
     },
     {
       "id": "item_D1_5_ukrajina_zastavit.pomoc",
@@ -152,7 +156,8 @@
       "text": "Česká republika by měla ukončit dodávky zbraní Ukrajině a více se soustředit na diplomatické řešení války.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka míří na spor mezi zdrženlivější zahraniční politikou a aktivním zapojením do spojenecké bezpečnosti."
     },
     {
       "id": "item_D1_6_rusko.cina_partneri",
@@ -164,7 +169,8 @@
       "text": "S Ruskem a Čínou bychom měli jednat jako s rovnocennými partnery, nikoliv jako s nepřáteli.",
       "reversed": true,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka míří na spor mezi zdrženlivější zahraniční politikou a aktivním zapojením do spojenecké bezpečnosti."
     },
     {
       "id": "item_D1_7_nato_zadni.vojaci.do.ciziny",
@@ -176,7 +182,8 @@
       "text": "Čeští vojáci by neměli být nasazováni v bojových operacích na obranu spojenecké země.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText.",
+      "description": "Otázka míří na spor mezi zdrženlivější zahraniční politikou a aktivním zapojením do spojenecké bezpečnosti."
     },
     {
       "id": "item_D1_8_nato_vystup.a.brics",
@@ -188,7 +195,8 @@
       "text": "Česká republika by měla vystoupit z NATO a usilovat o vojenskou neutralitu.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka míří na spor mezi zdrženlivější zahraniční politikou a aktivním zapojením do spojenecké bezpečnosti."
     },
     {
       "id": "item_D1_9_nato_zaruka.bezpeci",
@@ -200,7 +208,8 @@
       "text": "Členství v NATO je nejlepší zárukou naší bezpečnosti.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka míří na spor mezi zdrženlivější zahraniční politikou a aktivním zapojením do spojenecké bezpečnosti."
     },
     {
       "id": "item_D1_10_obrana_2.procenta.hdp",
@@ -212,7 +221,8 @@
       "text": "Je správné, že naše země dává na obranu alespoň 2 % HDP, jak jsme slíbili našim spojencům.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka míří na spor mezi zdrženlivější zahraniční politikou a aktivním zapojením do spojenecké bezpečnosti."
     },
     {
       "id": "item_D1_11_ukrajina_podpora.za.kazdou.cenu",
@@ -224,7 +234,8 @@
       "text": "Česká republika by měla Ukrajinu výrazně podporovat proti ruské agresi i při vysokých nákladech.",
       "reversed": false,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText.",
+      "description": "Otázka míří na spor mezi zdrženlivější zahraniční politikou a aktivním zapojením do spojenecké bezpečnosti."
     },
     {
       "id": "item_D1_12_usa_klicovy.spojenec",
@@ -236,7 +247,8 @@
       "text": "Spojené státy jsou naším nejdůležitějším strategickým spojencem.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka míří na spor mezi zdrženlivější zahraniční politikou a aktivním zapojením do spojenecké bezpečnosti."
     },
     {
       "id": "item_D1_13_cina_zakaz.infrastruktury",
@@ -248,7 +260,8 @@
       "text": "Je správné z bezpečnostních důvodů vyloučit čínské firmy jako Huawei z budování klíčových komunikačních sítí (internet, telefon), i kdyby to znamenalo vyšší náklady.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka míří na spor mezi zdrženlivější zahraniční politikou a aktivním zapojením do spojenecké bezpečnosti."
     },
     {
       "id": "item_D1_14_cina_pomoc.taiwanu",
@@ -260,7 +273,8 @@
       "text": "Česká republika by měla být připravena podílet se na vojenské pomoci Tchaj-wanu, pokud by byl napaden Čínou.",
       "reversed": false,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText.",
+      "description": "Otázka míří na spor mezi zdrženlivější zahraniční politikou a aktivním zapojením do spojenecké bezpečnosti."
     },
     {
       "id": "item_D1_15_rusko_sankce.i.pres.ceny",
@@ -272,7 +286,8 @@
       "text": "Ekonomické sankce vůči Rusku jsou správné a měly by pokračovat, i kdyby to pro nás znamenalo vyšší ceny energií.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka míří na spor mezi zdrženlivější zahraniční politikou a aktivním zapojením do spojenecké bezpečnosti."
     },
     {
       "id": "item_D1_16_usa_trvala.zakladna",
@@ -284,7 +299,8 @@
       "text": "Trvalá vojenská základna armády USA na našem území by zásadně posílila naši bezpečnost.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka míří na spor mezi zdrženlivější zahraniční politikou a aktivním zapojením do spojenecké bezpečnosti."
     },
     {
       "id": "item_D1_17_nato_obrana.vychodniho.kridla",
@@ -296,7 +312,8 @@
       "text": "Česká armáda by se měla aktivně podílet na obraně východního křídla NATO i při zvýšených bezpečnostních rizicích.",
       "reversed": false,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText.",
+      "description": "Otázka míří na spor mezi zdrženlivější zahraniční politikou a aktivním zapojením do spojenecké bezpečnosti."
     },
     {
       "id": "item_D2_1_migrace_omezeni.suverenity",
@@ -305,10 +322,11 @@
       "dimensionOrder": 1,
       "facet": "migrace_omezeni.suverenity",
       "originalText": "Společná evropská politika migrace (tzv. Migrační pakt) omezuje naši kontrolu nad tím, s kým budeme žít.",
-      "text": "Společná evropská migrační politika snižuje schopnost České republiky samostatně rozhodovat o migraci.",
-      "reversed": true,
+      "text": "Společná evropská pravidla pro migraci a azyl jsou pro Česko lepší než převážně samostatné národní rozhodování.",
+      "reversed": false,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText."
+      "reviewNote": "Neutrality and context review pass on 2026-06-27; original wording is preserved in originalText.",
+      "description": "Evropská unie má společná pravidla pro azyl a migraci. Nový migrační a azylový pakt počítá od roku 2026 s větší koordinací, rychlejšími řízeními a solidaritou mezi státy; spor je o to, zda společný postup pomáhá, nebo příliš omezuje národní kontrolu."
     },
     {
       "id": "item_D2_2_clenstvi_vice.bere",
@@ -320,7 +338,8 @@
       "text": "Nevýhody členství v Evropské unii převažují nad jeho přínosy.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka se týká toho, kolik pravomocí má Česko sdílet v Evropské unii a kdy má trvat na samostatném rozhodování."
     },
     {
       "id": "item_D2_3_euro_nikdy.neprijmout",
@@ -332,7 +351,8 @@
       "text": "Česká republika by měla dlouhodobě zachovat českou korunu a nepřijímat euro.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText.",
+      "description": "Otázka se týká toho, kolik pravomocí má Česko sdílet v Evropské unii a kdy má trvat na samostatném rozhodování."
     },
     {
       "id": "item_D2_4_veto_klicovy.nastroj",
@@ -341,10 +361,11 @@
       "dimensionOrder": 4,
       "facet": "veto_klicovy.nastroj",
       "originalText": "Právo veta je klíčovým nástrojem naší suverenity a nesmíme se ho v žádné oblasti vzdát.",
-      "text": "Právo veta v Evropské unii je důležitým nástrojem české suverenity.",
+      "text": "Právo veta členských států v Evropské unii je důležitým nástrojem české suverenity.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality and context review pass on 2026-06-27; original wording is preserved in originalText.",
+      "description": "V Evropské unii se v řadě oblastí hlasuje kvalifikovanou většinou, ale některá citlivá témata pořád vyžadují jednomyslnost členských států. Právo veta znamená, že jeden stát může rozhodnutí v takové oblasti zablokovat."
     },
     {
       "id": "item_D2_5_green.deal_diktat",
@@ -356,7 +377,8 @@
       "text": "Green Deal má na českou ekonomiku a průmysl spíše negativní dopady.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka se týká toho, kolik pravomocí má Česko sdílet v Evropské unii a kdy má trvat na samostatném rozhodování."
     },
     {
       "id": "item_D2_6_pravo_nadrazenost.ustavy",
@@ -365,10 +387,11 @@
       "dimensionOrder": 6,
       "facet": "pravo_nadrazenost.ustavy",
       "originalText": "Česká ústava a zákony musí být vždy nadřazeny právu Evropské unie.",
-      "text": "Česká ústava a české zákony by měly mít přednost před právem Evropské unie.",
+      "text": "V případě rozporu by měly mít česká ústava a české zákony přednost před právem Evropské unie.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText."
+      "reviewNote": "Neutrality and context review pass on 2026-06-27; original wording is preserved in originalText.",
+      "description": "V oblastech, které Česko svěřilo Evropské unii, má unijní právo v praxi přednost před běžnými českými zákony. Debata se vede hlavně o tom, kde jsou meze této přednosti a jakou roli má mít česká ústava."
     },
     {
       "id": "item_D2_7_armada_ztrata.suverenity",
@@ -377,10 +400,11 @@
       "dimensionOrder": 7,
       "facet": "armada_ztrata.suverenity",
       "originalText": "Vytvoření společné evropské armády je nepřijatelným krokem ke zrušení naší národní suverenity.",
-      "text": "Společná evropská armáda by nepřiměřeně omezila českou suverenitu.",
+      "text": "Obrana by měla zůstat hlavně v rukou národních armád a NATO, ne společné evropské armády.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText."
+      "reviewNote": "Neutrality and context review pass on 2026-06-27; original wording is preserved in originalText.",
+      "description": "Obrana evropských států dnes stojí hlavně na národních armádách a NATO. Myšlenka společné evropské armády by znamenala hlubší obrannou spolupráci v EU a část rozhodování by se přesunula na evropskou úroveň."
     },
     {
       "id": "item_D2_8_clenstvi_vystoupeni",
@@ -392,7 +416,8 @@
       "text": "Česká republika by měla vystoupit z Evropské unie.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText.",
+      "description": "Otázka se týká toho, kolik pravomocí má Česko sdílet v Evropské unii a kdy má trvat na samostatném rozhodování."
     },
     {
       "id": "item_D2_9_clenstvi_prospesne",
@@ -404,7 +429,8 @@
       "text": "Členství v Evropské unii je pro naši zemi celkově prospěšné.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka se týká toho, kolik pravomocí má Česko sdílet v Evropské unii a kdy má trvat na samostatném rozhodování."
     },
     {
       "id": "item_D2_10_euro_co.nejdrive",
@@ -416,7 +442,8 @@
       "text": "Měli bychom co nejdříve přijmout euro.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka se týká toho, kolik pravomocí má Česko sdílet v Evropské unii a kdy má trvat na samostatném rozhodování."
     },
     {
       "id": "item_D2_11_armada_posileni.bezpecnosti",
@@ -428,7 +455,8 @@
       "text": "Vytvoření společné evropské armády by posílilo naši bezpečnost.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka se týká toho, kolik pravomocí má Česko sdílet v Evropské unii a kdy má trvat na samostatném rozhodování."
     },
     {
       "id": "item_D2_12_pravo_spolecna.reseni",
@@ -440,7 +468,8 @@
       "text": "V některých oblastech by mělo být rozhodování přeneseno na úroveň Evropské unie, protože společná řešení mohou být efektivnější.",
       "reversed": false,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText.",
+      "description": "Otázka se týká toho, kolik pravomocí má Česko sdílet v Evropské unii a kdy má trvat na samostatném rozhodování."
     },
     {
       "id": "item_D2_13_veto_zrusit.v.zahranici",
@@ -452,7 +481,8 @@
       "text": "Měli bychom se vzdát práva veta v zahraniční politice, aby EU mohla jednat rychleji a jednotněji.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka se týká toho, kolik pravomocí má Česko sdílet v Evropské unii a kdy má trvat na samostatném rozhodování."
     },
     {
       "id": "item_D2_14_green.deal_prilezitost",
@@ -464,7 +494,8 @@
       "text": "Green Deal je velkou příležitostí k modernizaci naší ekonomiky a zlepšení životního prostředí.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka se týká toho, kolik pravomocí má Česko sdílet v Evropské unii a kdy má trvat na samostatném rozhodování."
     },
     {
       "id": "item_D2_15_clenstvi_federace.jako.usa",
@@ -476,7 +507,8 @@
       "text": "Evropská unie by se měla postupně proměnit ve federaci podobnou Spojeným státům americkým.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka se týká toho, kolik pravomocí má Česko sdílet v Evropské unii a kdy má trvat na samostatném rozhodování."
     },
     {
       "id": "item_D3_1_socialni.system_plna.odpovednost",
@@ -485,10 +517,11 @@
       "dimensionOrder": 1,
       "facet": "socialni.system_plna.odpovednost",
       "originalText": "Každý člověk je plně odpovědný za svůj osud a stát by neměl pomáhat těm, kteří se o sebe nedokážou postarat sami.",
-      "text": "Stát by měl omezit sociální pomoc lidem, kteří mají reálnou možnost se o sebe postarat sami.",
-      "reversed": true,
+      "text": "Stát by měl poskytovat sociální pomoc i lidem, kteří se dlouhodobě nedokážou sami uživit.",
+      "reversed": false,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality and context review pass on 2026-06-27; original wording is preserved in originalText.",
+      "description": "Sociální dávky dnes kombinují nárokovou pomoc, testování příjmů a různé podmínky. Spor není o pomoc lidem, kteří ji nepotřebují, ale o to, jak přísně rozlišovat mezi potřebou pomoci a osobní odpovědností."
     },
     {
       "id": "item_D3_2_dotace_radikalni.omezeni",
@@ -497,10 +530,11 @@
       "dimensionOrder": 2,
       "facet": "dotace_radikalni.omezeni",
       "originalText": "Stát by měl radikálně omezit většinu dotací, protože křiví trh a podporují korupci.",
-      "text": "Stát by měl výrazně omezit většinu dotací podnikům a vybraným odvětvím.",
+      "text": "Stát by měl výrazně omezit dotace podnikům a vybraným odvětvím.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality and context review pass on 2026-06-27; original wording is preserved in originalText.",
+      "description": "Dotace mohou podporovat investice, zemědělství, energetiku nebo veřejné cíle. Kritici namítají, že zvýhodňují vybrané příjemce, komplikují trh a vytvářejí prostor pro klientelismus."
     },
     {
       "id": "item_D3_3_dane_nizke.a.rovne",
@@ -512,7 +546,8 @@
       "text": "Daně by měly být co nejnižší a rovné pro všechny, i za cenu omezení některých veřejných služeb.",
       "reversed": true,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka míří na hranici mezi osobní odpovědností, přerozdělováním a rolí státu ve veřejných službách."
     },
     {
       "id": "item_D3_4_zadluzeni_vyrovnany.rozpocet",
@@ -524,7 +559,8 @@
       "text": "Stát by měl mít vyrovnaný rozpočet, i kdyby to znamenalo výrazné škrty ve výdajích.",
       "reversed": true,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka míří na hranici mezi osobní odpovědností, přerozdělováním a rolí státu ve veřejných službách."
     },
     {
       "id": "item_D3_5_duchody_soukrome.sporeni",
@@ -536,7 +572,8 @@
       "text": "Důchodový systém by měl být založen hlavně na soukromém spoření, ne na státním přerozdělování.",
       "reversed": true,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka míří na hranici mezi osobní odpovědností, přerozdělováním a rolí státu ve veřejných službách."
     },
     {
       "id": "item_D3_6_verejne.sluzby_spoluucast",
@@ -548,7 +585,8 @@
       "text": "Je správné, aby si lidé připláceli za lepší zdravotní péči nebo kvalitnější vzdělání na vysoké škole.",
       "reversed": true,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka míří na hranici mezi osobní odpovědností, přerozdělováním a rolí státu ve veřejných službách."
     },
     {
       "id": "item_D3_7_dane_zasluhovost",
@@ -560,7 +598,8 @@
       "text": "Lidé s vysokými příjmy by si měli ponechat větší část svých peněz, i kdyby to znamenalo menší přerozdělování.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka míří na hranici mezi osobní odpovědností, přerozdělováním a rolí státu ve veřejných službách."
     },
     {
       "id": "item_D3_8_socialni.system_boj.s.chudobou",
@@ -572,7 +611,8 @@
       "text": "Stát by měl zajistit, aby nikdo v naší zemi nežil v chudobě.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka míří na hranici mezi osobní odpovědností, přerozdělováním a rolí státu ve veřejných službách."
     },
     {
       "id": "item_D3_9_dane_progrese",
@@ -584,7 +624,8 @@
       "text": "Je správné, aby bohatší lidé a firmy platili výrazně vyšší daně než ostatní.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka míří na hranici mezi osobní odpovědností, přerozdělováním a rolí státu ve veřejných službách."
     },
     {
       "id": "item_D3_10_zadluzeni_pomoc.dluznikum",
@@ -596,7 +637,8 @@
       "text": "Stát by měl pomáhat lidem v exekuci získat druhou šanci.",
       "reversed": false,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText.",
+      "description": "Otázka míří na hranici mezi osobní odpovědností, přerozdělováním a rolí státu ve veřejných službách."
     },
     {
       "id": "item_D3_11_vlastnictvi_statni.podniky",
@@ -608,7 +650,8 @@
       "text": "Klíčové podniky, jako jsou elektrárny nebo vodárny, by měly být plně ve vlastnictví státu nebo obcí.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka míří na hranici mezi osobní odpovědností, přerozdělováním a rolí státu ve veřejných službách."
     },
     {
       "id": "item_D3_12_verejne.sluzby_zcela.zdarma",
@@ -620,7 +663,8 @@
       "text": "Základní zdravotní péče a vzdělání na všech stupních musí být pro každého zcela zdarma.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka míří na hranici mezi osobní odpovědností, přerozdělováním a rolí státu ve veřejných službách."
     },
     {
       "id": "item_D3_13_socialni.system_garance.dustojnosti",
@@ -632,7 +676,8 @@
       "text": "Stát by měl garantovat základní životní důstojnost i lidem, kteří zrovna nepracují.",
       "reversed": false,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText.",
+      "description": "Otázka míří na hranici mezi osobní odpovědností, přerozdělováním a rolí státu ve veřejných službách."
     },
     {
       "id": "item_D3_14_socialni.system_nepodmineny.prijem",
@@ -644,7 +689,8 @@
       "text": "Stát by měl všem občanům zajistit základní nepodmíněný příjem, který by pokryl jejich životní náklady.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka míří na hranici mezi osobní odpovědností, přerozdělováním a rolí státu ve veřejných službách."
     },
     {
       "id": "item_D3_15_vlastnictvi_nedotknutelnost",
@@ -656,7 +702,8 @@
       "text": "Soukromé vlastnictví má být velmi silně chráněno a vyvlastnění proti vůli vlastníka by mělo být možné jen ve zcela výjimečných případech.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText.",
+      "description": "Otázka míří na hranici mezi osobní odpovědností, přerozdělováním a rolí státu ve veřejných službách."
     },
     {
       "id": "item_D4_1_regulace.domaci_volna.soutez",
@@ -668,7 +715,8 @@
       "text": "Stát by měl firmám ukládat jen minimum pravidel a více spoléhat na konkurenci mezi nimi.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka porovnává důraz na podnikatelskou volnost s pravidly, která chrání zaměstnance, spotřebitele, místní obyvatele nebo životní prostředí."
     },
     {
       "id": "item_D4_2_regulace.prostredi_ekonomika.pred.ekologii",
@@ -677,10 +725,11 @@
       "dimensionOrder": 2,
       "facet": "regulace.prostredi_ekonomika.pred.ekologii",
       "originalText": "Ochrana životního prostředí by se neměla přehánět, pokud to omezuje výstavbu a poškozuje naši ekonomiku.",
-      "text": "Ekologické regulace by neměly brzdit výstavbu a ekonomický rozvoj.",
+      "text": "Ochrana životního prostředí může odůvodnit i pravidla, která zpomalí výstavbu nebo zvýší náklady firem.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText."
+      "reviewNote": "Neutrality and context review pass on 2026-06-27; original wording is preserved in originalText.",
+      "description": "Ekologická pravidla mohou chránit krajinu, vodu nebo zdraví, ale někdy prodlužují povolování staveb nebo zvyšují náklady. Otázka míří na to, jakou váhu má mít ochrana prostředí při konfliktu s rychlostí výstavby."
     },
     {
       "id": "item_D4_3_regulace.prace_snadne.propousteni",
@@ -692,7 +741,8 @@
       "text": "Zaměstnavatelé by měli mít jednodušší možnost propustit zaměstnance s nedostatečným pracovním výkonem.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText.",
+      "description": "Otázka porovnává důraz na podnikatelskou volnost s pravidly, která chrání zaměstnance, spotřebitele, místní obyvatele nebo životní prostředí."
     },
     {
       "id": "item_D4_4_obchod_proti.clum",
@@ -704,7 +754,8 @@
       "text": "Omezení dovozu levného zboží ze zahraničí by mělo více negativních než pozitivních dopadů.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka porovnává důraz na podnikatelskou volnost s pravidly, která chrání zaměstnance, spotřebitele, místní obyvatele nebo životní prostředí."
     },
     {
       "id": "item_D4_5_regulace.inovaci_volny.vyvoj",
@@ -716,7 +767,8 @@
       "text": "Stát by měl zasahovat do vývoje nových technologií jen výjimečně, i když s nimi mohou být spojena určitá rizika.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka porovnává důraz na podnikatelskou volnost s pravidly, která chrání zaměstnance, spotřebitele, místní obyvatele nebo životní prostředí."
     },
     {
       "id": "item_D4_6_regulace.cizinci_smluvni.volnost",
@@ -728,7 +780,8 @@
       "text": "Firmy by měly mít větší volnost při zaměstnávání zahraničních pracovníků.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka porovnává důraz na podnikatelskou volnost s pravidly, která chrání zaměstnance, spotřebitele, místní obyvatele nebo životní prostředí."
     },
     {
       "id": "item_D4_7_regulace.domaci_mene.byrokracie",
@@ -737,10 +790,11 @@
       "dimensionOrder": 7,
       "facet": "regulace.domaci_mene.byrokracie",
       "originalText": "Čím méně byrokracie a papírování pro podnikatele, tím lépe pro celou ekonomiku.",
-      "text": "Stát by měl výrazně snížit administrativní povinnosti podnikatelů.",
+      "text": "Stát by měl výrazně snížit administrativní povinnosti podnikatelů, i kdyby tím omezil část kontrol a hlášení.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality and context review pass on 2026-06-27; original wording is preserved in originalText.",
+      "description": "Administrativní povinnosti podnikatelů zahrnují hlášení, evidence, kontroly a žádosti. Jejich rušení může ulevit firmám, ale může také omezit část kontroly veřejných peněz, bezpečnosti práce, spotřebitelů nebo životního prostředí."
     },
     {
       "id": "item_D4_8_obchod_ochrana.zemedelcu",
@@ -752,7 +806,8 @@
       "text": "Stát by měl chránit české zemědělce před levným dovozem ze zahraničí, například obilí z Ukrajiny.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka porovnává důraz na podnikatelskou volnost s pravidly, která chrání zaměstnance, spotřebitele, místní obyvatele nebo životní prostředí."
     },
     {
       "id": "item_D4_9_regulace.prace_ochrana.zamestnancu",
@@ -764,7 +819,8 @@
       "text": "Zákoník práce by měl především chránit práva zaměstnanců, i když to zvyšuje náklady a povinnosti firem.",
       "reversed": false,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText.",
+      "description": "Otázka porovnává důraz na podnikatelskou volnost s pravidly, která chrání zaměstnance, spotřebitele, místní obyvatele nebo životní prostředí."
     },
     {
       "id": "item_D4_10_regulace.cen_stropy",
@@ -776,7 +832,8 @@
       "text": "Pokud ceny základních potravin nebo energií příliš rostou, stát by je měl zastropovat.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka porovnává důraz na podnikatelskou volnost s pravidly, která chrání zaměstnance, spotřebitele, místní obyvatele nebo životní prostředí."
     },
     {
       "id": "item_D4_11_regulace.vystavby_pravo.veta.obyvatel",
@@ -788,7 +845,8 @@
       "text": "Místní obyvatelé by měli mít silnější možnost bránit velkým projektům, jako jsou továrny nebo sklady.",
       "reversed": false,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka porovnává důraz na podnikatelskou volnost s pravidly, která chrání zaměstnance, spotřebitele, místní obyvatele nebo životní prostředí."
     },
     {
       "id": "item_D4_12_regulace.korporaci_prisna.kontrola",
@@ -800,7 +858,8 @@
       "text": "Stát by měl přísněji regulovat velké zahraniční firmy působící na českém trhu.",
       "reversed": false,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka porovnává důraz na podnikatelskou volnost s pravidly, která chrání zaměstnance, spotřebitele, místní obyvatele nebo životní prostředí."
     },
     {
       "id": "item_D4_13_regulace.cizinci_zakaz.nakupu.nemovitosti",
@@ -812,7 +871,8 @@
       "text": "Nákup nemovitostí by měl být povolen pouze českým občanům.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka porovnává důraz na podnikatelskou volnost s pravidly, která chrání zaměstnance, spotřebitele, místní obyvatele nebo životní prostředí."
     },
     {
       "id": "item_D4_14_regulace.domaci_naridit.vyrobu",
@@ -824,7 +884,8 @@
       "text": "Stát by měl mít možnost v mimořádných situacích nařídit firmám výrobu zboží ve veřejném zájmu.",
       "reversed": false,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka porovnává důraz na podnikatelskou volnost s pravidly, která chrání zaměstnance, spotřebitele, místní obyvatele nebo životní prostředí."
     },
     {
       "id": "item_D5_1_ostatni_zakaz.pornografie",
@@ -836,7 +897,8 @@
       "text": "Stát by měl zakázat pornografii a aktivně vymáhat tento zákaz.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText.",
+      "description": "Otázka se týká napětí mezi tradičními společenskými normami a osobní volbou v kulturních, rodinných nebo bioetických tématech."
     },
     {
       "id": "item_D5_2_gender_hrozba.pro.deti",
@@ -848,7 +910,8 @@
       "text": "Školy a veřejné programy by měly omezit výuku témat souvisejících s genderovou identitou u mladších dětí.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka se týká napětí mezi tradičními společenskými normami a osobní volbou v kulturních, rodinných nebo bioetických tématech."
     },
     {
       "id": "item_D5_3_bioetika_interrupce.je.vrazda",
@@ -860,7 +923,8 @@
       "text": "Interrupce by měla být zákonem výrazně omezena nebo zakázána od početí.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka se týká napětí mezi tradičními společenskými normami a osobní volbou v kulturních, rodinných nebo bioetických tématech."
     },
     {
       "id": "item_D5_4_rodina_jedine.muz.a.zena",
@@ -872,7 +936,8 @@
       "text": "Manželství může být jedině svazkem muže a ženy.",
       "reversed": true,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka se týká napětí mezi tradičními společenskými normami a osobní volbou v kulturních, rodinných nebo bioetických tématech."
     },
     {
       "id": "item_D5_5_gender_tradicni.role",
@@ -884,7 +949,8 @@
       "text": "Tradiční rozdělení rolí v rodině, kdy žena více pečuje o domácnost a muž více zajišťuje příjem, je pro společnost přínosné.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka se týká napětí mezi tradičními společenskými normami a osobní volbou v kulturních, rodinných nebo bioetických tématech."
     },
     {
       "id": "item_D5_6_nabozenstvi_navrat.ke.krestanstvi",
@@ -896,7 +962,8 @@
       "text": "Společnost by se měla více opírat o tradiční křesťanské hodnoty.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText.",
+      "description": "Otázka se týká napětí mezi tradičními společenskými normami a osobní volbou v kulturních, rodinných nebo bioetických tématech."
     },
     {
       "id": "item_D5_7_obecne_prilisna.svoboda.skodi",
@@ -908,7 +975,8 @@
       "text": "Silný důraz na individuální svobodu může oslabovat společenskou soudržnost.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka se týká napětí mezi tradičními společenskými normami a osobní volbou v kulturních, rodinných nebo bioetických tématech."
     },
     {
       "id": "item_D5_8_bioetika_pravo.na.eutanazii",
@@ -920,7 +988,8 @@
       "text": "Je správné, aby nevyléčitelně nemocní lidé měli možnost rozhodnout se pro ukončení svého života za asistence lékaře.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka se týká napětí mezi tradičními společenskými normami a osobní volbou v kulturních, rodinných nebo bioetických tématech."
     },
     {
       "id": "item_D5_9_obecne_svoboda.zivotniho.stylu",
@@ -932,7 +1001,8 @@
       "text": "Každý by měl mít svobodu žít tak, jak uzná za vhodné, i když se to ostatním nelíbí.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka se týká napětí mezi tradičními společenskými normami a osobní volbou v kulturních, rodinných nebo bioetických tématech."
     },
     {
       "id": "item_D5_10_rodina_adopce.pro.vsechny",
@@ -944,7 +1014,8 @@
       "text": "Stejnopohlavní páry by měly mít právo adoptovat děti.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka se týká napětí mezi tradičními společenskými normami a osobní volbou v kulturních, rodinných nebo bioetických tématech."
     },
     {
       "id": "item_D5_11_drogy_legalizace.marihuany",
@@ -956,7 +1027,8 @@
       "text": "Prodej marihuany pro osobní potřebu by měl být legální.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka se týká napětí mezi tradičními společenskými normami a osobní volbou v kulturních, rodinných nebo bioetických tématech."
     },
     {
       "id": "item_D5_12_gender_trans.zeny.ve.sportu",
@@ -968,7 +1040,8 @@
       "text": "Pravidla pro účast transgender žen ve sportu by měla vycházet především z biologického pohlaví.",
       "reversed": false,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka se týká napětí mezi tradičními společenskými normami a osobní volbou v kulturních, rodinných nebo bioetických tématech."
     },
     {
       "id": "item_D5_13_vychova_otevrena.sexualni.vychova",
@@ -980,7 +1053,8 @@
       "text": "Ve školách by se mělo otevřeně mluvit o různých podobách sexuality a partnerských vztahů.",
       "reversed": false,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText.",
+      "description": "Otázka se týká napětí mezi tradičními společenskými normami a osobní volbou v kulturních, rodinných nebo bioetických tématech."
     },
     {
       "id": "item_D5_14_rodina_uznani.poly.svazku",
@@ -992,7 +1066,8 @@
       "text": "Stát by měl umožnit právní uznání partnerských svazků více než dvou dospělých osob.",
       "reversed": false,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka se týká napětí mezi tradičními společenskými normami a osobní volbou v kulturních, rodinných nebo bioetických tématech."
     },
     {
       "id": "item_D6_1_jazyk_vyhradne.cestina",
@@ -1004,7 +1079,8 @@
       "text": "Veřejné instituce by měly komunikovat primárně česky a používání dalších jazyků omezit na nezbytné případy.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka sleduje, jakou váhu má mít národní identita, integrace menšin a otevřenost vůči migraci."
     },
     {
       "id": "item_D6_2_integrace_preferovani.cechu",
@@ -1013,10 +1089,11 @@
       "dimensionOrder": 2,
       "facet": "integrace_preferovani.cechu",
       "originalText": "Je správné, aby stát primárně hájil zájmy etnických Čechů před zájmy přistěhovalců a menšin.",
-      "text": "Stát by měl při tvorbě politik více zohledňovat zájmy většinové společnosti než zájmy přistěhovalců a menšin.",
+      "text": "Stát by měl při rozhodování více zohledňovat zájmy většinové společnosti než zájmy přistěhovalců a menšin.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality and context review pass on 2026-06-27; original wording is preserved in originalText.",
+      "description": "Vláda při rozhodování běžně zvažuje dopady na různé skupiny obyvatel. Spor je o to, zda má mít většinová společnost v konfliktních otázkách výraznou přednost před menšinami a nově příchozími."
     },
     {
       "id": "item_D6_3_integrace_asimilace",
@@ -1028,7 +1105,8 @@
       "text": "Přistěhovalci by měli přijmout českou kulturu i tehdy, pokud to znamená výrazně omezit některé původní zvyky.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka sleduje, jakou váhu má mít národní identita, integrace menšin a otevřenost vůči migraci."
     },
     {
       "id": "item_D6_4_skupinove.rozdily_mentalita",
@@ -1037,10 +1115,11 @@
       "dimensionOrder": 4,
       "facet": "skupinove.rozdily_mentalita",
       "originalText": "Neúspěch některých menšin, například Romů, ve společnosti je způsoben hlavně jejich odlišnou mentalitou, nikoliv diskriminací.",
-      "text": "Sociální a ekonomické problémy některých menšin jsou způsobeny spíše kulturními faktory než diskriminací.",
+      "text": "Sociální a ekonomické problémy některých menšin, například Romů, souvisejí spíše s prostředím a zvyky v jejich komunitách než s diskriminací.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality and context review pass on 2026-06-27; original wording is preserved in originalText.",
+      "description": "Otázka se ptá, zda za problémy některých menšin stojí hlavně diskriminace a nerovné podmínky, nebo spíš rozdíly v prostředí, zvycích a očekáváních uvnitř komunit."
     },
     {
       "id": "item_D6_5_imigrace_stop.kultury",
@@ -1052,7 +1131,8 @@
       "text": "Imigrace z kulturně odlišných zemí by měla být výrazně omezena.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka sleduje, jakou váhu má mít národní identita, integrace menšin a otevřenost vůči migraci."
     },
     {
       "id": "item_D6_6_narodni.stat_nejvyssi.hodnota\t",
@@ -1061,10 +1141,11 @@
       "dimensionOrder": 6,
       "facet": "narodni.stat_nejvyssi.hodnota\t",
       "originalText": "Český národnostní stát je klíčovou hodnotou a jeho ochrana musí být absolutní prioritou vlády.",
-      "text": "Ochrana českého národního státu by měla patřit mezi hlavní priority vlády.",
+      "text": "Vláda by měla klást větší důraz na českou státní suverenitu a národní identitu než na evropskou nebo globální spolupráci.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality and context review pass on 2026-06-27; original wording is preserved in originalText.",
+      "description": "Národním státem se zde myslí stát založený především na české politické suverenitě, jazyce a národní identitě. Otázka nemíří na běžnou obranu území, ale na prioritu národní identity v politice."
     },
     {
       "id": "item_D6_7_koncepce.naroda_narozeni",
@@ -1076,7 +1157,8 @@
       "text": "Česká národní identita je primárně dána původem a narozením.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText.",
+      "description": "Otázka sleduje, jakou váhu má mít národní identita, integrace menšin a otevřenost vůči migraci."
     },
     {
       "id": "item_D6_8_jazyk_vicejazycnost",
@@ -1088,7 +1170,8 @@
       "text": "Je přínosné, když se na veřejných místech a v obchodech běžně mluví i jinými jazyky než jen češtinou.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka sleduje, jakou váhu má mít národní identita, integrace menšin a otevřenost vůči migraci."
     },
     {
       "id": "item_D6_9_imigrace_humanita",
@@ -1100,7 +1183,8 @@
       "text": "Česká republika by měla přijímat uprchlíky z válečných oblastí, pokud to její kapacity umožňují.",
       "reversed": false,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka sleduje, jakou váhu má mít národní identita, integrace menšin a otevřenost vůči migraci."
     },
     {
       "id": "item_D6_10_integrace_podpora.diverzity",
@@ -1112,7 +1196,8 @@
       "text": "Stát by měl aktivně podporovat kulturní rozmanitost a pomáhat menšinám udržovat si jejich jazyk a tradice.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka sleduje, jakou váhu má mít národní identita, integrace menšin a otevřenost vůči migraci."
     },
     {
       "id": "item_D6_11_skupinove.rozdily_diskriminace",
@@ -1124,7 +1209,8 @@
       "text": "Nerovné podmínky a diskriminace významně přispívají k problémům některých menšin ve společnosti.",
       "reversed": false,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka sleduje, jakou váhu má mít národní identita, integrace menšin a otevřenost vůči migraci."
     },
     {
       "id": "item_D6_12.1_koncepce.naroda_evropan",
@@ -1136,7 +1222,8 @@
       "text": "Cítím se být stejně tak Evropanem a občanem světa jako Čechem.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka sleduje, jakou váhu má mít národní identita, integrace menšin a otevřenost vůči migraci."
     },
     {
       "id": "item_D6_12.2_",
@@ -1148,7 +1235,8 @@
       "text": "Cítím společenskou sounáležitost primárně s Čechy a ostatními Evropany.",
       "reversed": false,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka sleduje, jakou váhu má mít národní identita, integrace menšin a otevřenost vůči migraci."
     },
     {
       "id": "item_D6_13_imigrace_otevrene.hranice",
@@ -1160,7 +1248,8 @@
       "text": "Česká republika by měla být otevřenější lidem, kteří se sem chtějí přestěhovat za prací nebo lepším životem.",
       "reversed": false,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka sleduje, jakou váhu má mít národní identita, integrace menšin a otevřenost vůči migraci."
     },
     {
       "id": "item_D6_14_narodni.stat_zajem.je.prezitek\t",
@@ -1172,7 +1261,8 @@
       "text": "Český národní zájem by měl mít v současné politice menší význam než širší evropská nebo globální spolupráce.",
       "reversed": false,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka sleduje, jakou váhu má mít národní identita, integrace menšin a otevřenost vůči migraci."
     },
     {
       "id": "item_D6_15_narod.stat_zrusit",
@@ -1184,7 +1274,8 @@
       "text": "Nadnárodní organizace, například EU nebo OSN, by měly v budoucnu převzít více pravomocí od národních států.",
       "reversed": false,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka sleduje, jakou váhu má mít národní identita, integrace menšin a otevřenost vůči migraci."
     },
     {
       "id": "item_D6_16_koncepce.identita",
@@ -1196,7 +1287,8 @@
       "text": "Výrazná migrace může mít na evropské společnosti převážně negativní dopady.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka sleduje, jakou váhu má mít národní identita, integrace menšin a otevřenost vůči migraci."
     },
     {
       "id": "item_D7_1_instituce_ignorovani.soudu",
@@ -1208,7 +1300,8 @@
       "text": "Vláda by měla mít v mimořádných situacích možnost prosadit svou politiku i proti rozhodnutí soudů.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka míří na vztah mezi přímou politickou kontrolou a nezávislostí institucí, médií a pravidel."
     },
     {
       "id": "item_D7_2_lider_silny.vudce",
@@ -1220,7 +1313,8 @@
       "text": "Silný lídr s rozsáhlejšími pravomocemi může být pro zemi lepší než pomalejší koaliční rozhodování.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka míří na vztah mezi přímou politickou kontrolou a nezávislostí institucí, médií a pravidel."
     },
     {
       "id": "item_D7_3_media_statni.kontrola",
@@ -1232,7 +1326,8 @@
       "text": "Veřejnoprávní média by měla být pod přímou kontrolou vlády.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording is preserved in originalText.",
+      "description": "Otázka míří na vztah mezi přímou politickou kontrolou a nezávislostí institucí, médií a pravidel."
     },
     {
       "id": "item_D7_4_referendum_o.vsem",
@@ -1244,7 +1339,8 @@
       "text": "O nejdůležitějších otázkách, jako jsou daně nebo mezinárodní smlouvy, by se mělo vždy rozhodovat v referendu.",
       "reversed": true,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka míří na vztah mezi přímou politickou kontrolou a nezávislostí institucí, médií a pravidel."
     },
     {
       "id": "item_D7_5_etika_ucel.sveti.prostredky",
@@ -1256,7 +1352,8 @@
       "text": "Střet zájmů nebo porušení zákona u politika nemusí vždy vést k odstoupení, pokud voliči jeho politiku nadále podporují.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka míří na vztah mezi přímou politickou kontrolou a nezávislostí institucí, médií a pravidel."
     },
     {
       "id": "item_D7_6_instituce_cnb.pod.kontrolu",
@@ -1265,10 +1362,11 @@
       "dimensionOrder": 6,
       "facet": "instituce_cnb.pod.kontrolu",
       "originalText": "Nezávislost České národní banky je přeceňovaná; měla by se více řídit potřebami vlády a občanů.",
-      "text": "Česká národní banka by měla více zohledňovat hospodářské priority vlády.",
+      "text": "Vláda by měla mít větší vliv na směřování České národní banky.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality and context review pass on 2026-06-27; original wording is preserved in originalText.",
+      "description": "Česká národní banka je nezávislá instituce a jejím hlavním cílem je cenová stabilita. Spor je o to, zda má být tato nezávislost tak silná, nebo zda má banka víc reagovat na hospodářské priority vlády."
     },
     {
       "id": "item_D7_7_ostatni_kumulace.funkci",
@@ -1280,7 +1378,8 @@
       "text": "Politici by měli mít možnost zastávat více funkcí najednou, například být poslancem a starostou zároveň.",
       "reversed": true,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka míří na vztah mezi přímou politickou kontrolou a nezávislostí institucí, médií a pravidel."
     },
     {
       "id": "item_D7_8_etika_okamzita.rezignace",
@@ -1292,7 +1391,8 @@
       "text": "Politici, kteří prokazatelně lžou nebo opisují ve svých pracích, by měli odstoupit z veřejných funkcí.",
       "reversed": false,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka míří na vztah mezi přímou politickou kontrolou a nezávislostí institucí, médií a pravidel."
     },
     {
       "id": "item_D7_9_instituce_nezavislost.soudu",
@@ -1304,7 +1404,8 @@
       "text": "Nezávislé soudy jsou klíčovou pojistkou demokracie a jejich rozhodnutí musí respektovat i politici.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka míří na vztah mezi přímou politickou kontrolou a nezávislostí institucí, médií a pravidel."
     },
     {
       "id": "item_D7_10_media_nezavislost",
@@ -1316,7 +1417,8 @@
       "text": "Je důležité, aby veřejnoprávní média byla zcela nezávislá na politicích a vládě.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka míří na vztah mezi přímou politickou kontrolou a nezávislostí institucí, médií a pravidel."
     },
     {
       "id": "item_D7_11_etika_plna.transparentnost",
@@ -1328,7 +1430,8 @@
       "text": "Všechny smlouvy a výdaje státu a státních firem by měly být plně transparentní a dohledatelné na internetu.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka míří na vztah mezi přímou politickou kontrolou a nezávislostí institucí, médií a pravidel."
     },
     {
       "id": "item_D7_12_obecne_delba.moci",
@@ -1340,7 +1443,8 @@
       "text": "Dělba moci a systém vzájemné kontroly mezi vládou, parlamentem a soudy jsou pro fungování státu zásadní.",
       "reversed": false,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka míří na vztah mezi přímou politickou kontrolou a nezávislostí institucí, médií a pravidel."
     },
     {
       "id": "item_D7_13_lider_stabilni.koalice",
@@ -1352,7 +1456,8 @@
       "text": "Je lepší mít stabilní vládu složenou z mnoha stran, které se navzájem kontrolují, i když je pomalejší v rozhodování.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka míří na vztah mezi přímou politickou kontrolou a nezávislostí institucí, médií a pravidel."
     },
     {
       "id": "item_D7_14_obecne_politik.jako.spravce",
@@ -1364,7 +1469,8 @@
       "text": "Politici by se měli více řídit zákony a odbornými doporučeními než okamžitou náladou veřejnosti.",
       "reversed": false,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka míří na vztah mezi přímou politickou kontrolou a nezávislostí institucí, médií a pravidel."
     },
     {
       "id": "item_D8_1_autonomie.tela_povinne.ockovani",
@@ -1376,7 +1482,8 @@
       "text": "Stát by měl mít právo nařídit povinné očkování celého obyvatelstva v případě vážné epidemie.",
       "reversed": true,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka sleduje hranici mezi bezpečnostními pravomocemi státu a občanskými svobodami."
     },
     {
       "id": "item_D8_2_informace_id.na.socialnich.sitich",
@@ -1388,7 +1495,8 @@
       "text": "Používání sociálních sítí by mělo být možné jen pod ověřenou identitou.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Dnes lze většinu sociálních sítí používat pod přezdívkou. Povinné ověřování identity by mohlo omezit falešné účty, ale zároveň by snížilo anonymitu a soukromí uživatelů."
     },
     {
       "id": "item_D8_3_informace_zakaz.dezinformaci",
@@ -1400,7 +1508,8 @@
       "text": "Vláda by měla mít možnost dočasně omezit dostupnost webů, které bezpečnostní orgány označí za závažnou hrozbu.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka sleduje hranici mezi bezpečnostními pravomocemi státu a občanskými svobodami."
     },
     {
       "id": "item_D8_4_obrana_povinna.vojna",
@@ -1412,7 +1521,8 @@
       "text": "Měli bychom znovu zavést nějakou formu povinné vojenské služby.",
       "reversed": true,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka sleduje hranici mezi bezpečnostními pravomocemi státu a občanskými svobodami."
     },
     {
       "id": "item_D8_5_ostatni_biometrika.cizincu",
@@ -1424,7 +1534,8 @@
       "text": "Cizinci ze zemí mimo EU by měli při vstupu do České republiky povinně poskytovat biometrické údaje.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka sleduje hranici mezi bezpečnostními pravomocemi státu a občanskými svobodami."
     },
     {
       "id": "item_D8_6_ostatni_automaticke.vyhosteni",
@@ -1436,7 +1547,8 @@
       "text": "Cizinec, který v České republice spáchá úmyslný trestný čin, by měl být po odpykání trestu zpravidla vyhoštěn.",
       "reversed": true,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Dnes může soud uložit trest vyhoštění a správní orgány mohou rozhodnout o správním vyhoštění podle konkrétní situace. Neplatí ale jednoduché pravidlo, že každý cizinec odsouzený za úmyslný trestný čin musí být automaticky vyhoštěn."
     },
     {
       "id": "item_D8_7_obrana_povinnost.branit.vlast",
@@ -1448,7 +1560,8 @@
       "text": "Každý občan má povinnost aktivně bránit svou vlast v případě napadení.",
       "reversed": true,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka sleduje hranici mezi bezpečnostními pravomocemi státu a občanskými svobodami."
     },
     {
       "id": "item_D8_8_informace_zadne.zakazy.stran",
@@ -1460,7 +1573,8 @@
       "text": "Stát by neměl zakazovat politické strany nebo hnutí pouze kvůli jejich názorům.",
       "reversed": false,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka sleduje hranici mezi bezpečnostními pravomocemi státu a občanskými svobodami."
     },
     {
       "id": "item_D8_9_ngo_svoboda.financovani",
@@ -1472,7 +1586,8 @@
       "text": "Financování politicky aktivních neziskových organizací ze zahraničí by nemělo podléhat zvláštní regulaci nad rámec běžné transparentnosti.",
       "reversed": false,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka sleduje hranici mezi bezpečnostními pravomocemi státu a občanskými svobodami."
     },
     {
       "id": "item_D8_10_informace_absolutni.svoboda.slova",
@@ -1484,7 +1599,8 @@
       "text": "Stát by měl zasahovat do veřejných projevů jen v případech přímého porušení zákona, ne kvůli urážlivým nebo nepopulárním názorům.",
       "reversed": false,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka sleduje hranici mezi bezpečnostními pravomocemi státu a občanskými svobodami."
     },
     {
       "id": "item_D8_11_zbrane_pravo.vlastnit",
@@ -1496,7 +1612,8 @@
       "text": "Každý občan by měl mít právo vlastnit zbraň pro ochranu sebe, své rodiny a majetku.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka sleduje hranici mezi bezpečnostními pravomocemi státu a občanskými svobodami."
     },
     {
       "id": "item_D8_12_soukromi_zakaz.rozpoznavani.obliceju",
@@ -1508,7 +1625,8 @@
       "text": "Policie nemá používat plošnou automatickou identifikaci lidí bezpečnostními kamerami podle fotografií z občanských průkazů.",
       "reversed": false,
       "reviewStatus": "wording_reviewed",
-      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained."
+      "reviewNote": "Neutrality review pass on 2026-06-15; original wording retained.",
+      "description": "Otázka sleduje hranici mezi bezpečnostními pravomocemi státu a občanskými svobodami."
     },
     {
       "id": "item_D8_13_soukromi_absolutni.nedotknutelnost",
@@ -1520,7 +1638,8 @@
       "text": "Soukromá komunikace mezi lidmi má být silně chráněna před sledováním ze strany státu.",
       "reversed": false,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka sleduje hranici mezi bezpečnostními pravomocemi státu a občanskými svobodami."
     },
     {
       "id": "item_D8_14_informace_stat.neurcuje.pravdu",
@@ -1532,7 +1651,8 @@
       "text": "Stát by neměl rozhodovat, které sporné veřejné informace jsou pravdivé.",
       "reversed": false,
       "reviewStatus": "neutralized",
-      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText."
+      "reviewNote": "Neutrality review pass on 2026-06-26; original wording is preserved in originalText.",
+      "description": "Otázka sleduje hranici mezi bezpečnostními pravomocemi státu a občanskými svobodami."
     }
   ],
   "ratings": [
@@ -2610,7 +2730,7 @@
     {
       "questionId": "item_D2_1_migrace_omezeni.suverenity",
       "partyCode": "SPD",
-      "rating": 4,
+      "rating": 1,
       "evidenceStatus": "weak_source_context",
       "evidenceUrl": "https://spd.cz/",
       "evidenceTitle": "SPD: oficiální web, programové priority a veřejná stanoviska",
@@ -2619,7 +2739,7 @@
     {
       "questionId": "item_D2_1_migrace_omezeni.suverenity",
       "partyCode": "SPOLU",
-      "rating": 3,
+      "rating": 2,
       "evidenceStatus": "official_program_context",
       "evidenceUrl": "https://www.spolu25.cz/program",
       "evidenceTitle": "SPOLU 2025: VIZE 2030 / volební program",
@@ -2628,7 +2748,7 @@
     {
       "questionId": "item_D2_1_migrace_omezeni.suverenity",
       "partyCode": "PIRATI",
-      "rating": 3,
+      "rating": 2,
       "evidenceStatus": "official_program_context",
       "evidenceUrl": "https://www.pirati.cz/program/",
       "evidenceTitle": "Česká pirátská strana: programové dokumenty a Sněmovna 2025",
@@ -2637,7 +2757,7 @@
     {
       "questionId": "item_D2_1_migrace_omezeni.suverenity",
       "partyCode": "MOTORISTE",
-      "rating": 4,
+      "rating": 1,
       "evidenceStatus": "weak_source_context",
       "evidenceUrl": "https://motoristesobe.cz/wp-content/uploads/24_12_zakladni-ideova-vychodiska5.pdf",
       "evidenceTitle": "Motoristé sobě: Základní ideová východiska a veřejná vystoupení",
@@ -2646,7 +2766,7 @@
     {
       "questionId": "item_D2_1_migrace_omezeni.suverenity",
       "partyCode": "ANO",
-      "rating": 4,
+      "rating": 1,
       "evidenceStatus": "official_program_context",
       "evidenceUrl": "https://www.anobudelip.cz/program/",
       "evidenceTitle": "Volební program hnutí ANO do parlamentních voleb 2025",
@@ -2655,7 +2775,7 @@
     {
       "questionId": "item_D2_1_migrace_omezeni.suverenity",
       "partyCode": "STAN",
-      "rating": 1,
+      "rating": 4,
       "evidenceStatus": "official_program_context",
       "evidenceUrl": "https://www.starostove.cz/dobry-program",
       "evidenceTitle": "STAN: Dobrý program",
@@ -2664,7 +2784,7 @@
     {
       "questionId": "item_D2_1_migrace_omezeni.suverenity",
       "partyCode": "STACILO",
-      "rating": 4,
+      "rating": 1,
       "evidenceStatus": "weak_source_context",
       "evidenceUrl": "https://stacilo.cz/",
       "evidenceTitle": "Stačilo!: oficiální programový profil hnutí",
@@ -3555,7 +3675,7 @@
     {
       "questionId": "item_D3_1_socialni.system_plna.odpovednost",
       "partyCode": "SPD",
-      "rating": 1,
+      "rating": 4,
       "evidenceStatus": "weak_source_context",
       "evidenceUrl": "https://spd.cz/",
       "evidenceTitle": "SPD: oficiální web, programové priority a veřejná stanoviska",
@@ -3564,7 +3684,7 @@
     {
       "questionId": "item_D3_1_socialni.system_plna.odpovednost",
       "partyCode": "SPOLU",
-      "rating": 2,
+      "rating": 3,
       "evidenceStatus": "official_program_context",
       "evidenceUrl": "https://www.spolu25.cz/program",
       "evidenceTitle": "SPOLU 2025: VIZE 2030 / volební program",
@@ -3573,7 +3693,7 @@
     {
       "questionId": "item_D3_1_socialni.system_plna.odpovednost",
       "partyCode": "PIRATI",
-      "rating": 1,
+      "rating": 4,
       "evidenceStatus": "official_program_context",
       "evidenceUrl": "https://www.pirati.cz/program/",
       "evidenceTitle": "Česká pirátská strana: programové dokumenty a Sněmovna 2025",
@@ -3582,7 +3702,7 @@
     {
       "questionId": "item_D3_1_socialni.system_plna.odpovednost",
       "partyCode": "MOTORISTE",
-      "rating": 3,
+      "rating": 2,
       "evidenceStatus": "weak_source_context",
       "evidenceUrl": "https://motoristesobe.cz/wp-content/uploads/24_12_zakladni-ideova-vychodiska5.pdf",
       "evidenceTitle": "Motoristé sobě: Základní ideová východiska a veřejná vystoupení",
@@ -3591,7 +3711,7 @@
     {
       "questionId": "item_D3_1_socialni.system_plna.odpovednost",
       "partyCode": "ANO",
-      "rating": 1,
+      "rating": 4,
       "evidenceStatus": "official_program_context",
       "evidenceUrl": "https://www.anobudelip.cz/program/",
       "evidenceTitle": "Volební program hnutí ANO do parlamentních voleb 2025",
@@ -3600,7 +3720,7 @@
     {
       "questionId": "item_D3_1_socialni.system_plna.odpovednost",
       "partyCode": "STAN",
-      "rating": 1,
+      "rating": 4,
       "evidenceStatus": "official_program_context",
       "evidenceUrl": "https://www.starostove.cz/dobry-program",
       "evidenceTitle": "STAN: Dobrý program",
@@ -3609,7 +3729,7 @@
     {
       "questionId": "item_D3_1_socialni.system_plna.odpovednost",
       "partyCode": "STACILO",
-      "rating": 1,
+      "rating": 4,
       "evidenceStatus": "weak_source_context",
       "evidenceUrl": "https://stacilo.cz/",
       "evidenceTitle": "Stačilo!: oficiální programový profil hnutí",
@@ -4563,7 +4683,7 @@
     {
       "questionId": "item_D4_2_regulace.prostredi_ekonomika.pred.ekologii",
       "partyCode": "SPD",
-      "rating": 4,
+      "rating": 1,
       "evidenceStatus": "weak_source_context",
       "evidenceUrl": "https://spd.cz/",
       "evidenceTitle": "SPD: oficiální web, programové priority a veřejná stanoviska",
@@ -4572,7 +4692,7 @@
     {
       "questionId": "item_D4_2_regulace.prostredi_ekonomika.pred.ekologii",
       "partyCode": "SPOLU",
-      "rating": 3,
+      "rating": 2,
       "evidenceStatus": "official_program_context",
       "evidenceUrl": "https://www.spolu25.cz/program",
       "evidenceTitle": "SPOLU 2025: VIZE 2030 / volební program",
@@ -4581,7 +4701,7 @@
     {
       "questionId": "item_D4_2_regulace.prostredi_ekonomika.pred.ekologii",
       "partyCode": "PIRATI",
-      "rating": 1,
+      "rating": 4,
       "evidenceStatus": "official_program_context",
       "evidenceUrl": "https://www.pirati.cz/program/",
       "evidenceTitle": "Česká pirátská strana: programové dokumenty a Sněmovna 2025",
@@ -4590,7 +4710,7 @@
     {
       "questionId": "item_D4_2_regulace.prostredi_ekonomika.pred.ekologii",
       "partyCode": "MOTORISTE",
-      "rating": 4,
+      "rating": 1,
       "evidenceStatus": "weak_source_context",
       "evidenceUrl": "https://motoristesobe.cz/wp-content/uploads/24_12_zakladni-ideova-vychodiska5.pdf",
       "evidenceTitle": "Motoristé sobě: Základní ideová východiska a veřejná vystoupení",
@@ -4599,7 +4719,7 @@
     {
       "questionId": "item_D4_2_regulace.prostredi_ekonomika.pred.ekologii",
       "partyCode": "ANO",
-      "rating": 4,
+      "rating": 1,
       "evidenceStatus": "official_program_context",
       "evidenceUrl": "https://www.anobudelip.cz/program/",
       "evidenceTitle": "Volební program hnutí ANO do parlamentních voleb 2025",
@@ -4608,7 +4728,7 @@
     {
       "questionId": "item_D4_2_regulace.prostredi_ekonomika.pred.ekologii",
       "partyCode": "STAN",
-      "rating": 1,
+      "rating": 4,
       "evidenceStatus": "official_program_context",
       "evidenceUrl": "https://www.starostove.cz/dobry-program",
       "evidenceTitle": "STAN: Dobrý program",
@@ -4617,7 +4737,7 @@
     {
       "questionId": "item_D4_2_regulace.prostredi_ekonomika.pred.ekologii",
       "partyCode": "STACILO",
-      "rating": 4,
+      "rating": 1,
       "evidenceStatus": "weak_source_context",
       "evidenceUrl": "https://stacilo.cz/",
       "evidenceTitle": "Stačilo!: oficiální programový profil hnutí",

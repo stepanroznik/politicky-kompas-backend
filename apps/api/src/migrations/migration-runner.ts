@@ -66,6 +66,7 @@ interface Calculator2026Seed {
         facet: string;
         originalText: string;
         text: string;
+        description?: string | null;
         reversed: boolean;
         reviewStatus: string;
         reviewNote?: string;
@@ -274,6 +275,7 @@ const migrations: Migration[] = [
                 facet: { type: DataTypes.STRING, allowNull: false },
                 originalText: { type: DataTypes.TEXT, allowNull: false },
                 text: { type: DataTypes.TEXT, allowNull: false },
+                description: { type: DataTypes.TEXT, allowNull: true },
                 reversed: { type: DataTypes.BOOLEAN, allowNull: false },
                 reviewStatus: { type: DataTypes.STRING, allowNull: false },
                 reviewNote: { type: DataTypes.TEXT, allowNull: true },
@@ -580,6 +582,117 @@ const migrations: Migration[] = [
                      WHERE "calculatorSlug" = '2026'
                  )`,
                 { bind: [missingRatingNote, importedRatingNote, now] },
+            );
+        },
+    },
+    {
+        name: '20260627_add_calculator_2026_question_context',
+        up: async ({ queryInterface, sequelize }) => {
+            const seed = loadCalculator2026Seed();
+            const commonTimestamps = timestamps();
+            const calculatorSlug = seed.calculator.slug;
+
+            await sequelize.query(
+                'ALTER TABLE "CalculatorQuestions" ADD COLUMN IF NOT EXISTS "description" TEXT',
+            );
+
+            for (const axis of seed.axes) {
+                await queryInterface.bulkUpdate(
+                    'CalculatorAxes',
+                    {
+                        name: axis.name,
+                        negativeLabel: axis.negativeLabel,
+                        positiveLabel: axis.positiveLabel,
+                        updatedAt: commonTimestamps.updatedAt,
+                    },
+                    { code: axis.code, calculatorSlug },
+                );
+            }
+
+            for (const question of seed.questions) {
+                await queryInterface.bulkUpdate(
+                    'CalculatorQuestions',
+                    {
+                        text: question.text,
+                        description: question.description ?? null,
+                        reversed: question.reversed,
+                        reviewStatus: question.reviewStatus,
+                        reviewNote: question.reviewNote ?? null,
+                        updatedAt: commonTimestamps.updatedAt,
+                    },
+                    { id: question.id, calculatorSlug },
+                );
+            }
+
+            for (const rating of seed.ratings) {
+                await queryInterface.bulkUpdate(
+                    'CalculatorPartyRatings',
+                    {
+                        rating: rating.rating,
+                        evidenceStatus: rating.evidenceStatus,
+                        evidenceUrl: rating.evidenceUrl ?? null,
+                        evidenceTitle: rating.evidenceTitle ?? null,
+                        evidenceNote: rating.evidenceNote ?? null,
+                        updatedAt: commonTimestamps.updatedAt,
+                    },
+                    {
+                        questionId: rating.questionId,
+                        partyCode: rating.partyCode,
+                    },
+                );
+            }
+        },
+        down: async ({ sequelize }) => {
+            const now = new Date();
+            const importedRatingNote =
+                'Imported from ratings_matrix.xlsx; verify against official programs/statements.';
+            const missingRatingNote = 'No spreadsheet rating supplied.';
+            const importedQuestionNote =
+                'Imported from ratings_matrix.xlsx; wording and ratings require source-backed review.';
+
+            await sequelize.query(
+                `UPDATE "CalculatorQuestions"
+                 SET "text" = "originalText",
+                     "reviewStatus" = 'needs_review',
+                     "reviewNote" = $1,
+                     "updatedAt" = $2
+                 WHERE "calculatorSlug" = '2026'`,
+                { bind: [importedQuestionNote, now] },
+            );
+
+            await sequelize.query(
+                `UPDATE "CalculatorPartyRatings"
+                 SET "evidenceStatus" = CASE
+                         WHEN "rating" IS NULL THEN 'missing'
+                         ELSE 'spreadsheet_unverified'
+                     END,
+                     "evidenceUrl" = NULL,
+                     "evidenceTitle" = NULL,
+                     "evidenceNote" = CASE
+                         WHEN "rating" IS NULL THEN $1
+                         ELSE $2
+                     END,
+                     "updatedAt" = $3
+                 WHERE "questionId" IN (
+                     SELECT "id"
+                     FROM "CalculatorQuestions"
+                     WHERE "calculatorSlug" = '2026'
+                 )`,
+                { bind: [missingRatingNote, importedRatingNote, now] },
+            );
+
+            await sequelize.query(
+                `UPDATE "CalculatorAxes"
+                 SET "negativeLabel" = 'Regulace',
+                     "positiveLabel" = 'Volný trh',
+                     "updatedAt" = $1
+                 WHERE "calculatorSlug" = '2026'
+                   AND "code" = 'economy_market'`,
+                { bind: [now] },
+            );
+
+            await sequelize.query(
+                'ALTER TABLE "CalculatorQuestions" DROP COLUMN IF EXISTS "description"',
             );
         },
     },

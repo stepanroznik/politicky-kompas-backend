@@ -22,6 +22,7 @@ export interface ICalculatorQuestionAttributes {
     facet: string;
     originalText: string;
     text: string;
+    description?: string | null;
     reversed: boolean;
     reviewStatus: string;
     reviewNote?: string;
@@ -62,6 +63,10 @@ export class CalculatorQuestion extends Model<ICalculatorQuestionAttributes> {
     @AllowNull(false)
     @Column(DataType.TEXT)
     declare text: string;
+
+    @AllowNull(true)
+    @Column(DataType.TEXT)
+    declare description?: string | null;
 
     @AllowNull(false)
     @Column(DataType.BOOLEAN)

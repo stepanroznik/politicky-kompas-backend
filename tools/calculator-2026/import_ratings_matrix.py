@@ -47,8 +47,8 @@ AXES = {
     "D4": {
         "code": "economy_market",
         "name": "Trh a regulace",
-        "negativeLabel": "Regulace",
-        "positiveLabel": "Volný trh",
+        "negativeLabel": "Volný trh",
+        "positiveLabel": "Regulace",
     },
     "D5": {
         "code": "culture_morality",
@@ -203,6 +203,7 @@ def build_seed(input_path: Path):
                 "facet": parsed_id["facet"],
                 "originalText": original_text,
                 "text": original_text,
+                "description": None,
                 "reversed": reversed_bool,
                 "reviewStatus": "needs_review",
                 "reviewNote": "Imported from ratings_matrix.xlsx; wording and ratings require source-backed review.",
@@ -279,6 +280,7 @@ def apply_curation(seed, curation_path: Path):
             raise ValueError(f"Curation references unknown question {question_id}")
         question = questions[question_id]
         question["text"] = edit["text"]
+        question["description"] = edit.get("description")
         question["reviewStatus"] = edit.get("status", "neutralized")
         question["reviewNote"] = (
             "Neutrality review pass on 2026-06-15; original wording is "

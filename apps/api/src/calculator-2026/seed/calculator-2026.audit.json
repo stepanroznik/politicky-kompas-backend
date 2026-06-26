@@ -1,12 +1,14 @@
 {
   "calculatorSlug": "2026",
-  "date": "2026-06-26",
+  "date": "2026-06-27",
   "methodology": [
     "ratings_matrix.xlsx remains the base import source for the numeric party-answer matrix.",
-    "Voter-facing question text was reviewed item by item and neutralized where wording implied facts, motives, or value judgments; originalText remains unchanged for auditability.",
     "Party answers are now marked with official_program_context when the answer is checked against an official 2025 program/program hub, or weak_source_context when only broader public-position material is available.",
     "Some values remain editorial interpretations rather than direct questionnaire answers; the tooltip on the public party-answer table makes that visible without flooding the page with text.",
-    "Parties should be given a clear contact path to request corrections or provide direct answers."
+    "Parties should be given a clear contact path to request corrections or provide direct answers.",
+    "Voter-facing question text was reviewed again on 2026-06-27 for leading wording, missing context and unclear Czech phrasing; originalText remains unchanged for auditability.",
+    "Question descriptions now carry short context notes, especially where the current legal or institutional status matters for answering the question.",
+    "A few questions were rephrased in the opposite direction; their party ratings were inverted so match scoring still compares like with like."
   ],
   "partySources": {
     "ANO": {
@@ -104,8 +106,10 @@
     {
       "questionId": "item_D2_1_migrace_omezeni.suverenity",
       "originalText": "Společná evropská politika migrace (tzv. Migrační pakt) omezuje naši kontrolu nad tím, s kým budeme žít.",
-      "text": "Společná evropská migrační politika snižuje schopnost České republiky samostatně rozhodovat o migraci.",
-      "status": "neutralized"
+      "text": "Společná evropská pravidla pro migraci a azyl jsou pro Česko lepší než převážně samostatné národní rozhodování.",
+      "status": "neutralized",
+      "description": "Evropská unie má společná pravidla pro azyl a migraci. Nový migrační a azylový pakt počítá od roku 2026 s větší koordinací, rychlejšími řízeními a solidaritou mezi státy; spor je o to, zda společný postup pomáhá, nebo příliš omezuje národní kontrolu.",
+      "ratingDirectionChanged": true
     },
     {
       "questionId": "item_D2_3_euro_nikdy.neprijmout",
@@ -122,14 +126,18 @@
     {
       "questionId": "item_D2_6_pravo_nadrazenost.ustavy",
       "originalText": "Česká ústava a zákony musí být vždy nadřazeny právu Evropské unie.",
-      "text": "Česká ústava a české zákony by měly mít přednost před právem Evropské unie.",
-      "status": "neutralized"
+      "text": "V případě rozporu by měly mít česká ústava a české zákony přednost před právem Evropské unie.",
+      "status": "neutralized",
+      "description": "V oblastech, které Česko svěřilo Evropské unii, má unijní právo v praxi přednost před běžnými českými zákony. Debata se vede hlavně o tom, kde jsou meze této přednosti a jakou roli má mít česká ústava.",
+      "ratingDirectionChanged": false
     },
     {
       "questionId": "item_D2_7_armada_ztrata.suverenity",
       "originalText": "Vytvoření společné evropské armády je nepřijatelným krokem ke zrušení naší národní suverenity.",
-      "text": "Společná evropská armáda by nepřiměřeně omezila českou suverenitu.",
-      "status": "neutralized"
+      "text": "Obrana by měla zůstat hlavně v rukou národních armád a NATO, ne společné evropské armády.",
+      "status": "neutralized",
+      "description": "Obrana evropských států dnes stojí hlavně na národních armádách a NATO. Myšlenka společné evropské armády by znamenala hlubší obrannou spolupráci v EU a část rozhodování by se přesunula na evropskou úroveň.",
+      "ratingDirectionChanged": false
     },
     {
       "questionId": "item_D2_8_clenstvi_vystoupeni",
@@ -146,8 +154,10 @@
     {
       "questionId": "item_D3_1_socialni.system_plna.odpovednost",
       "originalText": "Každý člověk je plně odpovědný za svůj osud a stát by neměl pomáhat těm, kteří se o sebe nedokážou postarat sami.",
-      "text": "Každý člověk nese hlavní odpovědnost za svůj život a stát by měl omezit pomoc lidem, kteří mají možnost se o sebe postarat sami.",
-      "status": "neutralized"
+      "text": "Stát by měl poskytovat sociální pomoc i lidem, kteří se dlouhodobě nedokážou sami uživit.",
+      "status": "neutralized",
+      "description": "Sociální dávky dnes kombinují nárokovou pomoc, testování příjmů a různé podmínky. Spor není o pomoc lidem, kteří ji nepotřebují, ale o to, jak přísně rozlišovat mezi potřebou pomoci a osobní odpovědností.",
+      "ratingDirectionChanged": true
     },
     {
       "questionId": "item_D3_7_dane_zasluhovost",
@@ -176,8 +186,10 @@
     {
       "questionId": "item_D4_2_regulace.prostredi_ekonomika.pred.ekologii",
       "originalText": "Ochrana životního prostředí by se neměla přehánět, pokud to omezuje výstavbu a poškozuje naši ekonomiku.",
-      "text": "Ekologické regulace by neměly brzdit výstavbu a ekonomický rozvoj.",
-      "status": "neutralized"
+      "text": "Ochrana životního prostředí může odůvodnit i pravidla, která zpomalí výstavbu nebo zvýší náklady firem.",
+      "status": "neutralized",
+      "description": "Ekologická pravidla mohou chránit krajinu, vodu nebo zdraví, ale někdy prodlužují povolování staveb nebo zvyšují náklady. Otázka míří na to, jakou váhu má mít ochrana prostředí při konfliktu s rychlostí výstavby.",
+      "ratingDirectionChanged": true
     },
     {
       "questionId": "item_D4_3_regulace.prace_snadne.propousteni",
@@ -188,8 +200,10 @@
     {
       "questionId": "item_D4_7_regulace.domaci_mene.byrokracie",
       "originalText": "Čím méně byrokracie a papírování pro podnikatele, tím lépe pro celou ekonomiku.",
-      "text": "Snižování byrokracie pro podnikatele prospívá celé ekonomice.",
-      "status": "neutralized"
+      "text": "Stát by měl výrazně snížit administrativní povinnosti podnikatelů, i kdyby tím omezil část kontrol a hlášení.",
+      "status": "neutralized",
+      "description": "Administrativní povinnosti podnikatelů zahrnují hlášení, evidence, kontroly a žádosti. Jejich rušení může ulevit firmám, ale může také omezit část kontroly veřejných peněz, bezpečnosti práce, spotřebitelů nebo životního prostředí.",
+      "ratingDirectionChanged": false
     },
     {
       "questionId": "item_D4_9_regulace.prace_ochrana.zamestnancu",
@@ -248,14 +262,18 @@
     {
       "questionId": "item_D6_2_integrace_preferovani.cechu",
       "originalText": "Je správné, aby stát primárně hájil zájmy etnických Čechů před zájmy přistěhovalců a menšin.",
-      "text": "Stát by měl při tvorbě politik upřednostňovat zájmy etnických Čechů před zájmy přistěhovalců a menšin.",
-      "status": "neutralized"
+      "text": "Stát by měl při rozhodování více zohledňovat zájmy většinové společnosti než zájmy přistěhovalců a menšin.",
+      "status": "neutralized",
+      "description": "Vláda při rozhodování běžně zvažuje dopady na různé skupiny obyvatel. Spor je o to, zda má mít většinová společnost v konfliktních otázkách výraznou přednost před menšinami a nově příchozími.",
+      "ratingDirectionChanged": false
     },
     {
       "questionId": "item_D6_4_skupinove.rozdily_mentalita",
       "originalText": "Neúspěch některých menšin, například Romů, ve společnosti je způsoben hlavně jejich odlišnou mentalitou, nikoliv diskriminací.",
-      "text": "Sociální a ekonomické problémy některých menšin, například Romů, jsou způsobeny především odlišnými kulturními vzorci, nikoli diskriminací.",
-      "status": "neutralized"
+      "text": "Sociální a ekonomické problémy některých menšin, například Romů, souvisejí spíše s prostředím a zvyky v jejich komunitách než s diskriminací.",
+      "status": "neutralized",
+      "description": "Otázka se ptá, zda za problémy některých menšin stojí hlavně diskriminace a nerovné podmínky, nebo spíš rozdíly v prostředí, zvycích a očekáváních uvnitř komunit.",
+      "ratingDirectionChanged": false
     },
     {
       "questionId": "item_D6_5_imigrace_stop.kultury",
@@ -266,8 +284,10 @@
     {
       "questionId": "item_D6_6_narodni.stat_nejvyssi.hodnota\t",
       "originalText": "Český národnostní stát je klíčovou hodnotou a jeho ochrana musí být absolutní prioritou vlády.",
-      "text": "Ochrana českého národního státu by měla být hlavní prioritou vlády.",
-      "status": "neutralized"
+      "text": "Vláda by měla klást větší důraz na českou státní suverenitu a národní identitu než na evropskou nebo globální spolupráci.",
+      "status": "neutralized",
+      "description": "Národním státem se zde myslí stát založený především na české politické suverenitě, jazyce a národní identitě. Otázka nemíří na běžnou obranu území, ale na prioritu národní identity v politice.",
+      "ratingDirectionChanged": false
     },
     {
       "questionId": "item_D6_7_koncepce.naroda_narozeni",
@@ -370,6 +390,30 @@
       "originalText": "Stát nemá žádné právo určovat, co je a co není \"pravdivá\" informace.",
       "text": "Stát by neměl určovat, které informace jsou pravdivé.",
       "status": "neutralized"
+    },
+    {
+      "questionId": "item_D3_2_dotace_radikalni.omezeni",
+      "originalText": "Stát by měl radikálně omezit většinu dotací, protože křiví trh a podporují korupci.",
+      "text": "Stát by měl výrazně omezit dotace podnikům a vybraným odvětvím.",
+      "description": "Dotace mohou podporovat investice, zemědělství, energetiku nebo veřejné cíle. Kritici namítají, že zvýhodňují vybrané příjemce, komplikují trh a vytvářejí prostor pro klientelismus.",
+      "status": "neutralized",
+      "ratingDirectionChanged": false
+    },
+    {
+      "questionId": "item_D2_4_veto_klicovy.nastroj",
+      "originalText": "Právo veta je klíčovým nástrojem naší suverenity a nesmíme se ho v žádné oblasti vzdát.",
+      "text": "Právo veta členských států v Evropské unii je důležitým nástrojem české suverenity.",
+      "description": "V Evropské unii se v řadě oblastí hlasuje kvalifikovanou většinou, ale některá citlivá témata pořád vyžadují jednomyslnost členských států. Právo veta znamená, že jeden stát může rozhodnutí v takové oblasti zablokovat.",
+      "status": "neutralized",
+      "ratingDirectionChanged": false
+    },
+    {
+      "questionId": "item_D7_6_instituce_cnb.pod.kontrolu",
+      "originalText": "Nezávislost České národní banky je přeceňovaná; měla by se více řídit potřebami vlády a občanů.",
+      "text": "Vláda by měla mít větší vliv na směřování České národní banky.",
+      "description": "Česká národní banka je nezávislá instituce a jejím hlavním cílem je cenová stabilita. Spor je o to, zda má být tato nezávislost tak silná, nebo zda má banka víc reagovat na hospodářské priority vlády.",
+      "status": "neutralized",
+      "ratingDirectionChanged": false
     }
   ],
   "ratingOverrides": [
@@ -721,5 +765,93 @@
     "official_program_context": "A current official program or program hub supports the axis-level interpretation, but the value is not necessarily a direct questionnaire answer.",
     "weak_source_context": "A broader official/public source supports the interpretation, but source support is weaker than an explicit program point or direct questionnaire answer.",
     "missing": "No usable party answer or source context is available."
-  }
+  },
+  "questionDescriptions": [
+    {
+      "questionId": "item_D2_1_migrace_omezeni.suverenity",
+      "description": "Evropská unie má společná pravidla pro azyl a migraci. Nový migrační a azylový pakt počítá od roku 2026 s větší koordinací, rychlejšími řízeními a solidaritou mezi státy; spor je o to, zda společný postup pomáhá, nebo příliš omezuje národní kontrolu.",
+      "source": "editorial_context_review_2026_06_27"
+    },
+    {
+      "questionId": "item_D3_1_socialni.system_plna.odpovednost",
+      "description": "Sociální dávky dnes kombinují nárokovou pomoc, testování příjmů a různé podmínky. Spor není o pomoc lidem, kteří ji nepotřebují, ale o to, jak přísně rozlišovat mezi potřebou pomoci a osobní odpovědností.",
+      "source": "editorial_context_review_2026_06_27"
+    },
+    {
+      "questionId": "item_D3_2_dotace_radikalni.omezeni",
+      "description": "Dotace mohou podporovat investice, zemědělství, energetiku nebo veřejné cíle. Kritici namítají, že zvýhodňují vybrané příjemce, komplikují trh a vytvářejí prostor pro klientelismus.",
+      "source": "editorial_context_review_2026_06_27"
+    },
+    {
+      "questionId": "item_D4_2_regulace.prostredi_ekonomika.pred.ekologii",
+      "description": "Ekologická pravidla mohou chránit krajinu, vodu nebo zdraví, ale někdy prodlužují povolování staveb nebo zvyšují náklady. Otázka míří na to, jakou váhu má mít ochrana prostředí při konfliktu s rychlostí výstavby.",
+      "source": "editorial_context_review_2026_06_27"
+    },
+    {
+      "questionId": "item_D6_2_integrace_preferovani.cechu",
+      "description": "Vláda při rozhodování běžně zvažuje dopady na různé skupiny obyvatel. Spor je o to, zda má mít většinová společnost v konfliktních otázkách výraznou přednost před menšinami a nově příchozími.",
+      "source": "editorial_context_review_2026_06_27"
+    },
+    {
+      "questionId": "item_D8_2_informace_id.na.socialnich.sitich",
+      "description": "Dnes lze většinu sociálních sítí používat pod přezdívkou. Povinné ověřování identity by mohlo omezit falešné účty, ale zároveň by snížilo anonymitu a soukromí uživatelů.",
+      "source": "editorial_context_review_2026_06_27"
+    },
+    {
+      "questionId": "item_D2_4_veto_klicovy.nastroj",
+      "description": "V Evropské unii se v řadě oblastí hlasuje kvalifikovanou většinou, ale některá citlivá témata pořád vyžadují jednomyslnost členských států. Právo veta znamená, že jeden stát může rozhodnutí v takové oblasti zablokovat.",
+      "source": "editorial_context_review_2026_06_27"
+    },
+    {
+      "questionId": "item_D6_4_skupinove.rozdily_mentalita",
+      "description": "Otázka se ptá, zda za problémy některých menšin stojí hlavně diskriminace a nerovné podmínky, nebo spíš rozdíly v prostředí, zvycích a očekáváních uvnitř komunit.",
+      "source": "editorial_context_review_2026_06_27"
+    },
+    {
+      "questionId": "item_D2_6_pravo_nadrazenost.ustavy",
+      "description": "V oblastech, které Česko svěřilo Evropské unii, má unijní právo v praxi přednost před běžnými českými zákony. Debata se vede hlavně o tom, kde jsou meze této přednosti a jakou roli má mít česká ústava.",
+      "source": "editorial_context_review_2026_06_27"
+    },
+    {
+      "questionId": "item_D6_6_narodni.stat_nejvyssi.hodnota\t",
+      "description": "Národním státem se zde myslí stát založený především na české politické suverenitě, jazyce a národní identitě. Otázka nemíří na běžnou obranu území, ale na prioritu národní identity v politice.",
+      "source": "editorial_context_review_2026_06_27"
+    },
+    {
+      "questionId": "item_D8_6_ostatni_automaticke.vyhosteni",
+      "description": "Dnes může soud uložit trest vyhoštění a správní orgány mohou rozhodnout o správním vyhoštění podle konkrétní situace. Neplatí ale jednoduché pravidlo, že každý cizinec odsouzený za úmyslný trestný čin musí být automaticky vyhoštěn.",
+      "source": "editorial_context_review_2026_06_27"
+    },
+    {
+      "questionId": "item_D2_7_armada_ztrata.suverenity",
+      "description": "Obrana evropských států dnes stojí hlavně na národních armádách a NATO. Myšlenka společné evropské armády by znamenala hlubší obrannou spolupráci v EU a část rozhodování by se přesunula na evropskou úroveň.",
+      "source": "editorial_context_review_2026_06_27"
+    },
+    {
+      "questionId": "item_D4_7_regulace.domaci_mene.byrokracie",
+      "description": "Administrativní povinnosti podnikatelů zahrnují hlášení, evidence, kontroly a žádosti. Jejich rušení může ulevit firmám, ale může také omezit část kontroly veřejných peněz, bezpečnosti práce, spotřebitelů nebo životního prostředí.",
+      "source": "editorial_context_review_2026_06_27"
+    },
+    {
+      "questionId": "item_D7_6_instituce_cnb.pod.kontrolu",
+      "description": "Česká národní banka je nezávislá instituce a jejím hlavním cílem je cenová stabilita. Spor je o to, zda má být tato nezávislost tak silná, nebo zda má banka víc reagovat na hospodářské priority vlády.",
+      "source": "editorial_context_review_2026_06_27"
+    }
+  ],
+  "directionBalance": {
+    "note": "The seed remains globally balanced, but the frontend now alternates normal and reversed items within each axis so early checkpoints are not one-sided.",
+    "flippedRatingQuestionIds": [
+      "item_D2_1_migrace_omezeni.suverenity",
+      "item_D3_1_socialni.system_plna.odpovednost",
+      "item_D4_2_regulace.prostredi_ekonomika.pred.ekologii"
+    ]
+  },
+  "axisLabelEdits": [
+    {
+      "axisCode": "economy_market",
+      "negativeLabel": "Volný trh",
+      "positiveLabel": "Regulace",
+      "note": "Corrected labels to match imported reversed polarity: agreement with low-regulation/free-market items maps to the negative pole, while agreement with intervention/regulation items maps to the positive pole."
+    }
+  ]
 }
