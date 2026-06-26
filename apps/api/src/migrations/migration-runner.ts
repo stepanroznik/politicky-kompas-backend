@@ -505,6 +505,84 @@ const migrations: Migration[] = [
             );
         },
     },
+    {
+        name: '20260626_refresh_calculator_2026_beta_data',
+        up: async ({ queryInterface }) => {
+            const seed = loadCalculator2026Seed();
+            const commonTimestamps = timestamps();
+            const calculatorSlug = seed.calculator.slug;
+
+            for (const question of seed.questions) {
+                await queryInterface.bulkUpdate(
+                    'CalculatorQuestions',
+                    {
+                        text: question.text,
+                        reviewStatus: question.reviewStatus,
+                        reviewNote: question.reviewNote ?? null,
+                        updatedAt: commonTimestamps.updatedAt,
+                    },
+                    { id: question.id, calculatorSlug },
+                );
+            }
+
+            for (const rating of seed.ratings) {
+                await queryInterface.bulkUpdate(
+                    'CalculatorPartyRatings',
+                    {
+                        rating: rating.rating,
+                        evidenceStatus: rating.evidenceStatus,
+                        evidenceUrl: rating.evidenceUrl ?? null,
+                        evidenceTitle: rating.evidenceTitle ?? null,
+                        evidenceNote: rating.evidenceNote ?? null,
+                        updatedAt: commonTimestamps.updatedAt,
+                    },
+                    {
+                        questionId: rating.questionId,
+                        partyCode: rating.partyCode,
+                    },
+                );
+            }
+        },
+        down: async ({ sequelize }) => {
+            const now = new Date();
+            const importedRatingNote =
+                'Imported from ratings_matrix.xlsx; verify against official programs/statements.';
+            const missingRatingNote = 'No spreadsheet rating supplied.';
+            const importedQuestionNote =
+                'Imported from ratings_matrix.xlsx; wording and ratings require source-backed review.';
+
+            await sequelize.query(
+                `UPDATE "CalculatorQuestions"
+                 SET "text" = "originalText",
+                     "reviewStatus" = 'needs_review',
+                     "reviewNote" = $1,
+                     "updatedAt" = $2
+                 WHERE "calculatorSlug" = '2026'`,
+                { bind: [importedQuestionNote, now] },
+            );
+
+            await sequelize.query(
+                `UPDATE "CalculatorPartyRatings"
+                 SET "evidenceStatus" = CASE
+                         WHEN "rating" IS NULL THEN 'missing'
+                         ELSE 'spreadsheet_unverified'
+                     END,
+                     "evidenceUrl" = NULL,
+                     "evidenceTitle" = NULL,
+                     "evidenceNote" = CASE
+                         WHEN "rating" IS NULL THEN $1
+                         ELSE $2
+                     END,
+                     "updatedAt" = $3
+                 WHERE "questionId" IN (
+                     SELECT "id"
+                     FROM "CalculatorQuestions"
+                     WHERE "calculatorSlug" = '2026'
+                 )`,
+                { bind: [missingRatingNote, importedRatingNote, now] },
+            );
+        },
+    },
 ];
 
 async function ensureMigrationsTable(sequelize: Sequelize) {

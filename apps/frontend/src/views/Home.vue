@@ -1,12 +1,6 @@
 <template>
-  <section class="relative mx-auto min-h-[34rem] max-w-6xl overflow-hidden text-left">
-    <multi-axis-compass-3-d
-      class="absolute -right-10 top-2 hidden w-[46rem] opacity-80 lg:block"
-      :axes="previewAxes"
-      :user-axis-scores="previewUserScores"
-      :matches="previewMatches"
-    />
-    <div class="relative z-10 flex min-h-[30rem] max-w-2xl flex-col justify-center gap-6 bg-white/80 py-10 pr-6">
+  <section class="mx-auto grid max-w-6xl grid-cols-1 gap-8 overflow-visible text-left lg:grid-cols-[1fr_0.95fr]">
+    <div class="flex min-h-[30rem] max-w-2xl flex-col justify-center gap-6 py-10 pr-0 lg:pr-6">
       <div class="flex flex-col gap-3">
         <h1 class="text-4xl font-semibold leading-tight text-gray-950 sm:text-5xl">
           Politický kompas
@@ -46,6 +40,12 @@
         </router-link>
       </div>
     </div>
+    <multi-axis-compass-3-d
+      class="min-h-[24rem] w-full self-center overflow-visible lg:min-h-[32rem]"
+      :axes="previewAxes"
+      :user-axis-scores="previewUserScores"
+      :matches="previewMatches"
+    />
   </section>
 </template>
 
@@ -152,6 +152,46 @@ const previewMatches: PartyMatch[] = [
         axisScores: previewUserScores.map((score, index) => ({
             ...score,
             value: Math.max(-1, Math.min(1, score.value + (index % 2 === 0 ? -0.28 : 0.08))),
+        })),
+    },
+    {
+        partyCode: "PIRATI",
+        partyName: "Piráti",
+        percentage: 64,
+        answeredCount: 120,
+        axisScores: previewUserScores.map((score, index) => ({
+            ...score,
+            value: Math.max(-1, Math.min(1, score.value + (index % 3 === 0 ? 0.2 : -0.08))),
+        })),
+    },
+    {
+        partyCode: "SPD",
+        partyName: "SPD",
+        percentage: 61,
+        answeredCount: 120,
+        axisScores: previewUserScores.map((score, index) => ({
+            ...score,
+            value: Math.max(-1, Math.min(1, score.value + (index % 2 === 0 ? -0.42 : -0.12))),
+        })),
+    },
+    {
+        partyCode: "MOTORISTE",
+        partyName: "Motoristé",
+        percentage: 58,
+        answeredCount: 120,
+        axisScores: previewUserScores.map((score, index) => ({
+            ...score,
+            value: Math.max(-1, Math.min(1, score.value + (index % 2 === 0 ? 0.05 : -0.34))),
+        })),
+    },
+    {
+        partyCode: "STACILO",
+        partyName: "Stačilo!",
+        percentage: 54,
+        answeredCount: 120,
+        axisScores: previewUserScores.map((score, index) => ({
+            ...score,
+            value: Math.max(-1, Math.min(1, score.value + (index % 2 === 0 ? -0.36 : 0.24))),
         })),
     },
 ];

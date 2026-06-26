@@ -49,12 +49,6 @@
                   <p class="font-medium text-gray-950">
                     {{ question.text }}
                   </p>
-                  <p
-                    v-if="question.reviewStatus !== 'original'"
-                    class="mt-1 text-xs text-gray-500"
-                  >
-                    Upravené znění otázky, původní formulace je zachovaná v datech.
-                  </p>
                 </td>
                 <td
                   v-for="party in parties"
@@ -75,12 +69,14 @@
                       {{ statusLabel(ratingFor(question, party.code)?.evidenceStatus) }}
                     </span>
                   </div>
-                  <p
+                  <span
                     v-if="ratingFor(question, party.code)?.evidenceNote"
-                    class="mt-1 line-clamp-3 text-left text-xs text-gray-500"
+                    aria-label="Poznámka ke zdroji"
+                    class="mt-1 inline-flex h-5 w-5 cursor-help items-center justify-center rounded-full border border-gray-300 text-xs font-semibold text-gray-500"
+                    :title="evidenceTooltip(ratingFor(question, party.code))"
                   >
-                    {{ ratingFor(question, party.code)?.evidenceNote }}
-                  </p>
+                    ℹ
+                  </span>
                 </td>
               </tr>
             </template>
@@ -102,6 +98,8 @@ interface PartyRating {
     partyCode: string;
     rating: number | null;
     evidenceStatus: string;
+    evidenceUrl?: string | null;
+    evidenceTitle?: string | null;
     evidenceNote?: string | null;
 }
 
@@ -160,6 +158,15 @@ function statusLabel(status?: string) {
     if (status.includes("weak")) return "slabý zdroj";
     if (status.includes("review")) return "ke kontrole";
     return "";
+}
+
+function evidenceTooltip(rating?: PartyRating) {
+    if (!rating) return "";
+    return [
+        rating.evidenceTitle,
+        rating.evidenceNote,
+        rating.evidenceUrl,
+    ].filter(Boolean).join("\n");
 }
 
 function answerClass(rating?: PartyRating) {

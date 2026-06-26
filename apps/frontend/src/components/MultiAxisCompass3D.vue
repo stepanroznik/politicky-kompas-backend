@@ -1,8 +1,11 @@
 <template>
-  <div class="relative min-h-[28rem] w-full overflow-visible bg-white">
+  <div
+    ref="rootRef"
+    class="relative h-[28rem] min-h-[28rem] w-full overflow-visible bg-white lg:h-[32rem] lg:min-h-[32rem]"
+  >
     <canvas
       ref="canvasRef"
-      class="block h-full min-h-[28rem] w-full scale-110 cursor-grab touch-none active:cursor-grabbing"
+      class="absolute inset-0 block h-full w-full scale-110 cursor-grab touch-none active:cursor-grabbing"
       aria-label="3D vizualizace politického profilu"
       @pointerdown="startDrag"
       @pointermove="drag"
@@ -15,7 +18,7 @@
         <span class="h-2.5 w-2.5 rounded-full bg-gray-950" /> Vy
       </span>
       <span
-        v-for="(match, index) in matches.slice(0, 3)"
+        v-for="(match, index) in matches"
         :key="match.partyCode"
         class="inline-flex items-center gap-1 rounded-full border border-gray-200 bg-white/90 px-2 py-1 shadow-sm"
       >
@@ -55,6 +58,7 @@ const props = defineProps({
     },
 });
 
+const rootRef = ref<HTMLElement | null>(null);
 const canvasRef = ref<HTMLCanvasElement | null>(null);
 const isWebglAvailable = ref(true);
 
@@ -62,14 +66,16 @@ let renderer: THREE.WebGLRenderer | null = null;
 let scene: THREE.Scene | null = null;
 let camera: THREE.PerspectiveCamera | null = null;
 let animationId = 0;
-let rotationX = -0.55;
+let rotationX = 0;
 let rotationZ = 0;
 let isDragging = false;
-let hasInteracted = false;
+let lastInteractionAt = 0;
 let previousPointer = { x: 0, y: 0 };
+let spinSpeed = 0.001;
+let resizeObserver: ResizeObserver | null = null;
 
-const partyColors = [0x0284c7, 0xea580c, 0x65a30d];
-const cssPartyColors = ["#0284c7", "#ea580c", "#65a30d"];
+const partyColors = [0x2563eb, 0xdc2626, 0x16a34a, 0x9333ea, 0x0891b2, 0xea580c, 0x4b5563];
+const cssPartyColors = ["#2563eb", "#dc2626", "#16a34a", "#9333ea", "#0891b2", "#ea580c", "#4b5563"];
 
 function scoreMap(scores: AxisScore[]) {
     return new Map(scores.map((score) => [score.axisCode, score.value]));
@@ -156,8 +162,8 @@ function buildScene() {
     });
 
     addProfile(scene, axes, props.userAxisScores, 0x111827, 1);
-    props.matches.slice(0, 3).forEach((match, index) => {
-        addProfile(scene!, axes, match.axisScores, partyColors[index], 0.75);
+    props.matches.forEach((match, index) => {
+        addProfile(scene!, axes, match.axisScores, partyColors[index % partyColors.length], 0.75);
     });
 }
 
@@ -188,17 +194,22 @@ function createLabel(text: string) {
 }
 
 function resize() {
-    if (!canvasRef.value || !renderer || !camera) return;
-    const { clientWidth, clientHeight } = canvasRef.value;
-    renderer.setSize(clientWidth, clientHeight, false);
-    camera.aspect = clientWidth / clientHeight;
+    if (!rootRef.value || !renderer || !camera) return;
+    const { width, height } = rootRef.value.getBoundingClientRect();
+    const renderWidth = Math.max(1, Math.floor(width));
+    const renderHeight = Math.max(1, Math.floor(height));
+    renderer.setSize(renderWidth, renderHeight, false);
+    camera.aspect = renderWidth / renderHeight;
     camera.updateProjectionMatrix();
 }
 
 function animate() {
     if (!renderer || !scene || !camera) return;
-    if (!isDragging && !hasInteracted) {
-        rotationZ += 0.001;
+    if (!isDragging) {
+        const idleMs = performance.now() - lastInteractionAt;
+        const targetSpin = idleMs > 1200 ? 0.001 : 0;
+        spinSpeed += (targetSpin - spinSpeed) * 0.015;
+        rotationZ += spinSpeed;
     }
     scene.rotation.z = rotationZ;
     scene.rotation.x = rotationX;
@@ -209,7 +220,8 @@ function animate() {
 function startDrag(event: PointerEvent) {
     if (!canvasRef.value) return;
     isDragging = true;
-    hasInteracted = true;
+    spinSpeed = 0;
+    lastInteractionAt = performance.now();
     previousPointer = { x: event.clientX, y: event.clientY };
     canvasRef.value.setPointerCapture(event.pointerId);
 }
@@ -221,11 +233,13 @@ function drag(event: PointerEvent) {
     previousPointer = { x: event.clientX, y: event.clientY };
     rotationZ += dx * 0.01;
     rotationX = Math.max(-1.2, Math.min(0.35, rotationX + dy * 0.008));
+    lastInteractionAt = performance.now();
 }
 
 function stopDrag(event: PointerEvent) {
     if (!canvasRef.value || !isDragging) return;
     isDragging = false;
+    lastInteractionAt = performance.now();
     if (canvasRef.value.hasPointerCapture(event.pointerId)) {
         canvasRef.value.releasePointerCapture(event.pointerId);
     }
@@ -247,10 +261,12 @@ onMounted(() => {
 
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
-    camera.position.set(0, -7.2, 5.8);
+    camera.position.set(0, 0, 9);
     camera.lookAt(0, 0, 0);
     buildScene();
     resize();
+    resizeObserver = new ResizeObserver(() => resize());
+    resizeObserver.observe(rootRef.value!);
     window.addEventListener("resize", resize);
     animate();
 });
@@ -264,6 +280,7 @@ watch(
 onBeforeUnmount(() => {
     cancelAnimationFrame(animationId);
     window.removeEventListener("resize", resize);
+    resizeObserver?.disconnect();
     renderer?.dispose();
 });
 </script>

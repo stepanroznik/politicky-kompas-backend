@@ -13,7 +13,7 @@
     </div>
 
     <div class="grid gap-5 md:grid-cols-2">
-      <article class="border border-gray-300 bg-white p-5 shadow-sm">
+      <article class="flex flex-col border border-gray-300 bg-white p-5 shadow-sm">
         <h2 class="text-xl font-semibold text-gray-950">
           Obecný politický kompas
           <span class="ml-2 rounded-full bg-amber-100 px-2 py-1 text-xs font-semibold uppercase tracking-wide text-amber-800">
@@ -29,7 +29,7 @@
           </p>
         </div>
         <button
-          class="mt-5 bg-gray-900 px-5 py-3 font-semibold text-white transition hover:bg-black"
+          class="mt-auto bg-gray-900 px-5 py-3 font-semibold text-white transition hover:bg-black"
           type="button"
           @click="$router.push('/obecny-kompas')"
         >
@@ -37,7 +37,7 @@
         </button>
       </article>
 
-      <article class="border border-gray-300 bg-white p-5 shadow-sm">
+      <article class="flex flex-col border border-gray-300 bg-white p-5 shadow-sm">
         <h2 class="text-xl font-semibold text-gray-950">
           Sněmovní kompas 2021
         </h2>
@@ -50,7 +50,7 @@
           </p>
         </div>
         <button
-          class="mt-5 border border-gray-400 px-5 py-3 font-semibold text-gray-900 transition hover:border-gray-900"
+          class="mt-auto border border-gray-400 px-5 py-3 font-semibold text-gray-900 transition hover:border-gray-900"
           type="button"
           @click="$router.push('/')"
         >
