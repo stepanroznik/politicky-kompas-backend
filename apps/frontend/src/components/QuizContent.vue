@@ -18,16 +18,18 @@
       class="answers flex flex-col sm:max-w-2xl m-auto"
     >
       <button
-        class="border-2 border-solid active:outline-none answer col-al5 text-white font-semibold uppercase text-sm px-6 py-1 sm:py-2.5 rounded mb-1 ease-linear transition-all duration-150"
+        class="border-2 border-solid active:outline-none answer col-al5 text-white font-semibold uppercase text-sm px-6 py-1 sm:py-2.5 rounded mb-1 ease-linear transition-all duration-150 disabled:opacity-60 disabled:cursor-not-allowed"
         :class="isCurrentQuestionAnswered && currentQuestionAnswer == 5 ? 'border-dashed border-gray-500' : 'border-transparent'"
+        :disabled="isSubmittingResult"
         type="button"
         @click="answerQuestion(5)"
       >
         Rozhodně souhlasím
       </button>
       <button
-        class="border-2 border-solid active:outline-none answer col-al4 text-white font-semibold uppercase text-sm px-6 py-1 sm:py-2.5 rounded mb-1 ease-linear transition-all duration-150"
+        class="border-2 border-solid active:outline-none answer col-al4 text-white font-semibold uppercase text-sm px-6 py-1 sm:py-2.5 rounded mb-1 ease-linear transition-all duration-150 disabled:opacity-60 disabled:cursor-not-allowed"
         :class="isCurrentQuestionAnswered && currentQuestionAnswer == 4 ? 'border-dashed border-gray-500' : 'border-transparent'"
+        :disabled="isSubmittingResult"
         type="button"
         @click="answerQuestion(4)"
       >
@@ -35,8 +37,9 @@
       </button>
 
       <button
-        class="flex-1 border-2 border-solid active:outline-none answer col-al3 text-white font-semibold uppercase text-sm px-6 py-1 sm:py-2.5 rounded mb-1 ease-linear transition-all duration-150"
+        class="flex-1 border-2 border-solid active:outline-none answer col-al3 text-white font-semibold uppercase text-sm px-6 py-1 sm:py-2.5 rounded mb-1 ease-linear transition-all duration-150 disabled:opacity-60 disabled:cursor-not-allowed"
         :class="isCurrentQuestionAnswered && currentQuestionAnswer == 3 ? 'border-dashed border-gray-500' : 'border-transparent'"
+        :disabled="isSubmittingResult"
         type="button"
         @click="answerQuestion(3)"
       >
@@ -44,24 +47,27 @@
       </button>
 
       <button
-        class="border-2 border-solid active:outline-none answer col-al2 text-white font-semibold uppercase text-sm px-6 py-1 sm:py-2.5 rounded mb-1 ease-linear transition-all duration-150"
+        class="border-2 border-solid active:outline-none answer col-al2 text-white font-semibold uppercase text-sm px-6 py-1 sm:py-2.5 rounded mb-1 ease-linear transition-all duration-150 disabled:opacity-60 disabled:cursor-not-allowed"
         :class="isCurrentQuestionAnswered && currentQuestionAnswer == 2 ? 'border-dashed border-gray-500' : 'border-transparent'"
+        :disabled="isSubmittingResult"
         type="button"
         @click="answerQuestion(2)"
       >
         Spíše nesouhlasím
       </button>
       <button
-        class="border-2 border-solid active:outline-none answer col-al1 text-white font-semibold uppercase text-sm px-6 py-1 sm:py-2.5 rounded mb-1 ease-linear transition-all duration-150"
+        class="border-2 border-solid active:outline-none answer col-al1 text-white font-semibold uppercase text-sm px-6 py-1 sm:py-2.5 rounded mb-1 ease-linear transition-all duration-150 disabled:opacity-60 disabled:cursor-not-allowed"
         :class="isCurrentQuestionAnswered && currentQuestionAnswer == 1 ? 'border-dashed border-gray-500' : 'border-transparent'"
+        :disabled="isSubmittingResult"
         type="button"
         @click="answerQuestion(1)"
       >
         Rozhodně nesouhlasím
       </button>
       <button
-        class="flex-1 w-1/2 sm:w-1/3 self-end border-2 border-solid active:outline-none answer col-al0 text-white font-semibold uppercase text-sm px-6 py-1 sm:py-2.5 rounded mb-1 ease-linear transition-all duration-150"
+        class="flex-1 w-1/2 sm:w-1/3 self-end border-2 border-solid active:outline-none answer col-al0 text-white font-semibold uppercase text-sm px-6 py-1 sm:py-2.5 rounded mb-1 ease-linear transition-all duration-150 disabled:opacity-60 disabled:cursor-not-allowed"
         :class="isCurrentQuestionAnswered && currentQuestionAnswer == 0 ? 'border-dashed border-gray-500' : 'border-transparent'"
+        :disabled="isSubmittingResult"
         type="button"
         @click="answerQuestion(0)"
       >
@@ -75,9 +81,9 @@
       >
         <span class="text-sm text-gray-300">
           <button
-            class="p-1 border border-transparent active:outline-none rounded"
-            :class="{ 'hover:border-gray-400 text-gray-600': !isCurrentQuestionFirst }"
-            :disabled="isCurrentQuestionFirst"
+            class="p-1 border border-transparent active:outline-none rounded disabled:opacity-60 disabled:cursor-not-allowed"
+            :class="{ 'hover:border-gray-400 text-gray-600': !isCurrentQuestionFirst && !isSubmittingResult }"
+            :disabled="isCurrentQuestionFirst || isSubmittingResult"
             @click="goToPreviousQuestion"
           >
             &lt; předchozí
@@ -88,9 +94,9 @@
         <span class="text-sm text-gray-300">
           <button
             v-if="!isCurrentQuestionLast"
-            class="p-1 border border-transparent active:outline-none rounded"
-            :class="{ 'hover:border-gray-400 text-gray-600': isCurrentQuestionAnswered && !isCurrentQuestionLast }"
-            :disabled="!isCurrentQuestionAnswered"
+            class="p-1 border border-transparent active:outline-none rounded disabled:opacity-60 disabled:cursor-not-allowed"
+            :class="{ 'hover:border-gray-400 text-gray-600': isCurrentQuestionAnswered && !isCurrentQuestionLast && !isSubmittingResult }"
+            :disabled="!isCurrentQuestionAnswered || isSubmittingResult"
             @click="goToNextQuestion"
           >
             další &gt;
@@ -135,13 +141,23 @@ const store = useQuizStore();
 
 const currentQuestionIndex = ref(0);
 const showModal = ref(false);
+const isSubmittingResult = ref(false);
 
 const isCurrentQuestionFirst = computed(() => currentQuestionIndex.value === 0);
 const isCurrentQuestionLast = computed(() => currentQuestionIndex.value + 1 >= props.questions.length);
 const currentQuestion = computed(() => props.questions[currentQuestionIndex.value]);
-const isCurrentQuestionAnswered = computed(() => !!store.answers.find((x) => x.Question.id === currentQuestion.value.id)?.agreeLevel);
+const currentStoredAnswer = computed(() =>
+    store.answers.find(
+        (answer) =>
+            (answer.QuestionId ?? answer.Question?.id) ===
+            currentQuestion.value.id,
+    ),
+);
+const isCurrentQuestionAnswered = computed(
+    () => currentStoredAnswer.value !== undefined,
+);
 const currentQuestionAnswer = computed(() => {
-    if (isCurrentQuestionAnswered.value) return store.answers.find((x) => x.Question.id === currentQuestion.value.id)?.agreeLevel;
+    if (isCurrentQuestionAnswered.value) return currentStoredAnswer.value?.agreeLevel;
     return false;
 });
 const primaryQuestionsCount = computed(() => props.questions.filter((q) => q.isPrimary).length);
@@ -163,44 +179,56 @@ async function setCurrentQuestionQuery() {
 }
 
 async function goToPreviousQuestion() {
-    if (!isCurrentQuestionFirst.value) {
-        currentQuestionIndex.value -= 1;
-        await setCurrentQuestionQuery();
-    }
+  if (isSubmittingResult.value || isCurrentQuestionFirst.value) return;
+  currentQuestionIndex.value -= 1;
+  await setCurrentQuestionQuery();
 }
 
 async function goToNextQuestion() {
-    if (!isCurrentQuestionLast.value) {
-        currentQuestionIndex.value += 1;
-        await setCurrentQuestionQuery();
-        return;
-    }
-    if (isCurrentQuestionLast.value) {
-        store.completeQuiz();
-        await router.push({ name: "Result" });
-    }
+  if (isSubmittingResult.value) return;
+  if (!isCurrentQuestionLast.value) {
+    currentQuestionIndex.value += 1;
+    await setCurrentQuestionQuery();
+    return;
+  }
+  await finishQuiz();
 }
 
 async function answerQuestion(agreeLevel: number) {
-    if (isCurrentQuestionFirst.value) {
-        store.answers = [];
-        store.quizCompleted = false;
-    }
-    store.answerQuestion({ id: currentQuestion.value.id, position: currentQuestion.value.position }, agreeLevel);
-    if (primaryQuestionsCount.value - 1 === currentQuestionIndex.value) {
-        return (showModal.value = true);
-    }
-    await goToNextQuestion();
+  if (isSubmittingResult.value) return;
+  if (isCurrentQuestionFirst.value) {
+    store.resetProgress();
+  }
+  store.answerQuestion({ id: currentQuestion.value.id, position: currentQuestion.value.position }, agreeLevel);
+  if (primaryQuestionsCount.value - 1 === currentQuestionIndex.value) {
+    showModal.value = true;
+    return;
+  }
+  await goToNextQuestion();
 }
 
 async function decideToContinue(decision: boolean) {
-    if (decision) {
-        await goToNextQuestion();
-    } else {
-        store.completeQuiz();
-        await router.push({ name: "Result" });
-    }
-    showModal.value = false;
+  if (isSubmittingResult.value) return;
+  showModal.value = false;
+  if (decision) {
+    await goToNextQuestion();
+    return;
+  }
+  await finishQuiz();
+}
+
+async function finishQuiz() {
+  if (isSubmittingResult.value) return;
+  isSubmittingResult.value = true;
+  try {
+    await store.submitResults();
+    store.completeQuiz();
+    await router.push({ name: "Result" });
+  } catch (error) {
+    console.error(error);
+  } finally {
+    isSubmittingResult.value = false;
+  }
 }
 </script>
 

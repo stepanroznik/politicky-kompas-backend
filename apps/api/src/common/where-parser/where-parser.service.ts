@@ -126,7 +126,7 @@ export class WhereParserService {
             Object.entries(query).forEach(([key, value]) => {
                 q[key] = this.parseQuery(value);
             });
-        } catch (error) {
+        } catch {
             throw new BadRequestException("the 'where' query is malformed");
         }
 

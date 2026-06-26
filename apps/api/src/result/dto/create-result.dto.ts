@@ -6,8 +6,6 @@ import {
     IsNumber,
     IsIn,
     ValidateNested,
-    ArrayMinSize,
-    ArrayMaxSize,
     IsBoolean,
 } from 'class-validator';
 import { IResultAnswer } from '../interfaces/result-answer.interface';
@@ -22,17 +20,17 @@ export class CreateResultDto {
     })
     @IsArray()
     @ValidateNested({ each: true })
-    @ArrayMinSize(30)
-    @ArrayMaxSize(42)
     @Type(() => CreateResultAnswerDto)
     answers!: IResultAnswer[];
 
     @ApiProperty({
         description: 'The IP address of the user',
         type: String,
+        required: false,
     })
+    @IsOptional()
     @IsString()
-    ipAddress!: string;
+    ipAddress?: string;
 
     @ApiProperty({
         description: "The fingerprint of the user's browser or device",

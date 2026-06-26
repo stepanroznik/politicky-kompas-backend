@@ -1,11 +1,10 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { TimestampsDto } from '../../common/dto/timestamps.dto';
-import { IsNumber } from 'class-validator';
-import { ViewPartyDto } from '../../party/dto/view-party.dto';
+import { IsNumber, IsUUID } from 'class-validator';
 
-export class ViewPercentagesDto extends TimestampsDto {
-    @ApiProperty({ type: () => ViewPartyDto, isArray: true })
-    party!: ViewPartyDto[];
+export class ViewPercentagesDto {
+    @ApiProperty({ type: String, format: 'uuid' })
+    @IsUUID()
+    partyId!: string;
 
     @ApiProperty({ type: Number })
     @IsNumber()

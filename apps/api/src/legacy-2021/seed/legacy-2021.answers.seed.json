@@ -1,0 +1,3472 @@
+{
+  "source": {
+    "file": "/mnt/c/Users/StepanRoznik/Roznik/Desktop/dump-postgres-202310151807.sql",
+    "table": "public.Answers",
+    "extractedAt": "2026-06-15",
+    "rowCount": 346,
+    "partyCount": 9,
+    "questionCount": 40
+  },
+  "answers": [
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "0cfc02bb-460c-41cb-854d-6b353910e06a",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-19 19:23:02.281+00",
+      "updatedAt": "2021-09-19 19:23:02.281+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "10d97b97-c02f-4712-bc10-ac9f4c2cab72",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-19 17:58:01.105+00",
+      "updatedAt": "2021-09-19 17:58:01.105+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "1e2833ba-0df5-4a7e-9fdc-bd6b941647f1",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-10-02 08:18:19.869+00",
+      "updatedAt": "2021-10-02 08:18:19.869+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "283e4f63-9f99-44c8-b32f-06b48992d2b1",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-10-04 20:02:56.183+00",
+      "updatedAt": "2021-10-04 20:02:56.183+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "2d2f1820-968d-4551-be20-469f9df10e91",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-19 19:10:41.79+00",
+      "updatedAt": "2021-09-19 19:10:41.79+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "313f4283-47da-41dc-a6e3-bd5eeb71db90",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-19 19:00:18.859+00",
+      "updatedAt": "2021-09-19 19:00:18.859+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "320cf3b5-4aff-49f4-8d38-127f26079130",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-19 19:16:48.14+00",
+      "updatedAt": "2021-09-19 19:16:48.14+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "34fca529-db71-4abe-bbdb-c2e29d755299",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-19 19:01:26.179+00",
+      "updatedAt": "2021-09-19 19:01:26.179+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "3efcb52c-ea38-44f3-98c5-32f2461c29d5",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-25 09:20:30.505+00",
+      "updatedAt": "2021-09-25 09:20:30.505+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "412d8be5-c4ec-4ae0-84c2-2e052fce664c",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-25 09:23:10.315+00",
+      "updatedAt": "2021-09-25 09:23:10.315+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "47c843cf-8dc7-4f1a-b547-583ecedfca79",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-19 18:55:33.267+00",
+      "updatedAt": "2021-09-19 18:55:33.267+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "4d6e109a-babc-4bc4-b4f7-5f3c328c117c",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-19 19:30:06.819+00",
+      "updatedAt": "2021-09-19 19:30:06.819+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "4e928d7b-b89f-4b42-a4a0-7441dee07b37",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-25 09:45:37.857+00",
+      "updatedAt": "2021-09-25 09:45:37.857+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "50e7d3f4-fd7e-44e2-b0ca-626a93e162c6",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-19 19:08:50.656+00",
+      "updatedAt": "2021-09-24 16:05:13.905+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "523f7b50-94a9-48ad-b1e7-0ff36fbeb352",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-19 18:59:46.087+00",
+      "updatedAt": "2021-09-19 18:59:46.087+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "5a9d8d14-cfe1-48d1-9cc0-fc8d869ea5c1",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-24 16:25:28.239+00",
+      "updatedAt": "2021-09-24 16:25:28.239+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "60dde0fb-ead0-4275-a27c-64ef7f671562",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-21 21:34:15.089+00",
+      "updatedAt": "2021-09-21 21:34:15.089+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "700ac056-db75-4fbd-bc8f-8fd4071a784d",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-24 16:41:35.15+00",
+      "updatedAt": "2021-09-24 16:41:35.15+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "7513efe1-27d3-4d9e-ba9b-9dfae062727c",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-19 19:03:24.73+00",
+      "updatedAt": "2021-09-19 19:03:24.73+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "75c835fc-9a62-483a-864d-0d33327f3805",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-19 18:59:46.087+00",
+      "updatedAt": "2021-09-19 18:59:46.087+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "792d083c-4269-493c-94ca-09dbe0c362ed",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-19 19:38:57.198+00",
+      "updatedAt": "2021-09-19 19:38:57.198+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "7a1dea98-0f80-4419-b98c-58348a427f95",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-19 19:15:47.656+00",
+      "updatedAt": "2021-09-19 19:15:47.656+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "82f43a37-31c3-4fc2-9c1e-2f7e1b0fd0f6",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-25 17:35:42.758+00",
+      "updatedAt": "2021-09-25 17:35:42.758+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "8c63538b-1e8f-4e47-8cbc-36aafe21f10e",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-19 19:35:41.22+00",
+      "updatedAt": "2021-09-19 19:35:41.22+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "8dedf908-caf7-447d-9619-fd9bfcd11cff",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-24 16:18:13.471+00",
+      "updatedAt": "2021-09-24 17:05:29.582+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "90e2a861-ec07-45a3-ae7d-9eb4a9f68bb8",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-19 19:24:55.327+00",
+      "updatedAt": "2021-09-19 19:24:55.327+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "ad7b8e1a-63d1-4af0-9a94-4324b5657b93",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-25 18:34:55.703+00",
+      "updatedAt": "2021-09-25 18:34:55.703+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b0e67fb1-972f-4c2b-894b-bd435f3983c3",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-25 17:37:22.776+00",
+      "updatedAt": "2021-09-25 17:37:22.776+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b34f226b-3ca5-4e94-b2b2-8dc4ad9e31a1",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-21 21:34:51.819+00",
+      "updatedAt": "2021-09-21 21:34:51.819+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b3db4132-6845-42fc-a134-6eef5eff5afa",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-21 21:28:05.27+00",
+      "updatedAt": "2021-09-21 21:28:05.27+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b41b734c-bc25-4214-b392-7feaa1ba5554",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-19 19:43:31.917+00",
+      "updatedAt": "2021-09-21 21:22:13.625+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "c5cbba90-4c20-4e3e-aa6d-c80b5d552e1c",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-25 09:46:09.68+00",
+      "updatedAt": "2021-09-25 09:46:09.68+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "cf979583-7fcc-4df3-9bf5-dccd378ab570",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-10-04 17:33:17.113+00",
+      "updatedAt": "2021-10-04 17:33:17.113+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "d0340b1b-445d-4d55-989a-0980ecad9931",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-19 19:04:18.958+00",
+      "updatedAt": "2021-09-19 19:04:18.958+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "d12b8c0c-af53-433b-8596-30cd0bd3e4ca",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-21 18:53:59.865+00",
+      "updatedAt": "2021-09-21 18:53:59.865+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "dd0214df-da03-4157-855d-0fb88acebc1c",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-25 09:24:48.19+00",
+      "updatedAt": "2021-09-25 09:24:48.19+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "ec8ecb4f-217d-430f-aa58-33cb651bfef7",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-19 18:50:57.13+00",
+      "updatedAt": "2021-09-19 18:50:57.13+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "f31872ab-5cae-4f86-9555-4e3ca95dafd0",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-25 09:19:08.555+00",
+      "updatedAt": "2021-09-25 09:19:08.555+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "f762bfc3-e43a-42b4-9d92-27856ab75465",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-19 19:37:34.589+00",
+      "updatedAt": "2021-09-19 19:37:34.589+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "fc89f895-41df-4012-bdf3-d5286508c8d8",
+      "PartyId": "2374999d-9673-4a4a-ae07-c32e96d19670",
+      "createdAt": "2021-09-19 18:43:34.102+00",
+      "updatedAt": "2021-09-19 18:43:34.102+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "0cfc02bb-460c-41cb-854d-6b353910e06a",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-19 19:23:02.281+00",
+      "updatedAt": "2021-09-19 19:23:02.281+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "10d97b97-c02f-4712-bc10-ac9f4c2cab72",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-19 17:58:01.105+00",
+      "updatedAt": "2021-09-19 17:58:01.105+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "1e2833ba-0df5-4a7e-9fdc-bd6b941647f1",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-10-02 08:18:19.869+00",
+      "updatedAt": "2021-10-02 08:18:19.869+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "283e4f63-9f99-44c8-b32f-06b48992d2b1",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-10-04 20:02:56.183+00",
+      "updatedAt": "2021-10-04 20:02:56.183+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "2d2f1820-968d-4551-be20-469f9df10e91",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-19 19:10:41.79+00",
+      "updatedAt": "2021-09-19 19:10:41.79+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "313f4283-47da-41dc-a6e3-bd5eeb71db90",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-19 19:00:18.859+00",
+      "updatedAt": "2021-09-19 19:00:18.859+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "320cf3b5-4aff-49f4-8d38-127f26079130",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-19 19:16:48.14+00",
+      "updatedAt": "2021-09-19 19:16:48.14+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "34fca529-db71-4abe-bbdb-c2e29d755299",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-19 19:01:26.179+00",
+      "updatedAt": "2021-09-19 19:01:26.179+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "3efcb52c-ea38-44f3-98c5-32f2461c29d5",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-25 09:20:30.505+00",
+      "updatedAt": "2021-09-25 09:20:30.505+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "47c843cf-8dc7-4f1a-b547-583ecedfca79",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-19 18:55:33.267+00",
+      "updatedAt": "2021-09-19 18:55:33.267+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "4d6e109a-babc-4bc4-b4f7-5f3c328c117c",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-19 19:30:06.819+00",
+      "updatedAt": "2021-09-19 19:30:06.819+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "50e7d3f4-fd7e-44e2-b0ca-626a93e162c6",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-19 19:08:50.656+00",
+      "updatedAt": "2021-09-19 19:08:50.656+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "523f7b50-94a9-48ad-b1e7-0ff36fbeb352",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-19 18:59:46.087+00",
+      "updatedAt": "2021-09-19 18:59:46.087+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "5a9d8d14-cfe1-48d1-9cc0-fc8d869ea5c1",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-24 16:25:28.239+00",
+      "updatedAt": "2021-09-24 16:25:28.239+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "60dde0fb-ead0-4275-a27c-64ef7f671562",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-21 21:34:15.089+00",
+      "updatedAt": "2021-09-21 21:34:15.089+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "700ac056-db75-4fbd-bc8f-8fd4071a784d",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-24 16:41:35.15+00",
+      "updatedAt": "2021-09-24 16:41:35.15+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "7513efe1-27d3-4d9e-ba9b-9dfae062727c",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-19 19:03:24.73+00",
+      "updatedAt": "2021-09-19 19:03:24.73+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "75c835fc-9a62-483a-864d-0d33327f3805",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-19 18:59:46.087+00",
+      "updatedAt": "2021-09-19 18:59:46.087+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "792d083c-4269-493c-94ca-09dbe0c362ed",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-19 19:38:57.198+00",
+      "updatedAt": "2021-09-19 19:38:57.198+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "7a1dea98-0f80-4419-b98c-58348a427f95",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-19 19:15:47.656+00",
+      "updatedAt": "2021-09-19 19:15:47.656+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "82f43a37-31c3-4fc2-9c1e-2f7e1b0fd0f6",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-25 17:35:42.758+00",
+      "updatedAt": "2021-09-25 17:35:42.758+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "8c63538b-1e8f-4e47-8cbc-36aafe21f10e",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-19 19:35:41.22+00",
+      "updatedAt": "2021-09-19 19:35:41.22+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "8dedf908-caf7-447d-9619-fd9bfcd11cff",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-24 16:18:13.471+00",
+      "updatedAt": "2021-09-24 17:05:29.577+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "90e2a861-ec07-45a3-ae7d-9eb4a9f68bb8",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-19 19:24:55.327+00",
+      "updatedAt": "2021-09-19 19:24:55.327+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "ad7b8e1a-63d1-4af0-9a94-4324b5657b93",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-25 18:34:55.703+00",
+      "updatedAt": "2021-09-25 18:34:55.703+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b0e67fb1-972f-4c2b-894b-bd435f3983c3",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-25 17:37:22.776+00",
+      "updatedAt": "2021-09-25 17:37:22.776+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b34f226b-3ca5-4e94-b2b2-8dc4ad9e31a1",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-21 21:34:51.819+00",
+      "updatedAt": "2021-09-21 21:34:51.819+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b3db4132-6845-42fc-a134-6eef5eff5afa",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-21 21:28:05.27+00",
+      "updatedAt": "2021-09-21 21:28:05.27+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b41b734c-bc25-4214-b392-7feaa1ba5554",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-19 19:43:31.917+00",
+      "updatedAt": "2021-09-19 19:43:31.917+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "c5cbba90-4c20-4e3e-aa6d-c80b5d552e1c",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-25 09:46:09.68+00",
+      "updatedAt": "2021-09-25 09:46:09.68+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "cf979583-7fcc-4df3-9bf5-dccd378ab570",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-10-04 17:33:17.113+00",
+      "updatedAt": "2021-10-04 17:33:17.113+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "d0340b1b-445d-4d55-989a-0980ecad9931",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-19 19:04:18.958+00",
+      "updatedAt": "2021-09-19 19:04:18.958+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "d12b8c0c-af53-433b-8596-30cd0bd3e4ca",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-21 18:53:59.865+00",
+      "updatedAt": "2021-09-21 18:53:59.865+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "dd0214df-da03-4157-855d-0fb88acebc1c",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-25 09:24:48.19+00",
+      "updatedAt": "2021-09-25 09:24:48.19+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "ec8ecb4f-217d-430f-aa58-33cb651bfef7",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-19 18:50:57.13+00",
+      "updatedAt": "2021-09-19 18:50:57.13+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "f31872ab-5cae-4f86-9555-4e3ca95dafd0",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-25 09:19:08.555+00",
+      "updatedAt": "2021-09-25 09:19:08.555+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "f762bfc3-e43a-42b4-9d92-27856ab75465",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-19 19:37:34.589+00",
+      "updatedAt": "2021-09-19 19:37:34.589+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "fc89f895-41df-4012-bdf3-d5286508c8d8",
+      "PartyId": "455c2cae-c998-4644-9fa1-980b967f8696",
+      "createdAt": "2021-09-19 18:43:34.102+00",
+      "updatedAt": "2021-09-19 18:43:34.102+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "0cfc02bb-460c-41cb-854d-6b353910e06a",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-19 19:23:02.281+00",
+      "updatedAt": "2021-09-19 19:23:02.281+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "10d97b97-c02f-4712-bc10-ac9f4c2cab72",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-19 17:58:01.105+00",
+      "updatedAt": "2021-09-19 17:58:01.105+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "1e2833ba-0df5-4a7e-9fdc-bd6b941647f1",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-10-02 08:18:19.869+00",
+      "updatedAt": "2021-10-02 08:18:19.869+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "283e4f63-9f99-44c8-b32f-06b48992d2b1",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-10-04 20:02:56.183+00",
+      "updatedAt": "2021-10-04 20:02:56.183+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "2d2f1820-968d-4551-be20-469f9df10e91",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-19 19:10:41.79+00",
+      "updatedAt": "2021-09-19 19:10:41.79+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "313f4283-47da-41dc-a6e3-bd5eeb71db90",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-19 19:00:18.859+00",
+      "updatedAt": "2021-09-19 19:00:18.859+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "320cf3b5-4aff-49f4-8d38-127f26079130",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-19 19:16:48.14+00",
+      "updatedAt": "2021-09-19 19:16:48.14+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "34fca529-db71-4abe-bbdb-c2e29d755299",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-19 19:01:26.179+00",
+      "updatedAt": "2021-09-19 19:01:26.179+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "3efcb52c-ea38-44f3-98c5-32f2461c29d5",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-25 09:20:30.505+00",
+      "updatedAt": "2021-09-25 09:20:30.505+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "412d8be5-c4ec-4ae0-84c2-2e052fce664c",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-25 09:23:10.315+00",
+      "updatedAt": "2021-09-25 09:23:10.315+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "47c843cf-8dc7-4f1a-b547-583ecedfca79",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-19 18:55:33.267+00",
+      "updatedAt": "2021-09-19 18:55:33.267+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "4d6e109a-babc-4bc4-b4f7-5f3c328c117c",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-19 19:30:06.819+00",
+      "updatedAt": "2021-09-19 19:30:06.819+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "4e928d7b-b89f-4b42-a4a0-7441dee07b37",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-25 09:45:37.857+00",
+      "updatedAt": "2021-09-25 09:45:37.857+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "50e7d3f4-fd7e-44e2-b0ca-626a93e162c6",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-19 19:08:50.656+00",
+      "updatedAt": "2021-09-19 19:08:50.656+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "523f7b50-94a9-48ad-b1e7-0ff36fbeb352",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-19 18:59:46.087+00",
+      "updatedAt": "2021-09-19 18:59:46.087+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "5a9d8d14-cfe1-48d1-9cc0-fc8d869ea5c1",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-24 16:25:28.239+00",
+      "updatedAt": "2021-09-24 16:25:28.239+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "60dde0fb-ead0-4275-a27c-64ef7f671562",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-21 21:34:15.089+00",
+      "updatedAt": "2021-09-21 21:48:44.245+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "700ac056-db75-4fbd-bc8f-8fd4071a784d",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-24 16:41:35.15+00",
+      "updatedAt": "2021-09-24 16:41:35.15+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "7513efe1-27d3-4d9e-ba9b-9dfae062727c",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-19 19:03:24.73+00",
+      "updatedAt": "2021-09-19 19:03:24.73+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "75c835fc-9a62-483a-864d-0d33327f3805",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-19 18:59:46.087+00",
+      "updatedAt": "2021-09-19 18:59:46.087+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "792d083c-4269-493c-94ca-09dbe0c362ed",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-19 19:38:57.198+00",
+      "updatedAt": "2021-09-19 19:38:57.198+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "7a1dea98-0f80-4419-b98c-58348a427f95",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-19 19:15:47.656+00",
+      "updatedAt": "2021-09-19 19:15:47.656+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "82f43a37-31c3-4fc2-9c1e-2f7e1b0fd0f6",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-25 17:35:42.758+00",
+      "updatedAt": "2021-09-25 17:35:42.758+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "8c63538b-1e8f-4e47-8cbc-36aafe21f10e",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-19 19:35:41.22+00",
+      "updatedAt": "2021-09-19 19:35:41.22+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "8dedf908-caf7-447d-9619-fd9bfcd11cff",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-24 16:18:13.471+00",
+      "updatedAt": "2021-09-24 17:05:29.573+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "90e2a861-ec07-45a3-ae7d-9eb4a9f68bb8",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-19 19:24:55.327+00",
+      "updatedAt": "2021-09-19 19:24:55.327+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "ad7b8e1a-63d1-4af0-9a94-4324b5657b93",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-25 18:34:55.703+00",
+      "updatedAt": "2021-09-25 18:34:55.703+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b0e67fb1-972f-4c2b-894b-bd435f3983c3",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-25 17:37:22.776+00",
+      "updatedAt": "2021-09-25 17:37:22.776+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b34f226b-3ca5-4e94-b2b2-8dc4ad9e31a1",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-21 21:34:51.819+00",
+      "updatedAt": "2021-09-21 21:34:51.819+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b3db4132-6845-42fc-a134-6eef5eff5afa",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-21 21:28:05.27+00",
+      "updatedAt": "2021-09-21 21:28:05.27+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b41b734c-bc25-4214-b392-7feaa1ba5554",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-19 19:43:31.917+00",
+      "updatedAt": "2021-09-19 19:43:31.917+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "c5cbba90-4c20-4e3e-aa6d-c80b5d552e1c",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-25 09:46:09.68+00",
+      "updatedAt": "2021-09-25 09:46:09.68+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "cf979583-7fcc-4df3-9bf5-dccd378ab570",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-10-04 17:33:17.113+00",
+      "updatedAt": "2021-10-04 17:33:17.113+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "d0340b1b-445d-4d55-989a-0980ecad9931",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-19 19:04:18.958+00",
+      "updatedAt": "2021-09-19 19:04:18.958+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "dd0214df-da03-4157-855d-0fb88acebc1c",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-25 09:24:48.19+00",
+      "updatedAt": "2021-09-25 09:24:48.19+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "ec8ecb4f-217d-430f-aa58-33cb651bfef7",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-19 18:50:57.13+00",
+      "updatedAt": "2021-09-19 18:50:57.13+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "f31872ab-5cae-4f86-9555-4e3ca95dafd0",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-25 09:19:08.555+00",
+      "updatedAt": "2021-09-25 09:19:08.555+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "f762bfc3-e43a-42b4-9d92-27856ab75465",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-19 19:37:34.589+00",
+      "updatedAt": "2021-09-19 19:37:34.589+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "fc89f895-41df-4012-bdf3-d5286508c8d8",
+      "PartyId": "6cc0bf49-f42f-493b-ab52-8ceb571474eb",
+      "createdAt": "2021-09-19 18:43:34.102+00",
+      "updatedAt": "2021-09-19 18:43:34.102+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "0cfc02bb-460c-41cb-854d-6b353910e06a",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-19 19:23:02.281+00",
+      "updatedAt": "2021-09-19 19:23:02.281+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "10d97b97-c02f-4712-bc10-ac9f4c2cab72",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-19 17:58:01.105+00",
+      "updatedAt": "2021-09-19 17:58:01.105+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "1e2833ba-0df5-4a7e-9fdc-bd6b941647f1",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-10-02 08:18:19.869+00",
+      "updatedAt": "2021-10-02 08:18:19.869+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "283e4f63-9f99-44c8-b32f-06b48992d2b1",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-10-04 20:02:56.183+00",
+      "updatedAt": "2021-10-04 20:02:56.183+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "2d2f1820-968d-4551-be20-469f9df10e91",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-19 19:10:41.79+00",
+      "updatedAt": "2021-09-19 19:10:41.79+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "313f4283-47da-41dc-a6e3-bd5eeb71db90",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-19 19:00:18.859+00",
+      "updatedAt": "2021-09-19 19:00:18.859+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "320cf3b5-4aff-49f4-8d38-127f26079130",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-19 19:16:48.14+00",
+      "updatedAt": "2021-09-19 19:16:48.14+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "34fca529-db71-4abe-bbdb-c2e29d755299",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-19 19:01:26.179+00",
+      "updatedAt": "2021-09-19 19:01:26.179+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "3efcb52c-ea38-44f3-98c5-32f2461c29d5",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-25 09:20:30.505+00",
+      "updatedAt": "2021-09-25 09:20:30.505+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "412d8be5-c4ec-4ae0-84c2-2e052fce664c",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-25 09:23:10.315+00",
+      "updatedAt": "2021-09-25 09:23:10.315+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "47c843cf-8dc7-4f1a-b547-583ecedfca79",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-19 18:55:33.267+00",
+      "updatedAt": "2021-09-19 18:55:33.267+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "4d6e109a-babc-4bc4-b4f7-5f3c328c117c",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-19 19:30:06.819+00",
+      "updatedAt": "2021-09-19 19:30:06.819+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "4e928d7b-b89f-4b42-a4a0-7441dee07b37",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-25 09:45:37.857+00",
+      "updatedAt": "2021-09-25 09:45:37.857+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "50e7d3f4-fd7e-44e2-b0ca-626a93e162c6",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-19 19:08:50.656+00",
+      "updatedAt": "2021-09-19 19:08:50.656+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "523f7b50-94a9-48ad-b1e7-0ff36fbeb352",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-19 18:59:46.087+00",
+      "updatedAt": "2021-09-19 18:59:46.087+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "5a9d8d14-cfe1-48d1-9cc0-fc8d869ea5c1",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-24 16:25:28.239+00",
+      "updatedAt": "2021-09-24 16:25:28.239+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "60dde0fb-ead0-4275-a27c-64ef7f671562",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-21 21:34:15.089+00",
+      "updatedAt": "2021-09-21 21:34:15.089+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "700ac056-db75-4fbd-bc8f-8fd4071a784d",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-24 16:41:35.15+00",
+      "updatedAt": "2021-09-24 16:41:35.15+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "7513efe1-27d3-4d9e-ba9b-9dfae062727c",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-19 19:03:24.73+00",
+      "updatedAt": "2021-09-19 19:03:24.73+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "75c835fc-9a62-483a-864d-0d33327f3805",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-19 18:59:46.087+00",
+      "updatedAt": "2021-09-19 18:59:46.087+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "792d083c-4269-493c-94ca-09dbe0c362ed",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-19 19:38:57.198+00",
+      "updatedAt": "2021-09-19 19:38:57.198+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "7a1dea98-0f80-4419-b98c-58348a427f95",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-19 19:15:47.656+00",
+      "updatedAt": "2021-09-19 19:15:47.656+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "82f43a37-31c3-4fc2-9c1e-2f7e1b0fd0f6",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-25 17:35:42.758+00",
+      "updatedAt": "2021-09-25 17:35:42.758+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "8c63538b-1e8f-4e47-8cbc-36aafe21f10e",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-19 19:35:41.22+00",
+      "updatedAt": "2021-09-19 19:35:41.22+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "8dedf908-caf7-447d-9619-fd9bfcd11cff",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-24 16:18:13.471+00",
+      "updatedAt": "2021-09-24 17:05:29.664+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "90e2a861-ec07-45a3-ae7d-9eb4a9f68bb8",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-19 19:24:55.327+00",
+      "updatedAt": "2021-09-19 19:24:55.327+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b0e67fb1-972f-4c2b-894b-bd435f3983c3",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-25 17:37:22.776+00",
+      "updatedAt": "2021-09-25 17:37:22.776+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b34f226b-3ca5-4e94-b2b2-8dc4ad9e31a1",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-21 21:34:51.819+00",
+      "updatedAt": "2021-09-21 21:34:51.819+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b3db4132-6845-42fc-a134-6eef5eff5afa",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-21 21:28:05.27+00",
+      "updatedAt": "2021-09-21 21:28:05.27+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b41b734c-bc25-4214-b392-7feaa1ba5554",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-19 19:43:31.917+00",
+      "updatedAt": "2021-09-19 19:43:31.917+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "c5cbba90-4c20-4e3e-aa6d-c80b5d552e1c",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-25 09:46:09.68+00",
+      "updatedAt": "2021-09-25 09:46:09.68+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "cf979583-7fcc-4df3-9bf5-dccd378ab570",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-10-04 17:33:17.113+00",
+      "updatedAt": "2021-10-04 17:33:17.113+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "d0340b1b-445d-4d55-989a-0980ecad9931",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-19 19:04:18.958+00",
+      "updatedAt": "2021-09-19 19:04:18.958+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "d12b8c0c-af53-433b-8596-30cd0bd3e4ca",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-21 18:53:59.865+00",
+      "updatedAt": "2021-09-21 18:53:59.865+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "dd0214df-da03-4157-855d-0fb88acebc1c",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-25 09:24:48.19+00",
+      "updatedAt": "2021-09-25 09:24:48.19+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "ec8ecb4f-217d-430f-aa58-33cb651bfef7",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-19 18:50:57.13+00",
+      "updatedAt": "2021-09-19 18:50:57.13+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "f31872ab-5cae-4f86-9555-4e3ca95dafd0",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-25 09:19:08.555+00",
+      "updatedAt": "2021-09-25 09:19:08.555+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "f762bfc3-e43a-42b4-9d92-27856ab75465",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-19 19:37:34.589+00",
+      "updatedAt": "2021-09-19 19:37:34.589+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "fc89f895-41df-4012-bdf3-d5286508c8d8",
+      "PartyId": "75edb9c9-4b9b-4166-ac27-c0c4c6f07f06",
+      "createdAt": "2021-09-19 18:43:34.102+00",
+      "updatedAt": "2021-09-19 18:43:34.102+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "0cfc02bb-460c-41cb-854d-6b353910e06a",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-09-19 19:23:02.281+00",
+      "updatedAt": "2021-09-19 19:23:02.281+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "1e2833ba-0df5-4a7e-9fdc-bd6b941647f1",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-10-02 08:18:19.869+00",
+      "updatedAt": "2021-10-02 08:18:19.869+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "2d2f1820-968d-4551-be20-469f9df10e91",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-09-19 19:10:41.79+00",
+      "updatedAt": "2021-09-19 19:10:41.79+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "320cf3b5-4aff-49f4-8d38-127f26079130",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-09-19 19:16:48.14+00",
+      "updatedAt": "2021-09-19 19:16:48.14+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "3efcb52c-ea38-44f3-98c5-32f2461c29d5",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-09-25 09:20:30.505+00",
+      "updatedAt": "2021-09-25 09:20:30.505+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "412d8be5-c4ec-4ae0-84c2-2e052fce664c",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-09-25 09:23:10.315+00",
+      "updatedAt": "2021-09-25 09:23:10.315+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "47c843cf-8dc7-4f1a-b547-583ecedfca79",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-09-19 18:55:33.267+00",
+      "updatedAt": "2021-09-19 18:55:33.267+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "4d6e109a-babc-4bc4-b4f7-5f3c328c117c",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-09-19 19:30:06.819+00",
+      "updatedAt": "2021-09-19 19:30:06.819+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "4e928d7b-b89f-4b42-a4a0-7441dee07b37",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-09-25 09:45:37.857+00",
+      "updatedAt": "2021-09-25 09:45:37.857+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "5a9d8d14-cfe1-48d1-9cc0-fc8d869ea5c1",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-09-24 16:25:28.239+00",
+      "updatedAt": "2021-09-24 16:25:28.239+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "60dde0fb-ead0-4275-a27c-64ef7f671562",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-09-21 21:34:15.089+00",
+      "updatedAt": "2021-09-21 21:34:15.089+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "700ac056-db75-4fbd-bc8f-8fd4071a784d",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-09-24 16:41:35.15+00",
+      "updatedAt": "2021-09-24 16:41:35.15+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "7513efe1-27d3-4d9e-ba9b-9dfae062727c",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-09-19 19:03:24.73+00",
+      "updatedAt": "2021-09-19 19:03:24.73+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "75c835fc-9a62-483a-864d-0d33327f3805",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-09-19 18:59:46.087+00",
+      "updatedAt": "2021-09-19 18:59:46.087+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "7a1dea98-0f80-4419-b98c-58348a427f95",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-09-19 19:15:47.656+00",
+      "updatedAt": "2021-09-19 19:15:47.656+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "82f43a37-31c3-4fc2-9c1e-2f7e1b0fd0f6",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-09-25 17:35:42.758+00",
+      "updatedAt": "2021-09-25 17:35:42.758+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "8c63538b-1e8f-4e47-8cbc-36aafe21f10e",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-09-19 19:35:41.22+00",
+      "updatedAt": "2021-09-19 19:35:41.22+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "8dedf908-caf7-447d-9619-fd9bfcd11cff",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-09-24 16:18:13.471+00",
+      "updatedAt": "2021-09-24 17:05:29.589+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "90e2a861-ec07-45a3-ae7d-9eb4a9f68bb8",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-09-19 19:24:55.327+00",
+      "updatedAt": "2021-09-19 19:24:55.327+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "ad7b8e1a-63d1-4af0-9a94-4324b5657b93",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-09-25 18:34:55.703+00",
+      "updatedAt": "2021-09-25 18:34:55.703+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b0e67fb1-972f-4c2b-894b-bd435f3983c3",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-09-25 17:37:22.776+00",
+      "updatedAt": "2021-09-25 17:37:22.776+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b34f226b-3ca5-4e94-b2b2-8dc4ad9e31a1",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-09-21 21:34:51.819+00",
+      "updatedAt": "2021-09-21 21:34:51.819+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b3db4132-6845-42fc-a134-6eef5eff5afa",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-09-21 21:28:05.27+00",
+      "updatedAt": "2021-09-21 21:28:05.27+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b41b734c-bc25-4214-b392-7feaa1ba5554",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-09-19 19:43:31.917+00",
+      "updatedAt": "2021-09-19 19:43:31.917+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "c5cbba90-4c20-4e3e-aa6d-c80b5d552e1c",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-09-25 09:46:09.68+00",
+      "updatedAt": "2021-09-25 09:46:09.68+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "cf979583-7fcc-4df3-9bf5-dccd378ab570",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-10-04 17:33:17.113+00",
+      "updatedAt": "2021-10-04 17:33:17.113+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "d0340b1b-445d-4d55-989a-0980ecad9931",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-09-19 19:04:18.958+00",
+      "updatedAt": "2021-09-19 19:04:18.958+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "dd0214df-da03-4157-855d-0fb88acebc1c",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-09-25 09:24:48.19+00",
+      "updatedAt": "2021-09-25 09:24:48.19+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "f31872ab-5cae-4f86-9555-4e3ca95dafd0",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-09-25 09:19:08.555+00",
+      "updatedAt": "2021-09-25 09:19:08.555+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "f762bfc3-e43a-42b4-9d92-27856ab75465",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-09-19 19:37:34.589+00",
+      "updatedAt": "2021-09-19 19:37:34.589+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "fc89f895-41df-4012-bdf3-d5286508c8d8",
+      "PartyId": "90da8d54-0bab-4ee3-926d-d7f0b5c64a70",
+      "createdAt": "2021-09-19 18:43:34.102+00",
+      "updatedAt": "2021-09-21 21:37:27.081+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "0cfc02bb-460c-41cb-854d-6b353910e06a",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-19 19:23:02.281+00",
+      "updatedAt": "2021-09-19 19:23:02.281+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "10d97b97-c02f-4712-bc10-ac9f4c2cab72",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-19 17:58:01.105+00",
+      "updatedAt": "2021-09-19 17:58:01.105+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "1e2833ba-0df5-4a7e-9fdc-bd6b941647f1",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-10-02 08:18:19.869+00",
+      "updatedAt": "2021-10-02 08:18:19.869+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "283e4f63-9f99-44c8-b32f-06b48992d2b1",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-10-04 20:02:56.183+00",
+      "updatedAt": "2021-10-04 20:02:56.183+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "2d2f1820-968d-4551-be20-469f9df10e91",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-19 19:10:41.79+00",
+      "updatedAt": "2021-09-19 19:10:41.79+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "313f4283-47da-41dc-a6e3-bd5eeb71db90",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-19 19:00:18.859+00",
+      "updatedAt": "2021-09-19 19:00:18.859+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "320cf3b5-4aff-49f4-8d38-127f26079130",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-19 19:16:48.14+00",
+      "updatedAt": "2021-09-19 19:16:48.14+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "34fca529-db71-4abe-bbdb-c2e29d755299",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-19 19:01:26.179+00",
+      "updatedAt": "2021-09-19 19:01:26.179+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "3efcb52c-ea38-44f3-98c5-32f2461c29d5",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-25 09:20:30.505+00",
+      "updatedAt": "2021-09-25 09:20:30.505+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "412d8be5-c4ec-4ae0-84c2-2e052fce664c",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-25 09:23:10.315+00",
+      "updatedAt": "2021-09-25 09:23:10.315+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "4d6e109a-babc-4bc4-b4f7-5f3c328c117c",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-19 19:30:06.819+00",
+      "updatedAt": "2021-09-19 19:30:06.819+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "4e928d7b-b89f-4b42-a4a0-7441dee07b37",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-25 09:45:37.857+00",
+      "updatedAt": "2021-09-25 09:45:37.857+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "50e7d3f4-fd7e-44e2-b0ca-626a93e162c6",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-19 19:08:50.656+00",
+      "updatedAt": "2021-09-24 16:05:13.923+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "523f7b50-94a9-48ad-b1e7-0ff36fbeb352",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-19 18:59:46.087+00",
+      "updatedAt": "2021-09-19 18:59:46.087+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "5a9d8d14-cfe1-48d1-9cc0-fc8d869ea5c1",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-24 16:25:28.239+00",
+      "updatedAt": "2021-09-24 16:25:28.239+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "60dde0fb-ead0-4275-a27c-64ef7f671562",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-21 21:34:15.089+00",
+      "updatedAt": "2021-09-21 21:34:15.089+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "700ac056-db75-4fbd-bc8f-8fd4071a784d",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-24 16:41:35.15+00",
+      "updatedAt": "2021-09-24 16:41:35.15+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "7513efe1-27d3-4d9e-ba9b-9dfae062727c",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-19 19:03:24.73+00",
+      "updatedAt": "2021-09-19 19:03:24.73+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "75c835fc-9a62-483a-864d-0d33327f3805",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-19 18:59:46.087+00",
+      "updatedAt": "2021-09-19 18:59:46.087+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "792d083c-4269-493c-94ca-09dbe0c362ed",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-19 19:38:57.198+00",
+      "updatedAt": "2021-09-19 19:38:57.198+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "7a1dea98-0f80-4419-b98c-58348a427f95",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-19 19:15:47.656+00",
+      "updatedAt": "2021-09-19 19:15:47.656+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "82f43a37-31c3-4fc2-9c1e-2f7e1b0fd0f6",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-25 17:35:42.758+00",
+      "updatedAt": "2021-09-25 17:35:42.758+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "8c63538b-1e8f-4e47-8cbc-36aafe21f10e",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-19 19:35:41.22+00",
+      "updatedAt": "2021-09-19 19:35:41.22+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "8dedf908-caf7-447d-9619-fd9bfcd11cff",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-24 16:18:13.471+00",
+      "updatedAt": "2021-09-24 17:05:29.579+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "90e2a861-ec07-45a3-ae7d-9eb4a9f68bb8",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-19 19:24:55.327+00",
+      "updatedAt": "2021-09-19 19:24:55.327+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "ad7b8e1a-63d1-4af0-9a94-4324b5657b93",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-25 18:34:55.703+00",
+      "updatedAt": "2021-09-25 18:34:55.703+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b0e67fb1-972f-4c2b-894b-bd435f3983c3",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-25 17:37:22.776+00",
+      "updatedAt": "2021-09-25 17:37:22.776+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b34f226b-3ca5-4e94-b2b2-8dc4ad9e31a1",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-21 21:34:51.819+00",
+      "updatedAt": "2021-09-21 21:34:51.819+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b3db4132-6845-42fc-a134-6eef5eff5afa",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-21 21:28:05.27+00",
+      "updatedAt": "2021-09-21 21:28:05.27+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b41b734c-bc25-4214-b392-7feaa1ba5554",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-19 19:43:31.917+00",
+      "updatedAt": "2021-09-19 19:43:31.917+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "c5cbba90-4c20-4e3e-aa6d-c80b5d552e1c",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-25 09:46:09.68+00",
+      "updatedAt": "2021-09-25 09:46:09.68+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "cf979583-7fcc-4df3-9bf5-dccd378ab570",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-10-04 17:33:17.113+00",
+      "updatedAt": "2021-10-04 17:33:17.113+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "d0340b1b-445d-4d55-989a-0980ecad9931",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-19 19:04:18.958+00",
+      "updatedAt": "2021-09-19 19:04:18.958+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "d12b8c0c-af53-433b-8596-30cd0bd3e4ca",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-21 18:53:59.865+00",
+      "updatedAt": "2021-09-21 18:53:59.865+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "dd0214df-da03-4157-855d-0fb88acebc1c",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-25 09:24:48.19+00",
+      "updatedAt": "2021-09-25 09:24:48.19+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "ec8ecb4f-217d-430f-aa58-33cb651bfef7",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-19 18:50:57.13+00",
+      "updatedAt": "2021-09-19 18:50:57.13+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "f31872ab-5cae-4f86-9555-4e3ca95dafd0",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-25 09:19:08.555+00",
+      "updatedAt": "2021-09-25 09:19:08.555+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "f762bfc3-e43a-42b4-9d92-27856ab75465",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-19 19:37:34.589+00",
+      "updatedAt": "2021-09-19 19:37:34.589+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "fc89f895-41df-4012-bdf3-d5286508c8d8",
+      "PartyId": "a897edff-684c-4278-98d4-d188cb8675d0",
+      "createdAt": "2021-09-19 18:43:34.102+00",
+      "updatedAt": "2021-09-19 18:43:34.102+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "0cfc02bb-460c-41cb-854d-6b353910e06a",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-19 19:23:02.281+00",
+      "updatedAt": "2021-09-19 19:23:02.281+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "10d97b97-c02f-4712-bc10-ac9f4c2cab72",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-19 17:58:01.105+00",
+      "updatedAt": "2021-09-19 18:37:23.597+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "1e2833ba-0df5-4a7e-9fdc-bd6b941647f1",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-10-02 08:18:19.869+00",
+      "updatedAt": "2021-10-02 08:18:19.869+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "283e4f63-9f99-44c8-b32f-06b48992d2b1",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-10-04 20:02:56.183+00",
+      "updatedAt": "2021-10-04 20:02:56.183+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "2d2f1820-968d-4551-be20-469f9df10e91",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-19 19:10:41.79+00",
+      "updatedAt": "2021-09-19 19:10:41.79+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "313f4283-47da-41dc-a6e3-bd5eeb71db90",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-19 19:00:18.859+00",
+      "updatedAt": "2021-09-19 19:00:18.859+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "320cf3b5-4aff-49f4-8d38-127f26079130",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-19 19:16:48.14+00",
+      "updatedAt": "2021-09-19 19:16:48.14+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "34fca529-db71-4abe-bbdb-c2e29d755299",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-19 19:01:26.179+00",
+      "updatedAt": "2021-09-19 19:01:26.179+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "3efcb52c-ea38-44f3-98c5-32f2461c29d5",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-25 09:20:30.505+00",
+      "updatedAt": "2021-09-25 09:20:30.505+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "412d8be5-c4ec-4ae0-84c2-2e052fce664c",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-25 09:23:10.315+00",
+      "updatedAt": "2021-09-25 09:23:10.315+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "47c843cf-8dc7-4f1a-b547-583ecedfca79",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-19 18:55:33.267+00",
+      "updatedAt": "2021-09-19 18:55:33.267+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "4d6e109a-babc-4bc4-b4f7-5f3c328c117c",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-19 19:30:06.819+00",
+      "updatedAt": "2021-09-19 19:30:06.819+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "4e928d7b-b89f-4b42-a4a0-7441dee07b37",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-25 09:45:37.857+00",
+      "updatedAt": "2021-09-25 09:45:37.857+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "50e7d3f4-fd7e-44e2-b0ca-626a93e162c6",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-19 19:08:50.656+00",
+      "updatedAt": "2021-09-20 20:02:32.12+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "523f7b50-94a9-48ad-b1e7-0ff36fbeb352",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-19 18:59:46.087+00",
+      "updatedAt": "2021-09-19 18:59:46.087+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "5a9d8d14-cfe1-48d1-9cc0-fc8d869ea5c1",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-24 16:25:28.239+00",
+      "updatedAt": "2021-09-24 16:25:28.239+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "60dde0fb-ead0-4275-a27c-64ef7f671562",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-21 21:34:15.089+00",
+      "updatedAt": "2021-09-24 16:24:43.196+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "700ac056-db75-4fbd-bc8f-8fd4071a784d",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-24 16:41:35.15+00",
+      "updatedAt": "2021-09-24 16:41:35.15+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "7513efe1-27d3-4d9e-ba9b-9dfae062727c",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-19 19:03:24.73+00",
+      "updatedAt": "2021-09-19 19:03:24.73+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "75c835fc-9a62-483a-864d-0d33327f3805",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-19 18:59:46.087+00",
+      "updatedAt": "2021-09-19 18:59:46.087+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "792d083c-4269-493c-94ca-09dbe0c362ed",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-19 19:38:57.198+00",
+      "updatedAt": "2021-09-19 19:38:57.198+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "7a1dea98-0f80-4419-b98c-58348a427f95",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-19 19:15:47.656+00",
+      "updatedAt": "2021-09-19 19:15:47.656+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "82f43a37-31c3-4fc2-9c1e-2f7e1b0fd0f6",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-25 17:35:42.758+00",
+      "updatedAt": "2021-09-25 17:35:42.758+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "8c63538b-1e8f-4e47-8cbc-36aafe21f10e",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-19 19:35:41.22+00",
+      "updatedAt": "2021-09-19 19:35:41.22+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "8dedf908-caf7-447d-9619-fd9bfcd11cff",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-24 16:18:13.471+00",
+      "updatedAt": "2021-09-24 17:05:29.584+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "90e2a861-ec07-45a3-ae7d-9eb4a9f68bb8",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-19 19:24:55.327+00",
+      "updatedAt": "2021-09-19 19:24:55.327+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "ad7b8e1a-63d1-4af0-9a94-4324b5657b93",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-25 18:34:55.703+00",
+      "updatedAt": "2021-09-25 18:34:55.703+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b0e67fb1-972f-4c2b-894b-bd435f3983c3",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-25 17:37:22.776+00",
+      "updatedAt": "2021-09-25 17:37:22.776+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b34f226b-3ca5-4e94-b2b2-8dc4ad9e31a1",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-21 21:34:51.819+00",
+      "updatedAt": "2021-09-21 21:34:51.819+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b3db4132-6845-42fc-a134-6eef5eff5afa",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-21 21:28:05.27+00",
+      "updatedAt": "2021-09-21 21:28:05.27+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b41b734c-bc25-4214-b392-7feaa1ba5554",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-19 19:43:31.917+00",
+      "updatedAt": "2021-09-19 19:43:31.917+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "c5cbba90-4c20-4e3e-aa6d-c80b5d552e1c",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-25 09:46:09.68+00",
+      "updatedAt": "2021-09-25 09:46:09.68+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "cf979583-7fcc-4df3-9bf5-dccd378ab570",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-10-04 17:33:17.113+00",
+      "updatedAt": "2021-10-04 17:33:17.113+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "d0340b1b-445d-4d55-989a-0980ecad9931",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-19 19:04:18.958+00",
+      "updatedAt": "2021-09-19 19:04:18.958+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "d12b8c0c-af53-433b-8596-30cd0bd3e4ca",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-21 18:53:59.865+00",
+      "updatedAt": "2021-09-21 18:53:59.865+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "dd0214df-da03-4157-855d-0fb88acebc1c",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-25 09:24:48.19+00",
+      "updatedAt": "2021-09-25 09:24:48.19+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "ec8ecb4f-217d-430f-aa58-33cb651bfef7",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-19 18:50:57.13+00",
+      "updatedAt": "2021-09-19 18:50:57.13+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "f31872ab-5cae-4f86-9555-4e3ca95dafd0",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-25 09:19:08.555+00",
+      "updatedAt": "2021-09-25 09:19:08.555+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "f762bfc3-e43a-42b4-9d92-27856ab75465",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-19 19:37:34.589+00",
+      "updatedAt": "2021-09-19 19:37:34.589+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "fc89f895-41df-4012-bdf3-d5286508c8d8",
+      "PartyId": "b8daa283-42f3-48df-9953-b92fa446808a",
+      "createdAt": "2021-09-19 18:43:34.102+00",
+      "updatedAt": "2021-09-19 18:43:34.102+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "0cfc02bb-460c-41cb-854d-6b353910e06a",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-19 19:23:02.281+00",
+      "updatedAt": "2021-09-19 19:23:02.281+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "10d97b97-c02f-4712-bc10-ac9f4c2cab72",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-19 17:58:01.105+00",
+      "updatedAt": "2021-09-19 17:58:01.105+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "1e2833ba-0df5-4a7e-9fdc-bd6b941647f1",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-10-02 08:18:19.869+00",
+      "updatedAt": "2021-10-02 08:18:19.869+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "283e4f63-9f99-44c8-b32f-06b48992d2b1",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-10-04 20:02:56.183+00",
+      "updatedAt": "2021-10-04 20:02:56.183+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "2d2f1820-968d-4551-be20-469f9df10e91",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-19 19:10:41.79+00",
+      "updatedAt": "2021-09-19 19:10:41.79+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "313f4283-47da-41dc-a6e3-bd5eeb71db90",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-19 19:00:18.859+00",
+      "updatedAt": "2021-09-19 19:00:18.859+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "320cf3b5-4aff-49f4-8d38-127f26079130",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-19 19:16:48.14+00",
+      "updatedAt": "2021-09-19 19:16:48.14+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "34fca529-db71-4abe-bbdb-c2e29d755299",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-19 19:01:26.179+00",
+      "updatedAt": "2021-09-19 19:01:26.179+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "3efcb52c-ea38-44f3-98c5-32f2461c29d5",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-25 09:20:30.505+00",
+      "updatedAt": "2021-09-25 09:20:30.505+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "412d8be5-c4ec-4ae0-84c2-2e052fce664c",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-25 09:23:10.315+00",
+      "updatedAt": "2021-09-25 09:23:10.315+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "47c843cf-8dc7-4f1a-b547-583ecedfca79",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-19 18:55:33.267+00",
+      "updatedAt": "2021-09-19 18:55:33.267+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "4d6e109a-babc-4bc4-b4f7-5f3c328c117c",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-19 19:30:06.819+00",
+      "updatedAt": "2021-09-19 19:30:06.819+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "4e928d7b-b89f-4b42-a4a0-7441dee07b37",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-25 09:45:37.857+00",
+      "updatedAt": "2021-09-25 09:45:37.857+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "50e7d3f4-fd7e-44e2-b0ca-626a93e162c6",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-19 19:08:50.656+00",
+      "updatedAt": "2021-09-19 19:08:50.656+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "523f7b50-94a9-48ad-b1e7-0ff36fbeb352",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-19 18:59:46.087+00",
+      "updatedAt": "2021-09-19 18:59:46.087+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "5a9d8d14-cfe1-48d1-9cc0-fc8d869ea5c1",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-24 16:25:28.239+00",
+      "updatedAt": "2021-09-24 16:25:28.239+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "60dde0fb-ead0-4275-a27c-64ef7f671562",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-21 21:34:15.089+00",
+      "updatedAt": "2021-09-21 21:34:15.089+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "700ac056-db75-4fbd-bc8f-8fd4071a784d",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-24 16:41:35.15+00",
+      "updatedAt": "2021-09-24 16:41:35.15+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "7513efe1-27d3-4d9e-ba9b-9dfae062727c",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-19 19:03:24.73+00",
+      "updatedAt": "2021-09-19 19:03:24.73+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "75c835fc-9a62-483a-864d-0d33327f3805",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-19 18:59:46.087+00",
+      "updatedAt": "2021-09-19 18:59:46.087+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "792d083c-4269-493c-94ca-09dbe0c362ed",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-19 19:38:57.198+00",
+      "updatedAt": "2021-09-19 19:38:57.198+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "7a1dea98-0f80-4419-b98c-58348a427f95",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-19 19:15:47.656+00",
+      "updatedAt": "2021-09-19 19:15:47.656+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "82f43a37-31c3-4fc2-9c1e-2f7e1b0fd0f6",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-25 17:35:42.758+00",
+      "updatedAt": "2021-09-25 17:35:42.758+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "8c63538b-1e8f-4e47-8cbc-36aafe21f10e",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-19 19:35:41.22+00",
+      "updatedAt": "2021-09-19 19:35:41.22+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "8dedf908-caf7-447d-9619-fd9bfcd11cff",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-24 16:18:13.471+00",
+      "updatedAt": "2021-09-24 16:18:13.471+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "90e2a861-ec07-45a3-ae7d-9eb4a9f68bb8",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-19 19:24:55.327+00",
+      "updatedAt": "2021-09-19 19:24:55.327+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "ad7b8e1a-63d1-4af0-9a94-4324b5657b93",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-25 18:34:55.703+00",
+      "updatedAt": "2021-09-25 18:34:55.703+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b0e67fb1-972f-4c2b-894b-bd435f3983c3",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-25 17:37:22.776+00",
+      "updatedAt": "2021-09-25 17:37:22.776+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b34f226b-3ca5-4e94-b2b2-8dc4ad9e31a1",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-21 21:34:51.819+00",
+      "updatedAt": "2021-09-21 21:34:51.819+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b3db4132-6845-42fc-a134-6eef5eff5afa",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-21 21:28:05.27+00",
+      "updatedAt": "2021-09-21 21:28:05.27+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b41b734c-bc25-4214-b392-7feaa1ba5554",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-19 19:43:31.917+00",
+      "updatedAt": "2021-09-19 19:43:31.917+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "c5cbba90-4c20-4e3e-aa6d-c80b5d552e1c",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-25 09:46:09.68+00",
+      "updatedAt": "2021-09-25 09:46:09.68+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "cf979583-7fcc-4df3-9bf5-dccd378ab570",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-10-04 17:33:17.113+00",
+      "updatedAt": "2021-10-04 17:33:17.113+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "d0340b1b-445d-4d55-989a-0980ecad9931",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-19 19:04:18.958+00",
+      "updatedAt": "2021-09-19 19:04:18.958+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "d12b8c0c-af53-433b-8596-30cd0bd3e4ca",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-21 18:53:59.865+00",
+      "updatedAt": "2021-09-21 18:53:59.865+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "dd0214df-da03-4157-855d-0fb88acebc1c",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-25 09:24:48.19+00",
+      "updatedAt": "2021-09-25 09:24:48.19+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "ec8ecb4f-217d-430f-aa58-33cb651bfef7",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-19 18:50:57.13+00",
+      "updatedAt": "2021-09-19 18:50:57.13+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "f31872ab-5cae-4f86-9555-4e3ca95dafd0",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-25 09:19:08.555+00",
+      "updatedAt": "2021-09-25 09:19:08.555+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "f762bfc3-e43a-42b4-9d92-27856ab75465",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-19 19:37:34.589+00",
+      "updatedAt": "2021-09-19 19:37:34.589+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "fc89f895-41df-4012-bdf3-d5286508c8d8",
+      "PartyId": "cc223c8d-f3f5-4a56-b35a-5b0901942d94",
+      "createdAt": "2021-09-19 18:43:34.102+00",
+      "updatedAt": "2021-09-19 18:43:34.102+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "0cfc02bb-460c-41cb-854d-6b353910e06a",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-19 19:23:02.281+00",
+      "updatedAt": "2021-09-19 19:23:02.281+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "10d97b97-c02f-4712-bc10-ac9f4c2cab72",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-19 17:58:01.105+00",
+      "updatedAt": "2021-09-19 17:58:01.105+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "1e2833ba-0df5-4a7e-9fdc-bd6b941647f1",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-10-02 08:18:19.869+00",
+      "updatedAt": "2021-10-02 08:18:19.869+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "283e4f63-9f99-44c8-b32f-06b48992d2b1",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-10-04 20:02:56.183+00",
+      "updatedAt": "2021-10-04 20:02:56.183+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "2d2f1820-968d-4551-be20-469f9df10e91",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-19 19:10:41.79+00",
+      "updatedAt": "2021-09-19 19:10:41.79+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "313f4283-47da-41dc-a6e3-bd5eeb71db90",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-19 19:00:18.859+00",
+      "updatedAt": "2021-09-19 19:00:18.859+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "320cf3b5-4aff-49f4-8d38-127f26079130",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-19 19:16:48.14+00",
+      "updatedAt": "2021-09-19 19:16:48.14+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "34fca529-db71-4abe-bbdb-c2e29d755299",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-19 19:01:26.179+00",
+      "updatedAt": "2021-09-19 19:01:26.179+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "3efcb52c-ea38-44f3-98c5-32f2461c29d5",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-25 09:20:30.505+00",
+      "updatedAt": "2021-09-25 09:20:30.505+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "412d8be5-c4ec-4ae0-84c2-2e052fce664c",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-25 09:23:10.315+00",
+      "updatedAt": "2021-09-25 09:23:10.315+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "47c843cf-8dc7-4f1a-b547-583ecedfca79",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-19 18:55:33.267+00",
+      "updatedAt": "2021-09-19 18:55:33.267+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "4d6e109a-babc-4bc4-b4f7-5f3c328c117c",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-19 19:30:06.819+00",
+      "updatedAt": "2021-09-19 19:30:06.819+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "4e928d7b-b89f-4b42-a4a0-7441dee07b37",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-25 09:45:37.857+00",
+      "updatedAt": "2021-09-25 09:45:37.857+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "50e7d3f4-fd7e-44e2-b0ca-626a93e162c6",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-19 19:08:50.656+00",
+      "updatedAt": "2021-09-20 20:02:32.135+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "523f7b50-94a9-48ad-b1e7-0ff36fbeb352",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-19 18:59:46.087+00",
+      "updatedAt": "2021-09-19 18:59:46.087+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 4,
+      "source": null,
+      "statement": null,
+      "QuestionId": "5a9d8d14-cfe1-48d1-9cc0-fc8d869ea5c1",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-24 16:25:28.239+00",
+      "updatedAt": "2021-09-24 16:25:28.239+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "60dde0fb-ead0-4275-a27c-64ef7f671562",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-21 21:34:15.089+00",
+      "updatedAt": "2021-09-21 21:34:15.089+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "700ac056-db75-4fbd-bc8f-8fd4071a784d",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-24 16:41:35.15+00",
+      "updatedAt": "2021-09-24 16:41:35.15+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "7513efe1-27d3-4d9e-ba9b-9dfae062727c",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-19 19:03:24.73+00",
+      "updatedAt": "2021-09-19 19:03:24.73+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "75c835fc-9a62-483a-864d-0d33327f3805",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-19 18:59:46.087+00",
+      "updatedAt": "2021-09-19 18:59:46.087+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "792d083c-4269-493c-94ca-09dbe0c362ed",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-19 19:38:57.198+00",
+      "updatedAt": "2021-09-19 19:38:57.198+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "7a1dea98-0f80-4419-b98c-58348a427f95",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-19 19:15:47.656+00",
+      "updatedAt": "2021-09-19 19:15:47.656+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "82f43a37-31c3-4fc2-9c1e-2f7e1b0fd0f6",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-25 17:35:42.758+00",
+      "updatedAt": "2021-09-25 17:35:42.758+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "8c63538b-1e8f-4e47-8cbc-36aafe21f10e",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-19 19:35:41.22+00",
+      "updatedAt": "2021-09-19 19:35:41.22+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "8dedf908-caf7-447d-9619-fd9bfcd11cff",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-24 16:18:13.471+00",
+      "updatedAt": "2021-09-24 16:18:13.471+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "90e2a861-ec07-45a3-ae7d-9eb4a9f68bb8",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-19 19:24:55.327+00",
+      "updatedAt": "2021-09-19 19:24:55.327+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "ad7b8e1a-63d1-4af0-9a94-4324b5657b93",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-25 18:34:55.703+00",
+      "updatedAt": "2021-09-25 18:34:55.703+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b0e67fb1-972f-4c2b-894b-bd435f3983c3",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-25 17:37:22.776+00",
+      "updatedAt": "2021-09-25 17:37:22.776+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b34f226b-3ca5-4e94-b2b2-8dc4ad9e31a1",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-21 21:34:51.819+00",
+      "updatedAt": "2021-09-21 21:34:51.819+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b3db4132-6845-42fc-a134-6eef5eff5afa",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-21 21:28:05.27+00",
+      "updatedAt": "2021-09-21 21:28:05.27+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "b41b734c-bc25-4214-b392-7feaa1ba5554",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-19 19:43:31.917+00",
+      "updatedAt": "2021-09-19 19:43:31.917+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "c5cbba90-4c20-4e3e-aa6d-c80b5d552e1c",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-25 09:46:09.68+00",
+      "updatedAt": "2021-09-25 09:46:09.68+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 5,
+      "source": null,
+      "statement": null,
+      "QuestionId": "cf979583-7fcc-4df3-9bf5-dccd378ab570",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-10-04 17:33:17.113+00",
+      "updatedAt": "2021-10-04 17:33:17.113+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "d0340b1b-445d-4d55-989a-0980ecad9931",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-19 19:04:18.958+00",
+      "updatedAt": "2021-09-19 19:04:18.958+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "d12b8c0c-af53-433b-8596-30cd0bd3e4ca",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-21 18:53:59.865+00",
+      "updatedAt": "2021-09-21 18:53:59.865+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "dd0214df-da03-4157-855d-0fb88acebc1c",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-25 09:24:48.19+00",
+      "updatedAt": "2021-09-25 09:24:48.19+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 2,
+      "source": null,
+      "statement": null,
+      "QuestionId": "ec8ecb4f-217d-430f-aa58-33cb651bfef7",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-19 18:50:57.13+00",
+      "updatedAt": "2021-09-19 18:50:57.13+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 3,
+      "source": null,
+      "statement": null,
+      "QuestionId": "f31872ab-5cae-4f86-9555-4e3ca95dafd0",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-25 09:19:08.555+00",
+      "updatedAt": "2021-09-25 09:19:08.555+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "f762bfc3-e43a-42b4-9d92-27856ab75465",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-19 19:37:34.589+00",
+      "updatedAt": "2021-09-19 19:37:34.589+00",
+      "deletedAt": null
+    },
+    {
+      "agreeLevel": 1,
+      "source": null,
+      "statement": null,
+      "QuestionId": "fc89f895-41df-4012-bdf3-d5286508c8d8",
+      "PartyId": "e2598c2f-5ea9-4e02-840f-97cb7bea6f98",
+      "createdAt": "2021-09-19 18:43:34.102+00",
+      "updatedAt": "2021-09-19 18:43:34.102+00",
+      "deletedAt": null
+    }
+  ]
+}

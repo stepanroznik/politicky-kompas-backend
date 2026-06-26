@@ -9,8 +9,10 @@ import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 import { LoggerService } from './common/logger/logger.service';
 import appConfig from './config/app.config';
+import { runMigrations } from './migrations/migration-runner';
 
 async function bootstrap() {
+    await runMigrations();
     const app = await NestFactory.create<NestExpressApplication>(AppModule);
     app.useGlobalPipes(new ValidationPipe({ transform: true }));
     app.enableCors();

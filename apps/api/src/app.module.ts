@@ -21,6 +21,7 @@ import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
 import { ResultModule } from './result/result.module';
 import { Dialect } from 'sequelize';
+import { Calculator2026Module } from './calculator-2026/calculator-2026.module';
 
 // Resolve public assets directory relative to this file's directory (works for CommonJS tsc output)
 const publicPath = join(__dirname, '../../../..', 'frontend');
@@ -71,6 +72,7 @@ const publicPath = join(__dirname, '../../../..', 'frontend');
         PartyModule,
         AnswerModule,
         ResultModule,
+        Calculator2026Module,
         LoggerModule,
         WhereParserModule,
     ],

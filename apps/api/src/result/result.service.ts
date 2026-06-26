@@ -15,7 +15,7 @@ import {
 import { LoggerService } from '../common/logger/logger.service';
 import { PartyService } from '../party/party.service';
 import { getPartyAgreePercentage } from 'calculations';
-import geoip from 'geoip-lite';
+import * as geoip from 'geoip-lite';
 import { IResultAnswer } from './interfaces/result-answer.interface';
 
 const { Op } = Sequelize;
@@ -71,7 +71,7 @@ export class ResultService {
                     party.Answers,
                     candidatePayload.answers,
                 );
-                return { party: party.id, percentage };
+                return { partyId: party.id, percentage };
             });
 
             const dumpAssessment =

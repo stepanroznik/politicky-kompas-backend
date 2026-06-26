@@ -1,7 +1,7 @@
 <template>
   <dl class="mt-5 md:p-5 grid grid-cols-1 gap-3 text-left">
     <div
-      v-for="result, index in results"
+      v-for="(result, index) in results"
       :key="result.party.id"
       class="py-2.5 px-4 border-4 bg-gray-200 rounded overflow-hidden relative flex flex-row items-center"
     >
@@ -54,8 +54,7 @@
 </template>
 
 <script setup lang="ts">
-import { PropType, ref } from "vue";
-import { getPartyAgreePercentage } from "calculations";
+import { PropType, computed } from "vue";
 import locationMarker from '../assets/locationMarker.svg';
 import { useRouter } from "vue-router";
 import useQuizStore from "@frontend/store";
@@ -71,18 +70,21 @@ const props = defineProps({
         required: true,
     }
 });
-const results = ref([] as { party: IPartyWithOrientation, percentage: number }[]);
-(() => {
-    if (!store.quizCompleted) {
-        router.push({ name: 'Test' });
-    }
-    props.parties.forEach((party) => {
-        const percentage = getPartyAgreePercentage(party.Answers, store.answers);
-        results.value.push({party, percentage});
-    });
-    results.value.sort((a, b) => b.percentage - a.percentage);
+if (!store.quizCompleted) {
+  router.push({ name: 'Test' });
 }
-)();
+
+const results = computed(() => {
+  const partyById = new Map(props.parties.map((party) => [party.id, party]));
+  const mapped = store.results
+    .map((result) => {
+      const party = partyById.get(result.partyId);
+      if (!party) return null;
+      return { party, percentage: result.percentage };
+    })
+    .filter((entry): entry is { party: IPartyWithOrientation; percentage: number } => entry !== null);
+  return mapped.sort((first, second) => second.percentage - first.percentage);
+});
 </script>
 
 <style scoped>

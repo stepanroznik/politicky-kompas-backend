@@ -10,9 +10,9 @@
         class="px-3 py-1 flex items-center text-base font-normal text-black border border-transparent rounded hover:border-gray-400 transition-all"
         @click="checkIfCanEnterAnswers(link.url)"
       >
-        <span :class="(link.url === $route.path) ? 'border-b border-gray-400' : ''"> 
+        <span :class="isActive(link.url) ? 'border-b border-gray-400' : ''">
           {{ link.name }} 
-          <template v-if="link.url === '/answers'">
+          <template v-if="link.url.endsWith('/answers')">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-5 w-5 inline mb-0.5"
@@ -43,30 +43,48 @@
   <modal
     :show="showCompleteQuizMessage"
     message="Nenechte se ovlivnit názory druhých"
-    text="Před zobrazením odpovědí jednotlivých politických stran si prosím vyplňte test podle svých skutečných názorů. Je to jen na pár minut. 😉"
+    text="Před zobrazením odpovědí jednotlivých politických stran si prosím vyplňte test podle svých skutečných názorů."
     @close="showCompleteQuizMessage = false"
   />
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
+import { useRoute } from 'vue-router';
 import Modal from './Modal.vue';
 import useQuizStore from '@frontend/store';
 
 const store = useQuizStore();
+const route = useRoute();
 
 const showCompleteQuizMessage = ref(false);
 
-const links = [
+const mainLinks = [
     { name: 'Domů', url: '/' },
-    { name: 'Spustit test', url: '/test' },
-    { name: 'Odpovědi politických stran', url: '/answers' },
-    { name: 'O aplikaci', url: '/about' },
+    { name: 'Kompas 2026', url: '/kompas' },
 ] as const;
 
-const checkIfCanEnterAnswers = (url: typeof links[number]['url']) => {
-    if (url !== '/answers') return;
-    if (!store.quizCompleted) {
+const legacyLinks = [
+    { name: 'Úvod 2021', url: '/2021' },
+    { name: 'Test 2021', url: '/2021/test' },
+    { name: 'Odpovědi stran', url: '/2021/answers' },
+    { name: 'O kalkulačce', url: '/2021/about' },
+    { name: 'Nový kompas 2026', url: '/' },
+] as const;
+
+const legacyAliases = ['/test', '/result', '/answers', '/about'];
+
+const isLegacyRoute = computed(() =>
+    route.path.startsWith('/2021') || legacyAliases.includes(route.path)
+);
+const links = computed(() => (isLegacyRoute.value ? legacyLinks : mainLinks));
+
+const isActive = (url: string) =>
+    route.path === url || (url === '/2021' && legacyAliases.includes(route.path));
+
+const checkIfCanEnterAnswers = (url: string) => {
+    if (url.endsWith('/answers') === false) return;
+    if (store.quizCompleted === false) {
         showCompleteQuizMessage.value = true;
     }
 };

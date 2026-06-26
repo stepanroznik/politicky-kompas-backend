@@ -1,218 +1,183 @@
-import { NotFoundException } from '@nestjs/common';
-import { getModelToken } from '@nestjs/sequelize';
-import { Test } from '@nestjs/testing';
-import { toggleFlagTimeout } from '../../test/utils';
-import { LoggerModule } from '../common/logger/logger.module';
+import { ConflictException, NotFoundException } from '@nestjs/common';
+import { Request } from 'express';
+import Sequelize from 'sequelize';
 import { IResultCreationAttributes, Result } from './entities/result.entity';
-import { ResultMapper } from './result.mapper';
 import { ResultService } from './result.service';
 
-const mockResultMapper: {
-    fromDto?: (x) => any;
-    toDto?: (x) => any;
-} = {
-    fromDto: (x) => JSON.parse(JSON.stringify(x)),
-    toDto: (x) => JSON.parse(JSON.stringify(x)),
-};
+const QUESTION_A_ID = '00000000-0000-4000-8000-000000000001';
+const QUESTION_B_ID = '00000000-0000-4000-8000-000000000002';
+const PARTY_A_ID = '10000000-0000-4000-8000-000000000001';
+const PARTY_B_ID = '10000000-0000-4000-8000-000000000002';
 
-const mockResultRepository: {
-    bulkCreate?: (x) => Promise<any>;
-    findAll?: (x) => Promise<any>;
-    findByPk?: (x) => Promise<any>;
-    update?: (x, y) => Promise<any>;
-    destroy?: (x) => Promise<any>;
-} = {};
+function createPayload(
+    overrides: Partial<IResultCreationAttributes> = {},
+): IResultCreationAttributes {
+    return {
+        answers: [
+            { QuestionId: QUESTION_A_ID, agreeLevel: 5 },
+            { QuestionId: QUESTION_B_ID, agreeLevel: 1 },
+        ],
+        fingerprint: 'fingerprint-1',
+        gender: 'other',
+        ...overrides,
+    };
+}
+
+function createRequest(overrides: Partial<Request> = {}) {
+    return {
+        headers: {
+            'x-forwarded-for': '8.8.8.8, 10.0.0.1',
+            'user-agent': 'Mozilla/5.0',
+        },
+        ip: '127.0.0.1',
+        socket: {
+            remoteAddress: '127.0.0.1',
+        },
+        ...overrides,
+    } as Request;
+}
+
+function createService({
+    duplicateResult,
+    recentIpCount = 0,
+    createImpl,
+}: {
+    duplicateResult?: Partial<Result> | null;
+    recentIpCount?: number;
+    createImpl?: jest.Mock;
+} = {}) {
+    const resultRepository = {
+        create: createImpl ?? jest.fn(async (payload) => payload),
+        findAll: jest.fn(async () => []),
+        findOne: jest.fn(async (query) => {
+            if (query?.where?.fingerprint) return duplicateResult ?? null;
+            return null;
+        }),
+        count: jest.fn(async () => recentIpCount),
+    };
+    const partyService = {
+        findAll: jest.fn(async () => [
+            {
+                id: PARTY_A_ID,
+                Answers: [
+                    { QuestionId: QUESTION_A_ID, agreeLevel: 5 },
+                    { QuestionId: QUESTION_B_ID, agreeLevel: 1 },
+                ],
+            },
+            {
+                id: PARTY_B_ID,
+                Answers: [
+                    { QuestionId: QUESTION_A_ID, agreeLevel: 1 },
+                    { QuestionId: QUESTION_B_ID, agreeLevel: 5 },
+                ],
+            },
+        ]),
+    };
+    const logger = {
+        setContext: jest.fn(),
+        debug: jest.fn(),
+        warn: jest.fn(),
+    };
+
+    const service = new ResultService(
+        resultRepository as unknown as typeof Result,
+        partyService as any,
+        logger as any,
+    );
+
+    return { service, resultRepository, partyService, logger };
+}
 
 describe('ResultService', () => {
-    let service: ResultService;
-
-    beforeEach(async () => {
-        const module = await Test.createTestingModule({
-            imports: [LoggerModule.register({ silent: true })],
-            providers: [
-                ResultService,
-                {
-                    provide: ResultMapper,
-                    useValue: mockResultMapper,
-                },
-                {
-                    provide: getModelToken(Result),
-                    useValue: mockResultRepository,
-                },
-            ],
-        }).compile();
-        service = module.get<ResultService>(ResultService);
-    });
-
-    it('is defined', () => {
-        expect(service).toBeDefined();
-    });
-
     describe('create', () => {
-        it('creates results from a valid data array', async () => {
-            const resultsToCreate: IResultCreationAttributes[] = [
-                {
-                    name: 'test',
-                    position: 'test',
-                    tagExtractionScript: 'test',
-                    tagBubbleMapping: { test: 'tost' },
-                    SourceId: '5fa2d83a-5c5f-4c9b-9759-7f08415791f1',
-                },
-            ];
-            mockResultRepository.bulkCreate = jest.fn(async (x) => x);
-            const results = await service.create(resultsToCreate);
-            expect(Array.isArray(results)).toBe(true);
-            expect(results).toEqual(resultsToCreate);
-        });
+        it('stores a submission and returns backend-calculated party percentages', async () => {
+            const { service, resultRepository } = createService();
 
-        it('throws an error with invalid data', async () => {
-            const resultsToCreate = [
-                {
-                    name: null,
-                    position: 'test',
-                    tagExtractionScript: 'test',
-                    tagBubbleMapping: { test: 'tost' },
-                    SourceId: '5fa2d83a-5c5f-4c9b-9759-7f08415791f1',
-                },
-            ];
-            mockResultRepository.bulkCreate = jest.fn(async () => {
-                throw new Error('name cannot be null');
-            });
-            try {
-                await service.create(resultsToCreate);
-            } catch (e) {
-                expect(e).toBeInstanceOf(Error);
-            }
-        });
-    });
-
-    describe('findAll', () => {
-        mockResultRepository.findAll = jest.fn(async () => {
-            return [
-                {
-                    name: 'test',
-                    position: 'test',
-                    tagExtractionScript: 'test',
-                    tagBubbleMapping: { test: 'tost' },
-                    SourceId: '5fa2d83a-5c5f-4c9b-9759-7f08415791f1',
-                },
-            ];
-        });
-        it('returns an array', async () => {
-            const results = await service.findAll();
-            expect(Array.isArray(results)).toBe(true);
-        });
-        it('contains all properties', async () => {
-            const results = await service.findAll();
-            expect(results[0]).toHaveProperty('name');
-            expect(results[0]).toHaveProperty('position');
-            expect(results[0]).toHaveProperty('tagExtractionScript');
-            expect(results[0]).toHaveProperty('tagBubbleMapping');
-            expect(results[0]).toHaveProperty('SourceId');
-            expect(results[0].name).toEqual('test');
-            expect(results[0].position).toEqual('test');
-            expect(results[0].tagExtractionScript).toEqual('test');
-            expect(results[0].tagBubbleMapping).toEqual({ test: 'tost' });
-            expect(results[0].SourceId).toEqual(
-                '5fa2d83a-5c5f-4c9b-9759-7f08415791f1',
+            const result = await service.create(
+                createPayload(),
+                false,
+                createRequest(),
             );
+
+            expect(result).toEqual([
+                { partyId: PARTY_A_ID, percentage: 100 },
+                { partyId: PARTY_B_ID, percentage: 0 },
+            ]);
+            expect(resultRepository.create).toHaveBeenCalledWith(
+                expect.objectContaining({
+                    fingerprint: 'fingerprint-1',
+                    ipAddress: '8.8.8.8',
+                    userAgent: 'Mozilla/5.0',
+                    gender: 'other',
+                    isDumped: false,
+                }),
+            );
+        });
+
+        it('does not save when noSave is enabled', async () => {
+            const { service, resultRepository } = createService();
+
+            await service.create(createPayload(), true, createRequest());
+
+            expect(resultRepository.create).not.toHaveBeenCalled();
+        });
+
+        it('marks duplicate fingerprint and answers as dumped', async () => {
+            const { service, resultRepository, logger } = createService({
+                duplicateResult: {
+                    answers: [
+                        { QuestionId: QUESTION_B_ID, agreeLevel: 1 },
+                        { QuestionId: QUESTION_A_ID, agreeLevel: 5 },
+                    ],
+                },
+            });
+
+            await service.create(createPayload(), false, createRequest());
+
+            expect(resultRepository.create).toHaveBeenCalledWith(
+                expect.objectContaining({
+                    isDumped: true,
+                    dumpReason: 'duplicate_fingerprint_answers',
+                }),
+            );
+            expect(logger.warn).toHaveBeenCalled();
+        });
+
+        it('marks repeated IP submissions as dumped', async () => {
+            const { service, resultRepository } = createService({
+                recentIpCount: 5,
+            });
+
+            await service.create(createPayload(), false, createRequest());
+
+            expect(resultRepository.create).toHaveBeenCalledWith(
+                expect.objectContaining({
+                    isDumped: true,
+                    dumpReason: 'ip_rate_limit',
+                }),
+            );
+        });
+
+        it('turns sequelize unique constraint errors into conflict exceptions', async () => {
+            const { service } = createService({
+                createImpl: jest.fn(async () => {
+                    throw new Sequelize.UniqueConstraintError({});
+                }),
+            });
+
+            await expect(
+                service.create(createPayload(), false, createRequest()),
+            ).rejects.toBeInstanceOf(ConflictException);
         });
     });
 
     describe('findOne', () => {
-        it('contains all properties', async () => {
-            mockResultRepository.findByPk = jest.fn(async () => {
-                return {
-                    name: 'test',
-                    position: 'test',
-                    tagExtractionScript: 'test',
-                    tagBubbleMapping: { test: 'tost' },
-                    SourceId: '5fa2d83a-5c5f-4c9b-9759-7f08415791f1',
-                };
-            });
-            const result = await service.findOne('');
-            expect(result).toHaveProperty('name');
-            expect(result).toHaveProperty('position');
-            expect(result).toHaveProperty('tagExtractionScript');
-            expect(result).toHaveProperty('tagBubbleMapping');
-            expect(result).toHaveProperty('SourceId');
-            expect(result.name).toEqual('test');
-            expect(result.position).toEqual('test');
-            expect(result.tagExtractionScript).toEqual('test');
-            expect(result.tagBubbleMapping).toEqual({ test: 'tost' });
-            expect(result.SourceId).toEqual(
-                '5fa2d83a-5c5f-4c9b-9759-7f08415791f1',
+        it('throws when the result does not exist', async () => {
+            const { service } = createService();
+
+            await expect(service.findOne(PARTY_A_ID)).rejects.toBeInstanceOf(
+                NotFoundException,
             );
-        });
-
-        it('throws an error when it does not exist', async () => {
-            mockResultRepository.findByPk = jest.fn(async () => {
-                return null;
-            });
-            try {
-                await service.findOne('');
-            } catch (e) {
-                expect(e).toBeInstanceOf(NotFoundException);
-            }
-        });
-    });
-
-    describe('update', () => {
-        it('updates a result from valid data', async () => {
-            const payload = {
-                name: 'test2',
-            };
-            const mockUpdate = jest.fn((payload) => {
-                return payload;
-            });
-            mockResultRepository.findByPk = jest.fn(async () => {
-                return {
-                    name: 'test',
-                    async update(payload) {
-                        mockUpdate(payload);
-                        this.name = payload.name;
-                    },
-                };
-            });
-            const result = await service.update('', payload);
-            expect(mockUpdate).toHaveBeenCalledWith(payload);
-            expect(result).toMatchObject(payload);
-        });
-
-        it('throws an error when it does not exist', async () => {
-            mockResultRepository.findByPk = jest.fn(async () => {
-                return null;
-            });
-            try {
-                await service.update('', { name: 'test' });
-            } catch (e) {
-                expect(e).toBeInstanceOf(NotFoundException);
-            }
-        });
-    });
-
-    describe('remove', () => {
-        it('deletes a result', async () => {
-            const observer = { isFinished: false };
-            const mockDestroy = jest.fn(() =>
-                toggleFlagTimeout(observer, 'isFinished', 200),
-            );
-            mockResultRepository.findByPk = jest.fn(async () => ({
-                destroy: mockDestroy,
-            }));
-            await service.remove('');
-            expect(observer.isFinished).toBe(true);
-        });
-
-        it('throws an error when it does not exist', async () => {
-            mockResultRepository.findByPk = jest.fn(async () => {
-                return null;
-            });
-            try {
-                await service.remove('');
-            } catch (e) {
-                expect(e).toBeInstanceOf(NotFoundException);
-            }
         });
     });
 });

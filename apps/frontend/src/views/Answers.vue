@@ -123,8 +123,14 @@ const parties = ref([] as (IPartyWithAnswers | IUserResult)[]);
 const questions = ref([]);
 
 (async () => {
-    questions.value = await apiGet({ url: 'questions' });
-    parties.value = [ ...store.parties, { Answers: store.answers, isUser: true } ];
-    console.log('parties with user', parties.value);
+    const [questionResponse, partyResponse] = await Promise.all([
+        apiGet({ url: 'questions' }),
+        apiGet({ url: 'parties', query: { 'include-answers': true } }),
+    ]);
+    questions.value = questionResponse;
+    parties.value = [
+        ...(partyResponse as IPartyWithAnswers[]),
+        { Answers: store.answers, isUser: true },
+    ];
 })();
 </script>

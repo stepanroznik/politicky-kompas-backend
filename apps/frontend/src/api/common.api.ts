@@ -35,6 +35,7 @@ export function apiPost({ url, body, headers, query, method = 'POST' }: IPostPar
         .then(jsonBodyOrThrow)
         .catch(e => {
             console.error(e.toString());
+            throw e;
         });
     return result;
 }
@@ -48,6 +49,7 @@ export function apiGet({ url, headers, query }: IGetParams): Promise<any> {
         .then(jsonBodyOrThrow)
         .catch(e => {
             console.error(e.toString());
+            throw e;
         });
     return result;
 }

@@ -7,7 +7,7 @@
         class="w-full relative flex justify-between md:w-auto md:static md:block md:justify-start px-4"
       >
         <router-link
-          to="/"
+          :to="homeLink"
           class="text-lg font-semibold leading-relaxed mr-4 py-2 whitespace-nowrap text-black flex items-center"
         >
           <img
@@ -38,9 +38,17 @@
 import { Bars3Icon } from '@heroicons/vue/24/outline';
 import RouterLinks from './RouterLinks.vue';
 import icon from '../assets/icon.png';
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
+import { useRoute } from 'vue-router';
 
 const showMenu = ref(false);
+const route = useRoute();
+const legacyAliases = ['/test', '/result', '/answers', '/about'];
+
+const homeLink = computed(() =>
+    route.path.startsWith('/2021') || legacyAliases.includes(route.path) ? '/2021' : '/'
+);
+
 const toggleNavbar = () => {
     showMenu.value = !showMenu.value;
 };

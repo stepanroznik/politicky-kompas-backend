@@ -1,0 +1,725 @@
+{
+  "calculatorSlug": "2026",
+  "date": "2026-06-15",
+  "methodology": [
+    "ratings_matrix.xlsx remains the base import source.",
+    "Voter-facing question text was neutralized where wording was visibly loaded; originalText remains unchanged for auditability.",
+    "Spreadsheet party answers are marked spreadsheet_unverified until independently verified.",
+    "Missing party answers are filled only as explicit audit overrides, marked weak_source or inferred_unverified.",
+    "Parties should later be given a clear contact path to request corrections."
+  ],
+  "partySources": {
+    "ANO": {
+      "title": "ANO official site",
+      "url": "https://www.anobudelip.cz/",
+      "sourceType": "official_site",
+      "note": "General official party site; exact positions still require item-by-item confirmation."
+    },
+    "MOTORISTE": {
+      "title": "Motoriste sobe official site",
+      "url": "https://motoristesobe.cz/",
+      "sourceType": "official_site",
+      "note": "General official party site and downloads area; some item answers are inferred from the party profile where exact program text was not found."
+    },
+    "PIRATI": {
+      "title": "Pirate Party program",
+      "url": "https://www.pirati.cz/program/",
+      "sourceType": "official_program",
+      "note": "Official program hub."
+    },
+    "SPD": {
+      "title": "SPD official site",
+      "url": "https://spd.cz/",
+      "sourceType": "official_site",
+      "note": "Official party site with program/current-position material."
+    },
+    "SPOLU": {
+      "title": "SPOLU 2025 official campaign site",
+      "url": "https://www.spolu25.cz/",
+      "sourceType": "official_site",
+      "note": "Official campaign site for the 2025 alliance; some questions require party-level ODS/KDU-CSL/TOP 09 confirmation."
+    },
+    "STACILO": {
+      "title": "Stacilo official site",
+      "url": "https://stacilo.cz/",
+      "sourceType": "official_site",
+      "note": "Official movement site; many values remain inferred from public movement profile where exact answers are not published."
+    },
+    "STAN": {
+      "title": "STAN Dobry program",
+      "url": "https://www.starostove.cz/dobry-program",
+      "sourceType": "official_program",
+      "note": "Official program hub."
+    }
+  },
+  "questionTextEdits": [
+    {
+      "questionId": "item_D1_1_usa_proti.zakladnam",
+      "originalText": "Přítomnost amerických vojáků na našem území, i v rámci obranné smlouvy, ohrožuje naši suverenitu.",
+      "text": "Přítomnost amerických vojáků na českém území, i v rámci obranné smlouvy, by omezila naši suverenitu.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D1_3_obrana_nizke.vydaje",
+      "originalText": "Výdaje na obranu by se neměly zvyšovat na úkor důležitějších věcí, jako jsou důchody nebo zdravotnictví.",
+      "text": "Výdaje na obranu by se neměly zvyšovat, pokud by to omezilo financování důchodů, zdravotnictví nebo jiných veřejných služeb.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D1_4_technika_proti.f35",
+      "originalText": "Nákup drahých amerických stíhaček F-35 je chybou, měli jsme raději zvolit levnější evropskou alternativu.",
+      "text": "Česká republika měla místo stíhaček F-35 zvolit levnější evropskou alternativu.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D1_5_ukrajina_zastavit.pomoc",
+      "originalText": "Měli bychom okamžitě zastavit veškeré dodávky zbraní na Ukrajinu a donutit ji k mírovým jednáním s Ruskem.",
+      "text": "Česká republika by měla ukončit dodávky zbraní Ukrajině a prosazovat mírová jednání s Ruskem.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D1_7_nato_zadni.vojaci.do.ciziny",
+      "originalText": "Naši vojáci by za žádných okolností neměli být posíláni bojovat a umírat za cizí zemi, i kdyby byla naším spojencem.",
+      "text": "Čeští vojáci by neměli být nasazováni v bojových operacích na obranu spojenecké země.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D1_11_ukrajina_podpora.za.kazdou.cenu",
+      "originalText": "Je naší povinností všemožně podporovat Ukrajinu v jejím boji proti ruské agresi, i kdyby nás to stálo značné peníze.",
+      "text": "Česká republika by měla Ukrajinu výrazně podporovat proti ruské agresi i při vysokých nákladech.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D1_14_cina_pomoc.taiwanu",
+      "originalText": "Měli bychom být připraveni vojensky pomoci Tchaj-wanu, pokud by byl napaden komunistickou Čínou.",
+      "text": "Česká republika by měla být připravena podílet se na vojenské pomoci Tchaj-wanu, pokud by byl napaden Čínou.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D1_17_nato_obrana.vychodniho.kridla",
+      "originalText": "Česká armáda by se měla aktivně podílet na obraně východního křídla NATO, i kdyby to znamenalo riziko přímého střetu s Ruskem.",
+      "text": "Česká armáda by se měla aktivně podílet na obraně východního křídla NATO i při zvýšených bezpečnostních rizicích.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D2_1_migrace_omezeni.suverenity",
+      "originalText": "Společná evropská politika migrace (tzv. Migrační pakt) omezuje naši kontrolu nad tím, s kým budeme žít.",
+      "text": "Společná evropská migrační politika snižuje schopnost České republiky samostatně rozhodovat o migraci.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D2_3_euro_nikdy.neprijmout",
+      "originalText": "Měli bychom si za každou cenu udržet českou korunu a nikdy nepřijímat euro.",
+      "text": "Česká republika by měla dlouhodobě zachovat českou korunu a nepřijímat euro.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D2_5_green.deal_diktat",
+      "originalText": "Green Deal je škodlivý diktát z Bruselu, který zničí náš průmysl a životní úroveň.",
+      "text": "Green Deal české ekonomice a průmyslu spíše škodí.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D2_6_pravo_nadrazenost.ustavy",
+      "originalText": "Česká ústava a zákony musí být vždy nadřazeny právu Evropské unie.",
+      "text": "Česká ústava a české zákony by měly mít přednost před právem Evropské unie.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D2_7_armada_ztrata.suverenity",
+      "originalText": "Vytvoření společné evropské armády je nepřijatelným krokem ke zrušení naší národní suverenity.",
+      "text": "Společná evropská armáda by nepřiměřeně omezila českou suverenitu.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D2_8_clenstvi_vystoupeni",
+      "originalText": "Česká republika by měla okamžitě vystoupit z Evropské unie.",
+      "text": "Česká republika by měla vystoupit z Evropské unie.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D2_12_pravo_spolecna.reseni",
+      "originalText": "Je správné, že v některých oblastech rozhoduje Brusel za nás, protože společná evropská řešení jsou efektivnější.",
+      "text": "V některých oblastech by mělo být rozhodování přeneseno na úroveň Evropské unie, protože společná řešení mohou být efektivnější.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D3_1_socialni.system_plna.odpovednost",
+      "originalText": "Každý člověk je plně odpovědný za svůj osud a stát by neměl pomáhat těm, kteří se o sebe nedokážou postarat sami.",
+      "text": "Každý člověk nese hlavní odpovědnost za svůj život a stát by měl omezit pomoc lidem, kteří mají možnost se o sebe postarat sami.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D3_7_dane_zasluhovost",
+      "originalText": "Úspěšní a bohatí lidé by si měli většinu svých peněz nechat, protože si je zasloužili svou prací.",
+      "text": "Lidé s vysokými příjmy by si měli ponechat většinu svých peněz, protože jejich příjmy odrážejí jejich práci a schopnosti.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D3_10_zadluzeni_pomoc.dluznikum",
+      "originalText": "Lidé v exekuci si zaslouží pomoc a druhou šanci, i když si za své dluhy mohou často sami.",
+      "text": "Stát by měl pomáhat lidem v exekuci získat druhou šanci.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D3_13_socialni.system_garance.dustojnosti",
+      "originalText": "Stát by měl každému garantovat důstojný život, i když dotyčný zrovna nepracuje.",
+      "text": "Stát by měl garantovat základní životní důstojnost i lidem, kteří zrovna nepracují.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D3_15_vlastnictvi_nedotknutelnost",
+      "originalText": "Soukromé vlastnictví je nedotknutelné a stát by za žádných okolností neměl mít právo vyvlastnit majetek občana proti jeho vůli.",
+      "text": "Soukromé vlastnictví má být velmi silně chráněno a vyvlastnění proti vůli vlastníka by mělo být možné jen ve zcela výjimečných případech.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D4_2_regulace.prostredi_ekonomika.pred.ekologii",
+      "originalText": "Ochrana životního prostředí by se neměla přehánět, pokud to omezuje výstavbu a poškozuje naši ekonomiku.",
+      "text": "Ekologické regulace by neměly brzdit výstavbu a ekonomický rozvoj.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D4_3_regulace.prace_snadne.propousteni",
+      "originalText": "Zaměstnavatelé by měli mít možnost snadno a rychle propustit zaměstnance, kteří nepodávají dobrý výkon.",
+      "text": "Zaměstnavatelé by měli mít jednodušší možnost propustit zaměstnance s nedostatečným pracovním výkonem.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D4_7_regulace.domaci_mene.byrokracie",
+      "originalText": "Čím méně byrokracie a papírování pro podnikatele, tím lépe pro celou ekonomiku.",
+      "text": "Snižování byrokracie pro podnikatele prospívá celé ekonomice.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D4_9_regulace.prace_ochrana.zamestnancu",
+      "originalText": "Zákoník práce by měl především chránit práva zaměstnanců, i kdyby to firmám komplikovalo život.",
+      "text": "Zákoník práce by měl především chránit práva zaměstnanců, i když to zvyšuje náklady a povinnosti firem.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D5_1_ostatni_zakaz.pornografie",
+      "originalText": "Stát by měl aktivně potlačovat a trestat veškeré formy pornografie.",
+      "text": "Stát by měl zakázat pornografii a aktivně vymáhat tento zákaz.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D5_2_gender_hrozba.pro.deti",
+      "originalText": "Genderová ideologie představuje vážnou hrozbu pro naše děti a tradiční hodnoty.",
+      "text": "Výuka a veřejné programy zaměřené na genderovou identitu mohou negativně ovlivňovat děti a tradiční hodnoty.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D5_3_bioetika_interrupce.je.vrazda",
+      "originalText": "Interrupce je vraždou nenarozeného dítěte již od momentu početí a měla by být postavena mimo zákon.",
+      "text": "Interrupce by měla být zakázána od momentu početí.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D5_5_gender_tradicni.role",
+      "originalText": "Hlavní rolí ženy je péče o rodinu a domácnost, zatímco muž má rodinu především finančně zajistit.",
+      "text": "V rodině by měla žena obvykle pečovat o domácnost a děti a muž by ji měl finančně zajišťovat.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D5_6_nabozenstvi_navrat.ke.krestanstvi",
+      "originalText": "Návrat k tradičním křesťanským hodnotám je jedinou cestou k nápravě morálního úpadku společnosti.",
+      "text": "Společnost by se měla více opírat o tradiční křesťanské hodnoty.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D5_7_obecne_prilisna.svoboda.skodi",
+      "originalText": "Přílišná svoboda a individualismus škodí společnosti.",
+      "text": "Přílišný důraz na individuální svobodu oslabuje společenskou soudržnost.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D5_12_gender_trans.zeny.ve.sportu",
+      "originalText": "Transgender ženy by měly mít právo soutěžit v ženských sportovních kategoriích.",
+      "text": "Transgender ženy by měly soutěžit v ženských sportovních kategoriích.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D5_13_vychova_otevrena.sexualni.vychova",
+      "originalText": "Ve školách by se mělo otevřeně a bez předsudků mluvit o různých formách sexuality.",
+      "text": "Ve školách by se mělo otevřeně mluvit o různých podobách sexuality a partnerských vztahů.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D6_2_integrace_preferovani.cechu",
+      "originalText": "Je správné, aby stát primárně hájil zájmy etnických Čechů před zájmy přistěhovalců a menšin.",
+      "text": "Stát by měl při tvorbě politik upřednostňovat zájmy etnických Čechů před zájmy přistěhovalců a menšin.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D6_4_skupinove.rozdily_mentalita",
+      "originalText": "Neúspěch některých menšin, například Romů, ve společnosti je způsoben hlavně jejich odlišnou mentalitou, nikoliv diskriminací.",
+      "text": "Sociální a ekonomické problémy některých menšin, například Romů, jsou způsobeny především odlišnými kulturními vzorci, nikoli diskriminací.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D6_5_imigrace_stop.kultury",
+      "originalText": "Jakákoliv další imigrace z kulturně odlišných zemí, jako jsou ty islámské nebo africké, by měla být úplně zastavena.",
+      "text": "Další imigrace z kulturně odlišných zemí, například muslimských nebo afrických, by měla být zastavena.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D6_6_narodni.stat_nejvyssi.hodnota\t",
+      "originalText": "Český národnostní stát je klíčovou hodnotou a jeho ochrana musí být absolutní prioritou vlády.",
+      "text": "Ochrana českého národního státu by měla být hlavní prioritou vlády.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D6_7_koncepce.naroda_narozeni",
+      "originalText": "Skutečným Čechem se člověk může pouze narodit, nelze se jím stát.",
+      "text": "Česká národní identita je primárně dána původem a narozením.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D6_11_skupinove.rozdily_diskriminace",
+      "originalText": "Hlavní příčinou neúspěchu menšin ve společnosti je systémová diskriminace a nerovné podmínky, které jim stát a většina vytváří.",
+      "text": "Systémová diskriminace a nerovné podmínky jsou hlavní příčinou problémů některých menšin ve společnosti.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D6_14_narodni.stat_zajem.je.prezitek\t",
+      "originalText": "Myšlenka, že by měl existovat nějaký specificky \"český národní zájem\", je přežitá.",
+      "text": "Představa specifického českého národního zájmu je v současné politice zastaralá.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D6_15_narod.stat_zrusit",
+      "originalText": "Národnostní státy jsou nebezpečný přežitek, měly by být postupně nahrazeny nadnárodními organizacemi jako je EU nebo OSN.",
+      "text": "Národní státy by měly být postupně nahrazovány silnějšími nadnárodními organizacemi, například EU nebo OSN.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D6_16_koncepce.identita",
+      "originalText": "Evropské společnosti se s etnickou proměnou způsobenou migrací změní k horšímu",
+      "text": "Etnická proměna evropských společností vlivem migrace by měla převážně negativní dopady.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D7_1_instituce_ignorovani.soudu",
+      "originalText": "Vláda by měla mít právo ignorovat rozhodnutí soudů, pokud jsou v rozporu s vůlí lidu.",
+      "text": "Vláda by měla mít možnost nerespektovat rozhodnutí soudů, pokud se domnívá, že odporují vůli většiny.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D7_2_lider_silny.vudce",
+      "originalText": "Silný a rozhodný lídr, který se nebojí porušit pravidla, je pro zemi lepší než pomalá a nerozhodná vláda mnoha stran.",
+      "text": "Silný lídr s pravomocí jednat mimo běžná pravidla je pro zemi lepší než pomalejší vláda více stran.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D7_3_media_statni.kontrola",
+      "originalText": "Veřejnoprávní média by měla být pod přímou kontrolou vlády, aby šířila informace ve prospěch státu.",
+      "text": "Veřejnoprávní média by měla být pod přímou kontrolou vlády.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D7_5_etika_ucel.sveti.prostredky",
+      "originalText": "Nevadí mi, pokud politik poruší zákon nebo má střet zájmů, pokud jinak pracuje pro dobro obyčejných lidí.",
+      "text": "U politika by střet zájmů nebo porušení zákona neměly být důvodem k odstoupení, pokud prosazuje program svých voličů.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D7_14_obecne_politik.jako.spravce",
+      "originalText": "Politici by měli být pouze správci státu, kteří se řídí zákony a expertními doporučeními, a neměli by se snažit prosazovat \"vůli lidu\".",
+      "text": "Politici by se měli řídit především zákony a expertními doporučeními, nikoli přímým prosazováním momentální vůle veřejnosti.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D8_3_informace_zakaz.dezinformaci",
+      "originalText": "Vláda by měla mít možnost zakázat weby, které šíří nebezpečné dezinformace a lži.",
+      "text": "Vláda by měla mít možnost zakázat weby, které podle bezpečnostních orgánů šíří nebezpečné dezinformace.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D8_6_ostatni_automaticke.vyhosteni",
+      "originalText": "Cizinec, který v České republice spáchá jakýkoliv úmyslný trestný čin, by měl být po odpykání trestu automaticky a doživotně vyhoštěn.",
+      "text": "Cizinec, který v České republice spáchá úmyslný trestný čin, by měl být po odpykání trestu automaticky vyhoštěn bez možnosti návratu.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D8_8_informace_zadne.zakazy.stran",
+      "originalText": "Stát by neměl zakazovat žádné politické strany ani hnutí, bez ohledu na to, jak extrémní jsou jejich názory.",
+      "text": "Stát by neměl zakazovat politické strany ani hnutí kvůli jejich názorům.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D8_9_ngo_svoboda.financovani",
+      "originalText": "Financování politických neziskových organizací ze zahraničí je v pořádku a stát by jej neměl monitorovat nebo regulovat.",
+      "text": "Financování politicky aktivních neziskových organizací ze zahraničí by mělo být povoleno bez zvláštní státní regulace.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D8_10_informace_absolutni.svoboda.slova",
+      "originalText": "Je nepřijatelné, aby stát jakkoliv omezoval svobodu slova, i když jde o názory, které jsou pro většinu lidí urážlivé.",
+      "text": "Stát by neměl omezovat svobodu slova ani u názorů, které většina společnosti považuje za urážlivé.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D8_13_soukromi_absolutni.nedotknutelnost",
+      "originalText": "Soukromá komunikace mezi lidmi musí být absolutně nedotknutelná a stát ji nesmí za žádných okolností sledovat.",
+      "text": "Soukromá komunikace mezi lidmi má být nedotknutelná a stát ji nemá sledovat.",
+      "status": "neutralized"
+    },
+    {
+      "questionId": "item_D8_14_informace_stat.neurcuje.pravdu",
+      "originalText": "Stát nemá žádné právo určovat, co je a co není \"pravdivá\" informace.",
+      "text": "Stát by neměl určovat, které informace jsou pravdivé.",
+      "status": "neutralized"
+    }
+  ],
+  "ratingOverrides": [
+    {
+      "questionId": "item_D1_4_technika_proti.f35",
+      "partyCode": "MOTORISTE",
+      "rating": 3,
+      "evidenceStatus": "inferred_unverified",
+      "evidenceUrl": null,
+      "evidenceTitle": null,
+      "evidenceNote": "No direct F-35 source found in quick audit; inferred as mild agreement from public fiscal-conservative/national-conservative profile and criticism of high-cost state decisions."
+    },
+    {
+      "questionId": "item_D1_14_cina_pomoc.taiwanu",
+      "partyCode": "PIRATI",
+      "rating": 3,
+      "evidenceStatus": "weak_source",
+      "evidenceUrl": "https://www.pirati.cz/program/",
+      "evidenceTitle": "Pirate Party program",
+      "evidenceNote": "Related official program profile is pro-democratic/pro-human-rights; exact military-help wording not found, so answer is assumed as mild agreement rather than strong agreement."
+    },
+    {
+      "questionId": "item_D1_16_usa_trvala.zakladna",
+      "partyCode": "PIRATI",
+      "rating": 2,
+      "evidenceStatus": "inferred_unverified",
+      "evidenceUrl": null,
+      "evidenceTitle": null,
+      "evidenceNote": "No direct source found; inferred as cautious disagreement because the party is pro-NATO but not publicly associated with supporting a permanent US base in Czechia."
+    },
+    {
+      "questionId": "item_D3_14_socialni.system_nepodmineny.prijem",
+      "partyCode": "PIRATI",
+      "rating": 2,
+      "evidenceStatus": "inferred_unverified",
+      "evidenceUrl": null,
+      "evidenceTitle": null,
+      "evidenceNote": "No direct current commitment to a full basic income covering living costs found; inferred as mild disagreement despite openness to welfare innovation."
+    },
+    {
+      "questionId": "item_D4_5_regulace.inovaci_volny.vyvoj",
+      "partyCode": "STACILO",
+      "rating": 1,
+      "evidenceStatus": "inferred_unverified",
+      "evidenceUrl": null,
+      "evidenceTitle": null,
+      "evidenceNote": "Inferred from statist/protectionist public profile; exact technology-regulation answer not found."
+    },
+    {
+      "questionId": "item_D4_13_regulace.cizinci_zakaz.nakupu.nemovitosti",
+      "partyCode": "MOTORISTE",
+      "rating": 2,
+      "evidenceStatus": "inferred_unverified",
+      "evidenceUrl": null,
+      "evidenceTitle": null,
+      "evidenceNote": "Inferred balance between free-market property orientation and national-conservative restriction instincts; no exact source found."
+    },
+    {
+      "questionId": "item_D5_1_ostatni_zakaz.pornografie",
+      "partyCode": "MOTORISTE",
+      "rating": 2,
+      "evidenceStatus": "inferred_unverified",
+      "evidenceUrl": null,
+      "evidenceTitle": null,
+      "evidenceNote": "No direct source found; inferred as mild disagreement with a total pornography ban from the party mix of conservatism and anti-overregulation."
+    },
+    {
+      "questionId": "item_D5_1_ostatni_zakaz.pornografie",
+      "partyCode": "STACILO",
+      "rating": 2,
+      "evidenceStatus": "inferred_unverified",
+      "evidenceUrl": null,
+      "evidenceTitle": null,
+      "evidenceNote": "No direct source found; inferred as mild disagreement with a total ban despite socially conservative profile."
+    },
+    {
+      "questionId": "item_D5_2_gender_hrozba.pro.deti",
+      "partyCode": "SPOLU",
+      "rating": 2,
+      "evidenceStatus": "inferred_unverified",
+      "evidenceUrl": null,
+      "evidenceTitle": null,
+      "evidenceNote": "No single alliance-wide source found; inferred from mixed ODS/KDU-CSL/TOP 09 profile as mild disagreement with this broad wording."
+    },
+    {
+      "questionId": "item_D5_3_bioetika_interrupce.je.vrazda",
+      "partyCode": "MOTORISTE",
+      "rating": 2,
+      "evidenceStatus": "inferred_unverified",
+      "evidenceUrl": null,
+      "evidenceTitle": null,
+      "evidenceNote": "No direct source found; inferred as mild disagreement with an abortion ban from Czech conservative-right baseline rather than a strong pro-ban position."
+    },
+    {
+      "questionId": "item_D5_8_bioetika_pravo.na.eutanazii",
+      "partyCode": "ANO",
+      "rating": 2,
+      "evidenceStatus": "inferred_unverified",
+      "evidenceUrl": null,
+      "evidenceTitle": null,
+      "evidenceNote": "No direct current party source found; inferred as mild disagreement/ambivalence."
+    },
+    {
+      "questionId": "item_D5_8_bioetika_pravo.na.eutanazii",
+      "partyCode": "MOTORISTE",
+      "rating": 2,
+      "evidenceStatus": "inferred_unverified",
+      "evidenceUrl": null,
+      "evidenceTitle": null,
+      "evidenceNote": "No direct source found; inferred as mild disagreement from conservative social profile."
+    },
+    {
+      "questionId": "item_D5_8_bioetika_pravo.na.eutanazii",
+      "partyCode": "SPOLU",
+      "rating": 2,
+      "evidenceStatus": "inferred_unverified",
+      "evidenceUrl": null,
+      "evidenceTitle": null,
+      "evidenceNote": "No alliance-wide source found; inferred as mild disagreement because KDU-CSL conservatism likely offsets liberal members."
+    },
+    {
+      "questionId": "item_D5_12_gender_trans.zeny.ve.sportu",
+      "partyCode": "ANO",
+      "rating": 1,
+      "evidenceStatus": "inferred_unverified",
+      "evidenceUrl": null,
+      "evidenceTitle": null,
+      "evidenceNote": "No exact source found; inferred as strong disagreement from recent populist-conservative positioning on culture-war issues."
+    },
+    {
+      "questionId": "item_D5_12_gender_trans.zeny.ve.sportu",
+      "partyCode": "PIRATI",
+      "rating": 4,
+      "evidenceStatus": "weak_source",
+      "evidenceUrl": "https://www.pirati.cz/program/",
+      "evidenceTitle": "Pirate Party program",
+      "evidenceNote": "Related official profile supports LGBT equality; exact sports-category position not found, so marked weak-source assumption."
+    },
+    {
+      "questionId": "item_D5_12_gender_trans.zeny.ve.sportu",
+      "partyCode": "SPOLU",
+      "rating": 2,
+      "evidenceStatus": "inferred_unverified",
+      "evidenceUrl": null,
+      "evidenceTitle": null,
+      "evidenceNote": "No alliance-wide source found; inferred as mild disagreement because the coalition combines conservative and liberal-conservative parties."
+    },
+    {
+      "questionId": "item_D5_13_vychova_otevrena.sexualni.vychova",
+      "partyCode": "SPOLU",
+      "rating": 2,
+      "evidenceStatus": "inferred_unverified",
+      "evidenceUrl": null,
+      "evidenceTitle": null,
+      "evidenceNote": "No alliance-wide source found; inferred as mild disagreement/ambivalence due internal coalition differences."
+    },
+    {
+      "questionId": "item_D6_4_skupinove.rozdily_mentalita",
+      "partyCode": "SPOLU",
+      "rating": 2,
+      "evidenceStatus": "inferred_unverified",
+      "evidenceUrl": null,
+      "evidenceTitle": null,
+      "evidenceNote": "No direct source found; inferred as mild disagreement with ethnic/cultural essentialism while retaining centre-right emphasis on integration and responsibility."
+    },
+    {
+      "questionId": "item_D6_6_narodni.stat_nejvyssi.hodnota\t",
+      "partyCode": "ANO",
+      "rating": 3,
+      "evidenceStatus": "inferred_unverified",
+      "evidenceUrl": null,
+      "evidenceTitle": null,
+      "evidenceNote": "Inferred as mild agreement from national-interest rhetoric and catch-all populist profile."
+    },
+    {
+      "questionId": "item_D6_6_narodni.stat_nejvyssi.hodnota\t",
+      "partyCode": "MOTORISTE",
+      "rating": 4,
+      "evidenceStatus": "weak_source",
+      "evidenceUrl": "https://motoristesobe.cz/",
+      "evidenceTitle": "Motoriste sobe official site",
+      "evidenceNote": "Related public profile is national-conservative/eurosceptic; exact wording not found."
+    },
+    {
+      "questionId": "item_D6_6_narodni.stat_nejvyssi.hodnota\t",
+      "partyCode": "PIRATI",
+      "rating": 1,
+      "evidenceStatus": "weak_source",
+      "evidenceUrl": "https://www.pirati.cz/program/",
+      "evidenceTitle": "Pirate Party program",
+      "evidenceNote": "Related program profile is liberal/pro-European; inferred strong disagreement with making the national state the overriding priority."
+    },
+    {
+      "questionId": "item_D6_6_narodni.stat_nejvyssi.hodnota\t",
+      "partyCode": "SPD",
+      "rating": 4,
+      "evidenceStatus": "weak_source",
+      "evidenceUrl": "https://spd.cz/",
+      "evidenceTitle": "SPD official site",
+      "evidenceNote": "Related official messaging emphasizes sovereignty, borders, and national interests; exact item wording not found."
+    },
+    {
+      "questionId": "item_D6_6_narodni.stat_nejvyssi.hodnota\t",
+      "partyCode": "SPOLU",
+      "rating": 3,
+      "evidenceStatus": "inferred_unverified",
+      "evidenceUrl": null,
+      "evidenceTitle": null,
+      "evidenceNote": "Inferred as mild agreement from centre-right national-state orientation balanced by pro-EU commitments."
+    },
+    {
+      "questionId": "item_D6_6_narodni.stat_nejvyssi.hodnota\t",
+      "partyCode": "STACILO",
+      "rating": 4,
+      "evidenceStatus": "weak_source",
+      "evidenceUrl": "https://stacilo.cz/",
+      "evidenceTitle": "Stacilo official site",
+      "evidenceNote": "Related public profile is left-patriotic and sovereignty-oriented; exact wording not found."
+    },
+    {
+      "questionId": "item_D6_6_narodni.stat_nejvyssi.hodnota\t",
+      "partyCode": "STAN",
+      "rating": 2,
+      "evidenceStatus": "weak_source",
+      "evidenceUrl": "https://www.starostove.cz/dobry-program",
+      "evidenceTitle": "STAN Dobry program",
+      "evidenceNote": "Related program profile is pro-European/localist; inferred mild disagreement with national state as overriding priority."
+    },
+    {
+      "questionId": "item_D6_11_skupinove.rozdily_diskriminace",
+      "partyCode": "SPOLU",
+      "rating": 2,
+      "evidenceStatus": "inferred_unverified",
+      "evidenceUrl": null,
+      "evidenceTitle": null,
+      "evidenceNote": "No direct alliance-wide source found; inferred as mild disagreement with systemic-discrimination framing."
+    },
+    {
+      "questionId": "item_D6_14_narodni.stat_zajem.je.prezitek\t",
+      "partyCode": "ANO",
+      "rating": 1,
+      "evidenceStatus": "inferred_unverified",
+      "evidenceUrl": null,
+      "evidenceTitle": null,
+      "evidenceNote": "Inferred strong disagreement from national-interest rhetoric."
+    },
+    {
+      "questionId": "item_D6_14_narodni.stat_zajem.je.prezitek\t",
+      "partyCode": "MOTORISTE",
+      "rating": 1,
+      "evidenceStatus": "weak_source",
+      "evidenceUrl": "https://motoristesobe.cz/",
+      "evidenceTitle": "Motoriste sobe official site",
+      "evidenceNote": "Related national-conservative/eurosceptic profile implies strong disagreement."
+    },
+    {
+      "questionId": "item_D6_14_narodni.stat_zajem.je.prezitek\t",
+      "partyCode": "PIRATI",
+      "rating": 3,
+      "evidenceStatus": "weak_source",
+      "evidenceUrl": "https://www.pirati.cz/program/",
+      "evidenceTitle": "Pirate Party program",
+      "evidenceNote": "Related pro-European/cosmopolitan profile implies mild agreement, but exact wording not found."
+    },
+    {
+      "questionId": "item_D6_14_narodni.stat_zajem.je.prezitek\t",
+      "partyCode": "SPD",
+      "rating": 1,
+      "evidenceStatus": "weak_source",
+      "evidenceUrl": "https://spd.cz/",
+      "evidenceTitle": "SPD official site",
+      "evidenceNote": "Related official sovereignty/national-interest messaging implies strong disagreement."
+    },
+    {
+      "questionId": "item_D6_14_narodni.stat_zajem.je.prezitek\t",
+      "partyCode": "SPOLU",
+      "rating": 2,
+      "evidenceStatus": "inferred_unverified",
+      "evidenceUrl": null,
+      "evidenceTitle": null,
+      "evidenceNote": "Inferred mild disagreement: pro-European but still centre-right/national-state oriented."
+    },
+    {
+      "questionId": "item_D6_14_narodni.stat_zajem.je.prezitek\t",
+      "partyCode": "STACILO",
+      "rating": 1,
+      "evidenceStatus": "weak_source",
+      "evidenceUrl": "https://stacilo.cz/",
+      "evidenceTitle": "Stacilo official site",
+      "evidenceNote": "Related patriotic/sovereignty profile implies strong disagreement."
+    },
+    {
+      "questionId": "item_D6_14_narodni.stat_zajem.je.prezitek\t",
+      "partyCode": "STAN",
+      "rating": 2,
+      "evidenceStatus": "weak_source",
+      "evidenceUrl": "https://www.starostove.cz/dobry-program",
+      "evidenceTitle": "STAN Dobry program",
+      "evidenceNote": "Related pro-European profile implies only mild disagreement rather than rejection of national interest entirely."
+    },
+    {
+      "questionId": "item_D7_7_ostatni_kumulace.funkci",
+      "partyCode": "MOTORISTE",
+      "rating": 3,
+      "evidenceStatus": "inferred_unverified",
+      "evidenceUrl": null,
+      "evidenceTitle": null,
+      "evidenceNote": "No direct source found; inferred as mild agreement from pragmatic/right-populist governance profile."
+    },
+    {
+      "questionId": "item_D7_7_ostatni_kumulace.funkci",
+      "partyCode": "STACILO",
+      "rating": 2,
+      "evidenceStatus": "inferred_unverified",
+      "evidenceUrl": null,
+      "evidenceTitle": null,
+      "evidenceNote": "No direct source found; inferred as mild disagreement from anti-establishment accountability profile."
+    },
+    {
+      "questionId": "item_D8_5_ostatni_biometrika.cizincu",
+      "partyCode": "PIRATI",
+      "rating": 3,
+      "evidenceStatus": "inferred_unverified",
+      "evidenceUrl": null,
+      "evidenceTitle": null,
+      "evidenceNote": "No exact source found; inferred as mild agreement with border-control biometrics but weaker than other parties due privacy emphasis."
+    },
+    {
+      "questionId": "item_D8_11_zbrane_pravo.vlastnit",
+      "partyCode": "PIRATI",
+      "rating": 3,
+      "evidenceStatus": "inferred_unverified",
+      "evidenceUrl": null,
+      "evidenceTitle": null,
+      "evidenceNote": "No exact source found; inferred as mild agreement with Czech legal gun ownership/self-defense consensus."
+    },
+    {
+      "questionId": "item_D8_11_zbrane_pravo.vlastnit",
+      "partyCode": "STACILO",
+      "rating": 3,
+      "evidenceStatus": "inferred_unverified",
+      "evidenceUrl": null,
+      "evidenceTitle": null,
+      "evidenceNote": "No exact source found; inferred as mild agreement with Czech legal gun ownership baseline despite left-wing economics."
+    }
+  ],
+  "requireCompleteRatings": true,
+  "ratingEvidencePolicy": {
+    "spreadsheet_unverified": "Spreadsheet supplied the value, but it has not been independently verified.",
+    "weak_source": "A related source or public program profile supports the assumption, but not an exact answer to the item.",
+    "inferred_unverified": "No adequate source was found in the quick pass; answer is inferred from public profile/model knowledge and should be easy for parties to challenge."
+  }
+}

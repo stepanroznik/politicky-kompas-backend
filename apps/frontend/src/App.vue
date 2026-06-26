@@ -1,8 +1,7 @@
 <template>
   <navigation />
   <div class="text-center max-w-5xl m-auto mt-6 sm:mt-12 px-2">
-    <router-view v-if="parties.length" />
-    <loading v-else />
+    <router-view />
   </div>
   <img
     class="sr-only"
@@ -12,16 +11,9 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
 import { PartyModel } from './api';
 import compass from './assets/compass.png';
-import Loading from './components/Loading.vue';
 import Navigation from './components/Navigation.vue';
-import { useQuizStore } from './store';
-
-const store = useQuizStore();
-
-const parties = computed(() => store.parties);
 
 void PartyModel.fetchLatest();
 </script>

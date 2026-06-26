@@ -38,7 +38,7 @@ export interface IResultAttributes extends ITimestamps {
 export interface IResultCreationAttributes
     extends Optional<
         IResultAttributes,
-        'id' | 'createdAt' | 'updatedAt' | 'isDumped'
+        'id' | 'createdAt' | 'updatedAt' | 'ipAddress' | 'isDumped'
     > {}
 
 @Table({ schema: 'public' })

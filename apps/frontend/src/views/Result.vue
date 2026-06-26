@@ -20,7 +20,7 @@
       </h3>
       <comparison :parties="parties" />
       <router-link
-        to="/answers"
+        to="/2021/answers"
         class="underline my-2"
       >
         Zobrazit odpovědi politických stran
@@ -43,6 +43,6 @@ const router = useRouter();
 const parties = computed(() => store.parties);
 
 if (!store.quizCompleted) {
-    router.push({ name: 'Test' });
+  router.push({ name: 'Test' });
 }
 </script>

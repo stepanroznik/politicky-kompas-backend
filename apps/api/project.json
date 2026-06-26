@@ -8,6 +8,7 @@
       "executor": "@nx/js:node",
       "defaultConfiguration": "development",
       "dependsOn": [
+        "migrate",
         "build"
       ],
       "options": {
@@ -47,6 +48,16 @@
             "input": "apps/api",
             "glob": "public/**",
             "output": "."
+          },
+          {
+            "input": "apps/api/src/calculator-2026/seed",
+            "glob": "*.json",
+            "output": "apps/api/src/calculator-2026/seed"
+          },
+          {
+            "input": "apps/api/src/legacy-2021/seed",
+            "glob": "*.json",
+            "output": "apps/api/src/legacy-2021/seed"
           }
         ]
       },
@@ -57,6 +68,18 @@
         "production": {
           "sourceMap": false
         }
+      }
+    },
+    "migrate": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "jiti tools/migrations/run-migrations.ts"
+      }
+    },
+    "migrate:down": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "jiti tools/migrations/run-migrations.ts --down"
       }
     },
     "lint": {
