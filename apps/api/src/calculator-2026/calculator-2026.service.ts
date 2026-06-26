@@ -63,6 +63,37 @@ export class Calculator2026Service {
         return questions.map((question) => question.toJSON());
     }
 
+    async getPartyAnswers(slug: string) {
+        await this.ensureCalculator(slug);
+        const [questions, parties] = await Promise.all([
+            this.questionRepository.findAll({
+                where: { calculatorSlug: slug },
+                include: {
+                    model: CalculatorPartyRating,
+                    required: false,
+                },
+                order: [['order', 'ASC']],
+            }),
+            this.partyRepository.findAll({
+                where: { calculatorSlug: slug },
+                order: [['code', 'ASC']],
+            }),
+        ]);
+
+        return {
+            parties: parties.map((party) => party.toJSON()),
+            questions: questions.map((question) => {
+                const serialized = question.toJSON() as unknown as Record<string, unknown> & {
+                    ratings?: CalculatorPartyRating[];
+                };
+                return {
+                    ...serialized,
+                    ratings: (question.ratings ?? []).map((rating) => rating.toJSON()),
+                };
+            }),
+        };
+    }
+
     async createResult(
         slug: string,
         answers: CalculatorAnswerDto[],

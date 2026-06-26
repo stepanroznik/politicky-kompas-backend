@@ -1,5 +1,12 @@
 <template>
   <navigation />
+  <div
+    v-if="isBetaRoute"
+    class="mx-auto mt-4 max-w-5xl border border-amber-300 bg-amber-50 px-4 py-3 text-left text-sm text-amber-900"
+  >
+    <strong class="font-semibold">Beta verze.</strong>
+    Tento obecný politický kompas je zatím ve veřejné zkušební verzi. Otázky, odpovědi stran i vizualizace ještě mohou projít úpravami.
+  </div>
   <div class="text-center max-w-5xl m-auto mt-6 sm:mt-12 px-2">
     <router-view />
   </div>
@@ -11,9 +18,21 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
 import { PartyModel } from './api';
 import compass from './assets/compass.png';
 import Navigation from './components/Navigation.vue';
+
+const route = useRoute();
+const betaPaths = [
+    '/obecny-kompas',
+    '/kompas',
+    '/kompas/vysledek',
+    '/odpovedi-stran',
+    '/o-kalkulacce',
+];
+const isBetaRoute = computed(() => betaPaths.includes(route.path));
 
 void PartyModel.fetchLatest();
 </script>

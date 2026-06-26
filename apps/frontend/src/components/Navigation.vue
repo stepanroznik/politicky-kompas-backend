@@ -46,7 +46,9 @@ const route = useRoute();
 const legacyAliases = ['/test', '/result', '/answers', '/about'];
 
 const homeLink = computed(() =>
-    route.path.startsWith('/2021') || legacyAliases.includes(route.path) ? '/2021' : '/'
+    route.path === '/' || route.path.startsWith('/2021') || legacyAliases.includes(route.path)
+        ? '/'
+        : '/obecny-kompas'
 );
 
 const toggleNavbar = () => {

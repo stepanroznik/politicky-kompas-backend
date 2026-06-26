@@ -12,11 +12,16 @@
       </p>
     </div>
 
-    <multi-axis-compass-3-d
-      :axes="store.axes"
-      :user-axis-scores="result.userAxisScores"
-      :matches="result.matches"
-    />
+    <div>
+      <h2 class="mb-4 text-xl font-semibold">
+        Kompasy podle oblastí
+      </h2>
+      <multi-axis-compass-2-d
+        :axes="store.axes"
+        :user-axis-scores="result.userAxisScores"
+        :matches="result.matches"
+      />
+    </div>
 
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_22rem]">
       <div class="flex flex-col gap-4">
@@ -71,6 +76,21 @@
         </div>
       </aside>
     </div>
+
+    <details class="border border-gray-300 bg-white p-4">
+      <summary class="cursor-pointer text-lg font-semibold text-gray-950">
+        3D náhled profilu
+      </summary>
+      <p class="mt-2 max-w-3xl text-sm text-gray-600">
+        Tento náhled ukazuje všech osm os najednou. Hlavní interpretaci výsledku ale nesou kompasy výše.
+      </p>
+      <multi-axis-compass-3-d
+        class="mt-4"
+        :axes="store.axes"
+        :user-axis-scores="result.userAxisScores"
+        :matches="result.matches"
+      />
+    </details>
   </section>
   <loading v-else-if="isLoading" />
 </template>
@@ -79,6 +99,7 @@
 import { computed, onMounted, ref } from "vue";
 import { useRouter } from "vue-router";
 import Loading from "@frontend/components/Loading.vue";
+import MultiAxisCompass2D from "@frontend/components/MultiAxisCompass2D.vue";
 import MultiAxisCompass3D from "@frontend/components/MultiAxisCompass3D.vue";
 import { useCalculator2026Store } from "@frontend/stores/calculator2026";
 

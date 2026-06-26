@@ -60,27 +60,31 @@ const route = useRoute();
 const showCompleteQuizMessage = ref(false);
 
 const mainLinks = [
-    { name: 'Domů', url: '/' },
-    { name: 'Kompas 2026', url: '/kompas' },
+    { name: 'Úvod', url: '/obecny-kompas' },
+    { name: 'Test', url: '/kompas' },
+    { name: 'Odpovědi stran', url: '/odpovedi-stran' },
+    { name: 'O kalkulačce', url: '/o-kalkulacce' },
+    { name: 'Další kalkulačky', url: '/kompasy' },
 ] as const;
 
 const legacyLinks = [
-    { name: 'Úvod 2021', url: '/2021' },
-    { name: 'Test 2021', url: '/2021/test' },
+    { name: 'Úvod', url: '/' },
+    { name: 'Test', url: '/2021/test' },
     { name: 'Odpovědi stran', url: '/2021/answers' },
     { name: 'O kalkulačce', url: '/2021/about' },
-    { name: 'Nový kompas 2026', url: '/' },
+    { name: 'Další kalkulačky', url: '/kompasy' },
 ] as const;
 
 const legacyAliases = ['/test', '/result', '/answers', '/about'];
 
 const isLegacyRoute = computed(() =>
-    route.path.startsWith('/2021') || legacyAliases.includes(route.path)
+    route.path === '/' || route.path.startsWith('/2021') || legacyAliases.includes(route.path)
 );
 const links = computed(() => (isLegacyRoute.value ? legacyLinks : mainLinks));
 
 const isActive = (url: string) =>
-    route.path === url || (url === '/2021' && legacyAliases.includes(route.path));
+    route.path === url ||
+    (url === '/' && (route.path.startsWith('/2021') || legacyAliases.includes(route.path)));
 
 const checkIfCanEnterAnswers = (url: string) => {
     if (url.endsWith('/answers') === false) return;

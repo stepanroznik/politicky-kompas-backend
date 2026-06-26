@@ -6,6 +6,11 @@ import useQuizStore from '@frontend/store';
 const routes = [
     {
         path: '/',
+        name: 'DefaultLegacyHome',
+        component: Legacy2021Home,
+    },
+    {
+        path: '/obecny-kompas',
         name: 'Home',
         component: Home,
     },
@@ -32,6 +37,24 @@ const routes = [
         name: 'Compass2026Result',
         component: () =>
             import(/* webpackChunkName: "compass-2026" */ '../views/Compass2026Result.vue'),
+    },
+    {
+        path: '/odpovedi-stran',
+        name: 'Compass2026Answers',
+        component: () =>
+            import(/* webpackChunkName: "compass-2026-answers" */ '../views/Compass2026Answers.vue'),
+    },
+    {
+        path: '/o-kalkulacce',
+        name: 'Compass2026About',
+        component: () =>
+            import(/* webpackChunkName: "compass-2026-about" */ '../views/Compass2026About.vue'),
+    },
+    {
+        path: '/kompasy',
+        name: 'CompassDirectory',
+        component: () =>
+            import(/* webpackChunkName: "compass-directory" */ '../views/CompassDirectory.vue'),
     },
     {
         path: '/2021/result',

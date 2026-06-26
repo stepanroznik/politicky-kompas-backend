@@ -1,9 +1,15 @@
 <template>
-  <section class="mx-auto grid max-w-6xl grid-cols-1 gap-8 text-left lg:grid-cols-[1.1fr_0.9fr]">
-    <div class="flex flex-col justify-center gap-6">
+  <section class="relative mx-auto min-h-[34rem] max-w-6xl overflow-hidden text-left">
+    <multi-axis-compass-3-d
+      class="absolute -right-10 top-2 hidden w-[46rem] opacity-80 lg:block"
+      :axes="previewAxes"
+      :user-axis-scores="previewUserScores"
+      :matches="previewMatches"
+    />
+    <div class="relative z-10 flex min-h-[30rem] max-w-2xl flex-col justify-center gap-6 bg-white/80 py-10 pr-6">
       <div class="flex flex-col gap-3">
         <h1 class="text-4xl font-semibold leading-tight text-gray-950 sm:text-5xl">
-          Politický kompas 2026
+          Politický kompas
         </h1>
         <p class="max-w-2xl text-lg text-gray-700">
           Víceosá politická kalkulačka porovnává vaše odpovědi se stranami v bezpečnosti, ekonomice, kultuře, institucích i osobních svobodách.
@@ -15,23 +21,31 @@
           type="button"
           @click="$router.push('/kompas')"
         >
-          Spustit nový kompas
+          Spustit test
         </button>
         <button
           class="border border-gray-400 px-6 py-3 font-semibold text-gray-900 transition hover:border-gray-900"
           type="button"
-          @click="$router.push('/2021')"
+          @click="$router.push('/kompasy')"
         >
-          Původní kalkulačka 2021
+          Další kalkulačky
         </button>
       </div>
+      <div class="flex flex-wrap gap-x-4 gap-y-2 text-sm text-gray-600">
+        <router-link
+          class="border-b border-gray-400 hover:border-gray-900"
+          to="/odpovedi-stran"
+        >
+          Odpovědi stran
+        </router-link>
+        <router-link
+          class="border-b border-gray-400 hover:border-gray-900"
+          to="/o-kalkulacce"
+        >
+          O kalkulačce
+        </router-link>
+      </div>
     </div>
-    <multi-axis-compass-3-d
-      class="min-h-[22rem]"
-      :axes="previewAxes"
-      :user-axis-scores="previewUserScores"
-      :matches="previewMatches"
-    />
   </section>
 </template>
 
@@ -111,8 +125,8 @@ const previewUserScores: AxisScore[] = [
 
 const previewMatches: PartyMatch[] = [
     {
-        partyCode: "A",
-        partyName: "Ukázka A",
+        partyCode: "ANO",
+        partyName: "ANO 2011",
         percentage: 78,
         answeredCount: 120,
         axisScores: previewUserScores.map((score) => ({
@@ -121,13 +135,23 @@ const previewMatches: PartyMatch[] = [
         })),
     },
     {
-        partyCode: "B",
-        partyName: "Ukázka B",
+        partyCode: "SPOLU",
+        partyName: "SPOLU",
         percentage: 71,
         answeredCount: 120,
         axisScores: previewUserScores.map((score) => ({
             ...score,
             value: Math.max(-1, Math.min(1, score.value - 0.18)),
+        })),
+    },
+    {
+        partyCode: "STAN",
+        partyName: "STAN",
+        percentage: 68,
+        answeredCount: 120,
+        axisScores: previewUserScores.map((score, index) => ({
+            ...score,
+            value: Math.max(-1, Math.min(1, score.value + (index % 2 === 0 ? -0.28 : 0.08))),
         })),
     },
 ];

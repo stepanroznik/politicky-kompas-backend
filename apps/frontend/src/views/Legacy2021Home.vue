@@ -31,10 +31,10 @@
             Zobrazit výsledek</a>?
         </span>
         <router-link
-          to="/"
+          to="/kompasy"
           class="mt-5 border-b border-gray-800 text-sm text-gray-700"
         >
-          Zpět na nový kompas 2026
+          Další kalkulačky
         </router-link>
       </div>
     </div>

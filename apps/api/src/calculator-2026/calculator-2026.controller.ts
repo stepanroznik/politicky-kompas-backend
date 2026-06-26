@@ -23,6 +23,13 @@ export class Calculator2026Controller {
         return this.calculatorService.getQuestions(slug);
     }
 
+    @Get(':slug/party-answers')
+    @ApiParam({ name: 'slug', type: String })
+    @ApiOperation({ summary: 'Finds party answers for a calculator' })
+    async getPartyAnswers(@Param('slug') slug: string) {
+        return this.calculatorService.getPartyAnswers(slug);
+    }
+
     @Post(':slug/results')
     @ApiParam({ name: 'slug', type: String })
     @ApiOperation({ summary: 'Creates a calculator result' })

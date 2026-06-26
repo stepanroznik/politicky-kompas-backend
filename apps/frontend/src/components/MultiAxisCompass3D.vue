@@ -1,10 +1,31 @@
 <template>
-  <div class="relative min-h-[26rem] w-full overflow-hidden border border-gray-300 bg-gray-950">
+  <div class="relative min-h-[28rem] w-full overflow-visible bg-white">
     <canvas
       ref="canvasRef"
-      class="block h-full min-h-[26rem] w-full"
+      class="block h-full min-h-[28rem] w-full scale-110 cursor-grab touch-none active:cursor-grabbing"
       aria-label="3D vizualizace politického profilu"
+      @pointerdown="startDrag"
+      @pointermove="drag"
+      @pointerup="stopDrag"
+      @pointercancel="stopDrag"
+      @pointerleave="stopDrag"
     />
+    <div class="pointer-events-none absolute left-4 top-4 flex flex-wrap gap-3 text-xs text-gray-600">
+      <span class="inline-flex items-center gap-1 rounded-full border border-gray-200 bg-white/90 px-2 py-1 shadow-sm">
+        <span class="h-2.5 w-2.5 rounded-full bg-gray-950" /> Vy
+      </span>
+      <span
+        v-for="(match, index) in matches.slice(0, 3)"
+        :key="match.partyCode"
+        class="inline-flex items-center gap-1 rounded-full border border-gray-200 bg-white/90 px-2 py-1 shadow-sm"
+      >
+        <span
+          class="h-2.5 w-2.5 rounded-sm"
+          :style="{ backgroundColor: cssPartyColors[index] }"
+        />
+        {{ match.partyName }}
+      </span>
+    </div>
     <div
       v-if="!isWebglAvailable"
       class="absolute inset-0 flex items-center justify-center bg-gray-100 px-6 text-center text-sm text-gray-700"
@@ -40,10 +61,15 @@ const isWebglAvailable = ref(true);
 let renderer: THREE.WebGLRenderer | null = null;
 let scene: THREE.Scene | null = null;
 let camera: THREE.PerspectiveCamera | null = null;
-let frame = 0;
 let animationId = 0;
+let rotationX = -0.55;
+let rotationZ = 0;
+let isDragging = false;
+let hasInteracted = false;
+let previousPointer = { x: 0, y: 0 };
 
-const partyColors = [0x38bdf8, 0xf97316, 0x84cc16];
+const partyColors = [0x0284c7, 0xea580c, 0x65a30d];
+const cssPartyColors = ["#0284c7", "#ea580c", "#65a30d"];
 
 function scoreMap(scores: AxisScore[]) {
     return new Map(scores.map((score) => [score.axisCode, score.value]));
@@ -51,8 +77,8 @@ function scoreMap(scores: AxisScore[]) {
 
 function pointForAxis(index: number, total: number, value: number) {
     const angle = (index / total) * Math.PI * 2;
-    const radius = 1.5 + ((value + 1) / 2) * 2.3;
-    const z = Math.sin(angle * 2) * 0.35;
+    const radius = 1.3 + ((value + 1) / 2) * 2;
+    const z = Math.sin(angle * 2) * 0.18;
     return new THREE.Vector3(Math.cos(angle) * radius, Math.sin(angle) * radius, z);
 }
 
@@ -82,7 +108,7 @@ function addProfile(
 
     for (const point of points.slice(0, -1)) {
         const marker = new THREE.Mesh(
-            new THREE.SphereGeometry(0.06, 16, 16),
+            new THREE.SphereGeometry(0.065, 16, 16),
             new THREE.MeshBasicMaterial({ color }),
         );
         marker.position.copy(point);
@@ -93,13 +119,13 @@ function addProfile(
 function buildScene() {
     if (!scene || !canvasRef.value) return;
     scene.clear();
-    scene.background = new THREE.Color(0x020617);
+    scene.background = new THREE.Color(0xffffff);
 
     const axes = [...props.axes].sort((a, b) => a.order - b.order);
     const gridMaterial = new THREE.LineBasicMaterial({
-        color: 0x475569,
+        color: 0xcbd5e1,
         transparent: true,
-        opacity: 0.65,
+        opacity: 0.9,
     });
 
     for (let ring = 0; ring < 4; ring += 1) {
@@ -129,7 +155,7 @@ function buildScene() {
         scene!.add(label);
     });
 
-    addProfile(scene, axes, props.userAxisScores, 0xfacc15, 1);
+    addProfile(scene, axes, props.userAxisScores, 0x111827, 1);
     props.matches.slice(0, 3).forEach((match, index) => {
         addProfile(scene!, axes, match.axisScores, partyColors[index], 0.75);
     });
@@ -140,10 +166,12 @@ function createLabel(text: string) {
     canvas.width = 256;
     canvas.height = 64;
     const context = canvas.getContext("2d")!;
-    context.fillStyle = "rgba(15, 23, 42, 0.78)";
+    context.fillStyle = "rgba(255, 255, 255, 0.86)";
     context.fillRect(0, 0, canvas.width, canvas.height);
-    context.fillStyle = "#f8fafc";
-    context.font = "22px sans-serif";
+    context.strokeStyle = "rgba(203, 213, 225, 0.9)";
+    context.strokeRect(1, 1, canvas.width - 2, canvas.height - 2);
+    context.fillStyle = "#334155";
+    context.font = "21px sans-serif";
     context.textAlign = "center";
     context.textBaseline = "middle";
     context.fillText(text.slice(0, 24), canvas.width / 2, canvas.height / 2);
@@ -169,11 +197,38 @@ function resize() {
 
 function animate() {
     if (!renderer || !scene || !camera) return;
-    frame += 0.004;
-    scene.rotation.z = frame;
-    scene.rotation.x = -0.45;
+    if (!isDragging && !hasInteracted) {
+        rotationZ += 0.001;
+    }
+    scene.rotation.z = rotationZ;
+    scene.rotation.x = rotationX;
     renderer.render(scene, camera);
     animationId = requestAnimationFrame(animate);
+}
+
+function startDrag(event: PointerEvent) {
+    if (!canvasRef.value) return;
+    isDragging = true;
+    hasInteracted = true;
+    previousPointer = { x: event.clientX, y: event.clientY };
+    canvasRef.value.setPointerCapture(event.pointerId);
+}
+
+function drag(event: PointerEvent) {
+    if (!isDragging) return;
+    const dx = event.clientX - previousPointer.x;
+    const dy = event.clientY - previousPointer.y;
+    previousPointer = { x: event.clientX, y: event.clientY };
+    rotationZ += dx * 0.01;
+    rotationX = Math.max(-1.2, Math.min(0.35, rotationX + dy * 0.008));
+}
+
+function stopDrag(event: PointerEvent) {
+    if (!canvasRef.value || !isDragging) return;
+    isDragging = false;
+    if (canvasRef.value.hasPointerCapture(event.pointerId)) {
+        canvasRef.value.releasePointerCapture(event.pointerId);
+    }
 }
 
 onMounted(() => {
@@ -183,6 +238,7 @@ onMounted(() => {
             canvas: canvasRef.value,
             antialias: true,
             preserveDrawingBuffer: true,
+            alpha: true,
         });
     } catch {
         isWebglAvailable.value = false;
@@ -191,7 +247,7 @@ onMounted(() => {
 
     scene = new THREE.Scene();
     camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
-    camera.position.set(0, -7.5, 5.5);
+    camera.position.set(0, -7.2, 5.8);
     camera.lookAt(0, 0, 0);
     buildScene();
     resize();
