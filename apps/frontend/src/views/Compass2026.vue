@@ -5,7 +5,7 @@
       v-else-if="currentQuestion"
       class="flex flex-col gap-5"
     >
-      <div class="question rounded border border-gray-300 p-3 sm:p-5">
+      <div class="question flex min-h-[14rem] flex-col justify-center rounded border border-gray-300 p-3 sm:min-h-[13rem] sm:p-5">
         <div class="mb-3 flex flex-wrap items-center justify-between gap-2 text-sm text-gray-600">
           <span>Otázka {{ currentIndex + 1 }} z {{ progressTotal }}</span>
           <span class="font-semibold">{{ currentAxis?.name }}</span>

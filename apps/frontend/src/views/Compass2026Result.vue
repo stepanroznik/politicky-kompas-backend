@@ -23,6 +23,21 @@
       />
     </div>
 
+    <div>
+      <h2 class="mb-2 text-xl font-semibold">
+        3D kompas
+      </h2>
+      <p class="mb-3 max-w-3xl text-sm text-gray-600">
+        Osmiosý pohled ukazuje váš profil a všechny strany najednou. Kliknutím na štítky stran v legendě je můžete skrýt nebo znovu zobrazit.
+      </p>
+      <multi-axis-compass-3-d
+        :axes="store.axes"
+        :user-axis-scores="result.userAxisScores"
+        :matches="result.matches"
+        size="large"
+      />
+    </div>
+
     <div class="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_22rem]">
       <div class="flex flex-col gap-4">
         <h2 class="text-xl font-semibold">
@@ -61,7 +76,13 @@
           class="border border-gray-300 bg-white p-3"
         >
           <div class="flex items-center justify-between gap-3">
-            <span class="font-semibold">{{ match.partyName }}</span>
+            <span class="inline-flex min-w-0 items-center gap-2 font-semibold">
+              <party-logo
+                :party-code="match.partyCode"
+                class="h-8 w-12 flex-shrink-0 rounded-sm border border-gray-200"
+              />
+              <span class="min-w-0 truncate">{{ match.partyName }}</span>
+            </span>
             <span class="text-lg font-semibold">{{ match.percentage }} %</span>
           </div>
           <div class="mt-2 h-2 bg-gray-200">
@@ -76,21 +97,6 @@
         </div>
       </aside>
     </div>
-
-    <details class="border border-gray-300 bg-white p-4">
-      <summary class="cursor-pointer text-lg font-semibold text-gray-950">
-        3D náhled profilu
-      </summary>
-      <p class="mt-2 max-w-3xl text-sm text-gray-600">
-        Tento náhled ukazuje všech osm os najednou. Hlavní interpretaci výsledku ale nesou kompasy výše.
-      </p>
-      <multi-axis-compass-3-d
-        class="mt-4"
-        :axes="store.axes"
-        :user-axis-scores="result.userAxisScores"
-        :matches="result.matches"
-      />
-    </details>
   </section>
   <loading v-else-if="isLoading" />
 </template>
@@ -101,6 +107,7 @@ import { useRouter } from "vue-router";
 import Loading from "@frontend/components/Loading.vue";
 import MultiAxisCompass2D from "@frontend/components/MultiAxisCompass2D.vue";
 import MultiAxisCompass3D from "@frontend/components/MultiAxisCompass3D.vue";
+import PartyLogo from "@frontend/components/PartyLogo.vue";
 import { useCalculator2026Store } from "@frontend/stores/calculator2026";
 
 const router = useRouter();

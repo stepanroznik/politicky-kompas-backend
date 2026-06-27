@@ -1,7 +1,8 @@
 <template>
   <div
     ref="rootRef"
-    class="relative h-[28rem] min-h-[28rem] w-full overflow-visible bg-white lg:h-[32rem] lg:min-h-[32rem]"
+    class="relative w-full overflow-visible bg-white"
+    :class="sizeClasses"
   >
     <canvas
       ref="canvasRef"
@@ -13,21 +14,42 @@
       @pointercancel="stopDrag"
       @pointerleave="stopDrag"
     />
-    <div class="pointer-events-none absolute left-4 top-4 flex flex-wrap gap-3 text-xs text-gray-600">
-      <span class="inline-flex items-center gap-1 rounded-full border border-gray-200 bg-white/90 px-2 py-1 shadow-sm">
-        <span class="h-2.5 w-2.5 rounded-full bg-gray-950" /> Vy
-      </span>
+    <div class="absolute left-4 top-4 z-10 flex max-w-[calc(100%-2rem)] flex-wrap gap-2 text-xs text-gray-700">
       <span
+        v-if="showUser"
+        class="inline-flex items-center gap-1 rounded-full border border-gray-200 bg-white/95 px-2 py-1 shadow-sm"
+      >
+        <span class="h-2.5 w-2.5 rounded-full bg-gray-950" />
+        Vy
+      </span>
+      <button
         v-for="(match, index) in matches"
         :key="match.partyCode"
-        class="inline-flex items-center gap-1 rounded-full border border-gray-200 bg-white/90 px-2 py-1 shadow-sm"
+        class="inline-flex items-center gap-1 rounded-full border bg-white/95 px-2 py-1 shadow-sm transition hover:border-gray-500"
+        :class="isPartyHidden(match.partyCode) ? 'border-gray-200 opacity-45' : 'border-gray-300 opacity-100'"
+        type="button"
+        :aria-pressed="!isPartyHidden(match.partyCode)"
+        :title="isPartyHidden(match.partyCode) ? `Zobrazit ${match.partyName}` : `Skrýt ${match.partyName}`"
+        @click="toggleParty(match.partyCode)"
       >
+        <party-logo
+          :party-code="match.partyCode"
+          class="h-5 w-8 rounded-sm border border-gray-200"
+        />
         <span
           class="h-2.5 w-2.5 rounded-sm"
           :style="{ backgroundColor: cssPartyColors[index] }"
         />
         {{ match.partyName }}
-      </span>
+      </button>
+      <button
+        v-if="hiddenPartyCodes.size"
+        class="rounded-full border border-gray-300 bg-white/95 px-2 py-1 font-semibold text-gray-700 shadow-sm transition hover:border-gray-600"
+        type="button"
+        @click="showAllParties"
+      >
+        Zobrazit vše
+      </button>
     </div>
     <div
       v-if="!isWebglAvailable"
@@ -39,8 +61,9 @@
 </template>
 
 <script setup lang="ts">
-import { onBeforeUnmount, onMounted, PropType, ref, watch } from "vue";
+import { computed, onBeforeUnmount, onMounted, PropType, ref, watch } from "vue";
 import * as THREE from "three";
+import PartyLogo from "@frontend/components/PartyLogo.vue";
 import { AxisScore, CalculatorAxis, PartyMatch } from "@frontend/stores/calculator2026";
 
 const props = defineProps({
@@ -56,11 +79,20 @@ const props = defineProps({
         type: Array as PropType<PartyMatch[]>,
         required: true,
     },
+    showUser: {
+        type: Boolean,
+        default: true,
+    },
+    size: {
+        type: String as PropType<"compact" | "default" | "large">,
+        default: "default",
+    },
 });
 
 const rootRef = ref<HTMLElement | null>(null);
 const canvasRef = ref<HTMLCanvasElement | null>(null);
 const isWebglAvailable = ref(true);
+const hiddenPartyCodes = ref(new Set<string>());
 
 let renderer: THREE.WebGLRenderer | null = null;
 let scene: THREE.Scene | null = null;
@@ -76,6 +108,15 @@ let resizeObserver: ResizeObserver | null = null;
 
 const partyColors = [0x2563eb, 0xdc2626, 0x16a34a, 0x9333ea, 0x0891b2, 0xea580c, 0x4b5563];
 const cssPartyColors = ["#2563eb", "#dc2626", "#16a34a", "#9333ea", "#0891b2", "#ea580c", "#4b5563"];
+
+const visibleMatches = computed(() =>
+    props.matches.filter((match) => !hiddenPartyCodes.value.has(match.partyCode)),
+);
+const sizeClasses = computed(() => {
+    if (props.size === "compact") return "h-[24rem] min-h-[24rem] lg:h-[30rem] lg:min-h-[30rem]";
+    if (props.size === "large") return "h-[34rem] min-h-[34rem] lg:h-[40rem] lg:min-h-[40rem]";
+    return "h-[28rem] min-h-[28rem] lg:h-[32rem] lg:min-h-[32rem]";
+});
 
 function scoreMap(scores: AxisScore[]) {
     return new Map(scores.map((score) => [score.axisCode, score.value]));
@@ -95,6 +136,7 @@ function addProfile(
     color: number,
     opacity: number,
 ) {
+    if (!axes.length) return;
     const values = scoreMap(scores);
     const points = axes.map((axis, index) =>
         pointForAxis(index, axes.length, values.get(axis.code) ?? 0),
@@ -128,6 +170,7 @@ function buildScene() {
     scene.background = new THREE.Color(0xffffff);
 
     const axes = [...props.axes].sort((a, b) => a.order - b.order);
+    if (!axes.length) return;
     const gridMaterial = new THREE.LineBasicMaterial({
         color: 0xcbd5e1,
         transparent: true,
@@ -161,9 +204,11 @@ function buildScene() {
         scene!.add(label);
     });
 
-    addProfile(scene, axes, props.userAxisScores, 0x111827, 1);
-    props.matches.forEach((match, index) => {
-        addProfile(scene!, axes, match.axisScores, partyColors[index % partyColors.length], 0.75);
+    if (props.showUser) {
+        addProfile(scene, axes, props.userAxisScores, 0x111827, 1);
+    }
+    visibleMatches.value.forEach((match) => {
+        addProfile(scene!, axes, match.axisScores, colorForParty(match.partyCode), 0.75);
     });
 }
 
@@ -245,6 +290,28 @@ function stopDrag(event: PointerEvent) {
     }
 }
 
+function isPartyHidden(partyCode: string) {
+    return hiddenPartyCodes.value.has(partyCode);
+}
+
+function toggleParty(partyCode: string) {
+    const nextHidden = new Set(hiddenPartyCodes.value);
+    if (nextHidden.has(partyCode)) nextHidden.delete(partyCode);
+    else nextHidden.add(partyCode);
+    hiddenPartyCodes.value = nextHidden;
+    buildScene();
+}
+
+function showAllParties() {
+    hiddenPartyCodes.value = new Set();
+    buildScene();
+}
+
+function colorForParty(partyCode: string) {
+    const index = props.matches.findIndex((match) => match.partyCode === partyCode);
+    return partyColors[Math.max(0, index) % partyColors.length];
+}
+
 onMounted(() => {
     if (!canvasRef.value) return;
     try {
@@ -272,9 +339,21 @@ onMounted(() => {
 });
 
 watch(
-    () => [props.axes, props.userAxisScores, props.matches],
+    () => [props.axes, props.userAxisScores, props.matches, props.showUser],
     () => buildScene(),
     { deep: true },
+);
+
+watch(
+    () => props.matches.map((match) => match.partyCode),
+    (partyCodes) => {
+        const allowedCodes = new Set(partyCodes);
+        const nextHidden = new Set(
+            [...hiddenPartyCodes.value].filter((partyCode) => allowedCodes.has(partyCode)),
+        );
+        hiddenPartyCodes.value = nextHidden;
+        buildScene();
+    },
 );
 
 onBeforeUnmount(() => {

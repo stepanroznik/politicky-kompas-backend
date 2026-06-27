@@ -18,6 +18,14 @@
           Spustit test
         </button>
         <button
+          v-if="hasResult"
+          class="border border-gray-900 px-6 py-3 font-semibold text-gray-900 transition hover:bg-gray-900 hover:text-white"
+          type="button"
+          @click="$router.push('/kompas/vysledek')"
+        >
+          Zobrazit můj výsledek
+        </button>
+        <button
           class="border border-gray-400 px-6 py-3 font-semibold text-gray-900 transition hover:border-gray-900"
           type="button"
           @click="$router.push('/kompasy')"
@@ -40,159 +48,71 @@
         </router-link>
       </div>
     </div>
+
     <multi-axis-compass-3-d
-      class="min-h-[24rem] w-full self-center overflow-visible lg:min-h-[32rem]"
-      :axes="previewAxes"
-      :user-axis-scores="previewUserScores"
-      :matches="previewMatches"
+      v-if="hasPartyProfiles"
+      class="w-full self-center overflow-visible"
+      :axes="store.axes"
+      :user-axis-scores="[]"
+      :matches="partyProfiles"
+      :show-user="false"
+      size="compact"
+    />
+    <div
+      v-else
+      class="flex min-h-[24rem] items-center justify-center self-center border border-gray-200 bg-white text-sm text-gray-500 lg:min-h-[30rem]"
+    >
+      Načítání mapy stran...
+    </div>
+  </section>
+
+  <section
+    v-if="hasPartyProfiles"
+    class="mx-auto mt-8 max-w-6xl text-left"
+  >
+    <div class="mb-4 flex flex-col gap-1">
+      <h2 class="text-2xl font-semibold text-gray-950">
+        Strany na dvourozměrných kompasech
+      </h2>
+      <p class="max-w-3xl text-sm text-gray-600">
+        Stejné stranické odpovědi jsou rozdělené do čtyř přehlednějších kompasů podle dvojic os.
+      </p>
+    </div>
+    <multi-axis-compass-2-d
+      :axes="store.axes"
+      :user-axis-scores="[]"
+      :matches="partyProfiles"
+      :show-user="false"
+      :show-match-percentages="false"
     />
   </section>
 </template>
 
 <script setup lang="ts">
+import { computed, onMounted, ref } from "vue";
+import { apiGet } from "@frontend/api";
+import MultiAxisCompass2D from "@frontend/components/MultiAxisCompass2D.vue";
 import MultiAxisCompass3D from "@frontend/components/MultiAxisCompass3D.vue";
-import { AxisScore, CalculatorAxis, PartyMatch } from "@frontend/stores/calculator2026";
+import { PartyMatch, useCalculator2026Store } from "@frontend/stores/calculator2026";
+import { buildPartyProfiles, QuestionWithRatings } from "@frontend/utils/partyProfiles";
 
-const previewAxes: CalculatorAxis[] = [
-    {
-        code: "geopolitics_nato",
-        name: "NATO",
-        negativeLabel: "Neutralita",
-        positiveLabel: "Spojenci",
-        order: 1,
-    },
-    {
-        code: "geopolitics_eu",
-        name: "EU",
-        negativeLabel: "Suverenita",
-        positiveLabel: "Integrace",
-        order: 2,
-    },
-    {
-        code: "economy_state",
-        name: "Stát",
-        negativeLabel: "Menší stát",
-        positiveLabel: "Silnější stát",
-        order: 3,
-    },
-    {
-        code: "economy_market",
-        name: "Trh",
-        negativeLabel: "Regulace",
-        positiveLabel: "Volný trh",
-        order: 4,
-    },
-    {
-        code: "culture_morality",
-        name: "Morálka",
-        negativeLabel: "Konzervativní",
-        positiveLabel: "Liberální",
-        order: 5,
-    },
-    {
-        code: "culture_identity",
-        name: "Identita",
-        negativeLabel: "Národní",
-        positiveLabel: "Otevřená",
-        order: 6,
-    },
-    {
-        code: "institutions",
-        name: "Instituce",
-        negativeLabel: "Přímá kontrola",
-        positiveLabel: "Brzdy",
-        order: 7,
-    },
-    {
-        code: "authority_freedom",
-        name: "Svobody",
-        negativeLabel: "Autorita",
-        positiveLabel: "Svoboda",
-        order: 8,
-    },
-];
+const store = useCalculator2026Store();
+const partyProfiles = ref<PartyMatch[]>([]);
 
-const previewUserScores: AxisScore[] = [
-    { axisCode: "geopolitics_nato", value: 0.55, answeredCount: 12 },
-    { axisCode: "geopolitics_eu", value: 0.34, answeredCount: 12 },
-    { axisCode: "economy_state", value: -0.18, answeredCount: 12 },
-    { axisCode: "economy_market", value: 0.42, answeredCount: 12 },
-    { axisCode: "culture_morality", value: 0.24, answeredCount: 12 },
-    { axisCode: "culture_identity", value: 0.38, answeredCount: 12 },
-    { axisCode: "institutions", value: 0.62, answeredCount: 12 },
-    { axisCode: "authority_freedom", value: 0.18, answeredCount: 12 },
-];
+const hasResult = computed(() => Boolean(store.result));
+const hasPartyProfiles = computed(() => store.axes.length > 0 && partyProfiles.value.length > 0);
 
-const previewMatches: PartyMatch[] = [
-    {
-        partyCode: "ANO",
-        partyName: "ANO 2011",
-        percentage: 78,
-        answeredCount: 120,
-        axisScores: previewUserScores.map((score) => ({
-            ...score,
-            value: Math.max(-1, Math.min(1, score.value + 0.12)),
-        })),
-    },
-    {
-        partyCode: "SPOLU",
-        partyName: "SPOLU",
-        percentage: 71,
-        answeredCount: 120,
-        axisScores: previewUserScores.map((score) => ({
-            ...score,
-            value: Math.max(-1, Math.min(1, score.value - 0.18)),
-        })),
-    },
-    {
-        partyCode: "STAN",
-        partyName: "STAN",
-        percentage: 68,
-        answeredCount: 120,
-        axisScores: previewUserScores.map((score, index) => ({
-            ...score,
-            value: Math.max(-1, Math.min(1, score.value + (index % 2 === 0 ? -0.28 : 0.08))),
-        })),
-    },
-    {
-        partyCode: "PIRATI",
-        partyName: "Piráti",
-        percentage: 64,
-        answeredCount: 120,
-        axisScores: previewUserScores.map((score, index) => ({
-            ...score,
-            value: Math.max(-1, Math.min(1, score.value + (index % 3 === 0 ? 0.2 : -0.08))),
-        })),
-    },
-    {
-        partyCode: "SPD",
-        partyName: "SPD",
-        percentage: 61,
-        answeredCount: 120,
-        axisScores: previewUserScores.map((score, index) => ({
-            ...score,
-            value: Math.max(-1, Math.min(1, score.value + (index % 2 === 0 ? -0.42 : -0.12))),
-        })),
-    },
-    {
-        partyCode: "MOTORISTE",
-        partyName: "Motoristé",
-        percentage: 58,
-        answeredCount: 120,
-        axisScores: previewUserScores.map((score, index) => ({
-            ...score,
-            value: Math.max(-1, Math.min(1, score.value + (index % 2 === 0 ? 0.05 : -0.34))),
-        })),
-    },
-    {
-        partyCode: "STACILO",
-        partyName: "Stačilo!",
-        percentage: 54,
-        answeredCount: 120,
-        axisScores: previewUserScores.map((score, index) => ({
-            ...score,
-            value: Math.max(-1, Math.min(1, score.value + (index % 2 === 0 ? -0.36 : 0.24))),
-        })),
-    },
-];
+onMounted(async () => {
+    try {
+        await store.load();
+        const response = await apiGet({ url: `calculators/${store.slug}/party-answers` });
+        partyProfiles.value = buildPartyProfiles(
+            store.axes,
+            response.parties ?? [],
+            (response.questions ?? []) as QuestionWithRatings[],
+        );
+    } catch (error) {
+        console.error(error);
+    }
+});
 </script>
