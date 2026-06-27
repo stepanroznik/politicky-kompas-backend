@@ -55,6 +55,8 @@ export interface CalculatorResult {
     answeredCount: number;
 }
 
+const DATA_VERSION = 2;
+
 function generateFingerprint() {
     if (typeof crypto !== "undefined" && typeof crypto.randomUUID === "function") {
         return crypto.randomUUID();
@@ -74,10 +76,18 @@ export const useCalculator2026Store = defineStore("calculator-2026", {
         result: null as CalculatorResult | null,
         fingerprint: generateFingerprint(),
         isLoaded: false,
+        dataVersion: 0,
     }),
     actions: {
         async load() {
-            if (this.isLoaded && this.questions.length) return;
+            if (
+                this.isLoaded &&
+                this.dataVersion === DATA_VERSION &&
+                this.questions.length &&
+                this.questions.every((question) => "description" in question)
+            ) {
+                return;
+            }
             const [calculator, questions] = await Promise.all([
                 apiGet({ url: `calculators/${this.slug}` }),
                 apiGet({ url: `calculators/${this.slug}/questions` }),
@@ -87,6 +97,7 @@ export const useCalculator2026Store = defineStore("calculator-2026", {
             this.axes = calculator.axes ?? [];
             this.parties = calculator.parties ?? [];
             this.questions = questions ?? [];
+            this.dataVersion = DATA_VERSION;
             this.isLoaded = true;
         },
         answerQuestion(questionId: string, value: number | null) {
