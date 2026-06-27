@@ -696,6 +696,140 @@ const migrations: Migration[] = [
             );
         },
     },
+    {
+        name: '20260627_apply_calculator_2026_source_review',
+        up: async ({ queryInterface, sequelize }) => {
+            const seed = loadCalculator2026Seed();
+            const commonTimestamps = timestamps();
+            const calculatorSlug = seed.calculator.slug;
+            const normalizedQuestionIds = [
+                [
+                    'item_D6_6_narodni.stat_nejvyssi.hodnota\t',
+                    'item_D6_6_narodni.stat_nejvyssi.hodnota',
+                ],
+                [
+                    'item_D6_14_narodni.stat_zajem.je.prezitek\t',
+                    'item_D6_14_narodni.stat_zajem.je.prezitek',
+                ],
+            ];
+
+            await sequelize.query(
+                'ALTER TABLE "CalculatorQuestions" ADD COLUMN IF NOT EXISTS "description" TEXT',
+            );
+
+            for (const [oldId, newId] of normalizedQuestionIds) {
+                await sequelize.query(
+                    `UPDATE "CalculatorQuestions"
+                     SET "id" = $1,
+                         "updatedAt" = $2
+                     WHERE "id" = $3
+                       AND "calculatorSlug" = $4
+                       AND NOT EXISTS (
+                           SELECT 1
+                           FROM "CalculatorQuestions"
+                           WHERE "id" = $1
+                       )`,
+                    {
+                        bind: [
+                            newId,
+                            commonTimestamps.updatedAt,
+                            oldId,
+                            calculatorSlug,
+                        ],
+                    },
+                );
+
+                await sequelize.query(
+                    `UPDATE "CalculatorPartyRatings"
+                     SET "questionId" = $1,
+                         "updatedAt" = $2
+                     WHERE "questionId" = $3`,
+                    {
+                        bind: [newId, commonTimestamps.updatedAt, oldId],
+                    },
+                );
+            }
+
+            for (const axis of seed.axes) {
+                await queryInterface.bulkUpdate(
+                    'CalculatorAxes',
+                    {
+                        name: axis.name,
+                        negativeLabel: axis.negativeLabel,
+                        positiveLabel: axis.positiveLabel,
+                        updatedAt: commonTimestamps.updatedAt,
+                    },
+                    { code: axis.code, calculatorSlug },
+                );
+            }
+
+            for (const question of seed.questions) {
+                await queryInterface.bulkUpdate(
+                    'CalculatorQuestions',
+                    {
+                        text: question.text,
+                        description: question.description ?? null,
+                        reversed: question.reversed,
+                        reviewStatus: question.reviewStatus,
+                        reviewNote: question.reviewNote ?? null,
+                        updatedAt: commonTimestamps.updatedAt,
+                    },
+                    { id: question.id, calculatorSlug },
+                );
+            }
+
+            for (const rating of seed.ratings) {
+                await queryInterface.bulkUpdate(
+                    'CalculatorPartyRatings',
+                    {
+                        rating: rating.rating,
+                        evidenceStatus: rating.evidenceStatus,
+                        evidenceUrl: rating.evidenceUrl ?? null,
+                        evidenceTitle: rating.evidenceTitle ?? null,
+                        evidenceNote: rating.evidenceNote ?? null,
+                        updatedAt: commonTimestamps.updatedAt,
+                    },
+                    {
+                        questionId: rating.questionId,
+                        partyCode: rating.partyCode,
+                    },
+                );
+            }
+        },
+        down: async ({ sequelize }) => {
+            const now = new Date();
+
+            await sequelize.query(
+                `UPDATE "CalculatorPartyRatings"
+                 SET "evidenceStatus" = CASE
+                         WHEN "rating" IS NULL THEN 'missing'
+                         ELSE 'needs_review'
+                     END,
+                     "evidenceUrl" = NULL,
+                     "evidenceTitle" = NULL,
+                     "evidenceNote" = CASE
+                         WHEN "rating" IS NULL THEN 'No spreadsheet rating supplied.'
+                         ELSE 'Reverted the 2026-06-27 source review migration; rerun migrations up to restore revised evidence.'
+                     END,
+                     "updatedAt" = $1
+                 WHERE "questionId" IN (
+                     SELECT "id"
+                     FROM "CalculatorQuestions"
+                     WHERE "calculatorSlug" = '2026'
+                 )`,
+                { bind: [now] },
+            );
+
+            await sequelize.query(
+                `UPDATE "CalculatorQuestions"
+                 SET "reviewStatus" = 'needs_review',
+                     "reviewNote" = 'Reverted the 2026-06-27 source review migration; rerun migrations up to restore revised wording and evidence.',
+                     "updatedAt" = $1
+                 WHERE "calculatorSlug" = '2026'`,
+                { bind: [now] },
+            );
+        },
+    },
 ];
 
 async function ensureMigrationsTable(sequelize: Sequelize) {

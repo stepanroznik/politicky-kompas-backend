@@ -69,19 +69,121 @@
                       {{ statusLabel(ratingFor(question, party.code)?.evidenceStatus) }}
                     </span>
                   </div>
-                  <span
-                    v-if="ratingFor(question, party.code)?.evidenceNote"
-                    aria-label="Poznámka ke zdroji"
-                    class="mt-1 inline-flex h-5 w-5 cursor-help items-center justify-center rounded-full border border-gray-300 text-xs font-semibold text-gray-500"
-                    :title="evidenceTooltip(ratingFor(question, party.code))"
+                  <button
+                    v-if="hasEvidenceDetail(ratingFor(question, party.code))"
+                    type="button"
+                    class="mt-1 inline-flex h-5 w-5 items-center justify-center rounded-full border border-gray-300 text-xs font-semibold text-gray-500 transition hover:border-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-400"
+                    :aria-label="`Zobrazit zdroj odpovědi strany ${party.name}`"
+                    @click="openEvidence(question, party, ratingFor(question, party.code))"
                   >
                     ℹ
-                  </span>
+                  </button>
                 </td>
               </tr>
             </template>
           </tbody>
         </table>
+      </div>
+
+      <div
+        v-if="selectedEvidence"
+        class="fixed inset-0 z-50 flex items-center justify-center p-4"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="evidence-dialog-title"
+      >
+        <button
+          type="button"
+          class="absolute inset-0 bg-gray-950/45"
+          aria-label="Zavřít detail zdroje"
+          @click="closeEvidence"
+        />
+        <section class="relative max-h-[85vh] w-full max-w-2xl overflow-y-auto border border-gray-300 bg-white p-5 shadow-xl">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-wide text-gray-500">
+                {{ selectedEvidence.party.name }}
+              </p>
+              <h2
+                id="evidence-dialog-title"
+                class="mt-1 text-2xl font-semibold text-gray-950"
+              >
+                Zdroj odpovědi
+              </h2>
+            </div>
+            <button
+              type="button"
+              class="border border-gray-300 px-3 py-1.5 text-sm font-semibold text-gray-700 transition hover:border-gray-500 hover:text-gray-950"
+              @click="closeEvidence"
+            >
+              Zavřít
+            </button>
+          </div>
+
+          <div class="mt-5 space-y-4 text-sm text-gray-800">
+            <div>
+              <p class="font-semibold text-gray-950">
+                Otázka
+              </p>
+              <p class="mt-1 leading-relaxed">
+                {{ selectedEvidence.question.text }}
+              </p>
+            </div>
+
+            <dl class="grid gap-3 border-y border-gray-200 py-4 sm:grid-cols-2">
+              <div>
+                <dt class="text-xs font-semibold uppercase tracking-wide text-gray-500">
+                  Odpověď
+                </dt>
+                <dd class="mt-1 font-semibold text-gray-950">
+                  {{ answerLabel(selectedEvidence.rating.rating) }}
+                </dd>
+              </div>
+              <div>
+                <dt class="text-xs font-semibold uppercase tracking-wide text-gray-500">
+                  Doložení
+                </dt>
+                <dd class="mt-1 font-semibold text-gray-950">
+                  {{ fullStatusLabel(selectedEvidence.rating.evidenceStatus) }}
+                </dd>
+              </div>
+            </dl>
+
+            <div v-if="selectedEvidence.rating.evidenceTitle">
+              <p class="font-semibold text-gray-950">
+                Název zdroje
+              </p>
+              <p class="mt-1">
+                {{ selectedEvidence.rating.evidenceTitle }}
+              </p>
+            </div>
+
+            <div v-if="selectedEvidence.rating.evidenceNote">
+              <p class="font-semibold text-gray-950">
+                Poznámka
+              </p>
+              <p class="mt-1 whitespace-pre-line leading-relaxed">
+                {{ selectedEvidence.rating.evidenceNote }}
+              </p>
+            </div>
+
+            <a
+              v-if="selectedEvidence.rating.evidenceUrl"
+              :href="selectedEvidence.rating.evidenceUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex border border-gray-950 bg-gray-950 px-4 py-2 font-semibold text-white transition hover:bg-white hover:text-gray-950"
+            >
+              Otevřít zdroj
+            </a>
+            <p
+              v-else
+              class="text-gray-600"
+            >
+              U této odpovědi zatím není veřejný odkaz. Je označená jako odhad nebo čeká na lepší doložení.
+            </p>
+          </div>
+        </section>
       </div>
     </template>
   </section>
@@ -91,7 +193,7 @@
 import { computed, onMounted, ref } from "vue";
 import Loading from "@frontend/components/Loading.vue";
 import { apiGet } from "@frontend/api";
-import { CalculatorAxis, CalculatorParty, CalculatorQuestion, useCalculator2026Store } from "@frontend/stores/calculator2026";
+import { CalculatorParty, CalculatorQuestion, useCalculator2026Store } from "@frontend/stores/calculator2026";
 
 interface PartyRating {
     questionId: string;
@@ -107,10 +209,17 @@ interface QuestionWithRatings extends CalculatorQuestion {
     ratings: PartyRating[];
 }
 
+interface EvidenceSelection {
+    question: QuestionWithRatings;
+    party: CalculatorParty;
+    rating: PartyRating;
+}
+
 const store = useCalculator2026Store();
 const isLoading = ref(true);
 const parties = ref<CalculatorParty[]>([]);
 const questions = ref<QuestionWithRatings[]>([]);
+const selectedEvidence = ref<EvidenceSelection | null>(null);
 const electionOrder2025 = ["ANO", "SPOLU", "STAN", "PIRATI", "SPD", "MOTORISTE", "STACILO"];
 
 const groupedQuestions = computed(() =>
@@ -154,19 +263,59 @@ function answerLabel(value?: number | null) {
 
 function statusLabel(status?: string) {
     if (!status) return "";
-    if (status.includes("assumed")) return "odhad";
-    if (status.includes("weak")) return "slabý zdroj";
+    if (status === "assumption" || status.includes("assumed")) return "odhad";
+    if (status === "official_program_direct") return "program";
+    if (status === "official_program_inference") return "program";
+    if (status === "official_position_direct") return "postoj";
+    if (status === "official_position_inference") return "postoj";
+    if (status.includes("weak")) return "slabší zdroj";
     if (status.includes("review")) return "ke kontrole";
+    if (status.includes("missing")) return "nedoloženo";
     return "";
 }
 
-function evidenceTooltip(rating?: PartyRating) {
-    if (!rating) return "";
-    return [
-        rating.evidenceTitle,
-        rating.evidenceNote,
-        rating.evidenceUrl,
-    ].filter(Boolean).join("\n");
+function fullStatusLabel(status?: string) {
+    if (!status) return "Není uvedeno";
+    return {
+        assumption: "Odhad bez veřejného zdroje",
+        official_program_direct: "Přímý oficiální programový zdroj",
+        official_program_inference: "Nepřímý oficiální programový zdroj",
+        official_position_direct: "Přímý oficiální postoj",
+        official_position_inference: "Nepřímý oficiální postoj",
+        needs_review: "Ke kontrole",
+        missing: "Nedoloženo",
+    }[status] ?? (statusLabel(status) || status);
+}
+
+function isUncertainEvidence(status?: string) {
+    if (!status) return false;
+    return status === "assumption"
+        || status.includes("assumed")
+        || status.includes("weak")
+        || status.includes("review")
+        || status.includes("missing");
+}
+
+function hasEvidenceDetail(rating?: PartyRating) {
+    return Boolean(
+        rating?.evidenceTitle
+        || rating?.evidenceNote
+        || rating?.evidenceUrl
+        || rating?.evidenceStatus,
+    );
+}
+
+function openEvidence(
+    question: QuestionWithRatings,
+    party: CalculatorParty,
+    rating?: PartyRating,
+) {
+    if (!rating) return;
+    selectedEvidence.value = { question, party, rating };
+}
+
+function closeEvidence() {
+    selectedEvidence.value = null;
 }
 
 function answerClass(rating?: PartyRating) {
@@ -177,6 +326,6 @@ function answerClass(rating?: PartyRating) {
         3: "border-lime-200 bg-lime-50 text-lime-900",
         4: "border-green-200 bg-green-50 text-green-900",
     }[rating.rating] ?? "border-gray-200 bg-gray-50 text-gray-500";
-    return statusLabel(rating.evidenceStatus) ? `${base} ring-1 ring-gray-400` : base;
+    return isUncertainEvidence(rating.evidenceStatus) ? `${base} ring-1 ring-gray-400` : base;
 }
 </script>

@@ -853,5 +853,1884 @@
       "positiveLabel": "Regulace",
       "note": "Corrected labels to match imported reversed polarity: agreement with low-regulation/free-market items maps to the negative pole, while agreement with intervention/regulation items maps to the positive pole."
     }
-  ]
+  ],
+  "sourceReview2026_06_27": {
+    "sourceFile": "politicky-kompas-2026-revize-zdroju-oprava-media.xlsx",
+    "sourceSheet": "Zdroje",
+    "ratingRows": 840,
+    "textChangeCount": 0,
+    "ratingOrEvidenceChangeCount": 840,
+    "normalizedQuestionIds": {
+      "item_D6_6_narodni.stat_nejvyssi.hodnota\t": "item_D6_6_narodni.stat_nejvyssi.hodnota",
+      "item_D6_14_narodni.stat_zajem.je.prezitek\t": "item_D6_14_narodni.stat_zajem.je.prezitek"
+    },
+    "evidenceStatuses": {
+      "assumption": 132,
+      "official_position_direct": 3,
+      "official_position_inference": 97,
+      "official_program_direct": 114,
+      "official_program_inference": 494
+    },
+    "valueChanges": [
+      {
+        "questionId": "item_D1_3_obrana_nizke.vydaje",
+        "partyCode": "PIRATI",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.pirati.cz/program/",
+          "evidenceTitle": "Česká pirátská strana: programové dokumenty a Sněmovna 2025",
+          "evidenceNote": "Zdrojově porovnáno s programovými dokumenty Pirátů a programem pro Sněmovnu 2025 pro bezpečnost, NATO a zahraniční politiku. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 4,
+          "evidenceStatus": "official_program_direct",
+          "evidenceUrl": "https://majak.pirati.cz/documents/506/PROGRAM_PIRATU_2025.pdf#page=11",
+          "evidenceTitle": "Piráti – volební program 2025: obrana a NATO",
+          "evidenceNote": "Program se k výroku vyjadřuje přímo.\nSíla zdroje: Přímý programový zdroj\nLocator: str. 11, oddíl „Posílení evropského křídla NATO / investice do obrany“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D1_3_obrana_nizke.vydaje",
+        "partyCode": "MOTORISTE",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://motoristesobe.cz/wp-content/uploads/24_12_zakladni-ideova-vychodiska5.pdf",
+          "evidenceTitle": "Motoristé sobě: Základní ideová východiska a veřejná vystoupení",
+          "evidenceNote": "Porovnáno se Základními ideovými východisky Motoristů a veřejnými vystoupeními jejich představitelů pro bezpečnost, NATO a zahraniční politiku. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_direct",
+          "evidenceUrl": "https://motoristesobe.cz/program2025",
+          "evidenceTitle": "Motoristé – Program 2025",
+          "evidenceNote": "Program výslovně říká, že obranné výdaje nemají ohrozit jiné klíčové oblasti národní bezpečnosti; původní hodnota u otázky 3 tomu odporovala.\nSíla zdroje: Přímý oficiální zdroj\nLocator: oddíl „Armáda pro obranu, ne pro útok“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D1_8_nato_vystup.a.brics",
+        "partyCode": "SPD",
+        "before": {
+          "rating": 4,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://spd.cz/",
+          "evidenceTitle": "SPD: oficiální web, programové priority a veřejná stanoviska",
+          "evidenceNote": "Porovnáno s oficiálním webem SPD, programovými prioritami a opakovanými veřejnými postoji pro bezpečnost, NATO a zahraniční politiku. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_direct",
+          "evidenceUrl": "https://spd.cz/wp-content/uploads/2025/09/Program-SPD-pro-volby-do-Poslanecke-snemovny-2025.pdf#page=13",
+          "evidenceTitle": "SPD – volební program 2025: aktivní mírová politika a cizí základny",
+          "evidenceNote": "Program se k výroku vyjadřuje přímo.\nSíla zdroje: Přímý programový zdroj\nLocator: str. 13, oddíl „AKTIVNÍ MÍROVÁ POLITIKA“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D2_1_migrace_omezeni.suverenity",
+        "partyCode": "PIRATI",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.pirati.cz/program/",
+          "evidenceTitle": "Česká pirátská strana: programové dokumenty a Sněmovna 2025",
+          "evidenceNote": "Zdrojově porovnáno s programovými dokumenty Pirátů a programem pro Sněmovnu 2025 pro evropskou politiku, euro, migraci a Green Deal. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 4,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://majak.pirati.cz/documents/506/PROGRAM_PIRATU_2025.pdf#page=11",
+          "evidenceTitle": "Piráti – volební program 2025: silná Evropa a evropská spolupráce",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 11, oddíl „Bezpečné Česko v silné Evropě“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D2_4_veto_klicovy.nastroj",
+        "partyCode": "SPOLU",
+        "before": {
+          "rating": 4,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.spolu25.cz/program",
+          "evidenceTitle": "SPOLU 2025: VIZE 2030 / volební program",
+          "evidenceNote": "Zdrojově porovnáno s programem SPOLU 2025 pro evropskou politiku, euro, migraci a Green Deal. U kulturních a bioetických položek jde o koaliční interpretaci společného postoje ODS, KDU-ČSL a TOP 09."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://www.spolu25.cz/pdf/SPOLU-program-2025.pdf#page=8",
+          "evidenceTitle": "SPOLU – volební program 2025: EU, suverenita a evropská spolupráce",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 8, oddíl „Aktivní role v reformě EU“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D2_4_veto_klicovy.nastroj",
+        "partyCode": "STAN",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.starostove.cz/dobry-program",
+          "evidenceTitle": "STAN: Dobrý program",
+          "evidenceNote": "Zdrojově porovnáno s Dobrým programem STAN pro evropskou politiku, euro, migraci a Green Deal. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 1,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://www.starostove.cz/files/dobry-program-starostove.pdf#page=30",
+          "evidenceTitle": "STAN – volební program 2025: EU a zahraniční politika",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 30, oddíl „Evropská unie a zahraniční politika“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D2_6_pravo_nadrazenost.ustavy",
+        "partyCode": "SPOLU",
+        "before": {
+          "rating": 4,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.spolu25.cz/program",
+          "evidenceTitle": "SPOLU 2025: VIZE 2030 / volební program",
+          "evidenceNote": "Zdrojově porovnáno s programem SPOLU 2025 pro evropskou politiku, euro, migraci a Green Deal. U kulturních a bioetických položek jde o koaliční interpretaci společného postoje ODS, KDU-ČSL a TOP 09."
+        },
+        "after": {
+          "rating": 2,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://www.spolu25.cz/pdf/SPOLU-program-2025.pdf#page=8",
+          "evidenceTitle": "SPOLU – volební program 2025: EU, suverenita a evropská spolupráce",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 8, oddíl „Aktivní role v reformě EU“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D2_6_pravo_nadrazenost.ustavy",
+        "partyCode": "STAN",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.starostove.cz/dobry-program",
+          "evidenceTitle": "STAN: Dobrý program",
+          "evidenceNote": "Zdrojově porovnáno s Dobrým programem STAN pro evropskou politiku, euro, migraci a Green Deal. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 1,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://www.starostove.cz/files/dobry-program-starostove.pdf#page=30",
+          "evidenceTitle": "STAN – volební program 2025: EU a zahraniční politika",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 30, oddíl „Evropská unie a zahraniční politika“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D2_8_clenstvi_vystoupeni",
+        "partyCode": "SPD",
+        "before": {
+          "rating": 4,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://spd.cz/",
+          "evidenceTitle": "SPD: oficiální web, programové priority a veřejná stanoviska",
+          "evidenceNote": "Porovnáno s oficiálním webem SPD, programovými prioritami a opakovanými veřejnými postoji pro evropskou politiku, euro, migraci a Green Deal. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://spd.cz/wp-content/uploads/2025/09/Program-SPD-pro-volby-do-Poslanecke-snemovny-2025.pdf#page=4",
+          "evidenceTitle": "SPD – volební program 2025: suverénní stát a EU",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 4, oddíl „SUVERÉNNÍ STÁT“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D2_13_veto_zrusit.v.zahranici",
+        "partyCode": "STAN",
+        "before": {
+          "rating": 3,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.starostove.cz/dobry-program",
+          "evidenceTitle": "STAN: Dobrý program",
+          "evidenceNote": "Zdrojově porovnáno s Dobrým programem STAN pro evropskou politiku, euro, migraci a Green Deal. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 4,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://www.starostove.cz/files/dobry-program-starostove.pdf#page=30",
+          "evidenceTitle": "STAN – volební program 2025: EU a zahraniční politika",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 30, oddíl „Evropská unie a zahraniční politika“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D3_2_dotace_radikalni.omezeni",
+        "partyCode": "STAN",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.starostove.cz/dobry-program",
+          "evidenceTitle": "STAN: Dobrý program",
+          "evidenceNote": "Zdrojově porovnáno s Dobrým programem STAN pro daně, sociální politiku, důchody a roli státu. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 1,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://www.starostove.cz/files/dobry-program-starostove.pdf#page=4",
+          "evidenceTitle": "STAN – volební program 2025: ekonomika, daně a podnikání",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 4, oddíl „Ekonomika a daně“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D3_2_dotace_radikalni.omezeni",
+        "partyCode": "PIRATI",
+        "before": {
+          "rating": 4,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.pirati.cz/program/",
+          "evidenceTitle": "Česká pirátská strana: programové dokumenty a Sněmovna 2025",
+          "evidenceNote": "Zdrojově porovnáno s programovými dokumenty Pirátů a programem pro Sněmovnu 2025 pro daně, sociální politiku, důchody a roli státu. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://majak.pirati.cz/documents/506/PROGRAM_PIRATU_2025.pdf#page=22",
+          "evidenceTitle": "Piráti – volební program 2025: ekonomika, podnikání a méně byrokracie",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 22, oddíl „OSEKÁME BYROKRACII“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D3_2_dotace_radikalni.omezeni",
+        "partyCode": "SPD",
+        "before": {
+          "rating": 3,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://spd.cz/",
+          "evidenceTitle": "SPD: oficiální web, programové priority a veřejná stanoviska",
+          "evidenceNote": "Porovnáno s oficiálním webem SPD, programovými prioritami a opakovanými veřejnými postoji pro daně, sociální politiku, důchody a roli státu. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 4,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://spd.cz/wp-content/uploads/2025/09/Program-SPD-pro-volby-do-Poslanecke-snemovny-2025.pdf#page=20",
+          "evidenceTitle": "SPD – volební program 2025: národní ekonomika a rozpočtová odpovědnost",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 20, oddíl „KLÍČOVÉ ÚKOLY K PROSPERITĚ NÁRODNÍ EKONOMIKY“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D3_3_dane_nizke.a.rovne",
+        "partyCode": "MOTORISTE",
+        "before": {
+          "rating": 3,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://motoristesobe.cz/wp-content/uploads/24_12_zakladni-ideova-vychodiska5.pdf",
+          "evidenceTitle": "Motoristé sobě: Základní ideová východiska a veřejná vystoupení",
+          "evidenceNote": "Porovnáno se Základními ideovými východisky Motoristů a veřejnými vystoupeními jejich představitelů pro daně, sociální politiku, důchody a roli státu. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 4,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://motoristesobe.cz/program2025",
+          "evidenceTitle": "Motoristé – Program 2025",
+          "evidenceNote": "Oficiální text řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý oficiální zdroj\nLocator: oddíl „Podnikání, daně a menší stát“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D3_4_zadluzeni_vyrovnany.rozpocet",
+        "partyCode": "PIRATI",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.pirati.cz/program/",
+          "evidenceTitle": "Česká pirátská strana: programové dokumenty a Sněmovna 2025",
+          "evidenceNote": "Zdrojově porovnáno s programovými dokumenty Pirátů a programem pro Sněmovnu 2025 pro daně, sociální politiku, důchody a roli státu. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 2,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://majak.pirati.cz/documents/506/PROGRAM_PIRATU_2025.pdf#page=22",
+          "evidenceTitle": "Piráti – volební program 2025: ekonomika, podnikání a méně byrokracie",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 22, oddíl „OSEKÁME BYROKRACII“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D3_5_duchody_soukrome.sporeni",
+        "partyCode": "SPOLU",
+        "before": {
+          "rating": 4,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.spolu25.cz/program",
+          "evidenceTitle": "SPOLU 2025: VIZE 2030 / volební program",
+          "evidenceNote": "Zdrojově porovnáno s programem SPOLU 2025 pro daně, sociální politiku, důchody a roli státu. U kulturních a bioetických položek jde o koaliční interpretaci společného postoje ODS, KDU-ČSL a TOP 09."
+        },
+        "after": {
+          "rating": 2,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://www.spolu25.cz/pdf/SPOLU-program-2025.pdf#page=28",
+          "evidenceTitle": "SPOLU – volební program 2025: adresná sociální pomoc",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 28, oddíl „Adresné dávky a pružný pracovní trh“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D3_5_duchody_soukrome.sporeni",
+        "partyCode": "STAN",
+        "before": {
+          "rating": 3,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.starostove.cz/dobry-program",
+          "evidenceTitle": "STAN: Dobrý program",
+          "evidenceNote": "Zdrojově porovnáno s Dobrým programem STAN pro daně, sociální politiku, důchody a roli státu. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 2,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://www.starostove.cz/files/dobry-program-starostove.pdf#page=15",
+          "evidenceTitle": "STAN – volební program 2025: sociální politika",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 15, oddíl „Sociální politika“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D3_5_duchody_soukrome.sporeni",
+        "partyCode": "PIRATI",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.pirati.cz/program/",
+          "evidenceTitle": "Česká pirátská strana: programové dokumenty a Sněmovna 2025",
+          "evidenceNote": "Zdrojově porovnáno s programovými dokumenty Pirátů a programem pro Sněmovnu 2025 pro daně, sociální politiku, důchody a roli státu. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 2,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://majak.pirati.cz/documents/506/PROGRAM_PIRATU_2025.pdf#page=14",
+          "evidenceTitle": "Piráti – volební program 2025: sociální a zdravotní politika",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 14, oddíl „Dostupná péče ve stáří a s hendikepem“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D3_6_verejne.sluzby_spoluucast",
+        "partyCode": "SPOLU",
+        "before": {
+          "rating": 4,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.spolu25.cz/program",
+          "evidenceTitle": "SPOLU 2025: VIZE 2030 / volební program",
+          "evidenceNote": "Zdrojově porovnáno s programem SPOLU 2025 pro daně, sociální politiku, důchody a roli státu. U kulturních a bioetických položek jde o koaliční interpretaci společného postoje ODS, KDU-ČSL a TOP 09."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://www.spolu25.cz/pdf/SPOLU-program-2025.pdf#page=21",
+          "evidenceTitle": "SPOLU – volební program 2025: zdravotnictví a volba pacienta",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 21, oddíl „Dostupné zdravotnictví a prevence“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D3_6_verejne.sluzby_spoluucast",
+        "partyCode": "STAN",
+        "before": {
+          "rating": 3,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.starostove.cz/dobry-program",
+          "evidenceTitle": "STAN: Dobrý program",
+          "evidenceNote": "Zdrojově porovnáno s Dobrým programem STAN pro daně, sociální politiku, důchody a roli státu. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 2,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://www.starostove.cz/files/dobry-program-starostove.pdf#page=24",
+          "evidenceTitle": "STAN – volební program 2025: dostupné zdravotnictví",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 24, oddíl „Zdravotnictví“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D3_11_vlastnictvi_statni.podniky",
+        "partyCode": "PIRATI",
+        "before": {
+          "rating": 4,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.pirati.cz/program/",
+          "evidenceTitle": "Česká pirátská strana: programové dokumenty a Sněmovna 2025",
+          "evidenceNote": "Zdrojově porovnáno s programovými dokumenty Pirátů a programem pro Sněmovnu 2025 pro daně, sociální politiku, důchody a roli státu. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 2,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://majak.pirati.cz/documents/506/PROGRAM_PIRATU_2025.pdf#page=10",
+          "evidenceTitle": "Piráti – volební program 2025: energetika a veřejná kontrola",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 10, oddíl „Čisté technologie a energetika“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D3_11_vlastnictvi_statni.podniky",
+        "partyCode": "MOTORISTE",
+        "before": {
+          "rating": 3,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://motoristesobe.cz/wp-content/uploads/24_12_zakladni-ideova-vychodiska5.pdf",
+          "evidenceTitle": "Motoristé sobě: Základní ideová východiska a veřejná vystoupení",
+          "evidenceNote": "Porovnáno se Základními ideovými východisky Motoristů a veřejnými vystoupeními jejich představitelů pro daně, sociální politiku, důchody a roli státu. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 1,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://motoristesobe.cz/program2025",
+          "evidenceTitle": "Motoristé – Program 2025",
+          "evidenceNote": "Oficiální text řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý oficiální zdroj\nLocator: oddíl „Energetika a strategická infrastruktura“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D3_12_verejne.sluzby_zcela.zdarma",
+        "partyCode": "SPOLU",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.spolu25.cz/program",
+          "evidenceTitle": "SPOLU 2025: VIZE 2030 / volební program",
+          "evidenceNote": "Zdrojově porovnáno s programem SPOLU 2025 pro daně, sociální politiku, důchody a roli státu. U kulturních a bioetických položek jde o koaliční interpretaci společného postoje ODS, KDU-ČSL a TOP 09."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://www.spolu25.cz/pdf/SPOLU-program-2025.pdf#page=21",
+          "evidenceTitle": "SPOLU – volební program 2025: zdravotnictví a volba pacienta",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 21, oddíl „Dostupné zdravotnictví a prevence“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D3_12_verejne.sluzby_zcela.zdarma",
+        "partyCode": "STAN",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.starostove.cz/dobry-program",
+          "evidenceTitle": "STAN: Dobrý program",
+          "evidenceNote": "Zdrojově porovnáno s Dobrým programem STAN pro daně, sociální politiku, důchody a roli státu. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://www.starostove.cz/files/dobry-program-starostove.pdf#page=15",
+          "evidenceTitle": "STAN – volební program 2025: sociální politika",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 15, oddíl „Sociální politika“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D3_12_verejne.sluzby_zcela.zdarma",
+        "partyCode": "PIRATI",
+        "before": {
+          "rating": 3,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.pirati.cz/program/",
+          "evidenceTitle": "Česká pirátská strana: programové dokumenty a Sněmovna 2025",
+          "evidenceNote": "Zdrojově porovnáno s programovými dokumenty Pirátů a programem pro Sněmovnu 2025 pro daně, sociální politiku, důchody a roli státu. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 4,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://majak.pirati.cz/documents/506/PROGRAM_PIRATU_2025.pdf#page=14",
+          "evidenceTitle": "Piráti – volební program 2025: sociální a zdravotní politika",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 14, oddíl „Dostupná péče ve stáří a s hendikepem“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D3_15_vlastnictvi_nedotknutelnost",
+        "partyCode": "PIRATI",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.pirati.cz/program/",
+          "evidenceTitle": "Česká pirátská strana: programové dokumenty a Sněmovna 2025",
+          "evidenceNote": "Zdrojově porovnáno s programovými dokumenty Pirátů a programem pro Sněmovnu 2025 pro daně, sociální politiku, důchody a roli státu. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://majak.pirati.cz/documents/506/PROGRAM_PIRATU_2025.pdf#page=22",
+          "evidenceTitle": "Piráti – volební program 2025: ekonomika, podnikání a méně byrokracie",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 22, oddíl „OSEKÁME BYROKRACII“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D3_15_vlastnictvi_nedotknutelnost",
+        "partyCode": "SPD",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://spd.cz/",
+          "evidenceTitle": "SPD: oficiální web, programové priority a veřejná stanoviska",
+          "evidenceNote": "Porovnáno s oficiálním webem SPD, programovými prioritami a opakovanými veřejnými postoji pro daně, sociální politiku, důchody a roli státu. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://spd.cz/wp-content/uploads/2025/09/Program-SPD-pro-volby-do-Poslanecke-snemovny-2025.pdf#page=20",
+          "evidenceTitle": "SPD – volební program 2025: národní ekonomika a rozpočtová odpovědnost",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 20, oddíl „KLÍČOVÉ ÚKOLY K PROSPERITĚ NÁRODNÍ EKONOMIKY“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D3_15_vlastnictvi_nedotknutelnost",
+        "partyCode": "MOTORISTE",
+        "before": {
+          "rating": 3,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://motoristesobe.cz/wp-content/uploads/24_12_zakladni-ideova-vychodiska5.pdf",
+          "evidenceTitle": "Motoristé sobě: Základní ideová východiska a veřejná vystoupení",
+          "evidenceNote": "Porovnáno se Základními ideovými východisky Motoristů a veřejnými vystoupeními jejich představitelů pro daně, sociální politiku, důchody a roli státu. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 4,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://motoristesobe.cz/program2025",
+          "evidenceTitle": "Motoristé – Program 2025",
+          "evidenceNote": "Oficiální text řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý oficiální zdroj\nLocator: oddíl „Podnikání, daně a menší stát“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D3_15_vlastnictvi_nedotknutelnost",
+        "partyCode": "STACILO",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://stacilo.cz/",
+          "evidenceTitle": "Stačilo!: oficiální programový profil hnutí",
+          "evidenceNote": "Porovnáno s oficiálním programovým profilem hnutí Stačilo! pro daně, sociální politiku, důchody a roli státu. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_position_inference",
+          "evidenceUrl": "https://stacilo.cz/10-kroku-pro-lepsi-republiku/",
+          "evidenceTitle": "Stačilo! – 10 kroků pro lepší republiku",
+          "evidenceNote": "Oficiální text řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý oficiální zdroj\nLocator: oddíl „Strategické podniky, malé firmy a soběstačnost“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D4_1_regulace.domaci_volna.soutez",
+        "partyCode": "ANO",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.anobudelip.cz/program/",
+          "evidenceTitle": "Volební program hnutí ANO do parlamentních voleb 2025",
+          "evidenceNote": "Zdrojově porovnáno s volebním programem ANO 2025 pro podnikání, regulace, energetiku, dotace a tržní prostředí. Hodnota je redakční interpretace konkrétní otázky, ne doslovná odpověď strany v dotazníku."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://www.anobudelip.cz/program/#page=4",
+          "evidenceTitle": "ANO – volební program 2025: hospodářství a veřejné finance",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 4, oddíl „Prosperita a zdravé veřejné finance“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D4_1_regulace.domaci_volna.soutez",
+        "partyCode": "SPOLU",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.spolu25.cz/program",
+          "evidenceTitle": "SPOLU 2025: VIZE 2030 / volební program",
+          "evidenceNote": "Zdrojově porovnáno s programem SPOLU 2025 pro podnikání, regulace, energetiku, dotace a tržní prostředí. U kulturních a bioetických položek jde o koaliční interpretaci společného postoje ODS, KDU-ČSL a TOP 09."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_direct",
+          "evidenceUrl": "https://www.spolu25.cz/pdf/SPOLU-program-2025.pdf#page=11",
+          "evidenceTitle": "SPOLU – volební program 2025: odpovědné finance a méně byrokracie",
+          "evidenceNote": "Program se k výroku vyjadřuje přímo.\nSíla zdroje: Přímý programový zdroj\nLocator: str. 11, oddíl „SILNÁ EKONOMIKA & SNADNÉ PODNIKÁNÍ“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D4_1_regulace.domaci_volna.soutez",
+        "partyCode": "STAN",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.starostove.cz/dobry-program",
+          "evidenceTitle": "STAN: Dobrý program",
+          "evidenceNote": "Zdrojově porovnáno s Dobrým programem STAN pro podnikání, regulace, energetiku, dotace a tržní prostředí. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://www.starostove.cz/files/dobry-program-starostove.pdf#page=4",
+          "evidenceTitle": "STAN – volební program 2025: ekonomika, daně a podnikání",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 4, oddíl „Ekonomika a daně“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D4_1_regulace.domaci_volna.soutez",
+        "partyCode": "PIRATI",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.pirati.cz/program/",
+          "evidenceTitle": "Česká pirátská strana: programové dokumenty a Sněmovna 2025",
+          "evidenceNote": "Zdrojově porovnáno s programovými dokumenty Pirátů a programem pro Sněmovnu 2025 pro podnikání, regulace, energetiku, dotace a tržní prostředí. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 2,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://majak.pirati.cz/documents/506/PROGRAM_PIRATU_2025.pdf#page=22",
+          "evidenceTitle": "Piráti – volební program 2025: ekonomika, podnikání a méně byrokracie",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 22, oddíl „OSEKÁME BYROKRACII“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D4_1_regulace.domaci_volna.soutez",
+        "partyCode": "SPD",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://spd.cz/",
+          "evidenceTitle": "SPD: oficiální web, programové priority a veřejná stanoviska",
+          "evidenceNote": "Porovnáno s oficiálním webem SPD, programovými prioritami a opakovanými veřejnými postoji pro podnikání, regulace, energetiku, dotace a tržní prostředí. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 4,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://spd.cz/wp-content/uploads/2025/09/Program-SPD-pro-volby-do-Poslanecke-snemovny-2025.pdf#page=20",
+          "evidenceTitle": "SPD – volební program 2025: národní ekonomika a rozpočtová odpovědnost",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 20, oddíl „KLÍČOVÉ ÚKOLY K PROSPERITĚ NÁRODNÍ EKONOMIKY“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D4_1_regulace.domaci_volna.soutez",
+        "partyCode": "MOTORISTE",
+        "before": {
+          "rating": 3,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://motoristesobe.cz/wp-content/uploads/24_12_zakladni-ideova-vychodiska5.pdf",
+          "evidenceTitle": "Motoristé sobě: Základní ideová východiska a veřejná vystoupení",
+          "evidenceNote": "Porovnáno se Základními ideovými východisky Motoristů a veřejnými vystoupeními jejich představitelů pro podnikání, regulace, energetiku, dotace a tržní prostředí. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 4,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://motoristesobe.cz/program2025",
+          "evidenceTitle": "Motoristé – Program 2025",
+          "evidenceNote": "Oficiální text řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý oficiální zdroj\nLocator: oddíl „Podnikání, daně a menší stát“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D4_3_regulace.prace_snadne.propousteni",
+        "partyCode": "SPD",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://spd.cz/",
+          "evidenceTitle": "SPD: oficiální web, programové priority a veřejná stanoviska",
+          "evidenceNote": "Porovnáno s oficiálním webem SPD, programovými prioritami a opakovanými veřejnými postoji pro podnikání, regulace, energetiku, dotace a tržní prostředí. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://spd.cz/wp-content/uploads/2025/09/Program-SPD-pro-volby-do-Poslanecke-snemovny-2025.pdf#page=20",
+          "evidenceTitle": "SPD – volební program 2025: národní ekonomika a rozpočtová odpovědnost",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 20, oddíl „KLÍČOVÉ ÚKOLY K PROSPERITĚ NÁRODNÍ EKONOMIKY“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D4_3_regulace.prace_snadne.propousteni",
+        "partyCode": "MOTORISTE",
+        "before": {
+          "rating": 3,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://motoristesobe.cz/wp-content/uploads/24_12_zakladni-ideova-vychodiska5.pdf",
+          "evidenceTitle": "Motoristé sobě: Základní ideová východiska a veřejná vystoupení",
+          "evidenceNote": "Porovnáno se Základními ideovými východisky Motoristů a veřejnými vystoupeními jejich představitelů pro podnikání, regulace, energetiku, dotace a tržní prostředí. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 4,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://motoristesobe.cz/program2025",
+          "evidenceTitle": "Motoristé – Program 2025",
+          "evidenceNote": "Oficiální text řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý oficiální zdroj\nLocator: oddíl „Podnikání, daně a menší stát“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D4_4_obchod_proti.clum",
+        "partyCode": "SPD",
+        "before": {
+          "rating": 3,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://spd.cz/",
+          "evidenceTitle": "SPD: oficiální web, programové priority a veřejná stanoviska",
+          "evidenceNote": "Porovnáno s oficiálním webem SPD, programovými prioritami a opakovanými veřejnými postoji pro podnikání, regulace, energetiku, dotace a tržní prostředí. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 1,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://spd.cz/wp-content/uploads/2025/09/Program-SPD-pro-volby-do-Poslanecke-snemovny-2025.pdf#page=5",
+          "evidenceTitle": "SPD – volební program 2025: ochrana domácí produkce před zahraniční konkurencí",
+          "evidenceNote": "Program prosazuje ochranu domácích producentů a omezení nekalé zahraniční konkurence; proto původní souhlas s tvrzením, že omezení dovozu škodí, nedával smysl.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 5, oddíl „LEVNÉ POTRAVINY A POTRAVINOVÁ BEZPEČNOST / OCHRANA VESNICE“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D4_4_obchod_proti.clum",
+        "partyCode": "MOTORISTE",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://motoristesobe.cz/wp-content/uploads/24_12_zakladni-ideova-vychodiska5.pdf",
+          "evidenceTitle": "Motoristé sobě: Základní ideová východiska a veřejná vystoupení",
+          "evidenceNote": "Porovnáno se Základními ideovými východisky Motoristů a veřejnými vystoupeními jejich představitelů pro podnikání, regulace, energetiku, dotace a tržní prostředí. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 4,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://motoristesobe.cz/program2025",
+          "evidenceTitle": "Motoristé – Program 2025",
+          "evidenceNote": "Oficiální text řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý oficiální zdroj\nLocator: oddíl „Podnikání, daně a menší stát“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D4_5_regulace.inovaci_volny.vyvoj",
+        "partyCode": "PIRATI",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.pirati.cz/program/",
+          "evidenceTitle": "Česká pirátská strana: programové dokumenty a Sněmovna 2025",
+          "evidenceNote": "Zdrojově porovnáno s programovými dokumenty Pirátů a programem pro Sněmovnu 2025 pro podnikání, regulace, energetiku, dotace a tržní prostředí. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 2,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://majak.pirati.cz/documents/506/PROGRAM_PIRATU_2025.pdf#page=22",
+          "evidenceTitle": "Piráti – volební program 2025: ekonomika, podnikání a méně byrokracie",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 22, oddíl „OSEKÁME BYROKRACII“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D4_5_regulace.inovaci_volny.vyvoj",
+        "partyCode": "MOTORISTE",
+        "before": {
+          "rating": 3,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://motoristesobe.cz/wp-content/uploads/24_12_zakladni-ideova-vychodiska5.pdf",
+          "evidenceTitle": "Motoristé sobě: Základní ideová východiska a veřejná vystoupení",
+          "evidenceNote": "Porovnáno se Základními ideovými východisky Motoristů a veřejnými vystoupeními jejich představitelů pro podnikání, regulace, energetiku, dotace a tržní prostředí. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 4,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://motoristesobe.cz/program2025",
+          "evidenceTitle": "Motoristé – Program 2025",
+          "evidenceNote": "Oficiální text řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý oficiální zdroj\nLocator: oddíl „Podnikání, daně a menší stát“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D4_6_regulace.cizinci_smluvni.volnost",
+        "partyCode": "STAN",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.starostove.cz/dobry-program",
+          "evidenceTitle": "STAN: Dobrý program",
+          "evidenceNote": "Zdrojově porovnáno s Dobrým programem STAN pro podnikání, regulace, energetiku, dotace a tržní prostředí. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 4,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://www.starostove.cz/files/dobry-program-starostove.pdf#page=17",
+          "evidenceTitle": "STAN – volební program 2025: migrace a integrace pracovníků",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 17, oddíl „Sociální politika / integrace na trh práce“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D4_6_regulace.cizinci_smluvni.volnost",
+        "partyCode": "PIRATI",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.pirati.cz/program/",
+          "evidenceTitle": "Česká pirátská strana: programové dokumenty a Sněmovna 2025",
+          "evidenceNote": "Zdrojově porovnáno s programovými dokumenty Pirátů a programem pro Sněmovnu 2025 pro podnikání, regulace, energetiku, dotace a tržní prostředí. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://majak.pirati.cz/documents/506/PROGRAM_PIRATU_2025.pdf#page=22",
+          "evidenceTitle": "Piráti – volební program 2025: ekonomika, podnikání a méně byrokracie",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 22, oddíl „OSEKÁME BYROKRACII“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D4_7_regulace.domaci_mene.byrokracie",
+        "partyCode": "STACILO",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://stacilo.cz/",
+          "evidenceTitle": "Stačilo!: oficiální programový profil hnutí",
+          "evidenceNote": "Porovnáno s oficiálním programovým profilem hnutí Stačilo! pro podnikání, regulace, energetiku, dotace a tržní prostředí. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_position_inference",
+          "evidenceUrl": "https://stacilo.cz/10-kroku-pro-lepsi-republiku/",
+          "evidenceTitle": "Stačilo! – 10 kroků pro lepší republiku",
+          "evidenceNote": "Oficiální text řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý oficiální zdroj\nLocator: oddíl „Strategické podniky, malé firmy a soběstačnost“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D4_8_obchod_ochrana.zemedelcu",
+        "partyCode": "MOTORISTE",
+        "before": {
+          "rating": 4,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://motoristesobe.cz/wp-content/uploads/24_12_zakladni-ideova-vychodiska5.pdf",
+          "evidenceTitle": "Motoristé sobě: Základní ideová východiska a veřejná vystoupení",
+          "evidenceNote": "Porovnáno se Základními ideovými východisky Motoristů a veřejnými vystoupeními jejich představitelů pro podnikání, regulace, energetiku, dotace a tržní prostředí. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 2,
+          "evidenceStatus": "official_program_direct",
+          "evidenceUrl": "https://motoristesobe.cz/program2025",
+          "evidenceTitle": "Motoristé – Program 2025",
+          "evidenceNote": "Oficiální text se k výroku vyjadřuje přímo.\nSíla zdroje: Přímý oficiální zdroj\nLocator: oddíl „Konkurenceschopné zemědělství“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D4_10_regulace.cen_stropy",
+        "partyCode": "MOTORISTE",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://motoristesobe.cz/wp-content/uploads/24_12_zakladni-ideova-vychodiska5.pdf",
+          "evidenceTitle": "Motoristé sobě: Základní ideová východiska a veřejná vystoupení",
+          "evidenceNote": "Porovnáno se Základními ideovými východisky Motoristů a veřejnými vystoupeními jejich představitelů pro podnikání, regulace, energetiku, dotace a tržní prostředí. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 1,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://motoristesobe.cz/program2025",
+          "evidenceTitle": "Motoristé – Program 2025",
+          "evidenceNote": "Oficiální text řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý oficiální zdroj\nLocator: oddíl „Podnikání, daně a menší stát“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D4_11_regulace.vystavby_pravo.veta.obyvatel",
+        "partyCode": "ANO",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.anobudelip.cz/program/",
+          "evidenceTitle": "Volební program hnutí ANO do parlamentních voleb 2025",
+          "evidenceNote": "Zdrojově porovnáno s volebním programem ANO 2025 pro podnikání, regulace, energetiku, dotace a tržní prostředí. Hodnota je redakční interpretace konkrétní otázky, ne doslovná odpověď strany v dotazníku."
+        },
+        "after": {
+          "rating": 1,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://www.anobudelip.cz/program/#page=21",
+          "evidenceTitle": "ANO – volební program 2025: životní prostředí a zemědělství",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 21, oddíl „Ochrana životního prostředí“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D4_11_regulace.vystavby_pravo.veta.obyvatel",
+        "partyCode": "PIRATI",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.pirati.cz/program/",
+          "evidenceTitle": "Česká pirátská strana: programové dokumenty a Sněmovna 2025",
+          "evidenceNote": "Zdrojově porovnáno s programovými dokumenty Pirátů a programem pro Sněmovnu 2025 pro podnikání, regulace, energetiku, dotace a tržní prostředí. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 4,
+          "evidenceStatus": "official_program_direct",
+          "evidenceUrl": "https://majak.pirati.cz/documents/506/PROGRAM_PIRATU_2025.pdf#page=10",
+          "evidenceTitle": "Piráti – volební program 2025: čisté technologie a klimatická transformace",
+          "evidenceNote": "Program se k výroku vyjadřuje přímo.\nSíla zdroje: Přímý programový zdroj\nLocator: str. 10, oddíl „Rozumný přechod k čistým technologiím“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D4_12_regulace.korporaci_prisna.kontrola",
+        "partyCode": "MOTORISTE",
+        "before": {
+          "rating": 4,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://motoristesobe.cz/wp-content/uploads/24_12_zakladni-ideova-vychodiska5.pdf",
+          "evidenceTitle": "Motoristé sobě: Základní ideová východiska a veřejná vystoupení",
+          "evidenceNote": "Porovnáno se Základními ideovými východisky Motoristů a veřejnými vystoupeními jejich představitelů pro podnikání, regulace, energetiku, dotace a tržní prostředí. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 2,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://motoristesobe.cz/program2025",
+          "evidenceTitle": "Motoristé – Program 2025",
+          "evidenceNote": "Oficiální text řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý oficiální zdroj\nLocator: oddíl „Podnikání, daně a menší stát“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D4_13_regulace.cizinci_zakaz.nakupu.nemovitosti",
+        "partyCode": "ANO",
+        "before": {
+          "rating": 3,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.anobudelip.cz/program/",
+          "evidenceTitle": "Volební program hnutí ANO do parlamentních voleb 2025",
+          "evidenceNote": "Zdrojově porovnáno s volebním programem ANO 2025 pro podnikání, regulace, energetiku, dotace a tržní prostředí. Hodnota je redakční interpretace konkrétní otázky, ne doslovná odpověď strany v dotazníku."
+        },
+        "after": {
+          "rating": 2,
+          "evidenceStatus": "assumption",
+          "evidenceUrl": null,
+          "evidenceTitle": "Analytický odhad – bez dostatečně konkrétního veřejného stranického zdroje",
+          "evidenceNote": "Hodnota je pouze odhad podle širší ideologické orientace a souvisejících postojů strany; nepovažovat za doložený programový závazek.\nSíla zdroje: Předpoklad (superweak)\nLocator: Nenalezen přímý ani dostatečně blízký výrok v ověřených oficiálních materiálech.\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D4_14_regulace.domaci_naridit.vyrobu",
+        "partyCode": "SPD",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://spd.cz/",
+          "evidenceTitle": "SPD: oficiální web, programové priority a veřejná stanoviska",
+          "evidenceNote": "Porovnáno s oficiálním webem SPD, programovými prioritami a opakovanými veřejnými postoji pro podnikání, regulace, energetiku, dotace a tržní prostředí. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://spd.cz/wp-content/uploads/2025/09/Program-SPD-pro-volby-do-Poslanecke-snemovny-2025.pdf#page=20",
+          "evidenceTitle": "SPD – volební program 2025: národní ekonomika a rozpočtová odpovědnost",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 20, oddíl „KLÍČOVÉ ÚKOLY K PROSPERITĚ NÁRODNÍ EKONOMIKY“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D5_3_bioetika_interrupce.je.vrazda",
+        "partyCode": "SPD",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://spd.cz/",
+          "evidenceTitle": "SPD: oficiální web, programové priority a veřejná stanoviska",
+          "evidenceNote": "Porovnáno s oficiálním webem SPD, programovými prioritami a opakovanými veřejnými postoji pro rodinu, bioetiku, svobody a kulturní otázky. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "assumption",
+          "evidenceUrl": null,
+          "evidenceTitle": "Analytický odhad – bez dostatečně konkrétního veřejného stranického zdroje",
+          "evidenceNote": "Hodnota je pouze odhad podle širší ideologické orientace a souvisejících postojů strany; nepovažovat za doložený programový závazek.\nSíla zdroje: Předpoklad (superweak)\nLocator: Nenalezen přímý ani dostatečně blízký výrok v ověřených oficiálních materiálech.\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D5_4_rodina_jedine.muz.a.zena",
+        "partyCode": "SPOLU",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.spolu25.cz/program",
+          "evidenceTitle": "SPOLU 2025: VIZE 2030 / volební program",
+          "evidenceNote": "Zdrojově porovnáno s programem SPOLU 2025 pro rodinu, bioetiku, svobody a kulturní otázky. U kulturních a bioetických položek jde o koaliční interpretaci společného postoje ODS, KDU-ČSL a TOP 09."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://www.spolu25.cz/pdf/SPOLU-program-2025.pdf#page=4",
+          "evidenceTitle": "SPOLU – volební program 2025: rodina a odpovědnost",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 4, oddíl „Rodina jako základ společnosti“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D5_6_nabozenstvi_navrat.ke.krestanstvi",
+        "partyCode": "MOTORISTE",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://motoristesobe.cz/wp-content/uploads/24_12_zakladni-ideova-vychodiska5.pdf",
+          "evidenceTitle": "Motoristé sobě: Základní ideová východiska a veřejná vystoupení",
+          "evidenceNote": "Porovnáno se Základními ideovými východisky Motoristů a veřejnými vystoupeními jejich představitelů pro rodinu, bioetiku, svobody a kulturní otázky. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://motoristesobe.cz/program2025",
+          "evidenceTitle": "Motoristé – Program 2025",
+          "evidenceNote": "Oficiální text řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý oficiální zdroj\nLocator: oddíl „Kultura, tradice a společné hodnoty“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D5_9_obecne_svoboda.zivotniho.stylu",
+        "partyCode": "SPD",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://spd.cz/",
+          "evidenceTitle": "SPD: oficiální web, programové priority a veřejná stanoviska",
+          "evidenceNote": "Porovnáno s oficiálním webem SPD, programovými prioritami a opakovanými veřejnými postoji pro rodinu, bioetiku, svobody a kulturní otázky. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 2,
+          "evidenceStatus": "official_program_direct",
+          "evidenceUrl": "https://spd.cz/wp-content/uploads/2025/09/Program-SPD-pro-volby-do-Poslanecke-snemovny-2025.pdf#page=17",
+          "evidenceTitle": "SPD – volební program 2025: svoboda projevu a stop cenzuře",
+          "evidenceNote": "Program se k výroku vyjadřuje přímo.\nSíla zdroje: Přímý programový zdroj\nLocator: str. 17, oddíl „SVOBODA NÁZORU MÍSTO POLITICKÉ KOREKTNOSTI“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D5_9_obecne_svoboda.zivotniho.stylu",
+        "partyCode": "MOTORISTE",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://motoristesobe.cz/wp-content/uploads/24_12_zakladni-ideova-vychodiska5.pdf",
+          "evidenceTitle": "Motoristé sobě: Základní ideová východiska a veřejná vystoupení",
+          "evidenceNote": "Porovnáno se Základními ideovými východisky Motoristů a veřejnými vystoupeními jejich představitelů pro rodinu, bioetiku, svobody a kulturní otázky. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://motoristesobe.cz/program2025",
+          "evidenceTitle": "Motoristé – Program 2025",
+          "evidenceNote": "Oficiální text řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý oficiální zdroj\nLocator: oddíl „Kultura, tradice a společné hodnoty“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D5_9_obecne_svoboda.zivotniho.stylu",
+        "partyCode": "STACILO",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://stacilo.cz/",
+          "evidenceTitle": "Stačilo!: oficiální programový profil hnutí",
+          "evidenceNote": "Porovnáno s oficiálním programovým profilem hnutí Stačilo! pro rodinu, bioetiku, svobody a kulturní otázky. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_position_inference",
+          "evidenceUrl": "https://stacilo.cz/",
+          "evidenceTitle": "Stačilo! – Oficiální programový profil",
+          "evidenceNote": "Oficiální text řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý oficiální zdroj\nLocator: oddíl „Tradiční rodina, svoboda a společenské hodnoty“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D5_12_gender_trans.zeny.ve.sportu",
+        "partyCode": "SPOLU",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.spolu25.cz/program",
+          "evidenceTitle": "SPOLU 2025: VIZE 2030 / volební program",
+          "evidenceNote": "Zdrojově porovnáno s programem SPOLU 2025 pro rodinu, bioetiku, svobody a kulturní otázky. U kulturních a bioetických položek jde o koaliční interpretaci společného postoje ODS, KDU-ČSL a TOP 09."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://www.spolu25.cz/pdf/SPOLU-program-2025.pdf#page=4",
+          "evidenceTitle": "SPOLU – volební program 2025: rodina a odpovědnost",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 4, oddíl „Rodina jako základ společnosti“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D5_12_gender_trans.zeny.ve.sportu",
+        "partyCode": "STAN",
+        "before": {
+          "rating": 3,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.starostove.cz/dobry-program",
+          "evidenceTitle": "STAN: Dobrý program",
+          "evidenceNote": "Zdrojově porovnáno s Dobrým programem STAN pro rodinu, bioetiku, svobody a kulturní otázky. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 1,
+          "evidenceStatus": "assumption",
+          "evidenceUrl": null,
+          "evidenceTitle": "Analytický odhad – bez dostatečně konkrétního veřejného stranického zdroje",
+          "evidenceNote": "Hodnota je pouze odhad podle širší ideologické orientace a souvisejících postojů strany; nepovažovat za doložený programový závazek.\nSíla zdroje: Předpoklad (superweak)\nLocator: Nenalezen přímý ani dostatečně blízký výrok v ověřených oficiálních materiálech.\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D5_12_gender_trans.zeny.ve.sportu",
+        "partyCode": "PIRATI",
+        "before": {
+          "rating": 4,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.pirati.cz/program/",
+          "evidenceTitle": "Česká pirátská strana: programové dokumenty a Sněmovna 2025",
+          "evidenceNote": "Zdrojově porovnáno s programovými dokumenty Pirátů a programem pro Sněmovnu 2025 pro rodinu, bioetiku, svobody a kulturní otázky. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 1,
+          "evidenceStatus": "assumption",
+          "evidenceUrl": null,
+          "evidenceTitle": "Analytický odhad – bez dostatečně konkrétního veřejného stranického zdroje",
+          "evidenceNote": "Hodnota je pouze odhad podle širší ideologické orientace a souvisejících postojů strany; nepovažovat za doložený programový závazek.\nSíla zdroje: Předpoklad (superweak)\nLocator: Nenalezen přímý ani dostatečně blízký výrok v ověřených oficiálních materiálech.\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D5_12_gender_trans.zeny.ve.sportu",
+        "partyCode": "SPD",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://spd.cz/",
+          "evidenceTitle": "SPD: oficiální web, programové priority a veřejná stanoviska",
+          "evidenceNote": "Porovnáno s oficiálním webem SPD, programovými prioritami a opakovanými veřejnými postoji pro rodinu, bioetiku, svobody a kulturní otázky. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 4,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://spd.cz/wp-content/uploads/2025/09/Program-SPD-pro-volby-do-Poslanecke-snemovny-2025.pdf#page=4",
+          "evidenceTitle": "SPD – volební program 2025: tradiční hodnoty, identita a integrace",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 4, oddíl „TRADIČNÍ HODNOTY A IDENTITA“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D5_12_gender_trans.zeny.ve.sportu",
+        "partyCode": "MOTORISTE",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://motoristesobe.cz/wp-content/uploads/24_12_zakladni-ideova-vychodiska5.pdf",
+          "evidenceTitle": "Motoristé sobě: Základní ideová východiska a veřejná vystoupení",
+          "evidenceNote": "Porovnáno se Základními ideovými východisky Motoristů a veřejnými vystoupeními jejich představitelů pro rodinu, bioetiku, svobody a kulturní otázky. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 4,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://motoristesobe.cz/program2025",
+          "evidenceTitle": "Motoristé – Program 2025",
+          "evidenceNote": "Oficiální text řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý oficiální zdroj\nLocator: oddíl „Kultura, tradice a společné hodnoty“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D5_12_gender_trans.zeny.ve.sportu",
+        "partyCode": "STACILO",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://stacilo.cz/",
+          "evidenceTitle": "Stačilo!: oficiální programový profil hnutí",
+          "evidenceNote": "Porovnáno s oficiálním programovým profilem hnutí Stačilo! pro rodinu, bioetiku, svobody a kulturní otázky. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 4,
+          "evidenceStatus": "official_position_inference",
+          "evidenceUrl": "https://stacilo.cz/",
+          "evidenceTitle": "Stačilo! – Oficiální programový profil",
+          "evidenceNote": "Oficiální text řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý oficiální zdroj\nLocator: oddíl „Tradiční rodina, svoboda a společenské hodnoty“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D5_14_rodina_uznani.poly.svazku",
+        "partyCode": "STAN",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.starostove.cz/dobry-program",
+          "evidenceTitle": "STAN: Dobrý program",
+          "evidenceNote": "Zdrojově porovnáno s Dobrým programem STAN pro rodinu, bioetiku, svobody a kulturní otázky. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 1,
+          "evidenceStatus": "assumption",
+          "evidenceUrl": null,
+          "evidenceTitle": "Analytický odhad – bez dostatečně konkrétního veřejného stranického zdroje",
+          "evidenceNote": "Hodnota je pouze odhad podle širší ideologické orientace a souvisejících postojů strany; nepovažovat za doložený programový závazek.\nSíla zdroje: Předpoklad (superweak)\nLocator: Nenalezen přímý ani dostatečně blízký výrok v ověřených oficiálních materiálech.\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D5_14_rodina_uznani.poly.svazku",
+        "partyCode": "PIRATI",
+        "before": {
+          "rating": 4,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.pirati.cz/program/",
+          "evidenceTitle": "Česká pirátská strana: programové dokumenty a Sněmovna 2025",
+          "evidenceNote": "Zdrojově porovnáno s programovými dokumenty Pirátů a programem pro Sněmovnu 2025 pro rodinu, bioetiku, svobody a kulturní otázky. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 1,
+          "evidenceStatus": "assumption",
+          "evidenceUrl": null,
+          "evidenceTitle": "Analytický odhad – bez dostatečně konkrétního veřejného stranického zdroje",
+          "evidenceNote": "Hodnota je pouze odhad podle širší ideologické orientace a souvisejících postojů strany; nepovažovat za doložený programový závazek.\nSíla zdroje: Předpoklad (superweak)\nLocator: Nenalezen přímý ani dostatečně blízký výrok v ověřených oficiálních materiálech.\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D6_5_imigrace_stop.kultury",
+        "partyCode": "SPOLU",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.spolu25.cz/program",
+          "evidenceTitle": "SPOLU 2025: VIZE 2030 / volební program",
+          "evidenceNote": "Zdrojově porovnáno s programem SPOLU 2025 pro migraci, menšiny, národní identitu a integraci. U kulturních a bioetických položek jde o koaliční interpretaci společného postoje ODS, KDU-ČSL a TOP 09."
+        },
+        "after": {
+          "rating": 2,
+          "evidenceStatus": "official_program_direct",
+          "evidenceUrl": "https://www.spolu25.cz/pdf/SPOLU-program-2025.pdf#page=9",
+          "evidenceTitle": "SPOLU – volební program 2025: nelegální migrace a azyl",
+          "evidenceNote": "Program se k výroku vyjadřuje přímo.\nSíla zdroje: Přímý programový zdroj\nLocator: str. 9, oddíl „Bezpečné hranice a boj proti nelegální migraci“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D6_8_jazyk_vicejazycnost",
+        "partyCode": "MOTORISTE",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://motoristesobe.cz/wp-content/uploads/24_12_zakladni-ideova-vychodiska5.pdf",
+          "evidenceTitle": "Motoristé sobě: Základní ideová východiska a veřejná vystoupení",
+          "evidenceNote": "Porovnáno se Základními ideovými východisky Motoristů a veřejnými vystoupeními jejich představitelů pro migraci, menšiny, národní identitu a integraci. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 2,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://motoristesobe.cz/program2025",
+          "evidenceTitle": "Motoristé – Program 2025",
+          "evidenceNote": "Oficiální text řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý oficiální zdroj\nLocator: oddíl „Kultura, tradice a společné hodnoty“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D6_9_imigrace_humanita",
+        "partyCode": "STACILO",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://stacilo.cz/",
+          "evidenceTitle": "Stačilo!: oficiální programový profil hnutí",
+          "evidenceNote": "Porovnáno s oficiálním programovým profilem hnutí Stačilo! pro migraci, menšiny, národní identitu a integraci. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 2,
+          "evidenceStatus": "official_position_inference",
+          "evidenceUrl": "https://stacilo.cz/",
+          "evidenceTitle": "Stačilo! – Oficiální programový profil",
+          "evidenceNote": "Oficiální text řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý oficiální zdroj\nLocator: oddíl „Národní identita, rovnost a migrace“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D6_13_imigrace_otevrene.hranice",
+        "partyCode": "SPOLU",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.spolu25.cz/program",
+          "evidenceTitle": "SPOLU 2025: VIZE 2030 / volební program",
+          "evidenceNote": "Zdrojově porovnáno s programem SPOLU 2025 pro migraci, menšiny, národní identitu a integraci. U kulturních a bioetických položek jde o koaliční interpretaci společného postoje ODS, KDU-ČSL a TOP 09."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://www.spolu25.cz/pdf/SPOLU-program-2025.pdf#page=9",
+          "evidenceTitle": "SPOLU – volební program 2025: potřební pracovníci a kontrola migrace",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 9, oddíl „Bezpečné hranice a boj proti nelegální migraci“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D6_13_imigrace_otevrene.hranice",
+        "partyCode": "STAN",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.starostove.cz/dobry-program",
+          "evidenceTitle": "STAN: Dobrý program",
+          "evidenceNote": "Zdrojově porovnáno s Dobrým programem STAN pro migraci, menšiny, národní identitu a integraci. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 4,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://www.starostove.cz/files/dobry-program-starostove.pdf#page=17",
+          "evidenceTitle": "STAN – volební program 2025: migrace a integrace pracovníků",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 17, oddíl „Sociální politika / integrace na trh práce“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D6_13_imigrace_otevrene.hranice",
+        "partyCode": "PIRATI",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.pirati.cz/program/",
+          "evidenceTitle": "Česká pirátská strana: programové dokumenty a Sněmovna 2025",
+          "evidenceNote": "Zdrojově porovnáno s programovými dokumenty Pirátů a programem pro Sněmovnu 2025 pro migraci, menšiny, národní identitu a integraci. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://majak.pirati.cz/documents/506/PROGRAM_PIRATU_2025.pdf#page=26",
+          "evidenceTitle": "Piráti – volební program 2025: liberální a demokratická strana",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 26, oddíl „Povolební strategie – liberální demokratická strana“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D6_15_narod.stat_zrusit",
+        "partyCode": "PIRATI",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.pirati.cz/program/",
+          "evidenceTitle": "Česká pirátská strana: programové dokumenty a Sněmovna 2025",
+          "evidenceNote": "Zdrojově porovnáno s programovými dokumenty Pirátů a programem pro Sněmovnu 2025 pro migraci, menšiny, národní identitu a integraci. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://majak.pirati.cz/documents/506/PROGRAM_PIRATU_2025.pdf#page=11",
+          "evidenceTitle": "Piráti – volební program 2025: silná Evropa a evropská spolupráce",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 11, oddíl „Bezpečné Česko v silné Evropě“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D6_16_koncepce.identita",
+        "partyCode": "STAN",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.starostove.cz/dobry-program",
+          "evidenceTitle": "STAN: Dobrý program",
+          "evidenceNote": "Zdrojově porovnáno s Dobrým programem STAN pro migraci, menšiny, národní identitu a integraci. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 2,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://www.starostove.cz/files/dobry-program-starostove.pdf#page=14",
+          "evidenceTitle": "STAN – volební program 2025: lidská práva a rovné šance",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 14, oddíl „Lidská práva a rovné šance“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D7_1_instituce_ignorovani.soudu",
+        "partyCode": "SPD",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://spd.cz/",
+          "evidenceTitle": "SPD: oficiální web, programové priority a veřejná stanoviska",
+          "evidenceNote": "Porovnáno s oficiálním webem SPD, programovými prioritami a opakovanými veřejnými postoji pro demokracii, transparentnost, média a institucionální brzdy. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 1,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://spd.cz/wp-content/uploads/2025/09/Program-SPD-pro-volby-do-Poslanecke-snemovny-2025.pdf#page=19",
+          "evidenceTitle": "SPD – volební program 2025: přímá demokracie a právní stát",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 19, oddíl „DEMOKRACIE / ZÁKON O REFERENDU“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D7_1_instituce_ignorovani.soudu",
+        "partyCode": "MOTORISTE",
+        "before": {
+          "rating": 3,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://motoristesobe.cz/wp-content/uploads/24_12_zakladni-ideova-vychodiska5.pdf",
+          "evidenceTitle": "Motoristé sobě: Základní ideová východiska a veřejná vystoupení",
+          "evidenceNote": "Porovnáno se Základními ideovými východisky Motoristů a veřejnými vystoupeními jejich představitelů pro demokracii, transparentnost, média a institucionální brzdy. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 2,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://motoristesobe.cz/program2025",
+          "evidenceTitle": "Motoristé – Program 2025",
+          "evidenceNote": "Oficiální text řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý oficiální zdroj\nLocator: oddíl „Spravedlnost bez ideologie“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D7_3_media_statni.kontrola",
+        "partyCode": "ANO",
+        "before": {
+          "rating": 3,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.anobudelip.cz/program/",
+          "evidenceTitle": "Volební program hnutí ANO do parlamentních voleb 2025",
+          "evidenceNote": "Zdrojově porovnáno s volebním programem ANO 2025 pro demokracii, transparentnost, média a institucionální brzdy. Hodnota je redakční interpretace konkrétní otázky, ne doslovná odpověď strany v dotazníku."
+        },
+        "after": {
+          "rating": 2,
+          "evidenceStatus": "official_program_direct",
+          "evidenceUrl": "https://www.anobudelip.cz/program/#page=31",
+          "evidenceTitle": "ANO – volební program 2025: ČT a ČRo",
+          "evidenceNote": "Program se k výroku vyjadřuje přímo.\nSíla zdroje: Přímý programový zdroj\nLocator: str. 31, oddíl „ZRUŠENÍ POPLATKŮ ZA ČT A ČRO“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D7_3_media_statni.kontrola",
+        "partyCode": "SPD",
+        "before": {
+          "rating": 4,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://spd.cz/",
+          "evidenceTitle": "SPD: oficiální web, programové priority a veřejná stanoviska",
+          "evidenceNote": "Porovnáno s oficiálním webem SPD, programovými prioritami a opakovanými veřejnými postoji pro demokracii, transparentnost, média a institucionální brzdy. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_direct",
+          "evidenceUrl": "https://spd.cz/wp-content/uploads/2025/09/Program-SPD-pro-volby-do-Poslanecke-snemovny-2025.pdf#page=26",
+          "evidenceTitle": "SPD – volební program 2025: kultura a média",
+          "evidenceNote": "Program se k výroku vyjadřuje přímo.\nSíla zdroje: Přímý programový zdroj\nLocator: str. 26, oddíl „SVOBODNÁ MÉDIA / ČESKÁ TELEVIZE“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D7_4_referendum_o.vsem",
+        "partyCode": "ANO",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.anobudelip.cz/program/",
+          "evidenceTitle": "Volební program hnutí ANO do parlamentních voleb 2025",
+          "evidenceNote": "Zdrojově porovnáno s volebním programem ANO 2025 pro demokracii, transparentnost, média a institucionální brzdy. Hodnota je redakční interpretace konkrétní otázky, ne doslovná odpověď strany v dotazníku."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "assumption",
+          "evidenceUrl": null,
+          "evidenceTitle": "Analytický odhad – bez dostatečně konkrétního veřejného stranického zdroje",
+          "evidenceNote": "Hodnota je pouze odhad podle širší ideologické orientace a souvisejících postojů strany; nepovažovat za doložený programový závazek.\nSíla zdroje: Předpoklad (superweak)\nLocator: Nenalezen přímý ani dostatečně blízký výrok v ověřených oficiálních materiálech.\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D7_4_referendum_o.vsem",
+        "partyCode": "PIRATI",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.pirati.cz/program/",
+          "evidenceTitle": "Česká pirátská strana: programové dokumenty a Sněmovna 2025",
+          "evidenceNote": "Zdrojově porovnáno s programovými dokumenty Pirátů a programem pro Sněmovnu 2025 pro demokracii, transparentnost, média a institucionální brzdy. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 2,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://majak.pirati.cz/documents/506/PROGRAM_PIRATU_2025.pdf#page=29",
+          "evidenceTitle": "Piráti – volební program 2025: participace občanů",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 29, oddíl „Vnitrostranické a občanské rozhodování“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D7_6_instituce_cnb.pod.kontrolu",
+        "partyCode": "PIRATI",
+        "before": {
+          "rating": 3,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.pirati.cz/program/",
+          "evidenceTitle": "Česká pirátská strana: programové dokumenty a Sněmovna 2025",
+          "evidenceNote": "Zdrojově porovnáno s programovými dokumenty Pirátů a programem pro Sněmovnu 2025 pro demokracii, transparentnost, média a institucionální brzdy. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 1,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://majak.pirati.cz/documents/506/PROGRAM_PIRATU_2025.pdf#page=26",
+          "evidenceTitle": "Piráti – volební program 2025: protikorupční a demokratický program",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 26, oddíl „Liberální demokratická strana s protikorupčním programem“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D7_9_instituce_nezavislost.soudu",
+        "partyCode": "SPD",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://spd.cz/",
+          "evidenceTitle": "SPD: oficiální web, programové priority a veřejná stanoviska",
+          "evidenceNote": "Porovnáno s oficiálním webem SPD, programovými prioritami a opakovanými veřejnými postoji pro demokracii, transparentnost, média a institucionální brzdy. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://spd.cz/wp-content/uploads/2025/09/Program-SPD-pro-volby-do-Poslanecke-snemovny-2025.pdf#page=19",
+          "evidenceTitle": "SPD – volební program 2025: přímá demokracie a právní stát",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 19, oddíl „DEMOKRACIE / ZÁKON O REFERENDU“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D7_9_instituce_nezavislost.soudu",
+        "partyCode": "MOTORISTE",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://motoristesobe.cz/wp-content/uploads/24_12_zakladni-ideova-vychodiska5.pdf",
+          "evidenceTitle": "Motoristé sobě: Základní ideová východiska a veřejná vystoupení",
+          "evidenceNote": "Porovnáno se Základními ideovými východisky Motoristů a veřejnými vystoupeními jejich představitelů pro demokracii, transparentnost, média a institucionální brzdy. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://motoristesobe.cz/program2025",
+          "evidenceTitle": "Motoristé – Program 2025",
+          "evidenceNote": "Oficiální text řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý oficiální zdroj\nLocator: oddíl „Spravedlnost bez ideologie“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D7_9_instituce_nezavislost.soudu",
+        "partyCode": "STACILO",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://stacilo.cz/",
+          "evidenceTitle": "Stačilo!: oficiální programový profil hnutí",
+          "evidenceNote": "Porovnáno s oficiálním programovým profilem hnutí Stačilo! pro demokracii, transparentnost, média a institucionální brzdy. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_position_inference",
+          "evidenceUrl": "https://stacilo.cz/",
+          "evidenceTitle": "Stačilo! – Oficiální programový profil",
+          "evidenceNote": "Oficiální text řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý oficiální zdroj\nLocator: oddíl „Rovnost před zákonem, transparentnost a spravedlnost“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D7_10_media_nezavislost",
+        "partyCode": "ANO",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.anobudelip.cz/program/",
+          "evidenceTitle": "Volební program hnutí ANO do parlamentních voleb 2025",
+          "evidenceNote": "Zdrojově porovnáno s volebním programem ANO 2025 pro demokracii, transparentnost, média a institucionální brzdy. Hodnota je redakční interpretace konkrétní otázky, ne doslovná odpověď strany v dotazníku."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_direct",
+          "evidenceUrl": "https://www.anobudelip.cz/program/#page=31",
+          "evidenceTitle": "ANO – volební program 2025: ČT a ČRo",
+          "evidenceNote": "Program se k výroku vyjadřuje přímo.\nSíla zdroje: Přímý programový zdroj\nLocator: str. 31, oddíl „ZRUŠENÍ POPLATKŮ ZA ČT A ČRO“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D7_10_media_nezavislost",
+        "partyCode": "SPD",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://spd.cz/",
+          "evidenceTitle": "SPD: oficiální web, programové priority a veřejná stanoviska",
+          "evidenceNote": "Porovnáno s oficiálním webem SPD, programovými prioritami a opakovanými veřejnými postoji pro demokracii, transparentnost, média a institucionální brzdy. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 2,
+          "evidenceStatus": "official_program_direct",
+          "evidenceUrl": "https://spd.cz/wp-content/uploads/2025/09/Program-SPD-pro-volby-do-Poslanecke-snemovny-2025.pdf#page=26",
+          "evidenceTitle": "SPD – volební program 2025: kultura a média",
+          "evidenceNote": "Program se k výroku vyjadřuje přímo.\nSíla zdroje: Přímý programový zdroj\nLocator: str. 26, oddíl „SVOBODNÁ MÉDIA / ČESKÁ TELEVIZE“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D7_11_etika_plna.transparentnost",
+        "partyCode": "ANO",
+        "before": {
+          "rating": 3,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.anobudelip.cz/program/",
+          "evidenceTitle": "Volební program hnutí ANO do parlamentních voleb 2025",
+          "evidenceNote": "Zdrojově porovnáno s volebním programem ANO 2025 pro demokracii, transparentnost, média a institucionální brzdy. Hodnota je redakční interpretace konkrétní otázky, ne doslovná odpověď strany v dotazníku."
+        },
+        "after": {
+          "rating": 4,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://www.anobudelip.cz/program/#page=27",
+          "evidenceTitle": "ANO – volební program 2025: transparentnost justice a státu",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 27, oddíl „Spravedlnost a právní stát“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D7_12_obecne_delba.moci",
+        "partyCode": "SPD",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://spd.cz/",
+          "evidenceTitle": "SPD: oficiální web, programové priority a veřejná stanoviska",
+          "evidenceNote": "Porovnáno s oficiálním webem SPD, programovými prioritami a opakovanými veřejnými postoji pro demokracii, transparentnost, média a institucionální brzdy. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://spd.cz/wp-content/uploads/2025/09/Program-SPD-pro-volby-do-Poslanecke-snemovny-2025.pdf#page=19",
+          "evidenceTitle": "SPD – volební program 2025: přímá demokracie a právní stát",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 19, oddíl „DEMOKRACIE / ZÁKON O REFERENDU“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D7_12_obecne_delba.moci",
+        "partyCode": "MOTORISTE",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://motoristesobe.cz/wp-content/uploads/24_12_zakladni-ideova-vychodiska5.pdf",
+          "evidenceTitle": "Motoristé sobě: Základní ideová východiska a veřejná vystoupení",
+          "evidenceNote": "Porovnáno se Základními ideovými východisky Motoristů a veřejnými vystoupeními jejich představitelů pro demokracii, transparentnost, média a institucionální brzdy. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://motoristesobe.cz/program2025",
+          "evidenceTitle": "Motoristé – Program 2025",
+          "evidenceNote": "Oficiální text řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý oficiální zdroj\nLocator: oddíl „Spravedlnost bez ideologie“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D7_12_obecne_delba.moci",
+        "partyCode": "STACILO",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://stacilo.cz/",
+          "evidenceTitle": "Stačilo!: oficiální programový profil hnutí",
+          "evidenceNote": "Porovnáno s oficiálním programovým profilem hnutí Stačilo! pro demokracii, transparentnost, média a institucionální brzdy. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_position_inference",
+          "evidenceUrl": "https://stacilo.cz/",
+          "evidenceTitle": "Stačilo! – Oficiální programový profil",
+          "evidenceNote": "Oficiální text řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý oficiální zdroj\nLocator: oddíl „Rovnost před zákonem, transparentnost a spravedlnost“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D7_13_lider_stabilni.koalice",
+        "partyCode": "PIRATI",
+        "before": {
+          "rating": 4,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.pirati.cz/program/",
+          "evidenceTitle": "Česká pirátská strana: programové dokumenty a Sněmovna 2025",
+          "evidenceNote": "Zdrojově porovnáno s programovými dokumenty Pirátů a programem pro Sněmovnu 2025 pro demokracii, transparentnost, média a institucionální brzdy. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://majak.pirati.cz/documents/506/PROGRAM_PIRATU_2025.pdf#page=26",
+          "evidenceTitle": "Piráti – volební program 2025: protikorupční a demokratický program",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 26, oddíl „Liberální demokratická strana s protikorupčním programem“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D7_14_obecne_politik.jako.spravce",
+        "partyCode": "MOTORISTE",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://motoristesobe.cz/wp-content/uploads/24_12_zakladni-ideova-vychodiska5.pdf",
+          "evidenceTitle": "Motoristé sobě: Základní ideová východiska a veřejná vystoupení",
+          "evidenceNote": "Porovnáno se Základními ideovými východisky Motoristů a veřejnými vystoupeními jejich představitelů pro demokracii, transparentnost, média a institucionální brzdy. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 2,
+          "evidenceStatus": "official_program_direct",
+          "evidenceUrl": "https://motoristesobe.cz/program2025",
+          "evidenceTitle": "Motoristé – Program 2025",
+          "evidenceNote": "Oficiální text se k výroku vyjadřuje přímo.\nSíla zdroje: Přímý oficiální zdroj\nLocator: oddíl „Moderní legislativa bez byrokratických zbytečností“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D7_14_obecne_politik.jako.spravce",
+        "partyCode": "STACILO",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://stacilo.cz/",
+          "evidenceTitle": "Stačilo!: oficiální programový profil hnutí",
+          "evidenceNote": "Porovnáno s oficiálním programovým profilem hnutí Stačilo! pro demokracii, transparentnost, média a institucionální brzdy. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 2,
+          "evidenceStatus": "official_position_inference",
+          "evidenceUrl": "https://stacilo.cz/",
+          "evidenceTitle": "Stačilo! – Oficiální programový profil",
+          "evidenceNote": "Oficiální text řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý oficiální zdroj\nLocator: oddíl „Rovnost před zákonem, transparentnost a spravedlnost“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D8_1_autonomie.tela_povinne.ockovani",
+        "partyCode": "STAN",
+        "before": {
+          "rating": 3,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.starostove.cz/dobry-program",
+          "evidenceTitle": "STAN: Dobrý program",
+          "evidenceNote": "Zdrojově porovnáno s Dobrým programem STAN pro bezpečnostní pravomoci státu, svobodu slova, soukromí a občanské svobody. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 2,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://www.starostove.cz/files/dobry-program-starostove.pdf#page=24",
+          "evidenceTitle": "STAN – volební program 2025: zdravotnictví a prevence",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 24, oddíl „Zdravotnictví“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D8_1_autonomie.tela_povinne.ockovani",
+        "partyCode": "PIRATI",
+        "before": {
+          "rating": 4,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.pirati.cz/program/",
+          "evidenceTitle": "Česká pirátská strana: programové dokumenty a Sněmovna 2025",
+          "evidenceNote": "Zdrojově porovnáno s programovými dokumenty Pirátů a programem pro Sněmovnu 2025 pro bezpečnostní pravomoci státu, svobodu slova, soukromí a občanské svobody. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "assumption",
+          "evidenceUrl": null,
+          "evidenceTitle": "Analytický odhad – bez dostatečně konkrétního veřejného stranického zdroje",
+          "evidenceNote": "Hodnota je pouze odhad podle širší ideologické orientace a souvisejících postojů strany; nepovažovat za doložený programový závazek.\nSíla zdroje: Předpoklad (superweak)\nLocator: Nenalezen přímý ani dostatečně blízký výrok v ověřených oficiálních materiálech.\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D8_10_informace_absolutni.svoboda.slova",
+        "partyCode": "ANO",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.anobudelip.cz/program/",
+          "evidenceTitle": "Volební program hnutí ANO do parlamentních voleb 2025",
+          "evidenceNote": "Zdrojově porovnáno s volebním programem ANO 2025 pro bezpečnostní pravomoci státu, svobodu slova, soukromí a občanské svobody. Hodnota je redakční interpretace konkrétní otázky, ne doslovná odpověď strany v dotazníku."
+        },
+        "after": {
+          "rating": 4,
+          "evidenceStatus": "official_program_direct",
+          "evidenceUrl": "https://www.anobudelip.cz/program/#page=27",
+          "evidenceTitle": "ANO – volební program 2025: svoboda slova a konec cenzury",
+          "evidenceNote": "Program se k výroku vyjadřuje přímo.\nSíla zdroje: Přímý programový zdroj\nLocator: str. 27, oddíl „SVOBODA SLOVA A KONEC CENZURY“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D8_10_informace_absolutni.svoboda.slova",
+        "partyCode": "SPOLU",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.spolu25.cz/program",
+          "evidenceTitle": "SPOLU 2025: VIZE 2030 / volební program",
+          "evidenceNote": "Zdrojově porovnáno s programem SPOLU 2025 pro bezpečnostní pravomoci státu, svobodu slova, soukromí a občanské svobody. U kulturních a bioetických položek jde o koaliční interpretaci společného postoje ODS, KDU-ČSL a TOP 09."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://www.spolu25.cz/pdf/SPOLU-program-2025.pdf#page=29",
+          "evidenceTitle": "SPOLU – volební program 2025: demokracie a právní stát",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 29, oddíl „OCHRANA DEMOKRACIE & SPRAVEDLIVÝ STÁT“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D8_10_informace_absolutni.svoboda.slova",
+        "partyCode": "SPD",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://spd.cz/",
+          "evidenceTitle": "SPD: oficiální web, programové priority a veřejná stanoviska",
+          "evidenceNote": "Porovnáno s oficiálním webem SPD, programovými prioritami a opakovanými veřejnými postoji pro bezpečnostní pravomoci státu, svobodu slova, soukromí a občanské svobody. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 4,
+          "evidenceStatus": "official_program_direct",
+          "evidenceUrl": "https://spd.cz/wp-content/uploads/2025/09/Program-SPD-pro-volby-do-Poslanecke-snemovny-2025.pdf#page=17",
+          "evidenceTitle": "SPD – volební program 2025: svoboda projevu a stop cenzuře",
+          "evidenceNote": "Program se k výroku vyjadřuje přímo.\nSíla zdroje: Přímý programový zdroj\nLocator: str. 17, oddíl „SVOBODA NÁZORU MÍSTO POLITICKÉ KOREKTNOSTI“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D8_10_informace_absolutni.svoboda.slova",
+        "partyCode": "MOTORISTE",
+        "before": {
+          "rating": 3,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://motoristesobe.cz/wp-content/uploads/24_12_zakladni-ideova-vychodiska5.pdf",
+          "evidenceTitle": "Motoristé sobě: Základní ideová východiska a veřejná vystoupení",
+          "evidenceNote": "Porovnáno se Základními ideovými východisky Motoristů a veřejnými vystoupeními jejich představitelů pro bezpečnostní pravomoci státu, svobodu slova, soukromí a občanské svobody. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 4,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://motoristesobe.cz/program2025",
+          "evidenceTitle": "Motoristé – Program 2025",
+          "evidenceNote": "Oficiální text řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý oficiální zdroj\nLocator: oddíl „Spravedlnost bez ideologie / svoboda projevu“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D8_13_soukromi_absolutni.nedotknutelnost",
+        "partyCode": "ANO",
+        "before": {
+          "rating": 2,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.anobudelip.cz/program/",
+          "evidenceTitle": "Volební program hnutí ANO do parlamentních voleb 2025",
+          "evidenceNote": "Zdrojově porovnáno s volebním programem ANO 2025 pro bezpečnostní pravomoci státu, svobodu slova, soukromí a občanské svobody. Hodnota je redakční interpretace konkrétní otázky, ne doslovná odpověď strany v dotazníku."
+        },
+        "after": {
+          "rating": 4,
+          "evidenceStatus": "official_program_direct",
+          "evidenceUrl": "https://www.anobudelip.cz/program/#page=16",
+          "evidenceTitle": "ANO – volební program 2025: ochrana soukromí a občanských svobod",
+          "evidenceNote": "Program se k výroku vyjadřuje přímo.\nSíla zdroje: Přímý programový zdroj\nLocator: str. 16, oddíl „VNITRO BUDE GARANTEM SVOBOD, NIKOLI HROZBOU“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D8_13_soukromi_absolutni.nedotknutelnost",
+        "partyCode": "SPOLU",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.spolu25.cz/program",
+          "evidenceTitle": "SPOLU 2025: VIZE 2030 / volební program",
+          "evidenceNote": "Zdrojově porovnáno s programem SPOLU 2025 pro bezpečnostní pravomoci státu, svobodu slova, soukromí a občanské svobody. U kulturních a bioetických položek jde o koaliční interpretaci společného postoje ODS, KDU-ČSL a TOP 09."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "assumption",
+          "evidenceUrl": null,
+          "evidenceTitle": "Analytický odhad – bez dostatečně konkrétního veřejného stranického zdroje",
+          "evidenceNote": "Hodnota je pouze odhad podle širší ideologické orientace a souvisejících postojů strany; nepovažovat za doložený programový závazek.\nSíla zdroje: Předpoklad (superweak)\nLocator: Nenalezen přímý ani dostatečně blízký výrok v ověřených oficiálních materiálech.\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D8_13_soukromi_absolutni.nedotknutelnost",
+        "partyCode": "STAN",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.starostove.cz/dobry-program",
+          "evidenceTitle": "STAN: Dobrý program",
+          "evidenceNote": "Zdrojově porovnáno s Dobrým programem STAN pro bezpečnostní pravomoci státu, svobodu slova, soukromí a občanské svobody. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 3,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://www.starostove.cz/files/dobry-program-starostove.pdf#page=21",
+          "evidenceTitle": "STAN – volební program 2025: digitální práva a bezpečnost",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 21, oddíl „Digitalizace a ochrana dat“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D8_13_soukromi_absolutni.nedotknutelnost",
+        "partyCode": "PIRATI",
+        "before": {
+          "rating": 1,
+          "evidenceStatus": "official_program_context",
+          "evidenceUrl": "https://www.pirati.cz/program/",
+          "evidenceTitle": "Česká pirátská strana: programové dokumenty a Sněmovna 2025",
+          "evidenceNote": "Zdrojově porovnáno s programovými dokumenty Pirátů a programem pro Sněmovnu 2025 pro bezpečnostní pravomoci státu, svobodu slova, soukromí a občanské svobody. Hodnota je redakční interpretace konkrétní otázky."
+        },
+        "after": {
+          "rating": 4,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://majak.pirati.cz/documents/506/PROGRAM_PIRATU_2025.pdf#page=11",
+          "evidenceTitle": "Piráti – volební program 2025: soukromí, informace a digitální práva",
+          "evidenceNote": "Program řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý programový zdroj\nLocator: str. 11, oddíl „Odolnost obyvatelstva a moderní technologie“\nOvěřeno: 2026-06-27"
+        }
+      },
+      {
+        "questionId": "item_D8_13_soukromi_absolutni.nedotknutelnost",
+        "partyCode": "MOTORISTE",
+        "before": {
+          "rating": 3,
+          "evidenceStatus": "weak_source_context",
+          "evidenceUrl": "https://motoristesobe.cz/wp-content/uploads/24_12_zakladni-ideova-vychodiska5.pdf",
+          "evidenceTitle": "Motoristé sobě: Základní ideová východiska a veřejná vystoupení",
+          "evidenceNote": "Porovnáno se Základními ideovými východisky Motoristů a veřejnými vystoupeními jejich představitelů pro bezpečnostní pravomoci státu, svobodu slova, soukromí a občanské svobody. Zdroj je širší než přímá odpověď na otázku, proto je označen jako slabší doložení."
+        },
+        "after": {
+          "rating": 4,
+          "evidenceStatus": "official_program_inference",
+          "evidenceUrl": "https://motoristesobe.cz/program2025",
+          "evidenceTitle": "Motoristé – Program 2025",
+          "evidenceNote": "Oficiální text řeší stejnou oblast a umožňuje odvodit směr odpovědi, ale neformuluje přesně tento výrok.\nSíla zdroje: Nepřímý oficiální zdroj\nLocator: oddíl „Bezpečný digitální stát a ochrana dat“\nOvěřeno: 2026-06-27"
+        }
+      }
+    ],
+    "methodology": [
+      "List Zdroje is the source of truth for ratings and evidence fields.",
+      "Question descriptions are preserved from the existing seed because the revised workbook does not contain a description column.",
+      "Spreadsheet note, source strength, locator and verification date are combined into evidenceNote so they remain visible without a database schema change."
+    ]
+  }
 }
