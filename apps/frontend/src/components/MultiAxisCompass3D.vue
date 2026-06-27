@@ -29,7 +29,7 @@
         :class="isPartyHidden(match.partyCode) ? 'border-gray-200 opacity-45' : 'border-gray-300 opacity-100'"
         type="button"
         :aria-pressed="!isPartyHidden(match.partyCode)"
-        :title="isPartyHidden(match.partyCode) ? `Zobrazit ${match.partyName}` : `Skrýt ${match.partyName}`"
+        :title="isPartyHidden(match.partyCode) ? `Zobrazit ${match.partyCode}` : `Skrýt ${match.partyCode}`"
         @click="toggleParty(match.partyCode)"
       >
         <party-logo
@@ -40,7 +40,7 @@
           class="h-2.5 w-2.5 rounded-sm"
           :style="{ backgroundColor: cssPartyColors[index] }"
         />
-        {{ match.partyName }}
+        {{ match.partyCode }}
       </button>
       <button
         v-if="hiddenPartyCodes.size"
